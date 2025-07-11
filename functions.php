@@ -148,33 +148,7 @@ function giovanni_register_block_styles() {
     
     // Register block styles with error handling
     try {
-        // Register Ghost button style
-        register_block_style( 'core/button', array(
-            'name' => 'ghost',
-            'label' => __( 'Ghost', 'giovanni' ),
-            'inline_style' => '.wp-block-button.is-style-ghost .wp-block-button__link,.wp-block-button.is-style-ghost .wp-element-button{background:transparent!important;border:none!important;color:var(--wp--preset--color--gray-600)!important;text-decoration:underline!important;text-underline-offset:2px!important;font-weight:500!important;transition:all .15s ease!important}.wp-block-button.is-style-ghost .wp-block-button__link:hover,.wp-block-button.is-style-ghost .wp-element-button:hover,.wp-block-button.is-style-ghost .wp-block-button__link:focus,.wp-block-button.is-style-ghost .wp-element-button:focus{background:var(--wp--preset--color--gray-50)!important;color:var(--wp--preset--color--foreground)!important;text-decoration:none!important;transform:translateY(-1px)!important}',
-        ) );
-        
-        // Register Dark button style
-        register_block_style( 'core/button', array(
-            'name' => 'dark',
-            'label' => __( 'Dark', 'giovanni' ),
-            'inline_style' => '.wp-block-button.is-style-dark .wp-block-button__link,.wp-block-button.is-style-dark .wp-element-button{background:var(--wp--preset--color--gray-900)!important;border:none!important;color:var(--wp--preset--color--background)!important;font-weight:500!important;transition:all .15s ease!important;text-decoration:none!important}.wp-block-button.is-style-dark .wp-block-button__link:hover,.wp-block-button.is-style-dark .wp-element-button:hover,.wp-block-button.is-style-dark .wp-block-button__link:focus,.wp-block-button.is-style-dark .wp-element-button:focus{background:var(--wp--preset--color--gray-700)!important;color:var(--wp--preset--color--background)!important;transform:translateY(-1px)!important;box-shadow:0 2px 4px rgba(0,0,0,.1)!important}',
-        ) );
-        
-        // Register Arrow Light button style
-        register_block_style( 'core/button', array(
-            'name' => 'arrow-light',
-            'label' => __( 'Arrow Light', 'giovanni' ),
-            'inline_style' => '.wp-block-button.is-style-arrow-light{background:none!important;border:none!important}.wp-block-button.is-style-arrow-light .wp-block-button__link,.wp-block-button.is-style-arrow-light .wp-element-button{font-size:1.125rem!important;line-height:1.4!important;letter-spacing:-0.005625rem!important;font-weight:480!important;margin:0!important;color:var(--wp--preset--color--foreground)!important;background-color:var(--wp--preset--color--gray-100)!important;border:1px solid var(--wp--preset--color--gray-200)!important;border-radius:6px!important;text-decoration:none!important;transition:all .2s ease!important;position:relative!important;overflow:visible!important;padding:12px 24px 12px 24px!important;min-width:140px!important;display:inline-flex!important;align-items:center!important;justify-content:flex-start!important}.wp-block-button.is-style-arrow-light .wp-block-button__link:before,.wp-block-button.is-style-arrow-light .wp-element-button:before{content:"→"!important;position:absolute!important;right:24px!important;top:50%!important;transform:translateY(-50%) translateX(20px)!important;opacity:0!important;transition:all .2s ease!important;font-size:1.125rem!important;line-height:1!important;color:inherit!important}.wp-block-button.is-style-arrow-light .wp-block-button__link:hover,.wp-block-button.is-style-arrow-light .wp-element-button:hover{background-color:var(--wp--preset--color--gray-200)!important;border-color:var(--wp--preset--color--gray-300)!important;padding-left:24px!important;padding-right:50px!important}.wp-block-button.is-style-arrow-light .wp-block-button__link:hover:before,.wp-block-button.is-style-arrow-light .wp-element-button:hover:before{transform:translateY(-50%) translateX(0)!important;opacity:1!important}',
-        ) );
-        
-        // Register Arrow Dark button style
-        register_block_style( 'core/button', array(
-            'name' => 'arrow-dark',
-            'label' => __( 'Arrow Dark', 'giovanni' ),
-            'inline_style' => '.wp-block-button.is-style-arrow-dark{background:none!important;border:none!important}.wp-block-button.is-style-arrow-dark .wp-block-button__link,.wp-block-button.is-style-arrow-dark .wp-element-button{font-size:1.125rem!important;line-height:1.4!important;letter-spacing:-0.005625rem!important;font-weight:480!important;margin:0!important;color:var(--wp--preset--color--background)!important;background-color:var(--wp--preset--color--gray-900)!important;border:1px solid var(--wp--preset--color--gray-900)!important;border-radius:6px!important;text-decoration:none!important;transition:all .2s ease!important;position:relative!important;overflow:visible!important;padding:12px 24px 12px 24px!important;min-width:140px!important;display:inline-flex!important;align-items:center!important;justify-content:flex-start!important}.wp-block-button.is-style-arrow-dark .wp-block-button__link:before,.wp-block-button.is-style-arrow-dark .wp-element-button:before{content:"→"!important;position:absolute!important;right:24px!important;top:50%!important;transform:translateY(-50%) translateX(20px)!important;opacity:0!important;transition:all .2s ease!important;font-size:1.125rem!important;line-height:1!important;color:inherit!important}.wp-block-button.is-style-arrow-dark .wp-block-button__link:hover,.wp-block-button.is-style-arrow-dark .wp-element-button:hover{background-color:var(--wp--preset--color--gray-900)!important;border-color:var(--wp--preset--color--gray-900)!important;padding-left:24px!important;padding-right:50px!important}.wp-block-button.is-style-arrow-dark .wp-block-button__link:hover:before,.wp-block-button.is-style-arrow-dark .wp-element-button:hover:before{transform:translateY(-50%) translateX(0)!important;opacity:1!important}',
-        ) );
+        // Note: Button styles are now loaded automatically from /assets/styles/core-button.css
         
         // Register Polaroid image style (original with animation)
         register_block_style( 'core/image', array(
@@ -4097,5 +4071,35 @@ function giovanni_render_single_field($field, $post_id = false) {
 function giovanni_is_acf_active() {
     return function_exists('get_field') && function_exists('acf_get_field_groups');
 }
+
+/**
+ * Automatically enqueue block styles from assets/styles directory
+ * Following LLM_THEME_DEVELOPMENT_GUIDE.md best practices
+ */
+function giovanni_enqueue_custom_block_styles() {
+    $files = glob( get_template_directory() . '/assets/styles/*.css' );
+    
+    if ( empty( $files ) ) {
+        return;
+    }
+    
+    foreach ( $files as $file ) {
+        $filename = basename( $file, '.css' );
+        $block_name = str_replace( 'core-', 'core/', $filename );
+        
+        // Only enqueue if the block exists
+        if ( wp_block_type_registry()->is_registered( $block_name ) ) {
+            wp_enqueue_block_style(
+                $block_name,
+                array(
+                    'handle' => "giovanni-block-{$filename}",
+                    'src'    => get_theme_file_uri( "assets/styles/{$filename}.css" ),
+                    'path'   => get_theme_file_path( "assets/styles/{$filename}.css" ),
+                )
+            );
+        }
+    }
+}
+add_action( 'init', 'giovanni_enqueue_custom_block_styles' );
 
 ?>
