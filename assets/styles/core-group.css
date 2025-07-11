@@ -1,0 +1,350 @@
+/* Giovanni Group Styles */
+
+/* Card Group Style */
+.wp-block-group.is-style-card {
+    background: var(--wp--preset--color--background) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin: 24px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1) !important;
+    transition: all .3s ease !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+}
+
+.wp-block-group.is-style-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15) !important;
+    border-color: var(--wp--preset--color--gray-300) !important;
+    background: var(--wp--preset--color--gray-50) !important;
+}
+
+.wp-block-group.is-style-card > * {
+    margin-bottom: 16px !important;
+}
+
+.wp-block-group.is-style-card > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Portfolio Card Group Style */
+.wp-block-group.is-style-portfolio-card {
+    background: var(--wp--preset--color--background) !important;
+    border-radius: 12px !important;
+    padding: 0 !important;
+    margin: 24px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1) !important;
+    transition: all .3s ease !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+    overflow: hidden !important;
+}
+
+.wp-block-group.is-style-portfolio-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15) !important;
+    border-color: var(--wp--preset--color--gray-300) !important;
+    background: var(--wp--preset--color--gray-50) !important;
+}
+
+.wp-block-group.is-style-portfolio-card .wp-block-image {
+    margin: 0 0 16px 0 !important;
+}
+
+.wp-block-group.is-style-portfolio-card .wp-block-image img {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.wp-block-group.is-style-portfolio-card .wp-block-heading {
+    margin: 0 0 8px 0 !important;
+    padding: 0 24px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+.wp-block-group.is-style-portfolio-card .wp-block-paragraph {
+    margin: 0 0 16px 0 !important;
+    padding: 0 24px !important;
+    color: var(--wp--preset--color--gray-500) !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+.wp-block-group.is-style-portfolio-card .wp-block-buttons {
+    margin: 0 !important;
+    padding: 0 24px 24px !important;
+}
+
+/* Service Card Group Style */
+.wp-block-group.is-style-service-card {
+    background: var(--wp--preset--color--background) !important;
+    border-radius: 12px !important;
+    padding: 32px 24px !important;
+    margin: 24px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1) !important;
+    transition: all .3s ease !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+    text-align: center !important;
+}
+
+.wp-block-group.is-style-service-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15) !important;
+    border-color: var(--wp--preset--color--gray-300) !important;
+    background: var(--wp--preset--color--gray-50) !important;
+}
+
+.wp-block-group.is-style-service-card .wp-block-image {
+    margin: 0 auto 20px !important;
+    width: 64px !important;
+    height: 64px !important;
+}
+
+.wp-block-group.is-style-service-card .wp-block-image img {
+    border-radius: 8px !important;
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: cover !important;
+}
+
+.wp-block-group.is-style-service-card .wp-block-heading {
+    margin: 0 0 12px 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: var(--wp--preset--color--foreground) !important;
+}
+
+.wp-block-group.is-style-service-card .wp-block-paragraph {
+    margin: 0 0 20px 0 !important;
+    color: var(--wp--preset--color--gray-600) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.wp-block-group.is-style-service-card .wp-block-buttons {
+    margin: 0 !important;
+}
+
+/* Company Card Group Style */
+.wp-block-group.is-style-company-card {
+    background: var(--wp--preset--color--background) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin: 24px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1) !important;
+    transition: all .3s ease !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+    text-align: center !important;
+    min-height: 280px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.wp-block-group.is-style-company-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15) !important;
+    border-color: var(--wp--preset--color--gray-300) !important;
+    background: var(--wp--preset--color--gray-50) !important;
+}
+
+.wp-block-group.is-style-company-card .wp-block-image {
+    margin: 0 auto 16px !important;
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.wp-block-group.is-style-company-card .wp-block-image img {
+    border-radius: 12px !important;
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+}
+
+.wp-block-group.is-style-company-card .wp-block-heading {
+    margin: 0 0 8px 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: var(--wp--preset--color--foreground) !important;
+}
+
+.wp-block-group.is-style-company-card .wp-block-paragraph {
+    margin: 0 0 16px 0 !important;
+    color: var(--wp--preset--color--gray-600) !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    flex: 1 !important;
+}
+
+.wp-block-group.is-style-company-card .wp-block-buttons {
+    margin: 0 !important;
+}
+
+.wp-block-group.is-style-company-card .wp-block-button .wp-block-button__link {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+}
+
+/* Blog Roll Card Group Style */
+.wp-block-group.is-style-blog-roll-card {
+    background: var(--wp--preset--color--background) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin: 24px 0 !important;
+    transition: all .3s ease !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+    text-align: center !important;
+    min-height: 280px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.wp-block-group.is-style-blog-roll-card:hover {
+    transform: translateY(-4px) !important;
+    background: var(--wp--preset--color--gray-50) !important;
+}
+
+.wp-block-group.is-style-blog-roll-card .wp-block-image {
+    margin: 0 auto 16px !important;
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.wp-block-group.is-style-blog-roll-card .wp-block-image img {
+    border-radius: 12px !important;
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+}
+
+.wp-block-group.is-style-blog-roll-card .wp-block-heading {
+    margin: 0 0 8px 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: var(--wp--preset--color--foreground) !important;
+}
+
+.wp-block-group.is-style-blog-roll-card .wp-block-paragraph {
+    margin: 0 0 16px 0 !important;
+    color: var(--wp--preset--color--gray-600) !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    flex: 1 !important;
+}
+
+.wp-block-group.is-style-blog-roll-card .wp-block-buttons {
+    margin: 0 !important;
+}
+
+.wp-block-group.is-style-blog-roll-card .wp-block-button .wp-block-button__link {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+}
+
+/* Longform Reading Group Style */
+.wp-block-group.is-style-longform-reading {
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    padding: 48px 32px !important;
+    background: var(--wp--preset--color--background) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.wp-block-group.is-style-longform-reading .wp-block-paragraph {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    color: var(--wp--preset--color--reading-text) !important;
+    margin-bottom: 1.75rem !important;
+    font-weight: 400 !important;
+    text-align: left !important;
+}
+
+.wp-block-group.is-style-longform-reading .wp-block-heading {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    color: var(--wp--preset--color--foreground) !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 2.5rem !important;
+    font-weight: 600 !important;
+}
+
+.wp-block-group.is-style-longform-reading h2 {
+    font-size: 24px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.wp-block-group.is-style-longform-reading h3 {
+    font-size: 20px !important;
+    margin-top: 1.75rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.wp-block-group.is-style-longform-reading .wp-block-quote {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    margin: 2.5rem 0 !important;
+    padding-left: 2rem !important;
+    border-left: 3px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3)) !important;
+    background: none !important;
+    font-style: italic !important;
+    color: var(--wp--preset--color--gray-700) !important;
+}
+
+.wp-block-group.is-style-longform-reading .wp-block-list {
+    margin-bottom: 1.75rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.wp-block-group.is-style-longform-reading .wp-block-list li {
+    margin-bottom: 0.5rem !important;
+    line-height: 1.7 !important;
+    font-size: 18px !important;
+    color: var(--wp--preset--color--reading-text) !important;
+}
+
+/* Form Container Group Style */
+.wp-block-group.is-style-form-container {
+    background: var(--wp--preset--color--background) !important;
+    border: 1px solid var(--wp--preset--color--gray-200) !important;
+    border-radius: 12px !important;
+    padding: 32px !important;
+    margin: 32px 0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+.wp-block-group.is-style-form-container:hover {
+    border-color: var(--wp--preset--color--gray-300) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .wp-block-group.is-style-longform-reading {
+        padding: 32px 24px !important;
+    }
+    
+    .wp-block-group.is-style-longform-reading .wp-block-paragraph {
+        font-size: 17px !important;
+    }
+    
+    .wp-block-group.is-style-form-container {
+        padding: 24px 20px !important;
+        margin: 24px 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .wp-block-group.is-style-form-container {
+        padding: 20px 16px !important;
+    }
+}
