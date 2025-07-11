@@ -1,0 +1,63 @@
+/* Giovanni Image Styles */
+
+/* Polaroid Image Style */
+.wp-block-image.is-style-polaroid {
+    background: var(--wp--preset--color--background) !important;
+    padding: 12px 12px 40px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15) !important;
+    transform: rotate(-1deg) !important;
+    transition: transform .3s ease !important;
+    margin: 2rem auto !important;
+    display: inline-block !important;
+}
+
+.wp-block-image.is-style-polaroid:hover {
+    transform: rotate(0deg) scale(1.02) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2) !important;
+}
+
+.wp-block-image.is-style-polaroid img {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.wp-block-image.is-style-polaroid figcaption {
+    margin-top: 12px !important;
+    text-align: center !important;
+    font-family: "Courier New", monospace !important;
+    font-size: 14px !important;
+    color: var(--wp--preset--color--gray-500) !important;
+}
+
+/* Polaroid Static Image Style */
+.wp-block-image.is-style-polaroid-static {
+    background: var(--wp--preset--color--background) !important;
+    padding: 12px 12px 40px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15) !important;
+    transform: rotate(-1deg) !important;
+    margin: 2rem auto !important;
+    display: inline-block !important;
+}
+
+.wp-block-image.is-style-polaroid-static img {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.wp-block-image.is-style-polaroid-static figcaption {
+    margin-top: 12px !important;
+    text-align: center !important;
+    font-family: "Courier New", monospace !important;
+    font-size: 14px !important;
+    color: var(--wp--preset--color--gray-500) !important;
+}
+
+/* Rounded Image Style */
+.wp-block-image.is-style-rounded img {
+    border-radius: 12px !important;
+    transition: transform .3s ease !important;
+}
+
+.wp-block-image.is-style-rounded:hover img {
+    transform: scale(1.02) !important;
+}

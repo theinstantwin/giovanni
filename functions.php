@@ -150,33 +150,7 @@ function giovanni_register_block_styles() {
     try {
         // Note: Button styles are now loaded automatically from /assets/styles/core-button.css
         
-        // Register Polaroid image style (original with animation)
-        register_block_style( 'core/image', array(
-            'name' => 'polaroid',
-            'label' => __( 'Polaroid', 'giovanni' ),
-            'inline_style' => '.wp-block-image.is-style-polaroid{background:var(--wp--preset--color--background)!important;padding:12px 12px 40px!important;box-shadow:0 2px 8px rgba(0,0,0,.15)!important;transform:rotate(-1deg)!important;transition:transform .3s ease!important;margin:2rem auto!important;display:inline-block!important}.wp-block-image.is-style-polaroid:hover{transform:rotate(0deg) scale(1.02)!important;box-shadow:0 4px 16px rgba(0,0,0,.2)!important}.wp-block-image.is-style-polaroid img{margin:0!important;border-radius:0!important}.wp-block-image.is-style-polaroid figcaption{margin-top:12px!important;text-align:center!important;font-family:"Courier New",monospace!important;font-size:14px!important;color:var(--wp--preset--color--gray-500)!important}',
-        ) );
-        
-        // Register Polaroid Tape style (with tape effect and animation)
-        register_block_style( 'core/image', array(
-            'name' => 'polaroid-tape',
-            'label' => __( 'Polaroid with Tape', 'giovanni' ),
-            'inline_style' => '.wp-block-image.is-style-polaroid-tape{background:var(--wp--preset--color--background)!important;padding:12px 12px 40px!important;box-shadow:0 2px 8px rgba(0,0,0,.15)!important;transform:rotate(-1deg)!important;transition:transform .3s ease!important;margin:2rem auto!important;display:inline-block!important;position:relative!important}.wp-block-image.is-style-polaroid-tape:before{content:""!important;position:absolute!important;top:-.5em!important;right:1.2em!important;width:2.5em!important;height:1.2em!important;background:rgba(255,255,255,.8)!important;border:1px solid rgba(0,0,0,.1)!important;transform:rotate(15deg)!important;box-shadow:0 .1em .3em rgba(0,0,0,.1)!important;border-radius:.1em!important}.wp-block-image.is-style-polaroid-tape:after{content:""!important;position:absolute!important;bottom:-.4em!important;left:1em!important;width:2.2em!important;height:1.1em!important;background:rgba(255,255,255,.7)!important;border:1px solid rgba(0,0,0,.1)!important;transform:rotate(-12deg)!important;box-shadow:0 .1em .3em rgba(0,0,0,.1)!important;border-radius:.1em!important}.wp-block-image.is-style-polaroid-tape:hover{transform:rotate(0deg) scale(1.02)!important;box-shadow:0 4px 16px rgba(0,0,0,.2)!important}.wp-block-image.is-style-polaroid-tape img{margin:0!important;border-radius:0!important}.wp-block-image.is-style-polaroid-tape figcaption{margin-top:12px!important;text-align:center!important;font-family:"Courier New",monospace!important;font-size:14px!important;color:var(--wp--preset--color--gray-500)!important}',
-        ) );
-        
-        // Register Polaroid Static style (no animation)
-        register_block_style( 'core/image', array(
-            'name' => 'polaroid-static',
-            'label' => __( 'Polaroid Static', 'giovanni' ),
-            'inline_style' => '.wp-block-image.is-style-polaroid-static{background:var(--wp--preset--color--background)!important;padding:12px 12px 40px!important;box-shadow:0 2px 8px rgba(0,0,0,.15)!important;transform:rotate(-1deg)!important;margin:2rem auto!important;display:inline-block!important}.wp-block-image.is-style-polaroid-static img{margin:0!important;border-radius:0!important}.wp-block-image.is-style-polaroid-static figcaption{margin-top:12px!important;text-align:center!important;font-family:"Courier New",monospace!important;font-size:14px!important;color:var(--wp--preset--color--gray-500)!important}',
-        ) );
-        
-        // Register Rounded image style
-        register_block_style( 'core/image', array(
-            'name' => 'rounded',
-            'label' => __( 'Rounded', 'giovanni' ),
-            'inline_style' => '.wp-block-image.is-style-rounded img{border-radius:12px!important;transition:transform .3s ease!important}.wp-block-image.is-style-rounded:hover img{transform:scale(1.02)!important}',
-        ) );
+        // Note: Image styles are now loaded automatically from /assets/styles/core-image.css
         
         // Register Underline navigation style
         register_block_style( 'core/navigation', array(
