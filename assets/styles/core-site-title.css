@@ -1,49 +1,50 @@
-/* Giovanni Site Title Styles */
+/* Giovanni Site Title Styles
+--------------------------------------------- */
 
 /* Logo Style */
 .wp-block-site-title.is-style-logo-style {
-    background: var(--wp--preset--color--gray-50) !important;
-    padding: 12px 20px !important;
-    border-radius: 8px !important;
-    border: 1px solid var(--wp--preset--color--gray-200) !important;
-    display: inline-block !important;
-    transition: all 0.2s ease !important;
+    background: var(--wp--preset--color--gray-50);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--wp--preset--color--gray-200);
+    display: inline-block;
+    transition: all 0.2s ease;
 }
 
 .wp-block-site-title.is-style-logo-style:hover {
-    background: var(--wp--preset--color--gray-100) !important;
-    border-color: var(--wp--preset--color--gray-300) !important;
-    transform: translateY(-1px) !important;
+    background: var(--wp--preset--color--gray-100);
+    border-color: var(--wp--preset--color--gray-300);
+    transform: translateY(-1px);
 }
 
 .wp-block-site-title.is-style-logo-style a {
-    font-weight: 600 !important;
-    color: var(--wp--preset--color--foreground) !important;
-    text-decoration: none !important;
-    letter-spacing: -0.025em !important;
+    font-weight: 600;
+    color: var(--wp--preset--color--foreground);
+    text-decoration: none;
+    letter-spacing: -0.025em;
 }
 
 .wp-block-site-title.is-style-logo-style a:hover {
-    color: var(--wp--preset--color--giovanni-blue) !important;
+    color: var(--wp--preset--color--giovanni-blue);
 }
 
 /* Brand Name Style */
 .wp-block-site-title.is-style-brand-name {
-    display: inline-block !important;
+    display: inline-block;
 }
 
 .wp-block-site-title.is-style-brand-name a {
-    font-weight: 700 !important;
-    font-size: 1.5em !important;
-    color: var(--wp--preset--color--giovanni-blue) !important;
-    text-decoration: none !important;
-    letter-spacing: -0.05em !important;
-    line-height: 1.1 !important;
-    text-transform: uppercase !important;
-    transition: all 0.2s ease !important;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--wp--preset--color--giovanni-blue);
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
 }
 
 .wp-block-site-title.is-style-brand-name a:hover {
-    color: var(--wp--preset--color--gray-800) !important;
-    transform: scale(1.05) !important;
+    color: var(--wp--preset--color--gray-800);
+    transform: scale(1.05);
 }

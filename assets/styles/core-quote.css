@@ -1,77 +1,78 @@
-/* Giovanni Quote Styles */
+/* Giovanni Quote Styles
+--------------------------------------------- */
 
 /* Book Quote Style */
 .wp-block-quote.is-style-book-quote {
-    border-left: 4px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3)) !important;
-    background: var(--wp--preset--color--gray-50) !important;
-    padding: 24px 32px !important;
-    margin: 32px 0 !important;
-    border-radius: 8px !important;
-    position: relative !important;
+    border-left: 4px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    background: var(--wp--preset--color--gray-50);
+    padding: 24px 32px;
+    margin: 32px 0;
+    border-radius: 8px;
+    position: relative;
 }
 
-.wp-block-quote.is-style-book-quote:before {
-    content: "📚" !important;
-    position: absolute !important;
-    top: 12px !important;
-    right: 12px !important;
-    font-size: 24px !important;
-    opacity: .6 !important;
-    line-height: 1 !important;
+.wp-block-quote.is-style-book-quote::before {
+    content: "📚";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+    opacity: 0.6;
+    line-height: 1;
 }
 
 .wp-block-quote.is-style-book-quote p {
-    font-style: italic !important;
-    font-size: 18px !important;
-    line-height: 1.6 !important;
-    margin-bottom: 16px !important;
-    color: var(--wp--preset--color--foreground) !important;
-    padding: 4px 3px !important;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: var(--wp--preset--color--foreground);
+    padding: 4px 3px;
 }
 
 .wp-block-quote.is-style-book-quote cite {
-    font-weight: 600 !important;
-    font-style: normal !important;
-    color: var(--wp--preset--color--gray-600) !important;
-    font-size: 14px !important;
-    opacity: 0.8 !important;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--wp--preset--color--gray-600);
+    font-size: 14px;
+    opacity: 0.8;
 }
 
-.wp-block-quote.is-style-book-quote cite:before {
-    content: "— " !important;
+.wp-block-quote.is-style-book-quote cite::before {
+    content: "— ";
 }
 
 /* Personal Reflection Style */
 .wp-block-quote.is-style-personal-reflection {
-    border: none !important;
-    background: var(--wp--preset--color--gray-50) !important;
-    border-left: 4px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3)) !important;
-    border-radius: 0 8px 8px 0 !important;
-    padding: 20px 24px !important;
-    margin: 24px 0 !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1) !important;
-    position: relative !important;
+    border: none;
+    background: var(--wp--preset--color--gray-50);
+    border-left: 4px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.wp-block-quote.is-style-personal-reflection:before {
-    content: "💭" !important;
-    position: absolute !important;
-    top: 6px !important;
-    right: 8px !important;
-    font-size: 22px !important;
-    opacity: .6 !important;
-    line-height: 1 !important;
+.wp-block-quote.is-style-personal-reflection::before {
+    content: "💭";
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 22px;
+    opacity: 0.6;
+    line-height: 1;
 }
 
 .wp-block-quote.is-style-personal-reflection p {
-    font-style: normal !important;
-    font-size: 15px !important;
-    line-height: 1.7 !important;
-    margin: 0 !important;
-    color: var(--wp--preset--color--foreground) !important;
-    padding: 4px 3px !important;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--wp--preset--color--foreground);
+    padding: 4px 3px;
 }
 
 .wp-block-quote.is-style-personal-reflection cite {
-    display: none !important;
+    display: none;
 }

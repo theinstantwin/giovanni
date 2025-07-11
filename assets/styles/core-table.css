@@ -1,81 +1,82 @@
-/* Giovanni Table Styles */
+/* Giovanni Table Styles
+--------------------------------------------- */
 
 /* Striped Table Style */
 .wp-block-table.is-style-striped table {
-    border-collapse: collapse !important;
+    border-collapse: collapse;
 }
 
 .wp-block-table.is-style-striped tbody tr:nth-child(even) {
-    background: var(--wp--preset--color--gray-50) !important;
+    background: var(--wp--preset--color--gray-50);
 }
 
 .wp-block-table.is-style-striped tbody tr:hover {
-    background: var(--wp--preset--color--gray-100) !important;
+    background: var(--wp--preset--color--gray-100);
 }
 
 .wp-block-table.is-style-striped th {
-    background: var(--wp--preset--color--gray-100) !important;
-    border-bottom: 2px solid var(--wp--preset--color--gray-300) !important;
+    background: var(--wp--preset--color--gray-100);
+    border-bottom: 2px solid var(--wp--preset--color--gray-300);
 }
 
 .wp-block-table.is-style-striped td {
-    border-bottom: 1px solid var(--wp--preset--color--gray-200) !important;
+    border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 
 /* Minimal Table Style */
 .wp-block-table.is-style-minimal {
-    border: none !important;
-    background: none !important;
+    border: none;
+    background: none;
 }
 
 .wp-block-table.is-style-minimal table {
-    border: none !important;
-    background: none !important;
+    border: none;
+    background: none;
 }
 
 .wp-block-table.is-style-minimal th {
-    background: none !important;
-    border: none !important;
-    border-bottom: 2px solid var(--wp--preset--color--gray-300) !important;
-    font-weight: 600 !important;
-    color: var(--wp--preset--color--gray-700) !important;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--wp--preset--color--gray-300);
+    font-weight: 600;
+    color: var(--wp--preset--color--gray-700);
 }
 
 .wp-block-table.is-style-minimal td {
-    border: none !important;
-    border-bottom: 1px solid var(--wp--preset--color--gray-200) !important;
+    border: none;
+    border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 
 .wp-block-table.is-style-minimal tbody tr:hover {
-    background: var(--wp--preset--color--gray-50) !important;
+    background: var(--wp--preset--color--gray-50);
 }
 
 .wp-block-table.is-style-minimal tbody tr:last-child td {
-    border-bottom: none !important;
+    border-bottom: none;
 }
 
 /* Bordered Table Style */
 .wp-block-table.is-style-bordered {
-    border: 1px solid rgba(0,112,243,0.3) !important;
-    border-radius: 8px !important;
+    border: 1px solid rgba(0, 112, 243, 0.3);
+    border-radius: 8px;
 }
 
 .wp-block-table.is-style-bordered table {
-    border: none !important;
-    border-radius: 8px !important;
+    border: none;
+    border-radius: 8px;
 }
 
 .wp-block-table.is-style-bordered th {
-    background: rgba(0,112,243,0.08) !important;
-    color: var(--wp--preset--color--giovanni-blue) !important;
-    font-weight: 600 !important;
-    border-bottom: 1px solid rgba(0,112,243,0.3) !important;
+    background: rgba(0, 112, 243, 0.08);
+    color: var(--wp--preset--color--giovanni-blue);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 112, 243, 0.3);
 }
 
 .wp-block-table.is-style-bordered td {
-    border-bottom: 1px solid rgba(0,112,243,0.3) !important;
+    border-bottom: 1px solid rgba(0, 112, 243, 0.3);
 }
 
 .wp-block-table.is-style-bordered tbody tr:hover {
-    background: var(--wp--preset--color--gray-50) !important;
+    background: var(--wp--preset--color--gray-50);
 }
