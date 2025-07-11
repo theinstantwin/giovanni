@@ -51,10 +51,22 @@ Giovanni represents the foundation of this collection: elegant, sophisticated, a
 
 ## Installation
 
-1. **Download**: Get the latest release from the [Giovanni Theme repository](https://github.com/yourusername/giovanni)
-2. **Install**: Upload the theme zip file through WordPress Admin > Appearance > Themes > Add New
-3. **Activate**: Click "Activate" to enable the Giovanni theme
-4. **Customize**: Use the WordPress Site Editor to customize layouts and patterns
+### Method 1: Direct Download (Recommended)
+1. **Download**: Click the green "Code" button above and select "Download ZIP"
+2. **Install**: In WordPress Admin, go to Appearance > Themes > Add New > Upload Theme
+3. **Upload**: Select the downloaded ZIP file and click "Install Now"
+4. **Activate**: Click "Activate" to enable the Giovanni theme
+5. **Customize**: Use the WordPress Site Editor to customize layouts and patterns
+
+### Method 2: Git Clone (For Developers)
+```bash
+# Clone to your WordPress themes directory
+git clone https://github.com/theinstantwin/giovanni.git
+cd giovanni
+```
+
+### Method 3: WordPress.org (Coming Soon)
+Giovanni will be submitted to the WordPress.org theme directory for one-click installation.
 
 ## Block Patterns
 
@@ -149,9 +161,9 @@ This program is free software; you can redistribute it and/or modify it under th
 
 For support, please:
 
-1. Check the [documentation](https://github.com/yourusername/giovanni/wiki)
-2. Search [existing issues](https://github.com/yourusername/giovanni/issues)
-3. Create a new issue if needed
+1. Search [existing issues](https://github.com/theinstantwin/giovanni/issues)
+2. Create a new issue if you need help or found a bug
+3. Check the WordPress.org support forums (once theme is approved)
 
 ## Changelog
 
