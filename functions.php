@@ -161,6 +161,9 @@ function giovanni_register_block_styles() {
         // Note: Site Title styles are now loaded automatically from /assets/styles/core-site-title.css
         // Note: Post Terms styles are now loaded automatically from /assets/styles/core-post-terms.css
         // Note: Table styles are now loaded automatically from /assets/styles/core-table.css
+    } catch (Exception $e) {
+        error_log('Giovanni: Error registering block styles: ' . $e->getMessage());
+    }
 }
 add_action( 'init', 'giovanni_register_block_styles' );
 
