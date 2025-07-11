@@ -349,9 +349,6 @@
 		},
 		"elements": {
 			"link": {
-				"color": {
-					"text": "var(--wp--preset--color--giovanni-blue)"
-				},
 				"typography": {
 					"textDecoration": "none"
 				}
