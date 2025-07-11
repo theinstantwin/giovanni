@@ -3705,7 +3705,7 @@ function giovanni_header_pattern_styles() {
         }
         
         .wp-block-social-links.is-style-logos-only .wp-block-social-links-item .wp-block-social-link-anchor:hover {
-            color: var(--wp--preset--color--giovanni-blue) !important;
+            color: var(--wp--preset--color--foreground) !important;
             background: var(--wp--preset--color--gray-50) !important;
             transform: translateY(-1px) !important;
         }
