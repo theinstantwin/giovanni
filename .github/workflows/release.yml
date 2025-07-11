@@ -1,0 +1,26 @@
+name: Create Theme Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Create Release Zip
+        run: |
+          zip -r giovanni-theme.zip . \
+            --exclude ".git/*" ".github/*" ".claude/*" ".DS_Store" \
+            "*.log" "node_modules/*" ".distignore" "build-release.sh"
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: giovanni-theme.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

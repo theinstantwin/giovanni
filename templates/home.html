@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|24","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained","contentSize":"680px"}} -->
+<main class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--16);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--24);padding-left:var(--wp--preset--spacing--4)"><!-- wp:pattern {"slug":"giovanni/hero-section"} /-->
+
+<!-- wp:spacer {"height":"var:preset|spacing|16"} -->
+<div style="height:var(--wp--preset--spacing--16)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"600","lineHeight":"1.2","letterSpacing":"-0.015em"},"spacing":{"margin":{"bottom":"var:preset|spacing|12"}}},"fontSize":"2xl"} -->
+<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--12);font-weight:600;letter-spacing:-0.015em;line-height:1.2">Recent thoughts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:query {"queryId":1,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|12"}}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6","padding":{"bottom":"var:preset|spacing|12"}},"border":{"bottom":{"color":"var:preset|color|gray-200","width":"1px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--gray-200);border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--12)"><!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"600","lineHeight":"1.2","letterSpacing":"-0.015em"},"spacing":{"margin":{"bottom":"var:preset|spacing|3"}}},"fontSize":"2xl"} /-->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group"><!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gray-500","fontSize":"sm"} /-->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gray-500","fontSize":"sm"} -->
+<p class="has-gray-500-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">•</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gray-500","fontSize":"sm"} -->
+<p class="has-gray-500-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">2 min read</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:post-excerpt {"excerptLength":25,"style":{"spacing":{"margin":{"top":"var:preset|spacing|4","bottom":"0"}}},"fontSize":"md"} /-->
+
+<!-- wp:post-terms {"term":"category","style":{"spacing":{"margin":{"top":"var:preset|spacing|4","bottom":"0"}}},"textColor":"gray-500","fontSize":"sm"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|16"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--16)"><!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"typography":{"fontWeight":"500"},"spacing":{"padding":{"left":"var:preset|spacing|8","right":"var:preset|spacing|8","top":"var:preset|spacing|3","bottom":"var:preset|spacing|3"}},"border":{"radius":"6px"}},"fontSize":"md"} -->
+<div class="wp-block-button has-md-font-size"><a class="wp-block-button__link wp-element-button" href="/blog" style="border-radius:6px;font-weight:500;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--8)">View all posts →</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
