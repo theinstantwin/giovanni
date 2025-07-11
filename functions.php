@@ -302,12 +302,6 @@ function giovanni_register_block_styles() {
             'inline_style' => '.wp-block-site-title.is-style-brand-name a{font-weight:700!important;font-size:1.5em!important;color:var(--wp--preset--color--giovanni-blue)!important;text-decoration:none!important;letter-spacing:-0.05em!important;line-height:1.1!important;text-transform:uppercase!important;transition:all 0.2s ease!important}.wp-block-site-title.is-style-brand-name a:hover{color:var(--wp--preset--color--gray-800)!important;transform:scale(1.05)!important}.wp-block-site-title.is-style-brand-name{display:inline-block!important}',
         ) );
         
-        // Register Floating Circles social-links
-        register_block_style( 'core/social-links', array(
-            'name' => 'floating-circles',
-            'label' => __( 'Floating Circles', 'giovanni' ),
-            'inline_style' => '.wp-block-social-links.is-style-floating-circles .wp-block-social-link{border-radius:50%!important;background:var(--wp--preset--color--gray-50)!important;border:1px solid var(--wp--preset--color--gray-200)!important;transition:all 0.3s ease!important;box-shadow:0 2px 4px rgba(0,0,0,0.05)!important}.wp-block-social-links.is-style-floating-circles .wp-block-social-link:hover{background:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;border-color:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;transform:translateY(-4px)!important;box-shadow:0 8px 16px rgba(0,112,243,0.2)!important}.wp-block-social-links.is-style-floating-circles .wp-block-social-link a{color:var(--wp--preset--color--foreground)!important;transition:color 0.3s ease!important}.wp-block-social-links.is-style-floating-circles .wp-block-social-link:hover a{color:var(--wp--preset--color--background)!important}',
-        ) );
         
         // Register Pill Badge category style
         register_block_style( 'core/post-terms', array(
