@@ -3905,15 +3905,18 @@ function giovanni_enqueue_custom_block_styles() {
         $block_name = str_replace( 'core-', 'core/', $filename );
         
         // Only enqueue if the block exists
-        if ( wp_block_type_registry()->is_registered( $block_name ) ) {
-            wp_enqueue_block_style(
-                $block_name,
-                array(
-                    'handle' => "giovanni-block-{$filename}",
-                    'src'    => get_theme_file_uri( "assets/styles/{$filename}.css" ),
-                    'path'   => get_theme_file_path( "assets/styles/{$filename}.css" ),
-                )
-            );
+        if ( function_exists( 'wp_enqueue_block_style' ) && class_exists( 'WP_Block_Type_Registry' ) ) {
+            $registry = WP_Block_Type_Registry::get_instance();
+            if ( $registry->is_registered( $block_name ) ) {
+                wp_enqueue_block_style(
+                    $block_name,
+                    array(
+                        'handle' => "giovanni-block-{$filename}",
+                        'src'    => get_theme_file_uri( "assets/styles/{$filename}.css" ),
+                        'path'   => get_theme_file_path( "assets/styles/{$filename}.css" ),
+                    )
+                );
+            }
         }
     }
 }
