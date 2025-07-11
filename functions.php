@@ -3687,28 +3687,6 @@ function giovanni_header_pattern_styles() {
             gap: var(--wp--preset--spacing--8);
         }
         
-        /* Social links integration in headers */
-        .wp-block-social-links.is-style-logos-only {
-            flex-wrap: nowrap;
-        }
-        
-        .wp-block-social-links.is-style-logos-only .wp-block-social-links-item {
-            margin: 0 !important;
-        }
-        
-        .wp-block-social-links.is-style-logos-only .wp-block-social-links-item .wp-block-social-link-anchor {
-            padding: 6px !important;
-            color: var(--wp--preset--color--gray-500) !important;
-            background: transparent !important;
-            border-radius: 50% !important;
-            transition: all 0.15s ease !important;
-        }
-        
-        .wp-block-social-links.is-style-logos-only .wp-block-social-links-item .wp-block-social-link-anchor:hover {
-            color: var(--wp--preset--color--foreground) !important;
-            background: var(--wp--preset--color--gray-50) !important;
-            transform: translateY(-1px) !important;
-        }
         
         /* Header border styling */
         .wp-block-group.alignfull[style*="border-bottom"] {
@@ -3728,10 +3706,6 @@ function giovanni_header_pattern_styles() {
                 gap: var(--wp--preset--spacing--6);
             }
             
-            /* Social links mobile */
-            .wp-block-social-links.is-style-logos-only {
-                margin-top: var(--wp--preset--spacing--3);
-            }
             
             /* Split header mobile - stack elements */
             .wp-block-group[style*="justify-content:space-between"] {
@@ -3751,10 +3725,6 @@ function giovanni_header_pattern_styles() {
                 font-size: var(--wp--preset--font-size--lg) !important;
             }
             
-            /* Hide social links on very small screens if needed */
-            .wp-block-social-links.is-style-logos-only {
-                display: none;
-            }
         }
         
         /* Dark mode support for header patterns */
@@ -3763,9 +3733,6 @@ function giovanni_header_pattern_styles() {
                 border-bottom-color: var(--wp--preset--color--gray-700) !important;
             }
             
-            .wp-block-social-links.is-style-logos-only .wp-block-social-links-item .wp-block-social-link-anchor:hover {
-                background: var(--wp--preset--color--gray-800) !important;
-            }
         }
     </style>
     <?php
