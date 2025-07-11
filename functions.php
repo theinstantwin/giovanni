@@ -56,24 +56,6 @@ function giovanni_add_custom_link_styles() {
         .wp-block-post-title a:focus {
             text-decoration-thickness: 2px;
         }
-
-        /* Social media icons - let them inherit theme colors properly */
-        .wp-block-social-links {
-            color: inherit !important;
-        }
-        
-        .wp-block-social-links .wp-block-social-link-anchor {
-            color: inherit !important;
-        }
-        
-        .wp-block-social-links .wp-block-social-link-anchor svg {
-            fill: currentColor !important;
-        }
-        
-        /* Ensure group blocks don't force colors on social icons */
-        .wp-block-group .wp-block-social-links {
-            color: inherit !important;
-        }
     ';
     wp_add_inline_style( 'giovanni-style', $custom_css );
 }
