@@ -28,7 +28,7 @@
             <div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
             
-            <!-- wp:social-links {"iconColor":"gray-500","iconColorValue":"#737373","size":"has-small-icon-size","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"left":"var(--wp--preset--spacing--3)"}}}} -->
+            <!-- wp:social-links {"iconColor":"background","iconColorValue":"#ffffff","size":"has-small-icon-size","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"left":"var(--wp--preset--spacing--3)"}}}} -->
             <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only">
                 <!-- wp:social-link {"url":"https://twitter.com/yourusername","service":"twitter"} /-->
                 <!-- wp:social-link {"url":"https://github.com/yourusername","service":"github"} /-->
