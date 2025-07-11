@@ -158,66 +158,9 @@ function giovanni_register_block_styles() {
         
         // Note: Group styles are now loaded automatically from /assets/styles/core-group.css
         
-        // Register Logo Style site-title
-        register_block_style( 'core/site-title', array(
-            'name' => 'logo-style',
-            'label' => __( 'Logo Style', 'giovanni' ),
-            'inline_style' => '.wp-block-site-title.is-style-logo-style{background:var(--wp--preset--color--gray-50)!important;padding:12px 20px!important;border-radius:8px!important;border:1px solid var(--wp--preset--color--gray-200)!important;display:inline-block!important;transition:all 0.2s ease!important}.wp-block-site-title.is-style-logo-style:hover{background:var(--wp--preset--color--gray-100)!important;border-color:var(--wp--preset--color--gray-300)!important;transform:translateY(-1px)!important}.wp-block-site-title.is-style-logo-style a{font-weight:600!important;color:var(--wp--preset--color--foreground)!important;text-decoration:none!important;letter-spacing:-0.025em!important}.wp-block-site-title.is-style-logo-style a:hover{color:var(--wp--preset--color--giovanni-blue)!important}',
-        ) );
-        
-        // Register Brand Name site-title
-        register_block_style( 'core/site-title', array(
-            'name' => 'brand-name',
-            'label' => __( 'Brand Name', 'giovanni' ),
-            'inline_style' => '.wp-block-site-title.is-style-brand-name a{font-weight:700!important;font-size:1.5em!important;color:var(--wp--preset--color--giovanni-blue)!important;text-decoration:none!important;letter-spacing:-0.05em!important;line-height:1.1!important;text-transform:uppercase!important;transition:all 0.2s ease!important}.wp-block-site-title.is-style-brand-name a:hover{color:var(--wp--preset--color--gray-800)!important;transform:scale(1.05)!important}.wp-block-site-title.is-style-brand-name{display:inline-block!important}',
-        ) );
-        
-        
-        // Register Pill Badge category style
-        register_block_style( 'core/post-terms', array(
-            'name' => 'pill-badge',
-            'label' => __( 'Pill Badge', 'giovanni' ),
-            'inline_style' => '.wp-block-post-terms.is-style-pill-badge a{display:inline-block!important;padding:4px 8px!important;margin:0 4px 4px 0!important;border-radius:12px!important;background:var(--wp--preset--color--gray-100)!important;color:var(--wp--preset--color--gray-700)!important;font-size:12px!important;font-weight:500!important;text-transform:uppercase!important;text-decoration:none!important;letter-spacing:0.5px!important;transition:all 0.15s ease!important;border:1px solid transparent!important}.wp-block-post-terms.is-style-pill-badge a:hover{background:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;color:var(--wp--preset--color--background)!important;transform:translateY(-1px)!important;box-shadow:0 2px 4px rgba(0,0,0,0.1)!important}@media (prefers-color-scheme:dark){.wp-block-post-terms.is-style-pill-badge a{background:var(--wp--preset--color--gray-800)!important;color:var(--wp--preset--color--gray-300)!important}.wp-block-post-terms.is-style-pill-badge a:hover{background:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;color:var(--wp--preset--color--background)!important}}',
-        ) );
-        
-        // Register Accent Tag category style
-        register_block_style( 'core/post-terms', array(
-            'name' => 'accent-tag',
-            'label' => __( 'Accent Tag', 'giovanni' ),
-            'inline_style' => '.wp-block-post-terms.is-style-accent-tag a{display:inline-block!important;padding:6px 12px!important;margin:0 6px 6px 0!important;border-radius:4px!important;background:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;color:var(--wp--preset--color--background)!important;font-size:13px!important;font-weight:600!important;text-decoration:none!important;transition:all 0.15s ease!important;border:1px solid transparent!important}.wp-block-post-terms.is-style-accent-tag a:hover{background:transparent!important;color:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;border-color:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;transform:translateY(-1px)!important;box-shadow:0 2px 6px rgba(0,112,243,0.15)!important}.wp-block-post-terms.is-style-accent-tag{line-height:1!important}@media (max-width:768px){.wp-block-post-terms.is-style-accent-tag a{font-size:12px!important;padding:5px 10px!important;margin:0 4px 4px 0!important}}',
-        ) );
-        
-        // Register Ghost Outline category style
-        register_block_style( 'core/post-terms', array(
-            'name' => 'ghost-outline',
-            'label' => __( 'Ghost Outline', 'giovanni' ),
-            'inline_style' => '.wp-block-post-terms.is-style-ghost-outline a{display:inline-block!important;padding:6px 12px!important;margin:0 6px 6px 0!important;border-radius:6px!important;background:transparent!important;color:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;font-size:13px!important;font-weight:500!important;text-decoration:none!important;transition:all 0.15s ease!important;border:1px solid var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important}.wp-block-post-terms.is-style-ghost-outline a:hover{background:var(--wp--preset--color--giovanni-blue,var(--wp--preset--color--radical-red,#0070f3))!important;color:var(--wp--preset--color--background)!important;transform:translateY(-1px)!important;box-shadow:0 2px 6px rgba(0,112,243,0.2)!important}.wp-block-post-terms.is-style-ghost-outline{line-height:1!important}@media (max-width:768px){.wp-block-post-terms.is-style-ghost-outline a{font-size:12px!important;padding:5px 10px!important;margin:0 4px 4px 0!important}}@media (prefers-color-scheme:dark){.wp-block-post-terms.is-style-ghost-outline a:hover{box-shadow:0 2px 6px rgba(255,51,95,0.3)!important}}',
-        ) );
-        
-        // Register Striped table style
-        register_block_style( 'core/table', array(
-            'name' => 'striped',
-            'label' => __( 'Striped', 'giovanni' ),
-            'inline_style' => '.wp-block-table.is-style-striped table{border-collapse:collapse!important}.wp-block-table.is-style-striped tbody tr:nth-child(even){background:var(--wp--preset--color--gray-50)!important}.wp-block-table.is-style-striped tbody tr:hover{background:var(--wp--preset--color--gray-100)!important}.wp-block-table.is-style-striped th{background:var(--wp--preset--color--gray-100)!important;border-bottom:2px solid var(--wp--preset--color--gray-300)!important}.wp-block-table.is-style-striped td{border-bottom:1px solid var(--wp--preset--color--gray-200)!important}',
-        ) );
-        
-        // Register Minimal table style
-        register_block_style( 'core/table', array(
-            'name' => 'minimal',
-            'label' => __( 'Minimal', 'giovanni' ),
-            'inline_style' => '.wp-block-table.is-style-minimal{border:none!important;background:none!important}.wp-block-table.is-style-minimal table{border:none!important;background:none!important}.wp-block-table.is-style-minimal th{background:none!important;border:none!important;border-bottom:2px solid var(--wp--preset--color--gray-300)!important;font-weight:600!important;color:var(--wp--preset--color--gray-700)!important}.wp-block-table.is-style-minimal td{border:none!important;border-bottom:1px solid var(--wp--preset--color--gray-200)!important}.wp-block-table.is-style-minimal tbody tr:hover{background:var(--wp--preset--color--gray-50)!important}.wp-block-table.is-style-minimal tbody tr:last-child td{border-bottom:none!important}',
-        ) );
-        
-        // Register Bordered table style (light blue accent)
-        register_block_style( 'core/table', array(
-            'name' => 'bordered',
-            'label' => __( 'Bordered', 'giovanni' ),
-            'inline_style' => '.wp-block-table.is-style-bordered{border:1px solid rgba(0,112,243,0.3)!important;border-radius:8px!important}.wp-block-table.is-style-bordered table{border:none!important;border-radius:8px!important}.wp-block-table.is-style-bordered th{background:rgba(0,112,243,0.08)!important;color:var(--wp--preset--color--giovanni-blue)!important;font-weight:600!important;border-bottom:1px solid rgba(0,112,243,0.3)!important}.wp-block-table.is-style-bordered td{border-bottom:1px solid rgba(0,112,243,0.3)!important}.wp-block-table.is-style-bordered tbody tr:hover{background:var(--wp--preset--color--gray-50)!important}',
-        ) );
-    } catch (Exception $e) {
-        // Log error but don't break site
-        error_log('Giovanni Theme: Block style registration failed - ' . $e->getMessage());
-    }
+        // Note: Site Title styles are now loaded automatically from /assets/styles/core-site-title.css
+        // Note: Post Terms styles are now loaded automatically from /assets/styles/core-post-terms.css
+        // Note: Table styles are now loaded automatically from /assets/styles/core-table.css
 }
 add_action( 'init', 'giovanni_register_block_styles' );
 
