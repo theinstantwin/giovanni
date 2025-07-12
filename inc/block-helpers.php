@@ -107,6 +107,14 @@ function giovanni_clear_block_style_cache() {
         unregister_block_style( 'core/group', 'blog-roll-card' );
         unregister_block_style( 'core/group', 'longform-reading' );
         unregister_block_style( 'core/group', 'form-container' );
+        unregister_block_style( 'core/table', 'striped' );
+        unregister_block_style( 'core/table', 'minimal' );
+        unregister_block_style( 'core/table', 'bordered' );
+        unregister_block_style( 'core/post-terms', 'pill-badge' );
+        unregister_block_style( 'core/post-terms', 'accent-tag' );
+        unregister_block_style( 'core/post-terms', 'ghost-outline' );
+        unregister_block_style( 'core/site-title', 'logo-style' );
+        unregister_block_style( 'core/site-title', 'brand-name' );
     }
 }
 
@@ -217,6 +225,49 @@ function giovanni_register_block_styles() {
         register_block_style('core/group', [
             'name' => 'form-container',
             'label' => __('Form Container', 'giovanni'),
+        ]);
+
+        // Register Table Block Styles
+        register_block_style('core/table', [
+            'name' => 'striped',
+            'label' => __('Striped', 'giovanni'),
+        ]);
+
+        register_block_style('core/table', [
+            'name' => 'minimal',
+            'label' => __('Minimal', 'giovanni'),
+        ]);
+
+        register_block_style('core/table', [
+            'name' => 'bordered',
+            'label' => __('Bordered', 'giovanni'),
+        ]);
+
+        // Register Post Terms Block Styles
+        register_block_style('core/post-terms', [
+            'name' => 'pill-badge',
+            'label' => __('Pill Badge', 'giovanni'),
+        ]);
+
+        register_block_style('core/post-terms', [
+            'name' => 'accent-tag',
+            'label' => __('Accent Tag', 'giovanni'),
+        ]);
+
+        register_block_style('core/post-terms', [
+            'name' => 'ghost-outline',
+            'label' => __('Ghost Outline', 'giovanni'),
+        ]);
+
+        // Register Site Title Block Styles
+        register_block_style('core/site-title', [
+            'name' => 'logo-style',
+            'label' => __('Logo Style', 'giovanni'),
+        ]);
+
+        register_block_style('core/site-title', [
+            'name' => 'brand-name',
+            'label' => __('Brand Name', 'giovanni'),
         ]);
 
     } catch (Exception $e) {
