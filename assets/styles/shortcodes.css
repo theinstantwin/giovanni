@@ -20,8 +20,8 @@
     border-radius: 6px;
     margin-bottom: 8px;
     padding: 12px 16px;
-    background: var(--wp--preset--color--background);
-    border: 1px solid var(--wp--preset--color--gray-100);
+    background: transparent;
+    border: none;
     transition: all 0.15s ease;
     display: flex;
     align-items: center;
@@ -30,8 +30,7 @@
 }
 
 .blog-post-item:hover {
-    background: var(--wp--preset--color--gray-50);
-    border-color: var(--wp--preset--color--gray-200);
+    background: transparent;
     transform: translateX(4px);
 }
 
@@ -83,12 +82,7 @@
 
 /* Dark Theme Support */
 @media (prefers-color-scheme: dark) {
-    .blog-post-item {
-        border-color: var(--wp--preset--color--gray-700);
-    }
-    
     .blog-post-item:hover {
-        background: var(--wp--preset--color--gray-800);
-        border-color: var(--wp--preset--color--gray-600);
+        background: transparent;
     }
 }
