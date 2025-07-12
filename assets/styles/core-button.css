@@ -40,14 +40,15 @@
 /* Arrow Light Button */
 .wp-block-button.is-style-arrow-light .wp-block-button__link {
     position: relative;
-    background: var(--wp--preset--color--gray-100);
-    border: 1px solid var(--wp--preset--color--gray-200);
+    background: var(--wp--preset--color--background);
+    border: 2px solid var(--wp--preset--color--muted, var(--wp--preset--color--gray-300));
     color: var(--wp--preset--color--foreground);
     padding-right: 44px;
     transition: all 0.2s ease;
     border-radius: 6px;
     overflow: hidden;
     min-width: 120px;
+    text-decoration: none !important;
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link::after {
@@ -61,8 +62,10 @@
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover {
-    background: var(--wp--preset--color--gray-200);
-    border-color: var(--wp--preset--color--gray-300);
+    background: var(--wp--preset--color--subtle, var(--wp--preset--color--gray-100));
+    border-color: var(--wp--preset--color--secondary, var(--wp--preset--color--gray-400));
+    text-decoration: none !important;
+    transform: translateY(-1px);
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover::after {
