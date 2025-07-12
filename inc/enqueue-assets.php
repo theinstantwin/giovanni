@@ -182,6 +182,16 @@ function giovanni_enqueue_custom_block_styles() {
             continue;
         }
         
+        if ( $filename === 'advanced-interactions' ) {
+            wp_enqueue_style(
+                'giovanni-advanced-interactions',
+                get_theme_file_uri( "assets/styles/{$filename}.css" ),
+                array( 'giovanni-style' ),
+                wp_get_theme()->get('Version')
+            );
+            continue;
+        }
+        
         $block_name = str_replace( 'core-', 'core/', $filename );
         
         // Only enqueue if the block exists
