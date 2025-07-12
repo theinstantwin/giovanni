@@ -187,33 +187,23 @@
     border-color: var(--wp--preset--color--giovanni-blue, #0070f3);
 }
 
-/* Force dropdown style instead of modal */
-.wp-block-navigation__responsive-container.has-modal-open {
-    display: none !important;
-}
-
-.wp-block-navigation__responsive-dialog {
-    display: none !important;
-}
-
-/* Ensure mobile menu positioning */
+/* Mobile Navigation - Work with WordPress defaults */
 @media (max-width: 599px) {
-    /* Hide any modal overlay */
-    .wp-block-navigation .wp-block-navigation__responsive-dialog {
-        display: none !important;
+    /* Style the responsive container when open */
+    .wp-block-navigation__responsive-container.is-menu-open {
+        background-color: var(--wp--preset--color--background);
+        border: 1px solid var(--wp--preset--color--gray-200, #e5e5e5);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        padding: var(--wp--preset--spacing--4, 1rem);
     }
     
-    /* Force dropdown positioning within viewport */
-    .wp-block-navigation__responsive-container.is-menu-open {
-        position: absolute !important;
-        top: 100% !important;
-        right: 0 !important;
-        left: auto !important;
-        z-index: 100000 !important;
-        width: 280px !important;
-        max-width: calc(100vw - 2rem) !important;
-        transform: none !important;
-        height: auto !important;
-        margin-right: var(--wp--preset--spacing--4, 1rem);
+    /* If WordPress uses modal, style it properly */
+    .wp-block-navigation__responsive-dialog {
+        background-color: var(--wp--preset--color--background);
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        padding: var(--wp--preset--spacing--4, 1rem);
     }
 }
