@@ -29,8 +29,8 @@
             <div class="wp-block-button has-md-font-size"><a class="wp-block-button__link has-background-color has-giovanni-blue-background-color has-text-color has-background wp-element-button" href="#">Get in touch</a></div>
             <!-- /wp:button -->
 
-            <!-- wp:button {"className":"is-style-outline"} -->
-            <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">What I'm up to →</a></div>
+            <!-- wp:button {"className":"is-style-arrow-light"} -->
+            <div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#">What I'm up to</a></div>
             <!-- /wp:button -->
         </div>
         <!-- /wp:buttons -->

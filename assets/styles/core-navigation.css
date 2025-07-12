@@ -1,6 +1,16 @@
 /* Giovanni Navigation Styles
 --------------------------------------------- */
 
+/* Default Navigation Style */
+.wp-block-navigation .current-menu-item a {
+    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    font-weight: 600;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover {
+    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+}
+
 /* Underline Navigation Style */
 .wp-block-navigation.is-style-underline .wp-block-navigation-item a {
     position: relative;
@@ -25,7 +35,8 @@
     width: 100%;
 }
 
-.wp-block-navigation.is-style-underline .wp-block-navigation-item a:hover {
+.wp-block-navigation.is-style-underline .wp-block-navigation-item a:hover,
+.wp-block-navigation.is-style-underline .current-menu-item a {
     color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
 }
 

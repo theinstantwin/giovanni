@@ -19,8 +19,8 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Take Action</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-arrow-dark"} -->
+<div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#">Take Action</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

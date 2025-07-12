@@ -23,8 +23,8 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-dark"} -->
-<div class="wp-block-button is-style-dark"><a class="wp-block-button__link wp-element-button" href="#">View Project</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-arrow-dark"} -->
+<div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#">View Project</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-ghost"} -->
