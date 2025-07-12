@@ -187,12 +187,8 @@
     border-color: var(--wp--preset--color--giovanni-blue, #0070f3);
 }
 
-/* Ensure mobile menu works properly */
+/* Ensure mobile menu positioning */
 @media (max-width: 599px) {
-    .wp-block-navigation:not(.has-modal-open) .wp-block-navigation__responsive-container {
-        display: none;
-    }
-    
     .wp-block-navigation__responsive-container.is-menu-open {
         position: absolute;
         top: 100%;
