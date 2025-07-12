@@ -74,34 +74,6 @@ add_action( 'wp_enqueue_scripts', 'giovanni_theme_enqueue_scripts' );
  */
 function giovanni_add_custom_link_styles() {
     $custom_css = '
-        /* Clean links - no font weight changes or movement */
-        .entry-content p a, 
-        .entry-content li a, 
-        .entry-content blockquote a,
-        .wp-block-post-title a {
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 2px;
-            font-weight: inherit;
-            transition: text-decoration-thickness 0.15s ease;
-        }
-
-        /* Subtle hover effect - no movement */
-        .entry-content p a:hover,
-        .entry-content p a:focus,
-        .entry-content li a:hover,
-        .entry-content li a:focus,
-        .entry-content blockquote a:hover,
-        .entry-content blockquote a:focus,
-        .wp-block-post-title a:hover,
-        .wp-block-post-title a:focus {
-            text-decoration-thickness: 2px;
-        }
-
-        /* Post navigation uses same hover as footer links */
-        .wp-block-post-navigation-link a {
-            text-decoration: none;
-        }
 
         /* Mobile layout fixes - add proper padding and wider content */
         @media (max-width: 768px) {
@@ -189,10 +161,20 @@ function giovanni_enqueue_custom_block_styles() {
     foreach ( $files as $file ) {
         $filename = basename( $file, '.css' );
         
-        // Handle shortcodes CSS separately
+        // Handle non-block CSS files separately
         if ( $filename === 'shortcodes' ) {
             wp_enqueue_style(
                 'giovanni-shortcodes',
+                get_theme_file_uri( "assets/styles/{$filename}.css" ),
+                array( 'giovanni-style' ),
+                wp_get_theme()->get('Version')
+            );
+            continue;
+        }
+        
+        if ( $filename === 'core-links' ) {
+            wp_enqueue_style(
+                'giovanni-links',
                 get_theme_file_uri( "assets/styles/{$filename}.css" ),
                 array( 'giovanni-style' ),
                 wp_get_theme()->get('Version')
