@@ -98,22 +98,9 @@ function giovanni_add_custom_link_styles() {
             text-decoration-thickness: 2px;
         }
 
-        /* Clean post navigation hover effects */
+        /* Post navigation uses same hover as footer links */
         .wp-block-post-navigation-link a {
             text-decoration: none;
-            transition: color 0.15s ease, transform 0.15s ease;
-        }
-
-        .wp-block-post-navigation-link a:hover,
-        .wp-block-post-navigation-link a:focus {
-            color: var(--wp--preset--color--giovanni-blue, #0070f3);
-            transform: translateX(2px);
-        }
-
-        /* Previous link moves slightly left on hover */
-        .wp-block-post-navigation-link[data-type="previous"] a:hover,
-        .wp-block-post-navigation-link[data-type="previous"] a:focus {
-            transform: translateX(-2px);
         }
 
         /* Mobile layout fixes - add proper padding and wider content */
