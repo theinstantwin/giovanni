@@ -71,9 +71,9 @@ function giovanni_posts_by_month_shortcode() {
             $post_url = get_permalink($post->ID);
             $post_title = get_the_title($post->ID);
             
-            $output .= '<div class="blog-post-item" style="border-radius:6px;margin-bottom:8px;padding:8px 12px;">';
-            $output .= '<a href="' . esc_url($post_url) . '" style="text-decoration:none;color:var(--wp--preset--color--foreground);font-size:18px;font-weight:500;line-height:1.4;flex:1;margin-right:16px;">' . esc_html($post_title) . '</a>';
-            $output .= '<span style="color:var(--wp--preset--color--gray-500);font-size:14px;flex-shrink:0;white-space:nowrap;">' . esc_html($post_date) . '</span>';
+            $output .= '<div class="blog-post-item">';
+            $output .= '<a href="' . esc_url($post_url) . '">' . esc_html($post_title) . '</a>';
+            $output .= '<span class="post-date">' . esc_html($post_date) . '</span>';
             $output .= '</div>';
         }
         

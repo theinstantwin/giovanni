@@ -114,6 +114,18 @@ function giovanni_enqueue_custom_block_styles() {
     
     foreach ( $files as $file ) {
         $filename = basename( $file, '.css' );
+        
+        // Handle shortcodes CSS separately
+        if ( $filename === 'shortcodes' ) {
+            wp_enqueue_style(
+                'giovanni-shortcodes',
+                get_theme_file_uri( "assets/styles/{$filename}.css" ),
+                array( 'giovanni-style' ),
+                wp_get_theme()->get('Version')
+            );
+            continue;
+        }
+        
         $block_name = str_replace( 'core-', 'core/', $filename );
         
         // Only enqueue if the block exists
