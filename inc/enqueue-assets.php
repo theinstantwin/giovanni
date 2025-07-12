@@ -126,6 +126,45 @@ function giovanni_add_custom_link_styles() {
                 padding-left: var(--wp--preset--spacing--2, 0.5rem);
                 padding-right: var(--wp--preset--spacing--2, 0.5rem);
             }
+            
+            /* Blog listing mobile improvements */
+            .wp-block-query .wp-block-post {
+                padding: var(--wp--preset--spacing--4, 1rem) 0;
+                border-bottom: 1px solid var(--wp--preset--color--gray-200, #e5e5e5);
+                margin-bottom: 0;
+            }
+            
+            .wp-block-query .wp-block-post:last-child {
+                border-bottom: none;
+            }
+            
+            /* Month headers more compact on mobile */
+            .wp-block-query h2,
+            .wp-block-heading {
+                font-size: var(--wp--preset--font-size--lg, 1.25rem) !important;
+                margin: var(--wp--preset--spacing--6, 1.5rem) 0 var(--wp--preset--spacing--4, 1rem) 0 !important;
+            }
+            
+            /* Post titles larger and better spacing */
+            .wp-block-post-title {
+                font-size: var(--wp--preset--font-size--md, 1.125rem) !important;
+                line-height: 1.4 !important;
+                margin-bottom: var(--wp--preset--spacing--2, 0.5rem) !important;
+            }
+            
+            /* Post dates smaller and consistent */
+            .wp-block-post-date {
+                font-size: var(--wp--preset--font-size--sm, 0.875rem) !important;
+                color: var(--wp--preset--color--gray-500, #737373) !important;
+            }
+            
+            /* Improve touch targets */
+            .wp-block-post-title a {
+                display: block;
+                padding: var(--wp--preset--spacing--2, 0.5rem) 0;
+                min-height: 44px;
+                line-height: 1.4;
+            }
         }
     ';
     wp_add_inline_style( 'giovanni-style', $custom_css );
