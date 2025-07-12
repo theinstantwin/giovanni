@@ -70,7 +70,7 @@ function giovanni_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'giovanni_theme_enqueue_scripts' );
 
 /**
- * Add custom link styles to prevent layout shifts
+ * Add custom link styles and mobile layout fixes
  */
 function giovanni_add_custom_link_styles() {
     $custom_css = '
@@ -96,6 +96,29 @@ function giovanni_add_custom_link_styles() {
         .wp-block-post-title a:hover,
         .wp-block-post-title a:focus {
             text-decoration-thickness: 2px;
+        }
+
+        /* Mobile layout fixes - add proper padding to main content areas */
+        @media (max-width: 768px) {
+            .wp-site-blocks {
+                padding-left: var(--wp--preset--spacing--4, 1rem);
+                padding-right: var(--wp--preset--spacing--4, 1rem);
+            }
+            
+            /* Ensure constrained content has proper mobile padding */
+            .wp-block-group.is-layout-constrained,
+            .is-layout-constrained > * {
+                padding-left: var(--wp--preset--spacing--4, 1rem);
+                padding-right: var(--wp--preset--spacing--4, 1rem);
+            }
+            
+            /* Fix for edge-to-edge content that needs spacing */
+            .wp-block-post-content,
+            .wp-block-query,
+            .wp-block-navigation {
+                padding-left: var(--wp--preset--spacing--4, 1rem);
+                padding-right: var(--wp--preset--spacing--4, 1rem);
+            }
         }
     ';
     wp_add_inline_style( 'giovanni-style', $custom_css );
