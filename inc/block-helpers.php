@@ -81,11 +81,32 @@ add_action( 'init', 'giovanni_register_pattern_categories' );
 function giovanni_clear_block_style_cache() {
     // Force WordPress to re-register block styles by clearing any cached styles
     if ( function_exists( 'unregister_block_style' ) ) {
-        // Clear any potentially cached quote styles
+        // Clear old incorrect style names that might be cached
+        unregister_block_style( 'core/navigation', 'link-hover-grow' );
+        unregister_block_style( 'core/navigation', 'link-hover-underline' );
         unregister_block_style( 'core/quote', 'reflection' );
-        unregister_block_style( 'core/quote', 'personal-reflection' );
+        unregister_block_style( 'core/image', 'duotone-highlight' );
+        unregister_block_style( 'core/group', 'content-sidebar' );
+        
+        // Clear any potentially cached styles for re-registration
+        unregister_block_style( 'core/button', 'ghost' );
+        unregister_block_style( 'core/button', 'dark' );
+        unregister_block_style( 'core/button', 'arrow-light' );
+        unregister_block_style( 'core/button', 'arrow-dark' );
+        unregister_block_style( 'core/navigation', 'underline' );
+        unregister_block_style( 'core/navigation', 'button' );
+        unregister_block_style( 'core/navigation', 'pill' );
         unregister_block_style( 'core/quote', 'book-quote' );
-        unregister_block_style( 'core/quote', 'book-quote-alt' );
+        unregister_block_style( 'core/quote', 'personal-reflection' );
+        unregister_block_style( 'core/image', 'polaroid-static' );
+        unregister_block_style( 'core/image', 'rounded' );
+        unregister_block_style( 'core/group', 'card' );
+        unregister_block_style( 'core/group', 'portfolio-card' );
+        unregister_block_style( 'core/group', 'service-card' );
+        unregister_block_style( 'core/group', 'company-card' );
+        unregister_block_style( 'core/group', 'blog-roll-card' );
+        unregister_block_style( 'core/group', 'longform-reading' );
+        unregister_block_style( 'core/group', 'form-container' );
     }
 }
 
@@ -126,29 +147,76 @@ function giovanni_register_block_styles() {
 
         // Register Navigation Block Styles
         register_block_style('core/navigation', [
-            'name' => 'link-hover-grow',
-            'label' => __('Link Hover Grow', 'giovanni'),
+            'name' => 'underline',
+            'label' => __('Underline', 'giovanni'),
         ]);
 
         register_block_style('core/navigation', [
-            'name' => 'link-hover-underline',
-            'label' => __('Link Hover Underline', 'giovanni'),
+            'name' => 'button',
+            'label' => __('Button', 'giovanni'),
         ]);
 
-        // Register other block styles that were missing
+        register_block_style('core/navigation', [
+            'name' => 'pill',
+            'label' => __('Pill', 'giovanni'),
+        ]);
+
+        // Register Quote Block Styles
         register_block_style('core/quote', [
-            'name' => 'reflection',
-            'label' => __('Reflection', 'giovanni'),
+            'name' => 'book-quote',
+            'label' => __('Book Quote', 'giovanni'),
+        ]);
+
+        register_block_style('core/quote', [
+            'name' => 'personal-reflection',
+            'label' => __('Personal Reflection', 'giovanni'),
+        ]);
+
+        // Register Image Block Styles
+        register_block_style('core/image', [
+            'name' => 'polaroid-static',
+            'label' => __('Polaroid Static', 'giovanni'),
         ]);
 
         register_block_style('core/image', [
-            'name' => 'duotone-highlight',
-            'label' => __('Duotone Highlight', 'giovanni'),
+            'name' => 'rounded',
+            'label' => __('Rounded', 'giovanni'),
+        ]);
+
+        // Register Group Block Styles
+        register_block_style('core/group', [
+            'name' => 'card',
+            'label' => __('Card', 'giovanni'),
         ]);
 
         register_block_style('core/group', [
-            'name' => 'content-sidebar',
-            'label' => __('Content Sidebar Layout', 'giovanni'),
+            'name' => 'portfolio-card',
+            'label' => __('Portfolio Card', 'giovanni'),
+        ]);
+
+        register_block_style('core/group', [
+            'name' => 'service-card',
+            'label' => __('Service Card', 'giovanni'),
+        ]);
+
+        register_block_style('core/group', [
+            'name' => 'company-card',
+            'label' => __('Company Card', 'giovanni'),
+        ]);
+
+        register_block_style('core/group', [
+            'name' => 'blog-roll-card',
+            'label' => __('Blog Roll Card', 'giovanni'),
+        ]);
+
+        register_block_style('core/group', [
+            'name' => 'longform-reading',
+            'label' => __('Longform Reading', 'giovanni'),
+        ]);
+
+        register_block_style('core/group', [
+            'name' => 'form-container',
+            'label' => __('Form Container', 'giovanni'),
         ]);
 
     } catch (Exception $e) {
