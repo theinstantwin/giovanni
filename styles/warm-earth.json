@@ -1,0 +1,159 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Warm Earth",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#fdf9f4",
+					"name": "Background",
+					"slug": "background"
+				},
+				{
+					"color": "#2d1810",
+					"name": "Foreground",
+					"slug": "foreground"
+				},
+				{
+					"color": "#8b6914",
+					"name": "Warm Brown",
+					"slug": "gray"
+				},
+				{
+					"color": "#f4e6d1",
+					"name": "Light Beige",
+					"slug": "light-gray"
+				},
+				{
+					"color": "#faf7f0",
+					"name": "Cream 50",
+					"slug": "gray-50"
+				},
+				{
+					"color": "#f5f0e8",
+					"name": "Cream 100",
+					"slug": "gray-100"
+				},
+				{
+					"color": "#ede2d0",
+					"name": "Beige 200",
+					"slug": "gray-200"
+				},
+				{
+					"color": "#d9c5a5",
+					"name": "Sand 300",
+					"slug": "gray-300"
+				},
+				{
+					"color": "#b8956b",
+					"name": "Tan 400",
+					"slug": "gray-400"
+				},
+				{
+					"color": "#996633",
+					"name": "Brown 500",
+					"slug": "gray-500"
+				},
+				{
+					"color": "#7d4f1e",
+					"name": "Dark Brown 600",
+					"slug": "gray-600"
+				},
+				{
+					"color": "#5c3717",
+					"name": "Deep Brown 700",
+					"slug": "gray-700"
+				},
+				{
+					"color": "#3e2711",
+					"name": "Chocolate 800",
+					"slug": "gray-800"
+				},
+				{
+					"color": "#2d1810",
+					"name": "Espresso 900",
+					"slug": "gray-900"
+				},
+				{
+					"color": "#d2691e",
+					"name": "Earth Orange",
+					"slug": "giovanni-blue"
+				},
+				{
+					"color": "#2d1810",
+					"name": "Reading Text",
+					"slug": "reading-text"
+				},
+				{
+					"color": "#8fbc8f",
+					"name": "Forest Green",
+					"slug": "success"
+				},
+				{
+					"color": "#daa520",
+					"name": "Goldenrod",
+					"slug": "warning"
+				},
+				{
+					"color": "#cd853f",
+					"name": "Peru",
+					"slug": "error"
+				},
+				{
+					"color": "#4682b4",
+					"name": "Steel Blue",
+					"slug": "info"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--reading-text)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--giovanni-blue)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--gray-700)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/button": {
+				"color": {
+					"background": "var(--wp--preset--color--giovanni-blue)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--gray-700)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			},
+			"core/quote": {
+				"color": {
+					"text": "var(--wp--preset--color--gray-700)"
+				},
+				"border": {
+					"left": {
+						"color": "var(--wp--preset--color--giovanni-blue)"
+					}
+				}
+			},
+			"core/pullquote": {
+				"color": {
+					"text": "var(--wp--preset--color--gray-800)",
+					"background": "var(--wp--preset--color--gray-50)"
+				}
+			}
+		}
+	}
+}
