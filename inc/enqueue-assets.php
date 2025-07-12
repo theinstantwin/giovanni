@@ -98,26 +98,33 @@ function giovanni_add_custom_link_styles() {
             text-decoration-thickness: 2px;
         }
 
-        /* Mobile layout fixes - add proper padding to main content areas */
+        /* Mobile layout fixes - add proper padding and wider content */
         @media (max-width: 768px) {
             .wp-site-blocks {
-                padding-left: var(--wp--preset--spacing--4, 1rem);
-                padding-right: var(--wp--preset--spacing--4, 1rem);
+                padding-left: var(--wp--preset--spacing--3, 0.75rem);
+                padding-right: var(--wp--preset--spacing--3, 0.75rem);
             }
             
-            /* Ensure constrained content has proper mobile padding */
+            /* Make content wider on mobile by overriding contentSize */
+            .is-layout-constrained > :not(.alignfull):not(.alignwide) {
+                max-width: min(calc(100vw - 1.5rem), 100%);
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            /* Reduce padding for constrained content to maximize width */
             .wp-block-group.is-layout-constrained,
             .is-layout-constrained > * {
-                padding-left: var(--wp--preset--spacing--4, 1rem);
-                padding-right: var(--wp--preset--spacing--4, 1rem);
+                padding-left: 0;
+                padding-right: 0;
             }
             
-            /* Fix for edge-to-edge content that needs spacing */
+            /* Minimal padding for specific content blocks */
             .wp-block-post-content,
             .wp-block-query,
             .wp-block-navigation {
-                padding-left: var(--wp--preset--spacing--4, 1rem);
-                padding-right: var(--wp--preset--spacing--4, 1rem);
+                padding-left: var(--wp--preset--spacing--2, 0.5rem);
+                padding-right: var(--wp--preset--spacing--2, 0.5rem);
             }
         }
     ';
