@@ -11,20 +11,61 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Enqueue theme styles and scripts.
+ * 
+ * @hook giovanni_before_enqueue_assets Action before enqueueing theme assets
+ * @hook giovanni_after_enqueue_assets Action after enqueueing theme assets
+ * @hook giovanni_theme_version Filters the theme version for cache busting
+ * @hook giovanni_style_dependencies Filters the style dependencies array
+ * 
+ * @example
+ * // Add custom dependency
+ * add_filter('giovanni_style_dependencies', function($deps) {
+ *     $deps[] = 'custom-parent-style';
+ *     return $deps;
+ * });
+ * 
+ * // Add custom scripts after theme assets
+ * add_action('giovanni_after_enqueue_assets', function() {
+ *     wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom.js');
+ * });
  */
 function giovanni_theme_enqueue_scripts() {
+    /**
+     * Action hook before enqueueing theme assets
+     */
+    do_action( 'giovanni_before_enqueue_assets' );
+    
     // Enqueue theme styles with version for cache busting
     $theme_version = wp_get_theme()->get('Version');
     if (!$theme_version) {
         $theme_version = '1.0.0';
     }
     
+    /**
+     * Filter the theme version for cache busting
+     *
+     * @param string $version The theme version
+     */
+    $theme_version = apply_filters( 'giovanni_theme_version', $theme_version );
+    
+    /**
+     * Filter the style dependencies array
+     *
+     * @param array $dependencies The style dependencies
+     */
+    $dependencies = apply_filters( 'giovanni_style_dependencies', array() );
+    
     wp_enqueue_style(
         'giovanni-style',
         get_stylesheet_uri(),
-        array(),
+        $dependencies,
         $theme_version
     );
+    
+    /**
+     * Action hook after enqueueing theme assets
+     */
+    do_action( 'giovanni_after_enqueue_assets' );
 }
 add_action( 'wp_enqueue_scripts', 'giovanni_theme_enqueue_scripts' );
 
@@ -91,4 +132,4 @@ function giovanni_enqueue_custom_block_styles() {
         }
     }
 }
-add_action( 'init', 'giovanni_enqueue_custom_block_styles' );
+add_action( 'init', 'giovanni_enqueue_custom_block_styles', 100 );

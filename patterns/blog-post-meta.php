@@ -7,26 +7,26 @@
  */
 ?>
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","margin":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)">
-    <!-- wp:paragraph {"textColor":"muted","fontSize":"small"} -->
-    <p class="has-muted-color has-text-color has-small-font-size">By</p>
+<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--20)","margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--40)">
+    <!-- wp:paragraph {"textColor":"gray-500","fontSize":"sm"} -->
+    <p class="has-gray-500-color has-text-color has-sm-font-size">By</p>
     <!-- /wp:paragraph -->
     
-    <!-- wp:post-author {"showAvatar":false,"showBio":false,"isLink":true,"textColor":"muted","fontSize":"small"} /-->
+    <!-- wp:post-author {"showAvatar":false,"showBio":false,"isLink":true,"textColor":"gray-500","fontSize":"sm"} /-->
     
-    <!-- wp:paragraph {"textColor":"muted","fontSize":"small"} -->
-    <p class="has-muted-color has-text-color has-small-font-size">•</p>
+    <!-- wp:paragraph {"textColor":"gray-500","fontSize":"sm"} -->
+    <p class="has-gray-500-color has-text-color has-sm-font-size">•</p>
     <!-- /wp:paragraph -->
     
-    <!-- wp:post-date {"textColor":"muted","fontSize":"small"} /-->
+    <!-- wp:post-date {"textColor":"gray-500","fontSize":"sm"} /-->
     
-    <!-- wp:paragraph {"textColor":"muted","fontSize":"small"} -->
-    <p class="has-muted-color has-text-color has-small-font-size">•</p>
+    <!-- wp:paragraph {"textColor":"gray-500","fontSize":"sm"} -->
+    <p class="has-gray-500-color has-text-color has-sm-font-size">•</p>
     <!-- /wp:paragraph -->
     
-    <!-- wp:paragraph {"textColor":"muted","fontSize":"small"} -->
-    <p class="has-muted-color has-text-color has-small-font-size">2 min read</p>
+    <!-- wp:paragraph {"textColor":"gray-500","fontSize":"sm"} -->
+    <p class="has-gray-500-color has-text-color has-sm-font-size">2 min read</p>
     <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

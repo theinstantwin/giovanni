@@ -11,45 +11,66 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Register custom pattern categories.
+ * 
+ * @hook giovanni_pattern_categories Filters the pattern categories array before registration
+ * @hook giovanni_before_register_pattern_categories Action before registering pattern categories
+ * @hook giovanni_after_register_pattern_categories Action after registering pattern categories
+ * 
+ * @example
+ * // Add custom pattern category
+ * add_filter('giovanni_pattern_categories', function($categories) {
+ *     $categories['giovanni-custom'] = array('label' => __('Giovanni Custom', 'giovanni'));
+ *     return $categories;
+ * });
  */
 function giovanni_register_pattern_categories() {
     // Check if the function exists (WordPress 5.5+)
     if ( function_exists( 'register_block_pattern_category' ) ) {
         
-        // Register Giovanni Author category
-        register_block_pattern_category( 'giovanni-author', array(
-            'label' => __( 'Giovanni Author', 'giovanni' )
-        ) );
+        /**
+         * Action hook before registering pattern categories
+         */
+        do_action( 'giovanni_before_register_pattern_categories' );
         
-        // Register Giovanni Content category
-        register_block_pattern_category( 'giovanni-content', array(
-            'label' => __( 'Giovanni Content', 'giovanni' )
-        ) );
+        $default_categories = array(
+            'giovanni-author' => array(
+                'label' => __( 'Giovanni Author', 'giovanni' )
+            ),
+            'giovanni-content' => array(
+                'label' => __( 'Giovanni Content', 'giovanni' )
+            ),
+            'giovanni-header' => array(
+                'label' => __( 'Giovanni Headers', 'giovanni' )
+            ),
+            'giovanni-hero' => array(
+                'label' => __( 'Giovanni Heroes', 'giovanni' )
+            ),
+            'giovanni-personal' => array(
+                'label' => __( 'Giovanni Personal', 'giovanni' )
+            ),
+            'giovanni-posts' => array(
+                'label' => __( 'Giovanni Posts', 'giovanni' )
+            ),
+            'giovanni-cards' => array(
+                'label' => __( 'Giovanni Cards', 'giovanni' )
+            ),
+        );
         
-        // Register Giovanni Header category
-        register_block_pattern_category( 'giovanni-header', array(
-            'label' => __( 'Giovanni Headers', 'giovanni' )
-        ) );
+        /**
+         * Filter the pattern categories array before registration
+         *
+         * @param array $categories The default pattern categories
+         */
+        $categories = apply_filters( 'giovanni_pattern_categories', $default_categories );
         
-        // Register Giovanni Hero category
-        register_block_pattern_category( 'giovanni-hero', array(
-            'label' => __( 'Giovanni Heroes', 'giovanni' )
-        ) );
+        foreach ( $categories as $category_name => $category_args ) {
+            register_block_pattern_category( $category_name, $category_args );
+        }
         
-        // Register Giovanni Personal category
-        register_block_pattern_category( 'giovanni-personal', array(
-            'label' => __( 'Giovanni Personal', 'giovanni' )
-        ) );
-        
-        // Register Giovanni Posts category
-        register_block_pattern_category( 'giovanni-posts', array(
-            'label' => __( 'Giovanni Posts', 'giovanni' )
-        ) );
-        
-        // Register Giovanni Cards category (for the card patterns we migrated)
-        register_block_pattern_category( 'giovanni-cards', array(
-            'label' => __( 'Giovanni Cards', 'giovanni' )
-        ) );
+        /**
+         * Action hook after registering pattern categories
+         */
+        do_action( 'giovanni_after_register_pattern_categories' );
     }
 }
 add_action( 'init', 'giovanni_register_pattern_categories' );
@@ -82,19 +103,54 @@ function giovanni_register_block_styles() {
     
     // Register block styles with error handling
     try {
-        // Note: Button styles are now loaded automatically from /assets/styles/core-button.css
-        
-        // Note: Image styles are now loaded automatically from /assets/styles/core-image.css
-        
-        // Note: Navigation styles are now loaded automatically from /assets/styles/core-navigation.css
-        
-        // Note: Quote styles are now loaded automatically from /assets/styles/core-quote.css
-        
-        // Note: Group styles are now loaded automatically from /assets/styles/core-group.css
-        
-        // Note: Site Title styles are now loaded automatically from /assets/styles/core-site-title.css
-        // Note: Post Terms styles are now loaded automatically from /assets/styles/core-post-terms.css
-        // Note: Table styles are now loaded automatically from /assets/styles/core-table.css
+        // Register Button Block Styles
+        register_block_style('core/button', [
+            'name' => 'ghost',
+            'label' => __('Ghost', 'giovanni'),
+        ]);
+
+        register_block_style('core/button', [
+            'name' => 'dark',
+            'label' => __('Dark', 'giovanni'),
+        ]);
+
+        register_block_style('core/button', [
+            'name' => 'arrow-light',
+            'label' => __('Arrow Light', 'giovanni'),
+        ]);
+
+        register_block_style('core/button', [
+            'name' => 'arrow-dark',
+            'label' => __('Arrow Dark', 'giovanni'),
+        ]);
+
+        // Register Navigation Block Styles
+        register_block_style('core/navigation', [
+            'name' => 'link-hover-grow',
+            'label' => __('Link Hover Grow', 'giovanni'),
+        ]);
+
+        register_block_style('core/navigation', [
+            'name' => 'link-hover-underline',
+            'label' => __('Link Hover Underline', 'giovanni'),
+        ]);
+
+        // Register other block styles that were missing
+        register_block_style('core/quote', [
+            'name' => 'reflection',
+            'label' => __('Reflection', 'giovanni'),
+        ]);
+
+        register_block_style('core/image', [
+            'name' => 'duotone-highlight',
+            'label' => __('Duotone Highlight', 'giovanni'),
+        ]);
+
+        register_block_style('core/group', [
+            'name' => 'content-sidebar',
+            'label' => __('Content Sidebar Layout', 'giovanni'),
+        ]);
+
     } catch (Exception $e) {
         error_log('Giovanni: Error registering block styles: ' . $e->getMessage());
     }

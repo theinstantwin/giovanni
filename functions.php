@@ -1,16 +1,17 @@
 <?php
+
 /**
  * Giovanni Theme functions and definitions
  *
  * @package Giovanni_Theme
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
 // Define a theme constant for the /inc directory path.
-define( 'GIOVANNI_INC_DIR', get_template_directory() . '/inc' );
+define('GIOVANNI_INC_DIR', get_template_directory() . '/inc');
 
 // Load all the modular feature files.
 require_once GIOVANNI_INC_DIR . '/theme-setup.php';       // Core theme features and support.
