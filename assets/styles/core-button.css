@@ -43,20 +43,21 @@
     background: var(--wp--preset--color--gray-100);
     border: 1px solid var(--wp--preset--color--gray-200);
     color: var(--wp--preset--color--foreground);
-    padding-right: 50px;
+    padding-right: 44px;
     transition: all 0.2s ease;
     border-radius: 6px;
-    overflow: visible;
+    overflow: hidden;
+    min-width: 120px;
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link::after {
     content: "→";
     position: absolute;
-    right: 24px;
+    right: 20px;
     top: 50%;
-    transform: translateY(-50%) translateX(20px);
+    transform: translateY(-50%) translateX(0);
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover {
@@ -65,7 +66,7 @@
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover::after {
-    transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(6px);
     opacity: 1;
 }
 
@@ -75,23 +76,28 @@
     background: var(--wp--preset--color--gray-900);
     border: 1px solid var(--wp--preset--color--gray-900);
     color: var(--wp--preset--color--background);
-    padding-right: 50px;
+    padding-right: 44px;
     transition: all 0.2s ease;
     border-radius: 6px;
-    overflow: visible;
+    overflow: hidden;
+    min-width: 120px;
 }
 
 .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
     content: "→";
     position: absolute;
-    right: 24px;
+    right: 20px;
     top: 50%;
-    transform: translateY(-50%) translateX(20px);
+    transform: translateY(-50%) translateX(0);
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+}
+
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:hover {
+    background: var(--wp--preset--color--gray-700);
 }
 
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover::after {
-    transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(6px);
     opacity: 1;
 }
