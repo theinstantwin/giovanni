@@ -75,6 +75,34 @@ add_action( 'wp_enqueue_scripts', 'giovanni_theme_enqueue_scripts' );
 function giovanni_add_custom_link_styles() {
     $custom_css = '
 
+        /* System-aware dark mode using CSS custom properties */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --wp--preset--color--background: #1e2021;
+                --wp--preset--color--foreground: #FBF1C7;
+                --wp--preset--color--gray: #4C4641;
+                --wp--preset--color--light-gray: #333230;
+                --wp--preset--color--gray-50: #2F2F2F;
+                --wp--preset--color--gray-100: #333230;
+                --wp--preset--color--gray-200: #3D3A37;
+                --wp--preset--color--gray-300: #4C4641;
+                --wp--preset--color--gray-400: #5A534D;
+                --wp--preset--color--gray-500: #6B6258;
+                --wp--preset--color--gray-600: #7C7164;
+                --wp--preset--color--gray-700: #8D8070;
+                --wp--preset--color--gray-800: #A09686;
+                --wp--preset--color--gray-900: #FBF1C7;
+                --wp--preset--color--giovanni-blue: #ff335f;
+                --wp--preset--color--primary: #ff335f;
+                --wp--preset--color--secondary: #7C7164;
+                --wp--preset--color--muted: #4C4641;
+                --wp--preset--color--subtle: #333230;
+                --wp--preset--color--emphasis: #FBF1C7;
+                --wp--preset--color--primary-light: #ff5a7a;
+                --wp--preset--color--primary-dark: #2d1319;
+            }
+        }
+
         /* Mobile layout fixes - add proper padding and wider content */
         @media (max-width: 768px) {
             .wp-site-blocks {
