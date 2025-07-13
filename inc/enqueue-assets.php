@@ -103,6 +103,60 @@ function giovanni_add_custom_link_styles() {
             }
         }
 
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            /* Better touch targets for buttons */
+            .wp-block-button .wp-block-button__link {
+                min-height: 44px;
+                padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--6, 1.5rem);
+            }
+            
+            /* Larger touch targets for navigation */
+            .wp-block-navigation a {
+                min-height: 44px;
+                padding: var(--wp--preset--spacing--3, 0.75rem) var(--wp--preset--spacing--4, 1rem);
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Remove hover effects that don't work on touch */
+            .wp-block-group.is-style-card:hover {
+                transform: none;
+                box-shadow: var(--wp--custom--shadows--md, 0 4px 12px rgba(0,0,0,0.15));
+            }
+            
+            /* Make post titles more tappable */
+            .wp-block-post-title a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                padding: var(--wp--preset--spacing--2, 0.5rem) 0;
+            }
+            
+            /* Larger tap targets for post terms/tags */
+            .wp-block-post-terms a {
+                min-height: 36px;
+                padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--3, 0.75rem);
+                display: inline-flex;
+                align-items: center;
+            }
+            
+            /* Remove transform effects that can feel laggy on mobile */
+            .wp-block-button:hover,
+            .wp-block-post-terms:hover,
+            .wp-site-title:hover {
+                transform: none;
+            }
+            
+            /* Focus styles work better than hover on touch */
+            .wp-block-button .wp-block-button__link:focus,
+            .wp-block-navigation a:focus,
+            .wp-block-post-title a:focus {
+                outline: 3px solid var(--wp--preset--color--primary, #ff335f);
+                outline-offset: 2px;
+            }
+        }
+
         /* Mobile layout fixes - add proper padding and wider content */
         @media (max-width: 768px) {
             .wp-site-blocks {

@@ -131,6 +131,18 @@
     line-height: 1.4;
     border-radius: 4px;
     transition: background-color 0.2s ease;
+    position: relative;
+}
+
+/* Override any underline styles in mobile menu */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a::after {
+    display: none !important;
+}
+
+/* Remove focus outlines and replace with proper mobile focus styles */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--wp--preset--color--giovanni-blue, #0070f3);
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover,
@@ -146,9 +158,20 @@
     font-weight: 600;
 }
 
+/* Ensure current page doesn't show underlines in mobile */
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a::after {
+    display: none !important;
+}
+
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:hover {
     background-color: var(--wp--preset--color--gray-900);
     color: var(--wp--preset--color--background);
+}
+
+/* Remove any focus outlines on current page links */
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--wp--preset--color--background);
 }
 
 /* Hamburger button styling */
