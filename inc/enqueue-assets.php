@@ -119,7 +119,7 @@ function giovanni_add_custom_link_styles() {
                 align-items: center;
             }
             
-            /* Remove hover effects that don't work on touch */
+            /* Remove hover effects that do not work on touch */
             .wp-block-group.is-style-card:hover {
                 transform: none;
                 box-shadow: var(--wp--custom--shadows--md, 0 4px 12px rgba(0,0,0,0.15));
@@ -133,7 +133,7 @@ function giovanni_add_custom_link_styles() {
                 padding: var(--wp--preset--spacing--2, 0.5rem) 0;
             }
             
-            /* Larger tap targets for post terms/tags */
+            /* Larger tap targets for post terms and tags */
             .wp-block-post-terms a {
                 min-height: 36px;
                 padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--3, 0.75rem);
