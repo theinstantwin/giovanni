@@ -1,10 +1,21 @@
 /* Giovanni Navigation Styles
 --------------------------------------------- */
 
-/* Default Navigation Style */
-.wp-block-navigation .current-menu-item a {
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
-    font-weight: 600;
+/* Default Navigation Style - Desktop only */
+@media (min-width: 600px) {
+    .wp-block-navigation .current-menu-item a {
+        color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+        font-weight: 600;
+    }
+}
+
+/* Mobile Navigation - Override desktop styles */
+@media (max-width: 599px) {
+    .wp-block-navigation .current-menu-item a {
+        color: var(--wp--preset--color--foreground);
+        font-weight: 500;
+        background-color: transparent;
+    }
 }
 
 .wp-block-navigation .wp-block-navigation-item a:hover {
@@ -151,27 +162,46 @@
     color: var(--wp--preset--color--giovanni-blue, #0070f3);
 }
 
-/* Mobile menu current page */
-.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a {
+/* Mobile menu current page - handle all WordPress current page classes */
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_item a,
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a {
     background-color: var(--wp--preset--color--giovanni-blue, #0070f3);
     color: var(--wp--preset--color--background);
     font-weight: 600;
 }
 
 /* Ensure current page doesn't show underlines in mobile */
-.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a::after {
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a::after,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_item a::after,
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a::after,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a::after {
     display: none !important;
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:hover {
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:hover,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_item a:hover,
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a:hover,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a:hover {
     background-color: var(--wp--preset--color--gray-900);
     color: var(--wp--preset--color--background);
 }
 
 /* Remove any focus outlines on current page links */
-.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:focus {
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:focus,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_item a:focus,
+.wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a:focus,
+.wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--wp--preset--color--background);
+}
+
+/* Reset any accidentally highlighted items that shouldn't be current */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item:not(.current-menu-item):not(.current_page_item):not(.current-menu-ancestor):not(.current_page_ancestor) a {
+    background-color: transparent;
+    color: var(--wp--preset--color--foreground);
+    font-weight: 500;
 }
 
 /* Hamburger button styling */
