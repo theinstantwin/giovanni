@@ -2,7 +2,7 @@
 --------------------------------------------- */
 
 .wp-block-group[class*="is-style-"][class*="card"] {
-    background: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--container);
     border-radius: var(--wp--custom--border-radius--lg);
     border: 1px solid var(--wp--preset--color--light-gray);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -126,7 +126,7 @@
 }
 
 .wp-block-group.is-style-form-container {
-    background: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--container);
     border: 1px solid var(--wp--preset--color--light-gray);
     border-radius: var(--wp--custom--border-radius--lg);
     padding: var(--wp--preset--spacing--8, 2rem);

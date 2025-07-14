@@ -43,7 +43,7 @@
 
 .wp-block-quote.is-style-personal-reflection {
     border: none;
-    background: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--container);
     border-left: 4px solid var(--wp--preset--color--primary);
     border-radius: 0 var(--wp--custom--border-radius--md) var(--wp--custom--border-radius--md) 0;
     padding: var(--wp--preset--spacing--5, 1rem) var(--wp--preset--spacing--8, 2rem);
