@@ -164,11 +164,11 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var(--wp--preset--color--gray-600)"
+							"text": "var(--wp--preset--color--gray)"
 						},
 						":hover": {
 							"color": {
-								"text": "var(--wp--preset--color--gray-700)"
+								"text": "var(--wp--preset--color--foreground)"
 							}
 						}
 					}
@@ -176,14 +176,14 @@
 			},
 			"core/code": {
 				"color": {
-					"background": "var(--wp--preset--color--gray-100)",
-					"text": "var(--wp--preset--color--gray-900)"
+					"background": "var(--wp--preset--color--light-gray)",
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"core/preformatted": {
 				"color": {
-					"background": "var(--wp--preset--color--gray-50)",
-					"text": "var(--wp--preset--color--gray-900)"
+					"background": "var(--wp--preset--color--light-gray)",
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"core/button": {
@@ -223,7 +223,7 @@
 			},
 			"core/quote": {
 				"color": {
-					"text": "var(--wp--preset--color--gray-700)",
+					"text": "var(--wp--preset--color--foreground)",
 					"background": "var(--wp--preset--color--light-gray)"
 				},
 				"border": {
@@ -263,17 +263,17 @@
 			},
 			"core/post-date": {
 				"color": {
-					"text": "var(--wp--preset--color--gray-500)"
+					"text": "var(--wp--preset--color--gray)"
 				}
 			},
 			"core/post-author": {
 				"color": {
-					"text": "var(--wp--preset--color--gray-500)"
+					"text": "var(--wp--preset--color--gray)"
 				}
 			},
 			"core/post-terms": {
 				"color": {
-					"text": "var(--wp--preset--color--gray-500)"
+					"text": "var(--wp--preset--color--gray)"
 				}
 			}
 		}
