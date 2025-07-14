@@ -102,7 +102,7 @@ function giovanni_clear_block_style_cache() {
         unregister_block_style( 'core/image', 'rounded' );
         unregister_block_style( 'core/group', 'card' );
         unregister_block_style( 'core/group', 'portfolio-card' );
-        unregister_block_style( 'core/group', 'service-card' );
+
         unregister_block_style( 'core/group', 'company-card' );
         unregister_block_style( 'core/group', 'blog-roll-card' );
         unregister_block_style( 'core/group', 'longform-reading' );
@@ -202,10 +202,7 @@ function giovanni_register_block_styles() {
             'label' => __('Portfolio Card', 'giovanni'),
         ]);
 
-        register_block_style('core/group', [
-            'name' => 'service-card',
-            'label' => __('Service Card', 'giovanni'),
-        ]);
+
 
         register_block_style('core/group', [
             'name' => 'company-card',

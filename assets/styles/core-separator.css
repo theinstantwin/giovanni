@@ -1,0 +1,72 @@
+/**
+ * WordPress Core Separator Block Styles
+ * 
+ * Custom styles for the core/separator block including the dotted separator
+ * style used in timeline patterns.
+ *
+ * @package Giovanni
+ */
+
+/* Base separator reset */
+.wp-block-separator {
+    border: none;
+    height: 1px;
+    background: var(--wp--preset--color--gray-300, #d1d5db);
+    margin: var(--wp--preset--spacing--5, 1.5rem) 0;
+    width: 100%;
+}
+
+/* Dotted separator style for timeline patterns */
+.wp-block-separator.is-style-separator-dotted {
+    background: repeating-linear-gradient(
+        90deg, 
+        var(--wp--preset--color--gray-300, #d1d5db), 
+        var(--wp--preset--color--gray-300, #d1d5db) 2px, 
+        transparent 2px, 
+        transparent 5px
+    );
+    height: 1px;
+    border: none;
+    width: 100%;
+}
+
+/* Wide separator alignment */
+.wp-block-separator.alignwide {
+    width: 100%;
+}
+
+/* Full-width separator alignment */
+.wp-block-separator.alignfull {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Dark theme adjustments */
+.wp-block-separator.is-style-separator-dotted {
+    background: repeating-linear-gradient(
+        90deg, 
+        var(--wp--preset--color--gray-300, currentColor), 
+        var(--wp--preset--color--gray-300, currentColor) 2px, 
+        transparent 2px, 
+        transparent 5px
+    );
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wp-block-separator {
+        margin: var(--wp--preset--spacing--4, 1rem) 0;
+    }
+    
+    .wp-block-separator.alignfull {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+        left: 0;
+        right: 0;
+    }
+} 

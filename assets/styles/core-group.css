@@ -67,43 +67,7 @@
     padding: 0 24px 24px;
 }
 
-/* Service Card Style */
-.wp-block-group.is-style-service-card {
-    padding: 32px 24px;
-    text-align: center;
-}
 
-.wp-block-group.is-style-service-card .wp-block-image {
-    margin: 0 auto 20px;
-    width: 64px;
-    height: 64px;
-}
-
-.wp-block-group.is-style-service-card .wp-block-image img {
-    border-radius: 8px;
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-}
-
-.wp-block-group.is-style-service-card .wp-block-heading {
-    margin: 0 0 12px 0;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.3;
-    color: var(--wp--preset--color--foreground);
-}
-
-.wp-block-group.is-style-service-card .wp-block-paragraph {
-    margin: 0 0 20px 0;
-    color: var(--wp--preset--color--gray-600);
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.wp-block-group.is-style-service-card .wp-block-buttons {
-    margin: 0;
-}
 
 /* Company Card Style */
 .wp-block-group.is-style-company-card,

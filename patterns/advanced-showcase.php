@@ -72,8 +72,8 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--6)","bottom":"var(--wp--preset--spacing--6)","left":"var(--wp--preset--spacing--6)","right":"var(--wp--preset--spacing--6)"}},"border":{"radius":"12px"}},"className":"is-style-service-card","layout":{"type":"constrained"}} -->
-<div class="wp-block-group is-style-service-card" style="border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--6)","bottom":"var(--wp--preset--spacing--6)","left":"var(--wp--preset--spacing--6)","right":"var(--wp--preset--spacing--6)"}},"border":{"radius":"12px"}},"className":"is-style-card","layout":{"type":"constrained"}} -->
+<div class="wp-block-group is-style-card" style="border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
 
 <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"clamp(1.5rem, 3vw, 2rem)","fontWeight":"600"}}} -->
 <h3 class="wp-block-heading has-text-align-center" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Smooth Animations</h3>
