@@ -105,7 +105,6 @@ function giovanni_clear_block_style_cache() {
 
         unregister_block_style( 'core/group', 'company-card' );
         unregister_block_style( 'core/group', 'blog-roll-card' );
-        unregister_block_style( 'core/group', 'longform-reading' );
         unregister_block_style( 'core/group', 'form-container' );
         unregister_block_style( 'core/table', 'striped' );
         unregister_block_style( 'core/table', 'minimal' );
@@ -214,10 +213,6 @@ function giovanni_register_block_styles() {
             'label' => __('Blog Roll Card', 'giovanni'),
         ]);
 
-        register_block_style('core/group', [
-            'name' => 'longform-reading',
-            'label' => __('Longform Reading', 'giovanni'),
-        ]);
 
         register_block_style('core/group', [
             'name' => 'form-container',

@@ -11,6 +11,11 @@
 					"slug": "background"
 				},
 				{
+					"color": "#faf7f0",
+					"name": "Container",
+					"slug": "container"
+				},
+				{
 					"color": "#2d1810",
 					"name": "Foreground",
 					"slug": "foreground"
