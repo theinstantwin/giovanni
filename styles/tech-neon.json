@@ -165,8 +165,8 @@
 			},
 			"core/quote": {
 				"color": {
-					"text": "var(--wp--preset--color--gray-700)",
-					"background": "var(--wp--preset--color--gray-50)"
+					"text": "var(--wp--preset--color--foreground)",
+					"background": "var(--wp--preset--color--light-gray)"
 				},
 				"border": {
 					"left": {
@@ -177,12 +177,12 @@
 			"core/pullquote": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)",
-					"background": "var(--wp--preset--color--gray-100)"
+					"background": "var(--wp--preset--color--light-gray)"
 				}
 			},
 			"core/code": {
 				"color": {
-					"background": "var(--wp--preset--color--gray-100)",
+					"background": "var(--wp--preset--color--light-gray)",
 					"text": "var(--wp--preset--color--giovanni-blue)"
 				}
 			}
