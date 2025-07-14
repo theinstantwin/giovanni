@@ -20,7 +20,7 @@
     text-align: center;
     font-family: var(--wp--preset--font-family--mono);
     font-size: var(--wp--preset--font-size--xs);
-    color: var(--wp--preset--color--gray-500);
+    color: var(--wp--preset--color--gray);
 }
 
 .wp-block-image.is-style-rounded img {

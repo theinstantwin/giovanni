@@ -86,8 +86,8 @@
 
 @media (prefers-color-scheme: dark) {
     .wp-block-post-terms.is-style-pill-badge a {
-        background: var(--wp--preset--color--gray-800);
-        color: var(--wp--preset--color--gray-300);
+        background: var(--wp--preset--color--foreground);
+        color: var(--wp--preset--color--gray);
     }
     .wp-block-post-terms.is-style-pill-badge a:hover {
         background: var(--wp--preset--color--emphasis);

@@ -5,7 +5,7 @@
 .wp-block-button.is-style-ghost .wp-block-button__link {
     background: transparent;
     border: none;
-    color: var(--wp--preset--color--gray-600);
+    color: var(--wp--preset--color--foreground);
     text-decoration: underline;
     text-underline-offset: var(--wp--custom--letter-spacing--tight);
     font-weight: var(--wp--custom--font-weight--medium);
@@ -14,7 +14,7 @@
 
 .wp-block-button.is-style-ghost .wp-block-button__link:hover,
 .wp-block-button.is-style-ghost .wp-block-button__link:focus {
-    background: var(--wp--preset--color--gray-50);
+    background: var(--wp--preset--color--light-gray);
     color: var(--wp--preset--color--foreground);
     text-decoration: none;
     transform: translateY(-1px);
@@ -22,7 +22,7 @@
 
 /* Dark Button Style */
 .wp-block-button.is-style-dark .wp-block-button__link {
-    background: var(--wp--preset--color--gray-900);
+    background: var(--wp--preset--color--foreground);
     border: none;
     color: var(--wp--preset--color--background);
     font-weight: var(--wp--custom--font-weight--medium);
@@ -32,7 +32,7 @@
 
 .wp-block-button.is-style-dark .wp-block-button__link:hover,
 .wp-block-button.is-style-dark .wp-block-button__link:focus {
-    background: var(--wp--preset--color--gray-700);
+    background: var(--wp--preset--color--gray);
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -70,21 +70,21 @@
 
 /* Arrow Light Variant */
 .wp-block-button.is-style-arrow-light .wp-block-button__link {
-    background: var(--wp--preset--color--gray-100);
-    border: 1px solid var(--wp--preset--color--gray-200);
+    background: var(--wp--preset--color--light-gray);
+    border: 1px solid var(--wp--preset--color--light-gray);
     color: var(--wp--preset--color--foreground);
 }
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover {
-    background: var(--wp--preset--color--gray-200);
-    border-color: var(--wp--preset--color--gray-300);
+    background: var(--wp--preset--color--gray);
+    border-color: var(--wp--preset--color--gray);
 }
 
 /* Arrow Dark Variant */
 .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-    background: var(--wp--preset--color--gray-900);
-    border: 1px solid var(--wp--preset--color--gray-900);
+    background: var(--wp--preset--color--foreground);
+    border: 1px solid var(--wp--preset--color--foreground);
     color: var(--wp--preset--color--background);
 }
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover {
-    background: var(--wp--preset--color--gray-700);
+    background: var(--wp--preset--color--gray);
 }

@@ -39,8 +39,8 @@
 }
 
 .wp-site-blocks footer a,
-.has-gray-600-color a,
-.has-gray-500-color a {
+.has-foreground-color a,
+.has-gray-color a {
     text-decoration: underline;
     text-decoration-thickness: var(--giovanni-link-underline-thin);
     text-underline-offset: var(--giovanni-link-offset);
@@ -74,10 +74,10 @@
 
 .wp-site-blocks footer a:hover,
 .wp-site-blocks footer a:focus,
-.has-gray-600-color a:hover,
-.has-gray-600-color a:focus,
-.has-gray-500-color a:hover,
-.has-gray-500-color a:focus {
+.has-foreground-color a:hover,
+.has-foreground-color a:focus,
+.has-gray-color a:hover,
+.has-gray-color a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
     color: var(--wp--preset--color--emphasis);
 }

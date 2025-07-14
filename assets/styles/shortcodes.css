@@ -12,7 +12,7 @@
     margin-bottom: var(--wp--preset--spacing--4, 1rem);
     margin-top: 0;
     padding-bottom: var(--wp--preset--spacing--2, 0.5rem);
-    border-bottom: 2px solid var(--wp--preset--color--gray-200);
+    border-bottom: 2px solid var(--wp--preset--color--light-gray);
 }
 
 .blog-post-item {
@@ -48,7 +48,7 @@
 }
 
 .blog-post-item .post-date {
-    color: var(--wp--preset--color--gray-500);
+    color: var(--wp--preset--color--gray);
     font-size: var(--wp--preset--font-size--xs);
     flex-shrink: 0;
     white-space: nowrap;
