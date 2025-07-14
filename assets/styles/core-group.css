@@ -1,14 +1,13 @@
 /* Giovanni Group Styles
 --------------------------------------------- */
 
-/* Base Card Styles */
 .wp-block-group[class*="is-style-"][class*="card"] {
     background: var(--wp--preset--color--background);
-    border-radius: 12px;
+    border-radius: var(--wp--custom--border-radius--lg);
     border: 1px solid var(--wp--preset--color--gray-200);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    margin: 24px 0;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
+    margin: var(--wp--preset--spacing--6, 1.5rem) 0;
 }
 
 .wp-block-group[class*="is-style-"][class*="card"]:hover {
@@ -18,27 +17,25 @@
     background: var(--wp--preset--color--gray-50);
 }
 
-/* Simple Card Style */
 .wp-block-group.is-style-card {
-    padding: 24px;
+    padding: var(--wp--preset--spacing--6, 1.5rem);
 }
 
 .wp-block-group.is-style-card > * {
-    margin-bottom: 16px;
+    margin-bottom: var(--wp--preset--spacing--4, 1rem);
 }
 
 .wp-block-group.is-style-card > *:last-child {
     margin-bottom: 0;
 }
 
-/* Portfolio Card Style */
 .wp-block-group.is-style-portfolio-card {
     padding: 0;
     overflow: hidden;
 }
 
 .wp-block-group.is-style-portfolio-card .wp-block-image {
-    margin: 0 0 16px 0;
+    margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0;
 }
 
 .wp-block-group.is-style-portfolio-card .wp-block-image img {
@@ -47,30 +44,28 @@
 }
 
 .wp-block-group.is-style-portfolio-card .wp-block-heading {
-    margin: 0 0 8px 0;
-    padding: 0 24px;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.3;
+    margin: 0 0 var(--wp--preset--spacing--2, 0.5rem) 0;
+    padding: 0 var(--wp--preset--spacing--6, 1.5rem);
+    font-size: var(--wp--preset--font-size--md);
+    font-weight: var(--wp--custom--font-weight--semibold);
+    line-height: var(--wp--custom--line-height--snug);
 }
 
 .wp-block-group.is-style-portfolio-card .wp-block-paragraph {
-    margin: 0 0 16px 0;
-    padding: 0 24px;
+    margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0;
+    padding: 0 var(--wp--preset--spacing--6, 1.5rem);
     color: var(--wp--preset--color--gray-500);
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: var(--wp--preset--font-size--sm);
+    line-height: var(--wp--custom--line-height--normal);
 }
 
 .wp-block-group.is-style-portfolio-card .wp-block-buttons {
     margin: 0;
-    padding: 0 24px 24px;
+    padding: 0 var(--wp--preset--spacing--6, 1.5rem) var(--wp--preset--spacing--6, 1.5rem);
 }
 
-
-/* Card Base for Company and Blog Roll Cards */
 .wp-block-group.is-style-card-base {
-    padding: 24px;
+    padding: var(--wp--preset--spacing--6, 1.5rem);
     text-align: center;
     min-height: 280px;
     display: flex;
@@ -79,13 +74,13 @@
 }
 
 .wp-block-group.is-style-card-base .wp-block-image {
-    margin: 0 auto 16px;
+    margin: 0 auto var(--wp--preset--spacing--4, 1rem);
     width: 80px;
     height: 80px;
 }
 
 .wp-block-group.is-style-card-base .wp-block-image img {
-    border-radius: 12px;
+    border-radius: var(--wp--custom--border-radius--md);
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -93,18 +88,18 @@
 }
 
 .wp-block-group.is-style-card-base .wp-block-heading {
-    margin: 0 0 8px 0;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.3;
+    margin: 0 0 var(--wp--preset--spacing--2, 0.5rem) 0;
+    font-size: var(--wp--preset--font-size--sm);
+    font-weight: var(--wp--custom--font-weight--semibold);
+    line-height: var(--wp--custom--line-height--snug);
     color: var(--wp--preset--color--foreground);
 }
 
 .wp-block-group.is-style-card-base .wp-block-paragraph {
-    margin: 0 0 16px 0;
+    margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0;
     color: var(--wp--preset--color--gray-600);
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: var(--wp--preset--font-size--xs);
+    line-height: var(--wp--custom--line-height--normal);
     flex: 1;
 }
 
@@ -113,11 +108,10 @@
 }
 
 .wp-block-group.is-style-card-base .wp-block-button .wp-block-button__link {
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: var(--wp--preset--font-size--xs);
+    padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--4, 1rem);
 }
 
-/* Company Card and Blog Roll Card now extend the base */
 .wp-block-group.is-style-company-card {
     /* No unique properties, inherits all from base */
 }
@@ -131,16 +125,14 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Form Container Style */
 .wp-block-group.is-style-form-container {
     background: var(--wp--preset--color--background);
     border: 1px solid var(--wp--preset--color--gray-200);
-    border-radius: 12px;
-    padding: 32px;
-    margin: 32px 0;
+    border-radius: var(--wp--custom--border-radius--lg);
+    padding: var(--wp--preset--spacing--8, 2rem);
+    margin: var(--wp--preset--spacing--8, 2rem) 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-group.is-style-form-container:hover {
@@ -148,11 +140,10 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Three-Column Animated Cards Styles */
 .hover-cards > .wp-block-group {
     position: relative;
     overflow: visible;
-    transition: transform 0.3s ease;
+    transition: transform var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .hover-cards > .wp-block-group:nth-child(odd):hover {
@@ -165,15 +156,14 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Pulsing radar orb */
 .pulse-orb {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: var(--wp--preset--spacing--2, 0.5rem);
+    right: var(--wp--preset--spacing--2, 0.5rem);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
     z-index: 10;
 }
 
@@ -184,7 +174,7 @@
     left: 50%;
     width: 8px;
     height: 8px;
-    background: var(--wp--preset--color--giovanni-blue);
+    background: var(--wp--preset--color--primary);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -197,11 +187,11 @@
     left: 50%;
     width: 20px;
     height: 20px;
-    border: 2px solid var(--wp--preset--color--giovanni-blue);
+    border: 2px solid var(--wp--preset--color--primary);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0.5);
     opacity: 1;
-    animation: pulse-radar 2s ease-out infinite;
+    animation: pulse-radar 2s var(--wp--custom--animation--ease-in-out) infinite;
     pointer-events: none;
 }
 
@@ -220,18 +210,14 @@
     }
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .wp-block-group.is-style-form-container {
-        padding: 24px 20px;
-        margin: 24px 0;
+        padding: var(--wp--preset--spacing--6, 1.5rem) var(--wp--preset--spacing--5, 1rem);
+        margin: var(--wp--preset--spacing--6, 1.5rem) 0;
     }
-    
-    /* Animated cards mobile adjustments */
     .hover-cards {
         grid-template-columns: 1fr !important;
     }
-    
     .hover-cards > .wp-block-group:hover {
         transform: scale(1.02) !important;
     }
@@ -239,6 +225,6 @@
 
 @media (max-width: 480px) {
     .wp-block-group.is-style-form-container {
-        padding: 20px 16px;
+        padding: var(--wp--preset--spacing--5, 1rem) var(--wp--preset--spacing--4, 0.75rem);
     }
 }

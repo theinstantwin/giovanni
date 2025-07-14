@@ -1,7 +1,6 @@
 /* Giovanni Table Styles
 --------------------------------------------- */
 
-/* Striped Table Style */
 .wp-block-table.is-style-striped table {
     border-collapse: collapse;
 }
@@ -23,7 +22,6 @@
     border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 
-/* Minimal Table Style */
 .wp-block-table.is-style-minimal {
     border: none;
     background: none;
@@ -38,7 +36,7 @@
     background: none;
     border: none;
     border-bottom: 2px solid var(--wp--preset--color--gray-300);
-    font-weight: 600;
+    font-weight: var(--wp--custom--font-weight--semibold);
     color: var(--wp--preset--color--gray-700);
 }
 
@@ -55,26 +53,25 @@
     border-bottom: none;
 }
 
-/* Bordered Table Style */
 .wp-block-table.is-style-bordered {
-    border: 1px solid rgba(0, 112, 243, 0.3);
-    border-radius: 8px;
+    border: 1px solid var(--wp--preset--color--primary);
+    border-radius: var(--wp--custom--border-radius--md);
 }
 
 .wp-block-table.is-style-bordered table {
     border: none;
-    border-radius: 8px;
+    border-radius: var(--wp--custom--border-radius--md);
 }
 
 .wp-block-table.is-style-bordered th {
-    background: rgba(0, 112, 243, 0.08);
-    color: var(--wp--preset--color--giovanni-blue);
-    font-weight: 600;
-    border-bottom: 1px solid rgba(0, 112, 243, 0.3);
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+    font-weight: var(--wp--custom--font-weight--semibold);
+    border-bottom: 1px solid var(--wp--preset--color--primary);
 }
 
 .wp-block-table.is-style-bordered td {
-    border-bottom: 1px solid rgba(0, 112, 243, 0.3);
+    border-bottom: 1px solid var(--wp--preset--color--primary);
 }
 
 .wp-block-table.is-style-bordered tbody tr:hover {

@@ -7,9 +7,9 @@
     border: none;
     color: var(--wp--preset--color--gray-600);
     text-decoration: underline;
-    text-underline-offset: 2px;
-    font-weight: 500;
-    transition: all 0.15s ease;
+    text-underline-offset: var(--wp--custom--letter-spacing--tight);
+    font-weight: var(--wp--custom--font-weight--medium);
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-button.is-style-ghost .wp-block-button__link:hover,
@@ -25,8 +25,8 @@
     background: var(--wp--preset--color--gray-900);
     border: none;
     color: var(--wp--preset--color--background);
-    font-weight: 500;
-    transition: all 0.15s ease;
+    font-weight: var(--wp--custom--font-weight--medium);
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
     text-decoration: none;
 }
 
@@ -42,9 +42,9 @@
 .wp-block-button.is-style-arrow-light .wp-block-button__link,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link {
     position: relative;
-    padding-right: 44px;
-    transition: all 0.2s ease;
-    border-radius: 6px;
+    padding-right: var(--wp--preset--spacing--8, 2rem);
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
+    border-radius: var(--wp--custom--border-radius--md);
     overflow: hidden;
     min-width: 120px;
 }
@@ -54,11 +54,11 @@
 .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
     content: "→";
     position: absolute;
-    right: 20px;
+    right: var(--wp--preset--spacing--6, 1.5rem);
     top: 50%;
     transform: translateY(-50%) translateX(0);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-button.is-style-arrow-base .wp-block-button__link:hover::after,

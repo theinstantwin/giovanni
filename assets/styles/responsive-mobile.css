@@ -1,129 +1,94 @@
 /* Giovanni Theme - Responsive and Mobile Optimizations
 --------------------------------------------- */
 
-/* System-aware dark mode using CSS custom properties */
 @media (prefers-color-scheme: dark) {
     :root {
-        --wp--preset--color--background: #1e2021;
-        --wp--preset--color--foreground: #FBF1C7;
-        --wp--preset--color--gray: #4C4641;
-        --wp--preset--color--light-gray: #333230;
-        --wp--preset--color--gray-50: #2F2F2F;
-        --wp--preset--color--gray-100: #333230;
-        --wp--preset--color--gray-200: #3D3A37;
-        --wp--preset--color--gray-300: #4C4641;
-        --wp--preset--color--gray-400: #5A534D;
-        --wp--preset--color--gray-500: #6B6258;
-        --wp--preset--color--gray-600: #7C7164;
-        --wp--preset--color--gray-700: #8D8070;
-        --wp--preset--color--gray-800: #A09686;
-        --wp--preset--color--gray-900: #FBF1C7;
-        --wp--preset--color--giovanni-blue: #ff335f;
-        --wp--preset--color--primary: #ff335f;
-        --wp--preset--color--secondary: #7C7164;
-        --wp--preset--color--muted: #4C4641;
-        --wp--preset--color--subtle: #333230;
-        --wp--preset--color--emphasis: #FBF1C7;
-        --wp--preset--color--primary-light: #ff5a7a;
-        --wp--preset--color--primary-dark: #2d1319;
+        --wp--preset--color--background: var(--wp--preset--color--gray-900);
+        --wp--preset--color--foreground: var(--wp--preset--color--gray-100);
+        --wp--preset--color--gray: var(--wp--preset--color--gray-700);
+        --wp--preset--color--light-gray: var(--wp--preset--color--gray-600);
+        --wp--preset--color--gray-50: var(--wp--preset--color--gray-800);
+        --wp--preset--color--gray-100: var(--wp--preset--color--gray-700);
+        --wp--preset--color--gray-200: var(--wp--preset--color--gray-600);
+        --wp--preset--color--gray-300: var(--wp--preset--color--gray-500);
+        --wp--preset--color--gray-400: var(--wp--preset--color--gray-400);
+        --wp--preset--color--gray-500: var(--wp--preset--color--gray-300);
+        --wp--preset--color--gray-600: var(--wp--preset--color--gray-200);
+        --wp--preset--color--gray-700: var(--wp--preset--color--gray-100);
+        --wp--preset--color--gray-800: var(--wp--preset--color--gray-50);
+        --wp--preset--color--gray-900: var(--wp--preset--color--background);
+        --wp--preset--color--primary: var(--wp--preset--color--emphasis);
+        --wp--preset--color--emphasis: var(--wp--preset--color--primary);
     }
 }
 
-/* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
-    /* Better touch targets for buttons */
     .wp-block-button .wp-block-button__link {
         min-height: 44px;
-        padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--6, 1.5rem);
+        padding: var(--wp--preset--spacing--4) var(--wp--preset--spacing--6);
     }
-    
-    /* Larger touch targets for navigation */
     .wp-block-navigation a {
         min-height: 44px;
-        padding: var(--wp--preset--spacing--3, 0.75rem) var(--wp--preset--spacing--4, 1rem);
+        padding: var(--wp--preset--spacing--3) var(--wp--preset--spacing--4);
         display: flex;
         align-items: center;
     }
-    
-    /* Make post titles more tappable */
     .wp-block-post-title a {
         min-height: 44px;
         display: flex;
         align-items: center;
-        padding: var(--wp--preset--spacing--2, 0.5rem) 0;
+        padding: var(--wp--preset--spacing--2) 0;
     }
-    
-    /* Larger tap targets for post terms and tags */
     .wp-block-post-terms a {
         min-height: 36px;
-        padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--3, 0.75rem);
+        padding: var(--wp--preset--spacing--2) var(--wp--preset--spacing--3);
         display: inline-flex;
         align-items: center;
     }
-    
-    /* Focus styles work better than hover on touch */
     .wp-block-button .wp-block-button__link:focus,
     .wp-block-navigation a:focus,
     .wp-block-post-title a:focus {
-        outline: 3px solid var(--wp--preset--color--primary, #ff335f);
+        outline: 3px solid var(--wp--preset--color--primary);
         outline-offset: 2px;
     }
 }
 
-/* Mobile layout fixes - add proper padding and wider content */
 @media (max-width: 768px) {
     .wp-site-blocks {
-        padding-left: var(--wp--preset--spacing--3, 0.75rem);
-        padding-right: var(--wp--preset--spacing--3, 0.75rem);
+        padding-left: var(--wp--preset--spacing--3);
+        padding-right: var(--wp--preset--spacing--3);
     }
-    
-    /* Make content wider on mobile by overriding contentSize */
     .is-layout-constrained > :not(.alignfull):not(.alignwide) {
         max-width: min(calc(100vw - 1.5rem), 100%);
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    
-    /* Reduce padding for constrained content to maximize width */
     .wp-block-group.is-layout-constrained,
     .is-layout-constrained > * {
         padding-left: 0;
         padding-right: 0;
     }
-    
-    /* Minimal padding for specific content blocks */
     .wp-block-post-content,
     .wp-block-query,
     .wp-block-navigation {
-        padding-left: var(--wp--preset--spacing--2, 0.5rem);
-        padding-right: var(--wp--preset--spacing--2, 0.5rem);
+        padding-left: var(--wp--preset--spacing--2);
+        padding-right: var(--wp--preset--spacing--2);
     }
-    
-    /* Blog listing mobile improvements */
     .wp-block-query .wp-block-post {
-        padding: var(--wp--preset--spacing--4, 1rem) 0;
-        border-bottom: 1px solid var(--wp--preset--color--gray-200, #e5e5e5);
+        padding: var(--wp--preset--spacing--4) 0;
+        border-bottom: 1px solid var(--wp--preset--color--gray-200);
         margin-bottom: 0;
     }
-    
     .wp-block-query .wp-block-post:last-child {
         border-bottom: none;
     }
-    
-    /* Month headers more compact on mobile */
-    
-    /* Post titles larger and better spacing */
-    
-    /* Post dates smaller and consistent */
     .wp-block-post-date {
-        font-size: var(--wp--preset--font-size--sm, 0.875rem) !important;
-        color: var(--wp--preset--color--gray-500, #737373) !important;
+        font-size: var(--wp--preset--font-size--sm) !important;
+        color: var(--wp--preset--color--gray-500) !important;
     }
-    
-    /* Improve touch targets */
     .wp-block-post-title a {
         display: block;
-        padding: var(--wp--preset--spacing--2, 0.5rem) 0;
+        padding: var(--wp--preset--spacing--2) 0;
         min-height: 44px;
         line-height: 1.4;
     }

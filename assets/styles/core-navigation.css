@@ -1,31 +1,28 @@
 /* Giovanni Navigation Styles
 --------------------------------------------- */
 
-/* Default Navigation Style - Desktop only */
 @media (min-width: 600px) {
     .wp-block-navigation .current-menu-item a {
-        color: var(--wp--preset--color--primary, #0070f3);
-        font-weight: 600;
+        color: var(--wp--preset--color--primary);
+        font-weight: var(--wp--custom--font-weight--semibold);
     }
 }
 
-/* Mobile Navigation - Override desktop styles */
 @media (max-width: 599px) {
     .wp-block-navigation .current-menu-item a {
         color: var(--wp--preset--color--foreground);
-        font-weight: 500;
+        font-weight: var(--wp--custom--font-weight--medium);
         background-color: transparent;
     }
 }
 
 .wp-block-navigation .wp-block-navigation-item a:hover {
-    color: var(--wp--preset--color--primary, #0070f3);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Underline Navigation Style */
 .wp-block-navigation.is-style-underline .wp-block-navigation-item a {
     position: relative;
-    transition: color 0.2s ease;
+    transition: color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
     text-decoration: none;
 }
 
@@ -36,8 +33,8 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--wp--preset--color--primary, #0070f3);
-    transition: width 0.3s ease;
+    background-color: var(--wp--preset--color--primary);
+    transition: width var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-navigation.is-style-underline .wp-block-navigation-item a:hover::after,
@@ -48,31 +45,30 @@
 
 .wp-block-navigation.is-style-underline .wp-block-navigation-item a:hover,
 .wp-block-navigation.is-style-underline .current-menu-item a {
-    color: var(--wp--preset--color--primary, #0070f3);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Button Navigation Style */
 .wp-block-navigation.is-style-button .wp-block-navigation-item a {
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--4, 1rem);
+    border-radius: var(--wp--custom--border-radius--md);
     background: transparent;
     border: 1px solid transparent;
-    transition: all 0.2s ease;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: var(--wp--custom--font-weight--medium);
 }
 
 .wp-block-navigation.is-style-button .wp-block-navigation-item a:hover {
-    background: var(--wp--preset--color--primary, #0070f3);
-    border-color: var(--wp--preset--color--primary, #0070f3);
+    background: var(--wp--preset--color--primary);
+    border-color: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background);
     transform: translateY(-1px);
 }
 
 .wp-block-navigation.is-style-button .current-menu-item a {
-    background: var(--wp--preset--color--primary, #0070f3);
+    background: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background);
-    border-color: var(--wp--preset--color--primary, #0070f3);
+    border-color: var(--wp--preset--color--primary);
 }
 
 .wp-block-navigation.is-style-button .current-menu-item a:hover {
@@ -81,24 +77,23 @@
     color: var(--wp--preset--color--background);
 }
 
-/* Pill Navigation Style */
 .wp-block-navigation.is-style-pill .wp-block-navigation-item a {
-    padding: 6px 14px;
+    padding: var(--wp--preset--spacing--1, 0.25rem) var(--wp--preset--spacing--5, 1.5rem);
     border-radius: 20px;
     background: transparent;
-    transition: all 0.2s ease;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: var(--wp--preset--font-size--sm);
+    font-weight: var(--wp--custom--font-weight--medium);
 }
 
 .wp-block-navigation.is-style-pill .wp-block-navigation-item a:hover {
-    background: var(--wp--preset--color--primary, #0070f3);
+    background: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background);
 }
 
 .wp-block-navigation.is-style-pill .current-menu-item a {
-    background: var(--wp--preset--color--primary, #0070f3);
+    background: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background);
 }
 
@@ -107,72 +102,64 @@
     color: var(--wp--preset--color--background);
 }
 
-/* Mobile Navigation / Hamburger Menu Styles
---------------------------------------------- */
+/* Mobile Navigation / Hamburger Menu Styles */
 
-/* Mobile menu overlay */
 .wp-block-navigation__responsive-container.is-menu-open {
     background-color: var(--wp--preset--color--background);
-    border: 1px solid var(--wp--preset--color--gray-200, #e5e5e5);
+    border: 1px solid var(--wp--preset--color--gray-200);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    border-radius: var(--wp--custom--border-radius--md);
     padding: var(--wp--preset--spacing--4, 1rem);
-    margin-top: 8px;
+    margin-top: var(--wp--preset--spacing--2, 0.5rem);
 }
 
-/* Mobile menu items */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
     margin: 0;
     padding: var(--wp--preset--spacing--2, 0.5rem) 0;
-    border-bottom: 1px solid var(--wp--preset--color--gray-100, #f5f5f5);
+    border-bottom: 1px solid var(--wp--preset--color--gray-100);
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item:last-child {
     border-bottom: none;
 }
 
-/* Mobile menu links */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
     display: block;
     padding: var(--wp--preset--spacing--3, 0.75rem) var(--wp--preset--spacing--2, 0.5rem);
     color: var(--wp--preset--color--foreground);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: var(--wp--custom--font-weight--medium);
     min-height: 44px;
     line-height: 1.4;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    border-radius: var(--wp--custom--border-radius--sm);
+    transition: background-color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
     position: relative;
 }
 
-/* Override any underline styles in mobile menu */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a::after {
     display: none !important;
 }
 
-/* Remove focus outlines and replace with proper mobile focus styles */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--wp--preset--color--primary, #0070f3);
+    box-shadow: 0 0 0 2px var(--wp--preset--color--primary);
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:focus {
-    background-color: var(--wp--preset--color--gray-50, #fafafa);
-    color: var(--wp--preset--color--primary, #0070f3);
+    background-color: var(--wp--preset--color--gray-50);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Mobile menu current page - handle all WordPress current page classes */
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-item a,
 .wp-block-navigation__responsive-container.is-menu-open .current_page_item a,
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a,
 .wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a {
-    background-color: var(--wp--preset--color--primary, #0070f3);
+    background-color: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background);
-    font-weight: 600;
+    font-weight: var(--wp--custom--font-weight--semibold);
 }
 
-/* Ensure current page doesn't show underlines in mobile */
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-item a::after,
 .wp-block-navigation__responsive-container.is-menu-open .current_page_item a::after,
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a::after,
@@ -188,19 +175,17 @@
     color: var(--wp--preset--color--background);
 }
 
-/* Reset any accidentally highlighted items that shouldn't be current */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item:not(.current-menu-item):not(.current_page_item):not(.current-menu-ancestor):not(.current_page_ancestor) a {
     background-color: transparent;
     color: var(--wp--preset--color--foreground);
-    font-weight: 500;
+    font-weight: var(--wp--custom--font-weight--medium);
 }
 
-/* Hamburger button styling */
 .wp-block-navigation__responsive-container-open {
-    border: 1px solid var(--wp--preset--color--gray-300, #d4d4d4);
-    border-radius: 4px;
+    border: 1px solid var(--wp--preset--color--gray-300);
+    border-radius: var(--wp--custom--border-radius--sm);
     background: var(--wp--preset--color--background);
-    padding: 6px;
+    padding: var(--wp--preset--spacing--2, 0.5rem);
     min-width: 44px;
     min-height: 44px;
     display: flex;
@@ -209,45 +194,23 @@
 }
 
 .wp-block-navigation__responsive-container-open:hover {
-    background-color: var(--wp--preset--color--gray-50, #fafafa);
-    border-color: var(--wp--preset--color--primary, #0070f3);
+    background-color: var(--wp--preset--color--gray-50);
+    border-color: var(--wp--preset--color--primary);
 }
 
-/* Close button styling */
 .wp-block-navigation__responsive-container-close {
     position: absolute;
     top: var(--wp--preset--spacing--3, 0.75rem);
     right: var(--wp--preset--spacing--3, 0.75rem);
-    border: 1px solid var(--wp--preset--color--gray-300, #d4d4d4);
-    border-radius: 4px;
+    border: 1px solid var(--wp--preset--color--gray-300);
+    border-radius: var(--wp--custom--border-radius--sm);
     background: var(--wp--preset--color--background);
-    padding: 6px;
+    padding: var(--wp--preset--spacing--2, 0.5rem);
     min-width: 36px;
     min-height: 36px;
 }
 
 .wp-block-navigation__responsive-container-close:hover {
-    background-color: var(--wp--preset--color--gray-50, #fafafa);
-    border-color: var(--wp--preset--color--primary, #0070f3);
-}
-
-/* Mobile Navigation - Work with WordPress defaults */
-@media (max-width: 599px) {
-    /* Style the responsive container when open */
-    .wp-block-navigation__responsive-container.is-menu-open {
-        background-color: var(--wp--preset--color--background);
-        border: 1px solid var(--wp--preset--color--gray-200, #e5e5e5);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        border-radius: 8px;
-        padding: var(--wp--preset--spacing--4, 1rem);
-    }
-    
-    /* If WordPress uses modal, style it properly */
-    .wp-block-navigation__responsive-dialog {
-        background-color: var(--wp--preset--color--background);
-        max-width: none;
-        width: 100%;
-        margin: 0;
-        padding: var(--wp--preset--spacing--4, 1rem);
-    }
+    background-color: var(--wp--preset--color--gray-50);
+    border-color: var(--wp--preset--color--primary);
 }

@@ -1,13 +1,12 @@
 /* Giovanni Image Styles
 --------------------------------------------- */
 
-/* Polaroid Static Image Style */
 .wp-block-image.is-style-polaroid-static {
     background: var(--wp--preset--color--background);
-    padding: 12px 12px 40px;
+    padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--10, 2.5rem);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transform: rotate(-1deg);
-    margin: 2rem auto;
+    margin: var(--wp--preset--spacing--8, 2rem) auto;
     display: inline-block;
 }
 
@@ -17,17 +16,16 @@
 }
 
 .wp-block-image.is-style-polaroid-static figcaption {
-    margin-top: 12px;
+    margin-top: var(--wp--preset--spacing--4, 1rem);
     text-align: center;
-    font-family: "Courier New", monospace;
-    font-size: 14px;
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: var(--wp--preset--font-size--xs);
     color: var(--wp--preset--color--gray-500);
 }
 
-/* Rounded Image Style */
 .wp-block-image.is-style-rounded img {
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+    border-radius: var(--wp--custom--border-radius--md);
+    transition: transform var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-image.is-style-rounded:hover img {

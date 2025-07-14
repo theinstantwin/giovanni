@@ -4,11 +4,11 @@
 /* Logo Style */
 .wp-block-site-title.is-style-logo-style {
     background: var(--wp--preset--color--gray-50);
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--6, 1.5rem);
+    border-radius: var(--wp--custom--border-radius--md);
     border: 1px solid var(--wp--preset--color--gray-200);
     display: inline-block;
-    transition: all 0.2s ease;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-site-title.is-style-logo-style:hover {
@@ -18,14 +18,16 @@
 }
 
 .wp-block-site-title.is-style-logo-style a {
-    font-weight: 600;
+    font-weight: var(--wp--custom--font-weight--semibold);
     color: var(--wp--preset--color--foreground);
     text-decoration: none;
-    letter-spacing: -0.025em;
+    letter-spacing: var(--wp--custom--letter-spacing--tight);
+    font-family: var(--wp--preset--font-family--primary, var(--wp--preset--font-family--inter));
+    font-size: var(--wp--preset--font-size--md);
 }
 
 .wp-block-site-title.is-style-logo-style a:hover {
-    color: var(--wp--preset--color--giovanni-blue);
+    color: var(--wp--preset--color--primary);
 }
 
 /* Brand Name Style */
@@ -34,14 +36,15 @@
 }
 
 .wp-block-site-title.is-style-brand-name a {
-    font-weight: 700;
-    font-size: 1.5em;
-    color: var(--wp--preset--color--giovanni-blue);
+    font-weight: var(--wp--custom--font-weight--bold);
+    font-size: var(--wp--preset--font-size--2-xl);
+    color: var(--wp--preset--color--primary);
     text-decoration: none;
-    letter-spacing: -0.05em;
-    line-height: 1.1;
+    letter-spacing: var(--wp--custom--letter-spacing--tighter);
+    line-height: var(--wp--custom--line-height--tight);
     text-transform: uppercase;
-    transition: all 0.2s ease;
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
+    font-family: var(--wp--preset--font-family--primary, var(--wp--preset--font-family--inter));
 }
 
 .wp-block-site-title.is-style-brand-name a:hover {

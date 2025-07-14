@@ -1,15 +1,13 @@
 /* Giovanni Link System
 --------------------------------------------- */
 
-/* CSS Custom Properties for Link System */
 :root {
     --giovanni-link-underline-thin: 1px;
     --giovanni-link-underline-thick: 2px;
     --giovanni-link-offset: 2px;
-    --giovanni-link-transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+    --giovanni-link-transition: text-decoration-thickness var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out), color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
 }
 
-/* Base Link Styling - Content Links */
 .wp-block-post-content a,
 .entry-content p a, 
 .entry-content li a, 
@@ -19,27 +17,27 @@
     text-underline-offset: var(--giovanni-link-offset);
     font-weight: inherit;
     transition: var(--giovanni-link-transition);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Post Title Links */
 .wp-block-post-title a {
     text-decoration: underline;
     text-decoration-thickness: var(--giovanni-link-underline-thin);
     text-underline-offset: var(--giovanni-link-offset);
     font-weight: inherit;
     transition: var(--giovanni-link-transition);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Post Navigation Links */
 .wp-block-post-navigation-link a {
     text-decoration: underline;
     text-decoration-thickness: var(--giovanni-link-underline-thin);
     text-underline-offset: var(--giovanni-link-offset);
     font-weight: inherit;
     transition: var(--giovanni-link-transition);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Footer Links */
 .wp-site-blocks footer a,
 .has-gray-600-color a,
 .has-gray-500-color a {
@@ -47,9 +45,9 @@
     text-decoration-thickness: var(--giovanni-link-underline-thin);
     text-underline-offset: var(--giovanni-link-offset);
     transition: var(--giovanni-link-transition);
+    color: var(--wp--preset--color--primary);
 }
 
-/* Hover Effects - Content Links */
 .wp-block-post-content a:hover,
 .wp-block-post-content a:focus,
 .entry-content p a:hover,
@@ -59,24 +57,21 @@
 .entry-content blockquote a:hover,
 .entry-content blockquote a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--primary, #0070f3);
+    color: var(--wp--preset--color--emphasis);
 }
 
-/* Hover Effects - Post Title Links */
 .wp-block-post-title a:hover,
 .wp-block-post-title a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--primary, #0070f3);
+    color: var(--wp--preset--color--emphasis);
 }
 
-/* Hover Effects - Post Navigation Links */
 .wp-block-post-navigation-link a:hover,
 .wp-block-post-navigation-link a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--primary, #0070f3);
+    color: var(--wp--preset--color--emphasis);
 }
 
-/* Hover Effects - Footer Links */
 .wp-site-blocks footer a:hover,
 .wp-site-blocks footer a:focus,
 .has-gray-600-color a:hover,
@@ -84,20 +79,16 @@
 .has-gray-500-color a:hover,
 .has-gray-500-color a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--primary, #0070f3);
+    color: var(--wp--preset--color--emphasis);
 }
 
-/* Touch Device Improvements */
 @media (hover: none) and (pointer: coarse) {
-    /* Larger touch targets for mobile */
     .wp-block-post-title a {
         display: block;
         padding: var(--wp--preset--spacing--2, 0.5rem) 0;
         min-height: 44px;
         line-height: 1.4;
     }
-    
-    /* Post navigation touch improvements */
     .wp-block-post-navigation-link a {
         display: block;
         padding: var(--wp--preset--spacing--3, 0.75rem);
@@ -106,16 +97,13 @@
     }
 }
 
-/* Theme Variation Support - Dark Themes */
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Slightly thicker underlines for better contrast in dark mode */
         --giovanni-link-underline-thin: 1.5px;
         --giovanni-link-underline-thick: 2.5px;
     }
 }
 
-/* High Contrast Mode Support */
 @media (prefers-contrast: high) {
     .wp-block-post-content a,
     .entry-content a,
@@ -123,11 +111,10 @@
     .wp-block-post-navigation-link a,
     .wp-site-blocks footer a {
         text-decoration-thickness: var(--giovanni-link-underline-thick);
-        font-weight: 600;
+        font-weight: var(--wp--custom--font-weight--semibold);
     }
 }
 
-/* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
     .wp-block-post-content a,
     .entry-content a,
