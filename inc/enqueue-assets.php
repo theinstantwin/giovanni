@@ -199,7 +199,7 @@ function giovanni_add_custom_link_styles() {
             
             /* Month headers more compact on mobile */
             .wp-block-query h2,
-            .wp-block-heading {
+            .wp-block-query .wp-block-heading {
                 font-size: var(--wp--preset--font-size--lg, 1.25rem) !important;
                 margin: var(--wp--preset--spacing--6, 1.5rem) 0 var(--wp--preset--spacing--4, 1rem) 0 !important;
             }
