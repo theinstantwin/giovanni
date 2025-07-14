@@ -28,8 +28,8 @@
             
             <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem","margin":{"bottom":"0.75rem"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
             <div class="wp-block-group" style="gap:0.5rem;margin-bottom:0.75rem">
-                <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--giovanni-blue)"}}},"typography":{"fontSize":"0.75rem","fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"giovanni-blue","className":"margin-note-label"} -->
-                <p class="margin-note-label has-giovanni-blue-color has-text-color has-link-color" style="font-size:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase">✏️ Note</p>
+                <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--primary)"}}},"typography":{"fontSize":"0.75rem","fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"primary","className":"margin-note-label"} -->
+                <p class="margin-note-label has-primary-color has-text-color has-link-color" style="font-size:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase">✏️ Note</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

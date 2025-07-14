@@ -31,7 +31,7 @@
         <div class="wp-block-group has-gray-50-background-color has-background" style="border-color:var(--wp--preset--color--gray-100);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
             <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--3)","margin":{"bottom":"var(--wp--preset--spacing--4)"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
             <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--4)">
-                <!-- wp:post-date {"style":{"typography":{"fontWeight":"600","fontSize":"0.8rem","letterSpacing":"0.05em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"giovanni-blue"} /-->
+                <!-- wp:post-date {"style":{"typography":{"fontWeight":"600","fontSize":"0.8rem","letterSpacing":"0.05em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary"} /-->
                 
                 <!-- wp:post-terms {"term":"category","style":{"typography":{"fontWeight":"500","fontSize":"0.8rem","letterSpacing":"0.03em","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"gray-500"} /-->
             </div>
@@ -55,8 +55,8 @@
                 </div>
                 <!-- /wp:group -->
                 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8rem","fontWeight":"600","letterSpacing":"0.02em","textTransform":"uppercase"}},"textColor":"giovanni-blue"} -->
-                <p class="has-giovanni-blue-color has-text-color" style="font-size:0.8rem;font-weight:600;letter-spacing:0.02em;text-transform:uppercase">→ Read More</p>
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8rem","fontWeight":"600","letterSpacing":"0.02em","textTransform":"uppercase"}},"textColor":"primary"} -->
+                <p class="has-primary-color has-text-color" style="font-size:0.8rem;font-weight:600;letter-spacing:0.02em;text-transform:uppercase">→ Read More</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

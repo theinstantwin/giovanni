@@ -36,8 +36,8 @@
 			<!-- wp:paragraph {"fontSize":"sm"} -->
 			<p class="has-sm-font-size">A detailed discussion on modern web development trends and challenges.</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:group {"style":{"border":{"radius":"100px"},"spacing":{"padding":{"top":"3px","right":"15px","bottom":"3px","left":"15px"}},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"1px","textTransform":"uppercase"}},"backgroundColor":"giovanni-blue","className":"giovanni-no-shrink"} -->
-			<div class="wp-block-group giovanni-no-shrink has-giovanni-blue-background-color has-background has-sm-font-size" style="border-radius:100px;padding-top:3px;padding-right:15px;padding-bottom:3px;padding-left:15px;font-style:normal;font-weight:500;letter-spacing:1px;text-transform:uppercase">
+			<!-- wp:group {"style":{"border":{"radius":"100px"},"spacing":{"padding":{"top":"3px","right":"15px","bottom":"3px","left":"15px"}},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"1px","textTransform":"uppercase"}},"backgroundColor":"primary","className":"giovanni-no-shrink"} -->
+			<div class="wp-block-group giovanni-no-shrink has-primary-background-color has-background has-sm-font-size" style="border-radius:100px;padding-top:3px;padding-right:15px;padding-bottom:3px;padding-left:15px;font-style:normal;font-weight:500;letter-spacing:1px;text-transform:uppercase">
 				<!-- wp:paragraph {"fontSize":"xs","textColor":"background"} -->
 				<p class="has-xs-font-size has-background-color has-text-color">Podcast</p>
 				<!-- /wp:paragraph -->
@@ -62,8 +62,8 @@
 			<!-- wp:paragraph {"fontSize":"sm"} -->
 			<p class="has-sm-font-size">An insightful interview covering product design, user experience, and market strategies.</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:group {"style":{"border":{"radius":"100px"},"spacing":{"padding":{"top":"3px","right":"15px","bottom":"3px","left":"15px"}},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"1px","textTransform":"uppercase"}},"backgroundColor":"giovanni-blue","className":"giovanni-no-shrink"} -->
-			<div class="wp-block-group giovanni-no-shrink has-giovanni-blue-background-color has-background has-sm-font-size" style="border-radius:100px;padding-top:3px;padding-right:15px;padding-bottom:3px;padding-left:15px;font-style:normal;font-weight:500;letter-spacing:1px;text-transform:uppercase">
+			<!-- wp:group {"style":{"border":{"radius":"100px"},"spacing":{"padding":{"top":"3px","right":"15px","bottom":"3px","left":"15px"}},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"1px","textTransform":"uppercase"}},"backgroundColor":"primary","className":"giovanni-no-shrink"} -->
+			<div class="wp-block-group giovanni-no-shrink has-primary-background-color has-background has-sm-font-size" style="border-radius:100px;padding-top:3px;padding-right:15px;padding-bottom:3px;padding-left:15px;font-style:normal;font-weight:500;letter-spacing:1px;text-transform:uppercase">
 				<!-- wp:paragraph {"fontSize":"xs","textColor":"background"} -->
 				<p class="has-xs-font-size has-background-color has-text-color">Interview</p>
 				<!-- /wp:paragraph -->
@@ -88,8 +88,8 @@
 			<!-- wp:paragraph {"fontSize":"sm"} -->
 			<p class="has-sm-font-size">An in-depth webinar exploring the principles of effective design systems.</p>
 			<!-- /wp:paragraph -->
-			<!-- wp:group {"style":{"border":{"radius":"100px"},"spacing":{"padding":{"top":"3px","right":"15px","bottom":"3px","left":"15px"}},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"1px","textTransform":"uppercase"}},"backgroundColor":"giovanni-blue","className":"giovanni-no-shrink"} -->
-			<div class="wp-block-group giovanni-no-shrink has-giovanni-blue-background-color has-background has-sm-font-size" style="border-radius:100px;padding-top:3px;padding-right:15px;padding-bottom:3px;padding-left:15px;font-style:normal;font-weight:500;letter-spacing:1px;text-transform:uppercase">
+			<!-- wp:group {"style":{"border":{"radius":"100px"},"spacing":{"padding":{"top":"3px","right":"15px","bottom":"3px","left":"15px"}},"typography":{"fontStyle":"normal","fontWeight":"500","letterSpacing":"1px","textTransform":"uppercase"}},"backgroundColor":"primary","className":"giovanni-no-shrink"} -->
+			<div class="wp-block-group giovanni-no-shrink has-primary-background-color has-background has-sm-font-size" style="border-radius:100px;padding-top:3px;padding-right:15px;padding-bottom:3px;padding-left:15px;font-style:normal;font-weight:500;letter-spacing:1px;text-transform:uppercase">
 				<!-- wp:paragraph {"fontSize":"xs","textColor":"background"} -->
 				<p class="has-xs-font-size has-background-color has-text-color">Webinar</p>
 				<!-- /wp:paragraph -->

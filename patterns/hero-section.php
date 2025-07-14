@@ -25,8 +25,8 @@
 
         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)","margin":{"top":"var(--wp--preset--spacing--6)"}}}} -->
         <div class="wp-block-buttons" style="gap:var(--wp--preset--spacing--4);margin-top:var(--wp--preset--spacing--6)">
-            <!-- wp:button {"backgroundColor":"giovanni-blue","textColor":"background","style":{"border":{"radius":"6px"}},"fontSize":"md"} -->
-            <div class="wp-block-button has-md-font-size"><a class="wp-block-button__link has-background-color has-giovanni-blue-background-color has-text-color has-background wp-element-button" href="#">Get in touch</a></div>
+            <!-- wp:button {"backgroundColor":"primary","textColor":"background","style":{"border":{"radius":"6px"}},"fontSize":"md"} -->
+            <div class="wp-block-button has-md-font-size"><a class="wp-block-button__link has-background-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Get in touch</a></div>
             <!-- /wp:button -->
 
             <!-- wp:button {"className":"is-style-arrow-light"} -->

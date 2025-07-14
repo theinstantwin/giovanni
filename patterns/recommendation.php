@@ -20,8 +20,8 @@
         
         <!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
         <div class="wp-block-group" style="gap:0.75rem">
-            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--giovanni-blue)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"giovanni-blue","className":"recommendation-label"} -->
-            <p class="recommendation-label has-giovanni-blue-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:600">✨ Recommended</p>
+            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--primary)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"primary","className":"recommendation-label"} -->
+            <p class="recommendation-label has-primary-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:600">✨ Recommended</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->
@@ -48,8 +48,8 @@
             <p class="recommendation-rating has-gray-600-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:500">My Rating:</p>
             <!-- /wp:paragraph -->
             
-            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--giovanni-blue)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"giovanni-blue","className":"recommendation-stars"} -->
-            <p class="recommendation-stars has-giovanni-blue-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:600">★★★★★</p>
+            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--primary)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"primary","className":"recommendation-stars"} -->
+            <p class="recommendation-stars has-primary-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:600">★★★★★</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->

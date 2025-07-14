@@ -27,8 +27,8 @@
 	<p>Share the process, challenges, or technical details behind your work. This is where you can be transparent about your approach, lessons learned, or interesting problems you solved.</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--4)","bottom":"var(--wp--preset--spacing--4)","left":"var(--wp--preset--spacing--5)","right":"var(--wp--preset--spacing--5)"}},"border":{"radius":"4px"}},"backgroundColor":"giovanni-blue","textColor":"background","layout":{"type":"default"}} -->
-	<div class="wp-block-group has-background-color has-giovanni-blue-background-color has-text-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--4)","bottom":"var(--wp--preset--spacing--4)","left":"var(--wp--preset--spacing--5)","right":"var(--wp--preset--spacing--5)"}},"border":{"radius":"4px"}},"backgroundColor":"primary","textColor":"background","layout":{"type":"default"}} -->
+	<div class="wp-block-group has-background-color has-primary-background-color has-text-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--3)"}},"layout":{"type":"flex"},"fontSize":"sm"} -->
 		<div class="wp-block-group has-sm-font-size" style="gap:var(--wp--preset--spacing--3)">
 			<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->
