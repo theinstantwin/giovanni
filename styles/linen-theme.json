@@ -94,6 +94,16 @@
 					"color": "#fff5f7",
 					"name": "Red Light",
 					"slug": "red-light"
+				},
+				{
+					"color": "#ff335f",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#ff335f",
+					"name": "Giovanni Blue",
+					"slug": "giovanni-blue"
 				}
 			]
 		}
