@@ -91,6 +91,11 @@
 					"slug": "giovanni-blue"
 				},
 				{
+					"color": "#00d4aa",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
 					"color": "#e0e7ff",
 					"name": "Reading Text",
 					"slug": "reading-text"

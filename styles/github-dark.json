@@ -89,6 +89,11 @@
 					"color": "#f85149",
 					"name": "GitHub Red",
 					"slug": "giovanni-blue"
+				},
+				{
+					"color": "#f85149",
+					"name": "Primary",
+					"slug": "primary"
 				}
 			]
 		}
@@ -101,7 +106,7 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--giovanni-blue)"
+					"text": "var(--wp--preset--color--primary)"
 				},
 				":hover": {
 					"color": {
@@ -139,7 +144,7 @@
 			},
 			"core/button": {
 				"color": {
-					"background": "var(--wp--preset--color--giovanni-blue)",
+					"background": "var(--wp--preset--color--primary)",
 					"text": "var(--wp--preset--color--background)"
 				},
 				"border": {
@@ -161,7 +166,7 @@
 				},
 				"border": {
 					"left": {
-						"color": "var(--wp--preset--color--giovanni-blue)"
+						"color": "var(--wp--preset--color--primary)"
 					}
 				}
 			},
