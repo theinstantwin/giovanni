@@ -1006,9 +1006,6 @@
 						"top": "2rem",
 						"bottom": "2rem"
 					}
-				},
-				"border": {
-					"radius": "var(--wp--custom--border-radius--lg)"
 				}
 			},
 			"core/gallery": {
