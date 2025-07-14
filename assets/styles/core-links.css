@@ -59,21 +59,21 @@
 .entry-content blockquote a:hover,
 .entry-content blockquote a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Hover Effects - Post Title Links */
 .wp-block-post-title a:hover,
 .wp-block-post-title a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Hover Effects - Post Navigation Links */
 .wp-block-post-navigation-link a:hover,
 .wp-block-post-navigation-link a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Hover Effects - Footer Links */
@@ -84,7 +84,7 @@
 .has-gray-500-color a:hover,
 .has-gray-500-color a:focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Touch Device Improvements */

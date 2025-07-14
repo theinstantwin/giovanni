@@ -4,7 +4,7 @@
 /* Default Navigation Style - Desktop only */
 @media (min-width: 600px) {
     .wp-block-navigation .current-menu-item a {
-        color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+        color: var(--wp--preset--color--primary, #0070f3);
         font-weight: 600;
     }
 }
@@ -19,7 +19,7 @@
 }
 
 .wp-block-navigation .wp-block-navigation-item a:hover {
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Underline Navigation Style */
@@ -36,7 +36,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    background-color: var(--wp--preset--color--primary, #0070f3);
     transition: width 0.3s ease;
 }
 
@@ -48,7 +48,7 @@
 
 .wp-block-navigation.is-style-underline .wp-block-navigation-item a:hover,
 .wp-block-navigation.is-style-underline .current-menu-item a {
-    color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Button Navigation Style */
@@ -63,16 +63,16 @@
 }
 
 .wp-block-navigation.is-style-button .wp-block-navigation-item a:hover {
-    background: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
-    border-color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    background: var(--wp--preset--color--primary, #0070f3);
+    border-color: var(--wp--preset--color--primary, #0070f3);
     color: var(--wp--preset--color--background);
     transform: translateY(-1px);
 }
 
 .wp-block-navigation.is-style-button .current-menu-item a {
-    background: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    background: var(--wp--preset--color--primary, #0070f3);
     color: var(--wp--preset--color--background);
-    border-color: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    border-color: var(--wp--preset--color--primary, #0070f3);
 }
 
 .wp-block-navigation.is-style-button .current-menu-item a:hover {
@@ -93,12 +93,12 @@
 }
 
 .wp-block-navigation.is-style-pill .wp-block-navigation-item a:hover {
-    background: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    background: var(--wp--preset--color--primary, #0070f3);
     color: var(--wp--preset--color--background);
 }
 
 .wp-block-navigation.is-style-pill .current-menu-item a {
-    background: var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    background: var(--wp--preset--color--primary, #0070f3);
     color: var(--wp--preset--color--background);
 }
 
@@ -153,13 +153,13 @@
 /* Remove focus outlines and replace with proper mobile focus styles */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--wp--preset--color--giovanni-blue, #0070f3);
+    box-shadow: 0 0 0 2px var(--wp--preset--color--primary, #0070f3);
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:focus {
     background-color: var(--wp--preset--color--gray-50, #fafafa);
-    color: var(--wp--preset--color--giovanni-blue, #0070f3);
+    color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Mobile menu current page - handle all WordPress current page classes */
@@ -167,7 +167,7 @@
 .wp-block-navigation__responsive-container.is-menu-open .current_page_item a,
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a,
 .wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a {
-    background-color: var(--wp--preset--color--giovanni-blue, #0070f3);
+    background-color: var(--wp--preset--color--primary, #0070f3);
     color: var(--wp--preset--color--background);
     font-weight: 600;
 }
@@ -186,15 +186,6 @@
 .wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a:hover {
     background-color: var(--wp--preset--color--gray-900);
     color: var(--wp--preset--color--background);
-}
-
-/* Remove any focus outlines on current page links */
-.wp-block-navigation__responsive-container.is-menu-open .current-menu-item a:focus,
-.wp-block-navigation__responsive-container.is-menu-open .current_page_item a:focus,
-.wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor a:focus,
-.wp-block-navigation__responsive-container.is-menu-open .current_page_ancestor a:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--wp--preset--color--background);
 }
 
 /* Reset any accidentally highlighted items that shouldn't be current */
@@ -219,7 +210,7 @@
 
 .wp-block-navigation__responsive-container-open:hover {
     background-color: var(--wp--preset--color--gray-50, #fafafa);
-    border-color: var(--wp--preset--color--giovanni-blue, #0070f3);
+    border-color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Close button styling */
@@ -237,7 +228,7 @@
 
 .wp-block-navigation__responsive-container-close:hover {
     background-color: var(--wp--preset--color--gray-50, #fafafa);
-    border-color: var(--wp--preset--color--giovanni-blue, #0070f3);
+    border-color: var(--wp--preset--color--primary, #0070f3);
 }
 
 /* Mobile Navigation - Work with WordPress defaults */

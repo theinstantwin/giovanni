@@ -3,7 +3,7 @@
 
 /* Book Quote Style */
 .wp-block-quote.is-style-book-quote {
-    border-left: 4px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
+    border-left: 4px solid var(--wp--preset--color--primary, #0070f3);
     background: var(--wp--preset--color--gray-50);
     padding: 24px 32px;
     margin: 32px 0;
@@ -45,7 +45,7 @@
 /* Personal Reflection Style */
 .wp-block-quote.is-style-personal-reflection {
     border: none;
-    background: var(--wp--preset--color--gray-50);
+    background: var(--wp--preset--color--white);
     border-left: 4px solid var(--wp--preset--color--giovanni-blue, var(--wp--preset--color--radical-red, #0070f3));
     border-radius: 0 8px 8px 0;
     padding: 20px 24px;
