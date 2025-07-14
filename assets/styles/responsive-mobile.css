@@ -6,90 +6,30 @@
         --wp--preset--color--background: var(--wp--preset--color--gray-900);
         --wp--preset--color--foreground: var(--wp--preset--color--gray-100);
         --wp--preset--color--gray: var(--wp--preset--color--gray-700);
-        --wp--preset--color--light-gray: var(--wp--preset--color--gray-600);
-        --wp--preset--color--gray-50: var(--wp--preset--color--gray-800);
-        --wp--preset--color--gray-100: var(--wp--preset--color--gray-700);
-        --wp--preset--color--gray-200: var(--wp--preset--color--gray-600);
-        --wp--preset--color--gray-300: var(--wp--preset--color--gray-500);
-        --wp--preset--color--gray-400: var(--wp--preset--color--gray-400);
-        --wp--preset--color--gray-500: var(--wp--preset--color--gray-300);
-        --wp--preset--color--gray-600: var(--wp--preset--color--gray-200);
-        --wp--preset--color--gray-700: var(--wp--preset--color--gray-100);
-        --wp--preset--color--gray-800: var(--wp--preset--color--gray-50);
-        --wp--preset--color--gray-900: var(--wp--preset--color--background);
-        --wp--preset--color--primary: var(--wp--preset--color--emphasis);
-        --wp--preset--color--emphasis: var(--wp--preset--color--primary);
-    }
-}
-
-@media (hover: none) and (pointer: coarse) {
-    .wp-block-button .wp-block-button__link {
-        min-height: 44px;
-        padding: var(--wp--preset--spacing--4) var(--wp--preset--spacing--6);
-    }
-    .wp-block-navigation a {
-        min-height: 44px;
-        padding: var(--wp--preset--spacing--3) var(--wp--preset--spacing--4);
-        display: flex;
-        align-items: center;
-    }
-    .wp-block-post-title a {
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        padding: var(--wp--preset--spacing--2) 0;
-    }
-    .wp-block-post-terms a {
-        min-height: 36px;
-        padding: var(--wp--preset--spacing--2) var(--wp--preset--spacing--3);
-        display: inline-flex;
-        align-items: center;
-    }
-    .wp-block-button .wp-block-button__link:focus,
-    .wp-block-navigation a:focus,
-    .wp-block-post-title a:focus {
-        outline: 3px solid var(--wp--preset--color--primary);
-        outline-offset: 2px;
+        --wp--preset--color--light-gray: var(--wp--preset--color--gray-800);
+        --wp--preset--color--primary: #ff335f;
     }
 }
 
 @media (max-width: 768px) {
-    .wp-site-blocks {
-        padding-left: var(--wp--preset--spacing--3);
-        padding-right: var(--wp--preset--spacing--3);
+    .wp-block-navigation__responsive-container.is-menu-open {
+        background-color: var(--wp--preset--color--background);
+        border: 1px solid var(--wp--preset--color--light-gray);
     }
-    .is-layout-constrained > :not(.alignfull):not(.alignwide) {
-        max-width: min(calc(100vw - 1.5rem), 100%);
-        margin-left: auto !important;
-        margin-right: auto !important;
+    
+    .wp-block-navigation__responsive-container-content {
+        padding: 1rem;
     }
-    .wp-block-group.is-layout-constrained,
-    .is-layout-constrained > * {
-        padding-left: 0;
-        padding-right: 0;
+    
+    .wp-block-navigation-item a {
+        color: var(--wp--preset--color--foreground);
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--wp--preset--color--light-gray);
     }
-    .wp-block-post-content,
-    .wp-block-query,
-    .wp-block-navigation {
-        padding-left: var(--wp--preset--spacing--2);
-        padding-right: var(--wp--preset--spacing--2);
-    }
-    .wp-block-query .wp-block-post {
-        padding: var(--wp--preset--spacing--4) 0;
-        border-bottom: 1px solid var(--wp--preset--color--gray-200);
-        margin-bottom: 0;
-    }
-    .wp-block-query .wp-block-post:last-child {
-        border-bottom: none;
-    }
-    .wp-block-post-date {
-        font-size: var(--wp--preset--font-size--sm) !important;
-        color: var(--wp--preset--color--gray-500) !important;
-    }
-    .wp-block-post-title a {
-        display: block;
-        padding: var(--wp--preset--spacing--2) 0;
-        min-height: 44px;
-        line-height: 1.4;
+    
+    .wp-block-navigation-item a:hover,
+    .wp-block-navigation-item a:focus {
+        color: var(--wp--preset--color--primary);
+        background-color: transparent;
     }
 }
