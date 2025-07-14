@@ -45,8 +45,7 @@
 					"fontFamily": "var(--wp--preset--font-family--georgia-serif)",
 					"fontWeight": "var(--wp--custom--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--line-height--tight)",
-					"letterSpacing": "var(--wp--custom--letter-spacing--tight)",
-					"fontSize": "var(--wp--preset--font-size--5xl)"
+					"letterSpacing": "var(--wp--custom--letter-spacing--tight)"
 				}
 			},
 			"h3": {
