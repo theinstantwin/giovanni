@@ -157,6 +157,25 @@ function giovanni_enqueue_custom_block_styles() {
 add_action( 'init', 'giovanni_enqueue_custom_block_styles', 100 );
 
 /**
+ * Enqueue block styles for the editor (backend)
+ */
+function giovanni_enqueue_block_editor_styles() {
+    $files = glob( get_template_directory() . '/assets/styles/core-*.css' );
+    if ( ! empty( $files ) ) {
+        foreach ( $files as $file ) {
+            $filename = basename( $file );
+            wp_enqueue_style(
+                'giovanni-editor-' . $filename,
+                get_theme_file_uri( 'assets/styles/' . $filename ),
+                array(),
+                wp_get_theme()->get('Version')
+            );
+        }
+    }
+}
+add_action( 'enqueue_block_editor_assets', 'giovanni_enqueue_block_editor_styles' );
+
+/**
  * Clear the block styles cache when theme is updated or when needed
  */
 function giovanni_clear_block_styles_cache() {
