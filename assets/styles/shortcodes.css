@@ -6,7 +6,7 @@
 }
 
 .blog-posts-by-month .month-header {
-    font-size: var(--wp--preset--font-size--md);
+    font-size: var(--wp--preset--font-size--xl);
     font-weight: var(--wp--custom--font-weight--semibold);
     color: var(--wp--preset--color--primary);
     margin-bottom: var(--wp--preset--spacing--4, 1rem);
@@ -36,7 +36,7 @@
 .blog-post-item a {
     text-decoration: none;
     color: var(--wp--preset--color--foreground);
-    font-size: var(--wp--preset--font-size--sm);
+    font-size: var(--wp--preset--font-size--lg);
     font-weight: var(--wp--custom--font-weight--medium);
     line-height: var(--wp--custom--line-height--normal);
     flex: 1;
@@ -49,7 +49,7 @@
 
 .blog-post-item .post-date {
     color: var(--wp--preset--color--gray);
-    font-size: var(--wp--preset--font-size--xs);
+    font-size: var(--wp--preset--font-size--sm);
     flex-shrink: 0;
     white-space: nowrap;
     font-weight: var(--wp--custom--font-weight--regular);
@@ -63,14 +63,14 @@
         padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--3, 0.75rem);
     }
     .blog-post-item a {
-        font-size: var(--wp--preset--font-size--xs);
+        font-size: var(--wp--preset--font-size--md);
     }
     .blog-post-item .post-date {
-        font-size: var(--wp--preset--font-size--xs);
+        font-size: var(--wp--preset--font-size--sm);
         margin-top: var(--wp--preset--spacing--1, 0.25rem);
     }
     .blog-posts-by-month .month-header {
-        font-size: var(--wp--preset--font-size--sm);
+        font-size: var(--wp--preset--font-size--lg);
         margin-bottom: var(--wp--preset--spacing--2, 0.5rem);
     }
 }
