@@ -5,22 +5,37 @@
     background: var(--wp--preset--color--container);
     border-radius: var(--giovanni-card-radius);
     border: var(--giovanni-border-light);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     transition: var(--giovanni-transition-base);
     margin: var(--wp--preset--spacing--6, 1.5rem) 0;
 }
 
 /* Enhanced visibility for container backgrounds - matches personal-reflection quote style */
 .wp-block-group.has-container-background-color {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove shadows from nested group blocks to prevent compounding */
+.wp-block-group .wp-block-group[class*="is-style-"][class*="card"] {
+    box-shadow: none;
+}
+
+.wp-block-group .wp-block-group.has-container-background-color {
+    box-shadow: none;
 }
 
 .wp-block-group[class*="is-style-"][class*="card"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     border-color: var(--wp--preset--color--primary);
     background: var(--wp--preset--color--container, #ffffff) !important;
     background-color: var(--wp--preset--color--container, #ffffff) !important;
+}
+
+/* No hover shadows for nested group blocks */
+.wp-block-group .wp-block-group[class*="is-style-"][class*="card"]:hover {
+    box-shadow: none;
+    transform: none;
 }
 
 .wp-block-group.is-style-card {
@@ -137,13 +152,22 @@
     border-radius: var(--giovanni-card-radius);
     padding: var(--wp--preset--spacing--8, 2rem);
     margin: var(--wp--preset--spacing--8, 2rem) 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: var(--giovanni-transition-base);
 }
 
 .wp-block-group.is-style-form-container:hover {
     border-color: var(--wp--preset--color--muted-text);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Remove shadows from nested form containers */
+.wp-block-group .wp-block-group.is-style-form-container {
+    box-shadow: none;
+}
+
+.wp-block-group .wp-block-group.is-style-form-container:hover {
+    box-shadow: none;
 }
 
 .hover-cards > .wp-block-group {
@@ -154,14 +178,20 @@
 
 .hover-cards > .wp-block-group:nth-child(odd):hover {
     transform: scale(1.03) rotate(1.5deg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     background: var(--wp--preset--color--container, #ffffff) !important;
 }
 
 .hover-cards > .wp-block-group:nth-child(even):hover {
     transform: scale(1.03) rotate(-1.5deg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     background: var(--wp--preset--color--container, #ffffff) !important;
+}
+
+/* Prevent nested hover effects in animated cards */
+.hover-cards .wp-block-group .wp-block-group:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .pulse-orb {
