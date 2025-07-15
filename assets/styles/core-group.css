@@ -3,11 +3,16 @@
 
 .wp-block-group[class*="is-style-"][class*="card"] {
     background: var(--wp--preset--color--container);
-    border-radius: var(--wp--custom--border-radius--lg);
-    border: 1px solid var(--wp--preset--color--light-gray);
+    border-radius: var(--giovanni-card-radius);
+    border: var(--giovanni-border-light);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
+    transition: var(--giovanni-transition-base);
     margin: var(--wp--preset--spacing--6, 1.5rem) 0;
+}
+
+/* Enhanced visibility for container backgrounds - matches personal-reflection quote style */
+.wp-block-group.has-container-background-color {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .wp-block-group[class*="is-style-"][class*="card"]:hover {
@@ -127,12 +132,12 @@
 
 .wp-block-group.is-style-form-container {
     background: var(--wp--preset--color--container);
-    border: 1px solid var(--wp--preset--color--light-gray);
-    border-radius: var(--wp--custom--border-radius--lg);
+    border: var(--giovanni-border-light);
+    border-radius: var(--giovanni-card-radius);
     padding: var(--wp--preset--spacing--8, 2rem);
     margin: var(--wp--preset--spacing--8, 2rem) 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
+    transition: var(--giovanni-transition-base);
 }
 
 .wp-block-group.is-style-form-container:hover {

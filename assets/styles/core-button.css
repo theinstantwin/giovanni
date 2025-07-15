@@ -45,8 +45,8 @@
     padding-left: var(--wp--preset--spacing--5, 1.25rem);
     padding-top: var(--wp--preset--spacing--3, 0.75rem);
     padding-bottom: var(--wp--preset--spacing--3, 0.75rem);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: var(--wp--custom--border-radius--md);
+    transition: var(--giovanni-transition-base);
+    border-radius: var(--giovanni-button-radius);
     min-width: 140px;
     text-decoration: none;
     font-weight: var(--wp--custom--font-weight--medium);

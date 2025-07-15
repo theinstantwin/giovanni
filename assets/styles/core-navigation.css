@@ -79,7 +79,7 @@
 
 .wp-block-navigation.is-style-pill .wp-block-navigation-item a {
     padding: var(--wp--preset--spacing--1, 0.25rem) var(--wp--preset--spacing--5, 1.5rem);
-    border-radius: 20px;
+    border-radius: var(--wp--custom--border-radius--full);
     background: transparent;
     transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
     text-decoration: none;

@@ -12,3 +12,21 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: giovanni
 Tags: block-themes, full-site-editing, blog, portfolio, minimal, clean, modern, responsive, accessibility-ready, custom-colors, custom-logo, editor-style, featured-images, flexible-header, one-column, two-columns, translation-ready, wide-blocks, dark-mode, touch-friendly
 */
+
+/* Common Border Radius Patterns for Consistency
+--------------------------------------------- */
+:root {
+    /* Component-specific border radius patterns */
+    --giovanni-card-radius: var(--wp--custom--border-radius--lg);
+    --giovanni-button-radius: var(--wp--custom--border-radius--md);
+    --giovanni-input-radius: var(--wp--custom--border-radius--sm);
+    --giovanni-pill-radius: var(--wp--custom--border-radius--full);
+    
+    /* Common transition patterns */
+    --giovanni-transition-base: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
+    --giovanni-transition-fast: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    
+    /* Common border patterns */
+    --giovanni-border-light: 1px solid var(--wp--preset--color--light-gray);
+    --giovanni-border-gray: 1px solid var(--wp--preset--color--gray);
+}

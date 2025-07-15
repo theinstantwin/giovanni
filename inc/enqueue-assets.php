@@ -86,7 +86,22 @@ add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_responsive_styles' );
  * Programmatically enqueue custom block styles
  */
 function giovanni_enqueue_custom_block_styles() {
-    $files = glob( get_template_directory() . '/assets/styles/*.css' );
+    // Cache the file list for performance
+    $cache_key = 'giovanni_block_styles_files_' . wp_get_theme()->get('Version');
+    $files = get_transient( $cache_key );
+    
+    if ( false === $files ) {
+        $files = glob( get_template_directory() . '/assets/styles/*.css' );
+        
+        if ( empty( $files ) ) {
+            // Cache empty result for 1 hour to avoid repeated filesystem calls
+            set_transient( $cache_key, array(), HOUR_IN_SECONDS );
+            return;
+        }
+        
+        // Cache the file list for 6 hours (files rarely change in production)
+        set_transient( $cache_key, $files, 6 * HOUR_IN_SECONDS );
+    }
     
     if ( empty( $files ) ) {
         return;
@@ -135,3 +150,32 @@ function giovanni_enqueue_custom_block_styles() {
     }
 }
 add_action( 'init', 'giovanni_enqueue_custom_block_styles', 100 );
+
+/**
+ * Clear the block styles cache when theme is updated or when needed
+ */
+function giovanni_clear_block_styles_cache() {
+    $cache_key = 'giovanni_block_styles_files_' . wp_get_theme()->get('Version');
+    delete_transient( $cache_key );
+    
+    // Also clear any old cache keys from previous versions
+    global $wpdb;
+    $wpdb->query( 
+        $wpdb->prepare( 
+            "DELETE FROM {$wpdb->options} 
+             WHERE option_name LIKE %s 
+             AND option_name != %s",
+            '_transient_giovanni_block_styles_files_%',
+            '_transient_' . $cache_key
+        )
+    );
+}
+
+// Clear cache on theme switch or update
+add_action( 'after_switch_theme', 'giovanni_clear_block_styles_cache' );
+add_action( 'upgrader_process_complete', 'giovanni_clear_block_styles_cache' );
+
+// Clear cache when in development (if WP_DEBUG is true)
+if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+    add_action( 'init', 'giovanni_clear_block_styles_cache' );
+}
