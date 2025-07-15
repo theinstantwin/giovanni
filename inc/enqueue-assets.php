@@ -110,6 +110,11 @@ function giovanni_enqueue_custom_block_styles() {
     foreach ( $files as $file ) {
         $filename = basename( $file, '.css' );
         
+        // Skip responsive-mobile.css as it's handled separately
+        if ( $filename === 'responsive-mobile' ) {
+            continue;
+        }
+        
         // Handle non-block CSS files separately
         if ( $filename === 'shortcodes' ) {
             wp_enqueue_style(
