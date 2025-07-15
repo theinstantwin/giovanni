@@ -19,8 +19,8 @@
 	<h2 class="wp-block-heading alignwide highlight has-foreground-color has-link-color has-primary-color has-text-color has-6xl-font-size" style="letter-spacing:0px;line-height:.8">Our Featured Content</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {"align":"wide","layout":{"type":"grid","columnCount":3},"className":"hover-cards"} -->
-	<div class="wp-block-group alignwide hover-cards">
+	<!-- wp:group {"align":"wide","layout":{"type":"grid","columnCount":3},"backgroundColor":"container","className":"hover-cards"} -->
+	<div class="wp-block-group alignwide hover-cards has-container-background-color has-background">
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","bottom":"var(--wp--preset--spacing--8)","left":"var(--wp--preset--spacing--8)"}},"border":{"radius":"var(--giovanni-card-radius)"},"position":{"type":"relative"}},"backgroundColor":"container","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"className":"show-orb-on-hover is-linked","metadata":{"link":"#"},"fontSize":"md"} -->
 		<div class="wp-block-group show-orb-on-hover is-linked has-container-background-color has-background has-md-font-size" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--8)">
 			<a class="wp-block-group__link" href="#" target="_self" rel="follow" aria-hidden="true" tabindex="-1"></a>
