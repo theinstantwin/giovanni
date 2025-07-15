@@ -5,7 +5,7 @@
 
 @media (max-width: 768px) {
     .wp-block-navigation__responsive-container.is-menu-open {
-        background-color: var(--wp--preset--color--container);
+        background-color: var(--wp--preset--color--background);
         border: 1px solid var(--wp--preset--color--light-gray);
     }
     

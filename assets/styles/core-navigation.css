@@ -105,7 +105,7 @@
 /* Mobile Navigation / Hamburger Menu Styles */
 
 .wp-block-navigation__responsive-container.is-menu-open {
-    background-color: var(--wp--preset--color--container);
+    background-color: var(--wp--preset--color--background);
     border: 1px solid var(--wp--preset--color--light-gray);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: var(--wp--custom--border-radius--md);
@@ -185,7 +185,7 @@
 .wp-block-navigation__responsive-container-open {
     border: 1px solid var(--wp--preset--color--light-gray);
     border-radius: var(--wp--custom--border-radius--sm);
-    background: var(--wp--preset--color--container);
+    background: var(--wp--preset--color--background);
     padding: var(--wp--preset--spacing--2, 0.5rem);
     min-width: 44px;
     min-height: 44px;
@@ -205,7 +205,7 @@
     right: var(--wp--preset--spacing--3, 0.75rem);
     border: 1px solid var(--wp--preset--color--light-gray);
     border-radius: var(--wp--custom--border-radius--sm);
-    background: var(--wp--preset--color--container);
+    background: var(--wp--preset--color--background);
     padding: var(--wp--preset--spacing--2, 0.5rem);
     min-width: 36px;
     min-height: 36px;
