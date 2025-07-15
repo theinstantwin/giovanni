@@ -13,11 +13,11 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--12)","bottom":"var(--wp--preset--spacing--12)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">
 
-<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontSize":"clamp(2rem, 5vw, 4rem)","fontWeight":"700","lineHeight":"1.1"}},"textColor":"foreground"} -->
+<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"foreground","fontSize":"4xl"} -->
 <h2 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(2rem, 5vw, 4rem);font-weight:700;line-height:1.1">Advanced CSS Showcase</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"clamp(1rem, 2.5vw, 1.25rem)"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--8)"}}},"textColor":"gray"} -->
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--8)"}}},"textColor":"gray","fontSize":"lg"} -->
 <p class="has-text-align-center has-gray-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--8);font-size:clamp(1rem, 2.5vw, 1.25rem)">Fluid typography, dynamic colors, and smooth animations</p>
 <!-- /wp:paragraph -->
 
@@ -29,13 +29,13 @@
 
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"}} -->
 <div class="wp-block-group">
-<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(1.5rem, 3vw, 2rem)","fontWeight":"600"}}} -->
-<h3 class="wp-block-heading" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Fluid Typography</h3>
-<!-- /wp:heading -->
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"2xl"} -->
+            <h3 class="wp-block-heading" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Fluid Typography</h3>
+            <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1rem, 2vw, 1.125rem)","lineHeight":"1.6"}}} -->
-<p style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Text that scales smoothly from mobile to desktop using clamp() for responsive perfection without breakpoints.</p>
-<!-- /wp:paragraph -->
+            <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"fontSize":"md"} -->
+            <p style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Text that scales smoothly from mobile to desktop using clamp() for responsive perfection without breakpoints.</p>
+            <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
 
@@ -53,13 +53,13 @@
 
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"}} -->
 <div class="wp-block-group">
-<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(1.5rem, 3vw, 2rem)","fontWeight":"600"}}} -->
-<h3 class="wp-block-heading" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Dynamic Colors</h3>
-<!-- /wp:heading -->
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"2xl"} -->
+            <h3 class="wp-block-heading" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Dynamic Colors</h3>
+            <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"clamp(1rem, 2vw, 1.125rem)","lineHeight":"1.6"}}} -->
-<p style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Colors that adapt to any theme variation using color-mix() for intelligent hover effects and backgrounds.</p>
-<!-- /wp:paragraph -->
+            <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"fontSize":"md"} -->
+            <p style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Colors that adapt to any theme variation using color-mix() for intelligent hover effects and backgrounds.</p>
+            <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
 
@@ -75,13 +75,13 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--6)","bottom":"var(--wp--preset--spacing--6)","left":"var(--wp--preset--spacing--6)","right":"var(--wp--preset--spacing--6)"}},"border":{"radius":"12px"}},"className":"is-style-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-card" style="border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
 
-<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"clamp(1.5rem, 3vw, 2rem)","fontWeight":"600"}}} -->
-<h3 class="wp-block-heading has-text-align-center" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Smooth Animations</h3>
-<!-- /wp:heading -->
+        <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"2xl"} -->
+        <h3 class="wp-block-heading has-text-align-center" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Smooth Animations</h3>
+        <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"clamp(1rem, 2vw, 1.125rem)","lineHeight":"1.6"}}} -->
-<p class="has-text-align-center" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Performance-optimized animations with GPU acceleration and respect for user motion preferences.</p>
-<!-- /wp:paragraph -->
+        <!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.6"}},"fontSize":"md"} -->
+        <p class="has-text-align-center" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Performance-optimized animations with GPU acceleration and respect for user motion preferences.</p>
+        <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-ghost"} -->
@@ -99,9 +99,9 @@
 <hr class="wp-block-separator has-alpha-channel-opacity" style="margin-top:var(--wp--preset--spacing--8);margin-bottom:var(--wp--preset--spacing--8)"/>
 <!-- /wp:separator -->
 
-<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"clamp(1.25rem, 3vw, 1.75rem)","fontWeight":"600"}}} -->
-<h3 class="wp-block-heading has-text-align-center" style="font-size:clamp(1.25rem, 3vw, 1.75rem);font-weight:600">Button Style Gallery</h3>
-<!-- /wp:heading -->
+        <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"xl"} -->
+        <h3 class="wp-block-heading has-text-align-center" style="font-size:clamp(1.25rem, 3vw, 1.75rem);font-weight:600">Button Style Gallery</h3>
+        <!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)"}}} -->
 <div class="wp-block-buttons">
