@@ -38,7 +38,7 @@
     
     .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
     .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
-        right: var(--wp--preset--spacing--3, 0.75rem);
+        right: var(--wp--preset--spacing--4, 1rem);
         font-size: 1em;
     }
 }
@@ -55,7 +55,7 @@
     
     .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
     .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
-        right: var(--wp--preset--spacing--2, 0.5rem);
+        right: var(--wp--preset--spacing--3, 0.875rem);
         font-size: 0.95em;
     }
 }
