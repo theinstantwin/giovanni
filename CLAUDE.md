@@ -63,7 +63,7 @@ The theme includes comprehensive custom properties in theme.json:
 - **Primary**: `#0070f3` (Giovanni Blue)
 - **Foreground**: `#000000` (main text)
 - **Background**: `#fafafa` (page background)
-- **Gray Scale**: 50-900 comprehensive neutral palette
+- **Semantic Grays**: `light-gray`, `gray`, `container` (7 total semantic tokens)
 - **Semantic Colors**: Success, Warning, Error, Info
 - **Accent Colors**: Purple, Cyan for variety
 
@@ -116,10 +116,10 @@ The theme includes comprehensive block patterns organized by category:
 The theme provides custom styles for core WordPress blocks:
 
 **Button Styles**:
-- `ghost`: Transparent with underline
-- `dark`: Dark background variant
-- `arrow-light`: Button with arrow icon (light)
-- `arrow-dark`: Button with arrow icon (dark)
+- `ghost`: Transparent with underline hover effect
+- `dark`: Dark background variant with subtle hover animation
+- `arrow-light`: Light button with animated arrow icon (slides in on hover)
+- `arrow-dark`: Dark button with animated arrow icon (slides in on hover)
 
 **Navigation Styles**:
 - `underline`: Hover underline effect
@@ -264,11 +264,96 @@ assets/styles/
 - Test with all 9 theme variations
 - Ensure accessibility compliance
 
+**Arrow Button Implementation**:
+- Arrow buttons use CSS pseudo-elements (`::after`) with Unicode arrow (→)
+- Animation: starts at `translateX(-4px)` opacity 0, slides to `translateX(0px)` opacity 1
+- Proper spacing: `padding-right: 2.5rem` with arrow positioned at `right: 1rem`
+- Includes hover AND focus states for accessibility
+- Both light and dark variants with appropriate color transitions
+- Mobile responsive: smaller `min-width` and `padding-right` on tablets/phones to prevent overflow
+
 **Pattern Development**:
 - Use branded category prefixes (`giovanni-[category]`)
 - Follow established pattern naming convention
 - Include proper metadata and descriptions
 - Test responsive behavior
+
+**CRITICAL - Pattern Color Usage**:
+- **Always use semantic color tokens** (`"backgroundColor":"primary"`, `"textColor":"primary"`)
+- **Never use theme-specific color slugs** (`"backgroundColor":"giovanni-blue"` ❌)
+- **Never use hardcoded hex colors** (`"backgroundColor":"#0070f3"` ❌)
+- **Test with all style variations** - colors should change appropriately
+- **Use these semantic tokens in patterns**:
+  - `"primary"` - Main accent color (adapts to style variations)
+  - `"secondary"` - Secondary accent color
+  - `"foreground"` - Main text color
+  - `"background"` - Main background color
+  - `"container"` - Container/card background
+  - `"gray-[50-900]"` - Neutral grays
+
+**CRITICAL - Final Semantic Color System**:
+- **✅ COMPLETE**: All numbered gray tokens (gray-50 through gray-900) have been removed from the theme system
+- **✅ CONSISTENT**: All 9 theme variations now use identical semantic token names that match their visual appearance
+- **✅ BULLETPROOF**: No more confusion where numbered grays invert between light and dark themes
+
+**Current Semantic Color Tokens (7 Total)**:
+  - `background` - Page background color
+  - `container` - Card/container background (slightly elevated from background)
+  - `foreground` - Main text color
+  - `light-gray` - Subtle backgrounds, light borders
+  - `gray` - Stronger borders, dividers, secondary text
+  - `primary` - Main accent color
+  - `white` - Pure white (when needed)
+
+**Semantic Token Color Mapping by Theme Variation**:
+
+| Theme | background | white | container | foreground | gray | light-gray | primary |
+|-------|------------|-------|-----------|------------|------|------------|---------|
+| **Default (theme.json)** | `#fafafa` | `#ffffff` | `#ffffff` | `#000000` | `#666666` | `#e5e5e5` | `#0070f3` |
+| **Dark Theme** | `#1e2021` | `#ffffff` | `#2a2a2a` | `#FBF1C7` | `#4C4641` | `#333230` | `#ff335f` |
+| **GitHub Dark** | `#0d1117` | `#ffffff` | `#161b22` | `#e6edf3` | `#8b949e` | `#30363d` | `#f85149` |
+| **Linen Theme** | `#faf3ea` | *inherited* | `#ffffff` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
+| **Minimal Mono** | `#ffffff` | *inherited* | `#ffffff` | `#000000` | `#666666` | `#e5e5e5` | `#000000` |
+| **Tech Neon** | `#0a0a0f` | `#ffffff` | `#1a1a2e` | `#e0e7ff` | `#6366f1` | `#1e1b4b` | `#00d4aa` |
+| **Warm Earth** | `#fdf9f4` | *inherited* | `#faf7f0` | `#2d1810` | `#8b6914` | `#f4e6d1` | `#d2691e` |
+| **Condensed Modern** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
+| **Display Bold** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
+| **Serif Editorial** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
+
+*Note: Theme variations marked as "inherited" use the default theme.json colors. This demonstrates how the semantic token system provides consistent naming while allowing theme-specific color customization.*
+
+**Why This System Works**:
+- Eliminates confusion where `gray-900` was actually light cream in dark themes
+- Prevents white-on-white and contrast issues across all theme variations
+- Makes code self-documenting and maintainable
+- Ensures developers can trust color names to match their appearance
+- Provides consistent visual hierarchy: `background` < `container` < `light-gray` < `gray` < `foreground`
+
+**Migration Complete**:
+```css
+/* ❌ REMOVED - Numbered grays that inverted in dark themes */
+.element { background: var(--wp--preset--color--gray-900); }
+.element { background: var(--wp--preset--color--gray-50); }
+
+/* ✅ CURRENT - Semantic tokens that work across all themes */
+.element { background: var(--wp--preset--color--foreground); }
+.element { background: var(--wp--preset--color--light-gray); }
+```
+
+**Pattern Color Examples**:
+```html
+<!-- ✅ CORRECT - Uses semantic tokens that respect style variations -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background-color has-text-color has-background" href="#">Button</a></div>
+
+<!-- ❌ WRONG - Uses theme-specific colors that break style variations -->
+<div class="wp-block-button"><a class="wp-block-button__link has-giovanni-blue-background-color has-background-color has-text-color has-background" href="#">Button</a></div>
+```
+
+**Why This Matters**:
+- Ensures patterns work with all 9 theme style variations
+- Prevents color bleeding between style variations
+- Maintains design system consistency
+- Allows users to properly customize colors
 
 **Color System Usage**:
 - Always use `var(--wp--preset--color--name)` format
@@ -401,6 +486,8 @@ The ACF integration is designed to handle theme name changes seamlessly:
 When making changes to Giovanni:
 
 - [ ] Test all 9 theme style variations
+- [ ] **Test pattern colors with different style variations** (ensure no color bleeding)
+- [ ] **Verify semantic color token naming** (color names match actual appearance)
 - [ ] Verify responsive behavior (mobile to desktop)
 - [ ] **Test system-aware dark mode** (responsive-mobile.css)
 - [ ] **Test touch device optimizations** (44px touch targets)
@@ -425,10 +512,42 @@ When making changes to Giovanni:
 - Check category names match pattern declarations
 - Verify `register_block_pattern_category` function exists
 
+**Pattern Colors Not Respecting Style Variations**:
+- Check pattern files for hardcoded color references (`giovanni-blue`, `#0070f3`)
+- Replace with semantic tokens (`primary`, `secondary`, etc.)
+- Test with Linen theme to verify red colors appear instead of blue
+- Clear WordPress cache and refresh Site Editor
+
 **Style Variations Breaking**:
 - Replace hardcoded colors with CSS custom properties
 - Test all color combinations
 - Check dark mode compatibility
+
+**Semantic Color Token Naming**:
+- Ensure color names in patterns match their actual visual appearance in all theme variations
+- Test with all 9 style variations to verify consistency
+- Clear WordPress cache and refresh Site Editor
+
+**Arrow Button Animation Issues**:
+- Check arrow positioning in `core-button.css` (should have proper padding-right spacing)
+- Verify arrow animation uses smooth translateX transitions
+- Ensure hover states include proper color, transform, and box-shadow properties
+- Test arrow visibility across all 9 theme variations
+- Clear browser cache to see CSS changes
+
+**Mobile Padding and Layout Issues**:
+- All templates use `spacing-6` (1.125rem-1.5rem) for mobile padding, not `spacing-4` (0.75rem-1rem)
+- Check template files: `page.html`, `single.html`, `index.html`, `search.html`, `404.html`, `home.html`, `header.html`
+- Arrow buttons have mobile-specific responsive styles in `responsive-mobile.css`
+- Test on actual mobile devices, not just desktop browser resize
+- Ensure content isn't touching screen edges on small screens
+
+**Misleading Color Token Names**:
+- Check for numbered gray systems that invert in dark themes (gray-900 being light)
+- Replace confusing numbered grays with semantic tokens (foreground, background, light-gray)
+- Verify color names match their actual appearance across all theme variations
+- Update CSS to use semantic tokens instead of numbered systems
+- Test thoroughly to ensure no white-on-white or contrast issues
 
 ## Quick Reference
 
@@ -439,6 +558,12 @@ find patterns/ -name "*.php" | sort
 
 # Search for specific block styles
 grep -r "is-style-" assets/styles/
+
+# Find hardcoded color references in patterns
+find patterns/ -name "*.php" -exec grep -l "giovanni-blue\|#0070f3" {} \;
+
+# Replace hardcoded colors with semantic tokens (example)
+find patterns/ -name "*.php" -exec sed -i '' 's/"backgroundColor":"giovanni-blue"/"backgroundColor":"primary"/g' {} \;
 
 # Check theme.json syntax
 wp theme validate giovanni
@@ -457,6 +582,14 @@ wp pattern list
 ## Development History & Architecture Notes
 
 **Giovanni v1.7.2** represents a fully refactored, modern FSE theme that has been through comprehensive restructuring:
+
+### **Recent Fixes & Improvements**
+- ✅ **Complete Numbered Gray System Removal**: Successfully eliminated all numbered gray tokens (gray-50 through gray-900) from theme system, replacing with semantic tokens that remain consistent across all 9 theme variations
+- ✅ **Arrow Button Animation Fix**: Resolved wonky arrow button behavior with improved positioning, smoother animations, and proper hover/focus states
+- ✅ **Mobile Padding Layout Fix**: Updated all templates to use `spacing-6` instead of `spacing-4` for proper mobile padding, preventing content from being too close to screen edges
+- ✅ **Mobile Arrow Button Optimization**: Added responsive styles for arrow buttons on small screens to prevent overflow and improve usability
+- ✅ **Semantic Color Token Migration**: Eliminated misleading numbered gray systems, implemented consistent semantic token naming
+- ✅ **Mobile Navigation Optimization**: Fixed touch targets and background contrast issues across all theme variations
 
 ### **Completed Refactoring (Historical Context)**
 - ✅ **Modular Architecture**: Migrated from monolithic `functions.php` to organized `/inc` structure

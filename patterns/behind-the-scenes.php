@@ -9,12 +9,12 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--5)","padding":{}},"border":{"style":"dashed","width":"1px","radius":"8px"}},"borderColor":"gray-300","backgroundColor":"container","layout":{"type":"constrained","contentSize":"640px"}} -->
-<div class="wp-block-group has-border-color has-gray-300-border-color has-background has-container-background-color" style="border-style:dashed;border-width:1px;border-radius:8px;gap:var(--wp--preset--spacing--5)">
+<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--5)","padding":{}},"border":{"style":"dashed","width":"1px","radius":"8px"}},"borderColor":"gray","backgroundColor":"container","layout":{"type":"constrained","contentSize":"640px"}} -->
+<div class="wp-block-group has-border-color has-gray-border-color has-background has-container-background-color" style="border-style:dashed;border-width:1px;border-radius:8px;gap:var(--wp--preset--spacing--5)">
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--2)"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"fontSize":"sm","style":{"typography":{"fontWeight":"600"}},"textColor":"gray-700"} -->
-		<p class="has-gray-700-color has-text-color has-sm-font-size" style="font-weight:600">🔧 Behind the Scenes</p>
+		<!-- wp:paragraph {"fontSize":"sm","style":{"typography":{"fontWeight":"600"}},"textColor":"foreground"} -->
+		<p class="has-foreground-color has-text-color has-sm-font-size" style="font-weight:600">🔧 Behind the Scenes</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

@@ -24,4 +24,34 @@
         color: var(--wp--preset--color--primary);
         background-color: transparent;
     }
+    
+    /* Arrow button mobile optimizations */
+    .wp-block-button.is-style-arrow-light .wp-block-button__link,
+    .wp-block-button.is-style-arrow-dark .wp-block-button__link {
+        min-width: 110px;
+        padding-right: var(--wp--preset--spacing--8, 2rem);
+        font-size: var(--wp--preset--font-size--sm);
+    }
+    
+    .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
+    .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
+        right: var(--wp--preset--spacing--3, 0.75rem);
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even more compact arrow buttons on very small screens */
+    .wp-block-button.is-style-arrow-light .wp-block-button__link,
+    .wp-block-button.is-style-arrow-dark .wp-block-button__link {
+        min-width: 100px;
+        padding-right: var(--wp--preset--spacing--7, 1.75rem);
+        font-size: var(--wp--preset--font-size--sm);
+    }
+    
+    .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
+    .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
+        right: var(--wp--preset--spacing--2, 0.5rem);
+        font-size: 0.9em;
+    }
 }

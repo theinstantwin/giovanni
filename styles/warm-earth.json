@@ -31,56 +31,6 @@
 					"slug": "light-gray"
 				},
 				{
-					"color": "#faf7f0",
-					"name": "Cream 50",
-					"slug": "gray-50"
-				},
-				{
-					"color": "#f5f0e8",
-					"name": "Cream 100",
-					"slug": "gray-100"
-				},
-				{
-					"color": "#ede2d0",
-					"name": "Beige 200",
-					"slug": "gray-200"
-				},
-				{
-					"color": "#d9c5a5",
-					"name": "Sand 300",
-					"slug": "gray-300"
-				},
-				{
-					"color": "#b8956b",
-					"name": "Tan 400",
-					"slug": "gray-400"
-				},
-				{
-					"color": "#996633",
-					"name": "Brown 500",
-					"slug": "gray-500"
-				},
-				{
-					"color": "#7d4f1e",
-					"name": "Dark Brown 600",
-					"slug": "gray-600"
-				},
-				{
-					"color": "#5c3717",
-					"name": "Deep Brown 700",
-					"slug": "gray-700"
-				},
-				{
-					"color": "#3e2711",
-					"name": "Chocolate 800",
-					"slug": "gray-800"
-				},
-				{
-					"color": "#2d1810",
-					"name": "Espresso 900",
-					"slug": "gray-900"
-				},
-				{
 					"color": "#d2691e",
 					"name": "Earth Orange",
 					"slug": "giovanni-blue"

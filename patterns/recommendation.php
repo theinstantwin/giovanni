@@ -32,8 +32,8 @@
             <h4 class="wp-block-heading recommendation-title" style="margin-top:0;margin-bottom:0;font-size:1.25rem;font-weight:600;line-height:1.3">Book/Tool/Person Name</h4>
             <!-- /wp:heading -->
             
-            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.5"},"spacing":{"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var(--wp--preset--color--gray-600)"}}},"textColor":"gray-600"},"className":"recommendation-meta"} -->
-            <p class="recommendation-meta has-gray-600-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:0.875rem;line-height:1.5">Category or Type</p>
+            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.5"},"spacing":{"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var(--wp--preset--color--gray)"}}},"textColor":"gray"},"className":"recommendation-meta"} -->
+            <p class="recommendation-meta has-gray-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:0.875rem;line-height:1.5">Category or Type</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->
@@ -44,8 +44,8 @@
         
         <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
         <div class="wp-block-group" style="gap:0.5rem">
-            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--gray-600)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"500"}},"textColor":"gray-600","className":"recommendation-rating"} -->
-            <p class="recommendation-rating has-gray-600-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:500">My Rating:</p>
+            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--gray)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"500"}},"textColor":"gray","className":"recommendation-rating"} -->
+            <p class="recommendation-rating has-gray-color has-text-color has-link-color" style="font-size:0.875rem;font-weight:500">My Rating:</p>
             <!-- /wp:paragraph -->
             
             <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--primary)"}}},"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"primary","className":"recommendation-stars"} -->

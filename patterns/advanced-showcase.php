@@ -17,8 +17,8 @@
 <h2 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(2rem, 5vw, 4rem);font-weight:700;line-height:1.1">Advanced CSS Showcase</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"clamp(1rem, 2.5vw, 1.25rem)"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--8)"}}},"textColor":"gray-600"} -->
-<p class="has-text-align-center has-gray-600-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--8);font-size:clamp(1rem, 2.5vw, 1.25rem)">Fluid typography, dynamic colors, and smooth animations</p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"clamp(1rem, 2.5vw, 1.25rem)"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--8)"}}},"textColor":"gray"} -->
+<p class="has-text-align-center has-gray-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--8);font-size:clamp(1rem, 2.5vw, 1.25rem)">Fluid typography, dynamic colors, and smooth animations</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--6)"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->

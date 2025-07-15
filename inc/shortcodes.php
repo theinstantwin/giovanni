@@ -43,7 +43,7 @@ function giovanni_posts_by_month_shortcode() {
          *
          * @param string $message The default empty message
          */
-        $empty_message = apply_filters( 'giovanni_posts_by_month_shortcode_empty_message', '<p class="has-gray-500-color has-text-color">No posts found.</p>' );
+        $empty_message = apply_filters( 'giovanni_posts_by_month_shortcode_empty_message', '<p class="has-gray-color has-text-color">No posts found.</p>' );
         
         /**
          * Action hook after posts by month shortcode output

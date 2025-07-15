@@ -15,12 +15,12 @@
         <h1 class="wp-block-heading has-text-align-center has-5-xl-font-size" style="font-weight:700;line-height:1.1">Hi, I'm [Your Name]</h1>
         <!-- /wp:heading -->
 
-        <!-- wp:paragraph {"textAlign":"center","fontSize":"xl","textColor":"gray-600"} -->
-        <p class="has-text-align-center has-gray-600-color has-text-color has-xl-font-size">I build thoughtful solutions through code and creativity</p>
+        <!-- wp:paragraph {"textAlign":"center","fontSize":"xl","textColor":"gray"} -->
+        <p class="has-text-align-center has-gray-color has-text-color has-xl-font-size">I build thoughtful solutions through code and creativity</p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph {"textAlign":"center","fontSize":"lg","textColor":"gray-500"} -->
-        <p class="has-text-align-center has-gray-500-color has-text-color has-lg-font-size">Welcome to my corner of the internet where I share thoughts on development, design, and life.</p>
+        <!-- wp:paragraph {"textAlign":"center","fontSize":"lg","textColor":"gray"} -->
+        <p class="has-text-align-center has-gray-color has-text-color has-lg-font-size">Welcome to my corner of the internet where I share thoughts on development, design, and life.</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)","margin":{"top":"var(--wp--preset--spacing--6)"}}}} -->

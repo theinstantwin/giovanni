@@ -36,56 +36,6 @@
 					"slug": "light-gray"
 				},
 				{
-					"color": "#0f0f23",
-					"name": "Deep Blue 50",
-					"slug": "gray-50"
-				},
-				{
-					"color": "#1a1a35",
-					"name": "Navy 100",
-					"slug": "gray-100"
-				},
-				{
-					"color": "#252547",
-					"name": "Purple 200",
-					"slug": "gray-200"
-				},
-				{
-					"color": "#3730a3",
-					"name": "Indigo 300",
-					"slug": "gray-300"
-				},
-				{
-					"color": "#4f46e5",
-					"name": "Violet 400",
-					"slug": "gray-400"
-				},
-				{
-					"color": "#6366f1",
-					"name": "Electric 500",
-					"slug": "gray-500"
-				},
-				{
-					"color": "#7c3aed",
-					"name": "Bright Purple 600",
-					"slug": "gray-600"
-				},
-				{
-					"color": "#8b5cf6",
-					"name": "Neon Purple 700",
-					"slug": "gray-700"
-				},
-				{
-					"color": "#a855f7",
-					"name": "Magenta 800",
-					"slug": "gray-800"
-				},
-				{
-					"color": "#c084fc",
-					"name": "Light Purple 900",
-					"slug": "gray-900"
-				},
-				{
 					"color": "#00d4aa",
 					"name": "Neon Cyan",
 					"slug": "giovanni-blue"
