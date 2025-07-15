@@ -1,36 +1,75 @@
-/* Giovanni Shortcode Styles
+/* Giovanni Shortcode Styles - Blog Posts by Month
 --------------------------------------------- */
 
 .blog-posts-by-month {
-    margin-bottom: var(--wp--preset--spacing--8, 2rem);
+    margin-bottom: var(--wp--preset--spacing--12, 3rem);
+    padding: 0;
 }
 
 .blog-posts-by-month .month-header {
-    font-size: var(--wp--preset--font-size--xl);
-    font-weight: var(--wp--custom--font-weight--semibold);
-    color: var(--wp--preset--color--primary);
-    margin-bottom: var(--wp--preset--spacing--4, 1rem);
+    font-size: var(--wp--preset--font-size--2xl);
+    font-weight: var(--wp--custom--font-weight--bold);
+    color: var(--wp--preset--color--foreground);
+    margin-bottom: var(--wp--preset--spacing--6, 1.5rem);
+    margin-top: var(--wp--preset--spacing--8, 2rem);
+    padding-bottom: var(--wp--preset--spacing--3, 0.75rem);
+    border-bottom: 3px solid var(--wp--preset--color--primary);
+    position: relative;
+    letter-spacing: var(--wp--custom--letter-spacing--tight);
+}
+
+.blog-posts-by-month .month-header:first-child {
     margin-top: 0;
-    padding-bottom: var(--wp--preset--spacing--2, 0.5rem);
-    border-bottom: 2px solid var(--wp--preset--color--light-gray);
+}
+
+.blog-posts-by-month .month-header::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--wp--preset--color--primary);
+    opacity: 0.3;
 }
 
 .blog-post-item {
-    border-radius: var(--wp--custom--border-radius--md);
-    margin-bottom: var(--wp--preset--spacing--2, 0.5rem);
-    padding: var(--wp--preset--spacing--3, 0.75rem) var(--wp--preset--spacing--4, 1rem);
-    background: transparent;
-    border: none;
-    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    border-radius: var(--wp--custom--border-radius--lg);
+    margin-bottom: var(--wp--preset--spacing--3, 0.75rem);
+    padding: var(--wp--preset--spacing--5, 1.25rem) var(--wp--preset--spacing--6, 1.5rem);
+    background: var(--wp--preset--color--container);
+    border: 1px solid var(--wp--preset--color--light-gray);
+    transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--wp--preset--spacing--4, 1rem);
+    gap: var(--wp--preset--spacing--5, 1.25rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-post-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--wp--preset--color--primary);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .blog-post-item:hover {
-    background: transparent;
-    transform: translateX(4px);
+    background: var(--wp--preset--color--background);
+    border-color: var(--wp--preset--color--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.blog-post-item:hover::before {
+    transform: scaleY(1);
 }
 
 .blog-post-item a {
@@ -38,13 +77,15 @@
     color: var(--wp--preset--color--foreground);
     font-size: var(--wp--preset--font-size--lg);
     font-weight: var(--wp--custom--font-weight--medium);
-    line-height: var(--wp--custom--line-height--normal);
+    line-height: var(--wp--custom--line-height--tight);
     flex: 1;
-    transition: color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    position: relative;
 }
 
 .blog-post-item a:hover {
     color: var(--wp--preset--color--primary);
+    transform: translateX(2px);
 }
 
 .blog-post-item .post-date {
@@ -52,26 +93,90 @@
     font-size: var(--wp--preset--font-size--sm);
     flex-shrink: 0;
     white-space: nowrap;
-    font-weight: var(--wp--custom--font-weight--regular);
+    font-weight: var(--wp--custom--font-weight--medium);
+    background: var(--wp--preset--color--light-gray);
+    padding: var(--wp--preset--spacing--1, 0.25rem) var(--wp--preset--spacing--3, 0.75rem);
+    border-radius: var(--wp--custom--border-radius--full);
+    font-variant-numeric: tabular-nums;
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+}
+
+.blog-post-item:hover .post-date {
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+}
+
+@media (max-width: 768px) {
+    .blog-posts-by-month {
+        margin-left: var(--wp--preset--spacing--4, 1rem);
+        margin-right: var(--wp--preset--spacing--4, 1rem);
+    }
+    
+    .blog-posts-by-month .month-header {
+        font-size: var(--wp--preset--font-size--xl);
+        margin-bottom: var(--wp--preset--spacing--4, 1rem);
+        margin-top: var(--wp--preset--spacing--6, 1.5rem);
+    }
+    
+    .blog-post-item {
+        padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--5, 1.25rem);
+        gap: var(--wp--preset--spacing--4, 1rem);
+    }
 }
 
 @media (max-width: 640px) {
+    .blog-posts-by-month {
+        margin-left: var(--wp--preset--spacing--6, 1.5rem);
+        margin-right: var(--wp--preset--spacing--6, 1.5rem);
+    }
+    
+    .blog-posts-by-month .month-header {
+        font-size: var(--wp--preset--font-size--lg);
+        margin-bottom: var(--wp--preset--spacing--4, 1rem);
+        margin-top: var(--wp--preset--spacing--6, 1.5rem);
+        border-bottom-width: 2px;
+    }
+    
+    .blog-posts-by-month .month-header::after {
+        width: 30px;
+        height: 2px;
+        bottom: -2px;
+    }
+    
     .blog-post-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--wp--preset--spacing--1, 0.25rem);
-        padding: var(--wp--preset--spacing--2, 0.5rem) var(--wp--preset--spacing--3, 0.75rem);
+        gap: var(--wp--preset--spacing--3, 0.75rem);
+        padding: var(--wp--preset--spacing--4, 1rem);
+        margin-bottom: var(--wp--preset--spacing--3, 0.75rem);
     }
+    
     .blog-post-item a {
         font-size: var(--wp--preset--font-size--md);
+        line-height: var(--wp--custom--line-height--normal);
     }
+    
     .blog-post-item .post-date {
-        font-size: var(--wp--preset--font-size--sm);
+        font-size: var(--wp--preset--font-size--xs);
+        padding: var(--wp--preset--spacing--1, 0.25rem) var(--wp--preset--spacing--2, 0.5rem);
+        align-self: flex-end;
         margin-top: var(--wp--preset--spacing--1, 0.25rem);
     }
-    .blog-posts-by-month .month-header {
-        font-size: var(--wp--preset--font-size--lg);
-        margin-bottom: var(--wp--preset--spacing--2, 0.5rem);
+    
+    .blog-post-item:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-posts-by-month {
+        margin-left: var(--wp--preset--spacing--8, 2rem);
+        margin-right: var(--wp--preset--spacing--8, 2rem);
+    }
+    
+    .blog-post-item {
+        padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--4, 1rem);
     }
 }
 
