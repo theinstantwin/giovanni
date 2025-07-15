@@ -167,7 +167,7 @@ The theme includes complete style variations for different aesthetics:
 7. **Minimal Mono**: Monospace typography focus
 8. **Serif Editorial**: Editorial/magazine style
 9. **Tech Neon**: High-tech, neon accents
-10. **Warm Earth**: Earthy, organic colors
+10. **Creamsicle**: Creamy, warm colors with linen theme palette
 
 ## File Structure & Organization
 
@@ -315,7 +315,7 @@ assets/styles/
 | **Linen Theme** | `#faf3ea` | *inherited* | `#ffffff` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
 | **Minimal Mono** | `#ffffff` | *inherited* | `#ffffff` | `#000000` | `#666666` | `#e5e5e5` | `#000000` |
 | **Tech Neon** | `#0a0a0f` | `#ffffff` | `#1a1a2e` | `#e0e7ff` | `#6366f1` | `#1e1b4b` | `#00d4aa` |
-| **Warm Earth** | `#fdf9f4` | *inherited* | `#faf7f0` | `#2d1810` | `#8b6914` | `#f4e6d1` | `#d2691e` |
+| **Creamsicle** | `#faf3ea` | *inherited* | `#ffffff` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
 | **Condensed Modern** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
 | **Display Bold** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
 | **Serif Editorial** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |

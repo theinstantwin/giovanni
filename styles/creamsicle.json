@@ -1,68 +1,68 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
-	"title": "Warm Earth",
+	"title": "Creamsicle",
 	"settings": {
 		"color": {
 			"palette": [
 				{
-					"color": "#fdf9f4",
+					"color": "#faf3ea",
 					"name": "Background",
 					"slug": "background"
 				},
 				{
-					"color": "#faf7f0",
+					"color": "#ffffff",
 					"name": "Container",
 					"slug": "container"
 				},
 				{
-					"color": "#2d1810",
+					"color": "#383a3c",
 					"name": "Foreground",
 					"slug": "foreground"
 				},
 				{
-					"color": "#8b6914",
-					"name": "Warm Brown",
+					"color": "#6c757d",
+					"name": "Gray",
 					"slug": "gray"
 				},
 				{
-					"color": "#f4e6d1",
-					"name": "Light Beige",
+					"color": "#f5eadd",
+					"name": "Light Gray",
 					"slug": "light-gray"
 				},
 				{
-					"color": "#d2691e",
-					"name": "Earth Orange",
+					"color": "#ff335f",
+					"name": "Creamsicle Red",
 					"slug": "giovanni-blue"
 				},
 				{
-					"color": "#d2691e",
+					"color": "#ff335f",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#2d1810",
+					"color": "#383a3c",
 					"name": "Reading Text",
 					"slug": "reading-text"
 				},
 				{
-					"color": "#8fbc8f",
-					"name": "Forest Green",
+					"color": "#ff6b6b",
+					"name": "Coral Pink",
 					"slug": "success"
 				},
 				{
-					"color": "#daa520",
-					"name": "Goldenrod",
+					"color": "#ff8c42",
+					"name": "Orange Cream",
 					"slug": "warning"
 				},
 				{
-					"color": "#cd853f",
-					"name": "Peru",
+					"color": "#e6285a",
+					"name": "Deep Red",
 					"slug": "error"
 				},
 				{
-					"color": "#4682b4",
-					"name": "Steel Blue",
+					"color": "#ff5a7a",
+					"name": "Light Pink",
 					"slug": "info"
 				}
 			]
