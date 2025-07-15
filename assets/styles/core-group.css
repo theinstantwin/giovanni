@@ -2,7 +2,7 @@
 --------------------------------------------- */
 
 /* ============================================
-   CENTRALIZED SHADOW SYSTEM
+   SIMPLE CENTRALIZED SHADOW SYSTEM
    ============================================ */
 
 /* All group blocks that need shadows - unified approach */
@@ -10,90 +10,35 @@
 .wp-block-group.has-container-background-color,
 .wp-block-group.has-background {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: var(--giovanni-transition-base);
+    transition: all 0.2s ease;
 }
 
-/* Hover effects for all shadowed group blocks */
+/* Simple hover effect for all shadowed group blocks */
 .wp-block-group[class*="is-style-"]:hover,
 .wp-block-group.has-container-background-color:hover,
 .wp-block-group.has-background:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* EXCEPTION: Portfolio cards with arrow buttons should not transform to avoid arrow animation conflicts */
-.wp-block-group.is-style-portfolio-card:hover {
-    transform: none !important;
-}
-
-/* NESTED GROUP OVERRIDE - Remove shadows from nested group blocks (but allow hover-cards) */
+/* NESTED GROUP OVERRIDE - Remove shadows from nested group blocks */
 .wp-block-group .wp-block-group {
     box-shadow: none !important;
 }
 
-/* INTENTIONAL: Nested cards do NOT hover to prevent confusing interactions */
 .wp-block-group .wp-block-group:hover {
     box-shadow: none !important;
-    transform: none !important;
-}
-
-/* OPTIONAL: Remove borders from nested cards too (uncomment if desired) */
-/*
-.wp-block-group .wp-block-group[class*="is-style-"] {
-    border: none !important;
-}
-*/
-
-/* EXCEPTION: Allow hover-cards to have shadows and animations */
-.hover-cards > .wp-block-group {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-}
-
-.hover-cards > .wp-block-group:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-    transform: translateY(-2px) !important;
-}
-
-/* Restore animated card hover effects */
-.hover-cards > .wp-block-group:nth-child(odd):hover {
-    transform: scale(1.03) rotate(1.5deg) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-    background: var(--wp--preset--color--container, #ffffff) !important;
-}
-
-.hover-cards > .wp-block-group:nth-child(even):hover {
-    transform: scale(1.03) rotate(-1.5deg) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-    background: var(--wp--preset--color--container, #ffffff) !important;
-}
-
-/* But still prevent nesting INSIDE hover-cards */
-.hover-cards .wp-block-group .wp-block-group {
-    box-shadow: none !important;
-}
-
-.hover-cards .wp-block-group .wp-block-group:hover {
-    box-shadow: none !important;
-    transform: none !important;
 }
 
 /* ============================================
-   INDIVIDUAL BLOCK STYLES
+   INDIVIDUAL BLOCK STYLES (NO HOVER/SHADOWS)
    ============================================ */
 
-/* Base card styling */
+/* Base card styling - NO shadows or hover (handled centrally) */
 .wp-block-group[class*="is-style-"][class*="card"] {
     background: var(--wp--preset--color--container);
     border-radius: var(--giovanni-card-radius);
     border: var(--giovanni-border-light);
     margin: var(--wp--preset--spacing--6, 1.5rem) 0;
-}
-
-/* Hover color changes for card styles */
-.wp-block-group[class*="is-style-"][class*="card"]:hover {
-    border-color: var(--wp--preset--color--primary);
-    background: var(--wp--preset--color--container, #ffffff) !important;
-    background-color: var(--wp--preset--color--container, #ffffff) !important;
 }
 
 .wp-block-group.is-style-card {
@@ -194,17 +139,11 @@ div.wp-block-group.is-style-portfolio-card p {
 }
 
 .wp-block-group.is-style-company-card {
-    /* Override base padding for better spacing */
     padding: var(--wp--preset--spacing--8, 2rem) !important;
 }
 
 .wp-block-group.is-style-blog-roll-card {
-    /* Override base padding for better spacing */
     padding: var(--wp--preset--spacing--8, 2rem) !important;
-}
-
-.wp-block-group.is-style-blog-roll-card:hover {
-    /* No special hover effects - handled by centralized system */
 }
 
 .wp-block-group.is-style-form-container {
@@ -213,23 +152,7 @@ div.wp-block-group.is-style-portfolio-card p {
     border-radius: var(--giovanni-card-radius);
     padding: var(--wp--preset--spacing--8, 2rem);
     margin: var(--wp--preset--spacing--8, 2rem) 0;
-    /* Shadow handled by centralized system */
 }
-
-.wp-block-group.is-style-form-container:hover {
-    border-color: var(--wp--preset--color--muted-text);
-    /* Shadow handled by centralized system */
-}
-
-/* Nested shadow removal is now handled by centralized system */
-
-.hover-cards > .wp-block-group {
-    position: relative;
-    overflow: visible;
-    transition: transform var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
-}
-
-/* Animation styles now handled by centralized system above */
 
 /* Fix button pill badges to not span full width and make them smaller */
 .giovanni-no-shrink {
@@ -245,11 +168,6 @@ div.wp-block-group.is-style-portfolio-card p {
 /* Fix pill button text color */
 .giovanni-no-shrink p {
     color: var(--wp--preset--color--container, #ffffff) !important;
-}
-
-/* Make hover-cards container match background for better card contrast */
-.hover-cards {
-    background: var(--wp--preset--color--background, #fafafa) !important;
 }
 
 .pulse-orb {
@@ -291,9 +209,7 @@ div.wp-block-group.is-style-portfolio-card p {
     pointer-events: none;
 }
 
-.show-orb-on-hover:hover .pulse-orb {
-    opacity: 1;
-}
+/* Pulse orb hover removed for minimal shadow system */
 
 @keyframes pulse-radar {
     0% {
@@ -310,12 +226,6 @@ div.wp-block-group.is-style-portfolio-card p {
     .wp-block-group.is-style-form-container {
         padding: var(--wp--preset--spacing--6, 1.5rem) var(--wp--preset--spacing--5, 1rem);
         margin: var(--wp--preset--spacing--6, 1.5rem) 0;
-    }
-    .hover-cards {
-        grid-template-columns: 1fr !important;
-    }
-    .hover-cards > .wp-block-group:hover {
-        transform: scale(1.02) !important;
     }
     
     /* Fix blog roll cards spacing on mobile - reduce gaps */
