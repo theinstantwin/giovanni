@@ -16,10 +16,10 @@
 }
 
 .wp-block-group[class*="is-style-"][class*="card"]:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    border-color: var(--wp--preset--color--gray);
-    background: var(--wp--preset--color--light-gray);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-color: var(--wp--preset--color--primary);
+    background: color-mix(in srgb, var(--wp--preset--color--container) 97%, var(--wp--preset--color--primary) 3%);
 }
 
 .wp-block-group.is-style-card {
