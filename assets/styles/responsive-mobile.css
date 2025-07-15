@@ -14,7 +14,7 @@
     
     .wp-block-navigation__responsive-container.is-menu-open {
         background-color: var(--wp--preset--color--background);
-        border: 1px solid var(--wp--preset--color--light-gray);
+        border: 1px solid var(--wp--preset--color--subtle-border);
     }
     
     .wp-block-navigation__responsive-container-content {
@@ -24,7 +24,7 @@
     .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
         color: var(--wp--preset--color--foreground) !important;
         padding: 0.5rem 0;
-        border-bottom: 1px solid var(--wp--preset--color--light-gray);
+        border-bottom: 1px solid var(--wp--preset--color--subtle-border);
         font-size: var(--wp--preset--font-size--lg);
         font-weight: var(--wp--custom--font-weight--medium);
     }

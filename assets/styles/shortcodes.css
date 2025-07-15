@@ -13,7 +13,7 @@
     margin-bottom: var(--wp--preset--spacing--3, 0.75rem);
     margin-top: var(--wp--preset--spacing--6, 1.5rem);
     padding-bottom: var(--wp--preset--spacing--2, 0.5rem);
-    border-bottom: 1px solid var(--wp--preset--color--light-gray);
+    border-bottom: 1px solid var(--wp--preset--color--subtle-border);
 }
 
 .blog-posts-by-month .month-header:first-child {
@@ -58,7 +58,7 @@
 }
 
 .blog-post-item .post-date {
-    color: var(--wp--preset--color--gray);
+    color: var(--wp--preset--color--muted-text);
     font-size: var(--wp--preset--font-size--sm);
     flex-shrink: 0;
     font-weight: var(--wp--custom--font-weight--regular);

@@ -27,13 +27,13 @@
 				},
 				{
 					"color": "#6366f1",
-					"name": "Electric Purple",
-					"slug": "gray"
+					"name": "Muted Text",
+					"slug": "muted-text"
 				},
 				{
 					"color": "#1e1b4b",
-					"name": "Dark Purple",
-					"slug": "light-gray"
+					"name": "Subtle Border",
+					"slug": "subtle-border"
 				},
 				{
 					"color": "#00d4aa",
@@ -116,7 +116,7 @@
 			"core/quote": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)",
-					"background": "var(--wp--preset--color--light-gray)"
+					"background": "var(--wp--preset--color--subtle-border)"
 				},
 				"border": {
 					"left": {
@@ -127,12 +127,12 @@
 			"core/pullquote": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)",
-					"background": "var(--wp--preset--color--light-gray)"
+					"background": "var(--wp--preset--color--subtle-border)"
 				}
 			},
 			"core/code": {
 				"color": {
-					"background": "var(--wp--preset--color--light-gray)",
+					"background": "var(--wp--preset--color--subtle-border)",
 					"text": "var(--wp--preset--color--giovanni-blue)"
 				}
 			}

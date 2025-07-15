@@ -20,14 +20,14 @@
         <div class="wp-block-group blog-post-item" style="border-radius:6px;padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--3)">
             <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"500","lineHeight":"1.3"},"spacing":{"margin":{"bottom":"0","top":"0"}}},"fontSize":"xl"} /-->
             
-            <!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"lineHeight":"1.3"}},"textColor":"gray","fontSize":"sm"} /-->
+            <!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"lineHeight":"1.3"}},"textColor":"muted-text","fontSize":"sm"} /-->
         </div>
         <!-- /wp:group -->
         <!-- /wp:post-template -->
 
         <!-- wp:query-no-results -->
-        <!-- wp:paragraph {"textAlign":"center","textColor":"gray"} -->
-        <p class="has-text-align-center has-gray-color has-text-color">No posts found.</p>
+        <!-- wp:paragraph {"textAlign":"center","textColor":"muted-text"} -->
+        <p class="has-text-align-center has-muted-text-color has-text-color">No posts found.</p>
         <!-- /wp:paragraph -->
         <!-- /wp:query-no-results -->
     </div>

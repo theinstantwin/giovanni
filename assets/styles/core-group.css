@@ -60,7 +60,7 @@
 .wp-block-group.is-style-portfolio-card .wp-block-paragraph {
     margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0;
     padding: 0 var(--wp--preset--spacing--6, 1.5rem);
-    color: var(--wp--preset--color--gray);
+    color: var(--wp--preset--color--muted-text);
     font-size: var(--wp--preset--font-size--sm);
     line-height: var(--wp--custom--line-height--normal);
 }
@@ -90,7 +90,7 @@
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border: 1px solid var(--wp--preset--color--light-gray);
+    border: 1px solid var(--wp--preset--color--subtle-border);
 }
 
 .wp-block-group.is-style-card-base .wp-block-heading {
@@ -142,7 +142,7 @@
 }
 
 .wp-block-group.is-style-form-container:hover {
-    border-color: var(--wp--preset--color--gray);
+    border-color: var(--wp--preset--color--muted-text);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 

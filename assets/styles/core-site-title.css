@@ -3,17 +3,17 @@
 
 /* Logo Style */
 .wp-block-site-title.is-style-logo-style {
-    background: var(--wp--preset--color--light-gray);
+    background: var(--wp--preset--color--subtle-border);
     padding: var(--wp--preset--spacing--4, 1rem) var(--wp--preset--spacing--6, 1.5rem);
     border-radius: var(--wp--custom--border-radius--md);
-    border: 1px solid var(--wp--preset--color--light-gray);
+    border: 1px solid var(--wp--preset--color--subtle-border);
     display: inline-block;
     transition: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
 .wp-block-site-title.is-style-logo-style:hover {
-    background: var(--wp--preset--color--light-gray);
-    border-color: var(--wp--preset--color--gray);
+    background: var(--wp--preset--color--subtle-border);
+    border-color: var(--wp--preset--color--muted-text);
     transform: translateY(-1px);
 }
 

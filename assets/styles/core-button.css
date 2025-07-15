@@ -14,7 +14,7 @@
 
 .wp-block-button.is-style-ghost .wp-block-button__link:hover,
 .wp-block-button.is-style-ghost .wp-block-button__link:focus {
-    background: var(--wp--preset--color--light-gray);
+    background: var(--wp--preset--color--subtle-border);
     color: var(--wp--preset--color--foreground);
     text-decoration: none;
     transform: translateY(-1px);
@@ -32,7 +32,7 @@
 
 .wp-block-button.is-style-dark .wp-block-button__link:hover,
 .wp-block-button.is-style-dark .wp-block-button__link:focus {
-    background: var(--wp--preset--color--gray);
+    background: var(--wp--preset--color--muted-text);
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -82,14 +82,14 @@
 /* Arrow Light Variant */
 .wp-block-button.is-style-arrow-light .wp-block-button__link {
     background: var(--wp--preset--color--background);
-    border: 2px solid var(--wp--preset--color--light-gray);
+    border: 2px solid var(--wp--preset--color--subtle-border);
     color: var(--wp--preset--color--foreground);
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover,
 .wp-block-button.is-style-arrow-light .wp-block-button__link:focus {
-    background: var(--wp--preset--color--light-gray);
-    border-color: var(--wp--preset--color--gray);
+    background: var(--wp--preset--color--subtle-border);
+    border-color: var(--wp--preset--color--muted-text);
     color: var(--wp--preset--color--foreground);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

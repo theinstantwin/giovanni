@@ -22,13 +22,13 @@
 				},
 				{
 					"color": "#666666",
-					"name": "Gray",
-					"slug": "gray"
+					"name": "Muted Text",
+					"slug": "muted-text"
 				},
 				{
 					"color": "#e5e5e5",
-					"name": "Light Gray",
-					"slug": "light-gray"
+					"name": "Subtle Border",
+					"slug": "subtle-border"
 				},
 				{
 					"color": "#000000",

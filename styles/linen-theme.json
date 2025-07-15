@@ -22,13 +22,13 @@
 				},
 				{
 					"color": "#6c757d",
-					"name": "Gray",
-					"slug": "gray"
+					"name": "Muted Text",
+					"slug": "muted-text"
 				},
 				{
 					"color": "#f5eadd",
-					"name": "Light Gray",
-					"slug": "light-gray"
+					"name": "Subtle Border",
+					"slug": "subtle-border"
 				},
 				{
 					"color": "#ff335f",
@@ -83,7 +83,7 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var(--wp--preset--color--gray)"
+							"text": "var(--wp--preset--color--muted-text)"
 						},
 						":hover": {
 							"color": {
@@ -95,13 +95,13 @@
 			},
 			"core/code": {
 				"color": {
-					"background": "var(--wp--preset--color--light-gray)",
+					"background": "var(--wp--preset--color--subtle-border)",
 					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"core/preformatted": {
 				"color": {
-					"background": "var(--wp--preset--color--light-gray)",
+					"background": "var(--wp--preset--color--subtle-border)",
 					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
@@ -126,7 +126,7 @@
 			"core/quote": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)",
-					"background": "var(--wp--preset--color--light-gray)"
+					"background": "var(--wp--preset--color--subtle-border)"
 				},
 				"border": {
 					"left": {
@@ -147,7 +147,7 @@
 			"core/pullquote": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)",
-					"background": "var(--wp--preset--color--light-gray)"
+					"background": "var(--wp--preset--color--subtle-border)"
 				},
 				"border": {
 					"color": "var(--wp--preset--color--radical-red)",
@@ -165,17 +165,17 @@
 			},
 			"core/post-date": {
 				"color": {
-					"text": "var(--wp--preset--color--gray)"
+					"text": "var(--wp--preset--color--muted-text)"
 				}
 			},
 			"core/post-author": {
 				"color": {
-					"text": "var(--wp--preset--color--gray)"
+					"text": "var(--wp--preset--color--muted-text)"
 				}
 			},
 			"core/post-terms": {
 				"color": {
-					"text": "var(--wp--preset--color--gray)"
+					"text": "var(--wp--preset--color--muted-text)"
 				}
 			}
 		}
