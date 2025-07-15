@@ -230,9 +230,10 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--lg)",
+					"fontSize": "var(--wp--preset--font-size--2xl)",
 					"lineHeight": "var(--wp--custom--line-height--tight)",
-					"letterSpacing": "var(--wp--custom--letter-spacing--tight)"
+					"letterSpacing": "var(--wp--custom--letter-spacing--tight)",
+					"fontWeight": "var(--wp--custom--font-weight--bold)"
 				}
 			},
 			"core/post-date": {

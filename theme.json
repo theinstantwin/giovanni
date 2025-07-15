@@ -833,6 +833,17 @@
 				}
 			},
 			"core/post-title": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--3xl)",
+					"lineHeight": "var(--wp--custom--line-height--tight)",
+					"letterSpacing": "var(--wp--custom--letter-spacing--tight)",
+					"fontWeight": "var(--wp--custom--font-weight--bold)"
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--preset--spacing--4)"
+					}
+				},
 				"elements": {
 					"link": {
 						"color": {
