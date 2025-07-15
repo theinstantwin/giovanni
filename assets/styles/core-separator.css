@@ -11,7 +11,7 @@
 .wp-block-separator {
     border: none;
     height: 1px;
-    background: var(--wp--preset--color--gray, #d1d5db);
+    background: var(--wp--preset--color--gray);
     margin: var(--wp--preset--spacing--5, 1.5rem) 0;
     width: 100%;
 }
@@ -20,8 +20,8 @@
 .wp-block-separator.is-style-separator-dotted {
     background: repeating-linear-gradient(
         90deg, 
-        var(--wp--preset--color--gray, #d1d5db), 
-        var(--wp--preset--color--gray, #d1d5db) 2px, 
+        var(--wp--preset--color--gray), 
+        var(--wp--preset--color--gray) 2px, 
         transparent 2px, 
         transparent 5px
     );
@@ -49,8 +49,8 @@
 .wp-block-separator.is-style-separator-dotted {
     background: repeating-linear-gradient(
         90deg, 
-        var(--wp--preset--color--gray, currentColor), 
-        var(--wp--preset--color--gray, currentColor) 2px, 
+        var(--wp--preset--color--gray), 
+        var(--wp--preset--color--gray) 2px, 
         transparent 2px, 
         transparent 5px
     );

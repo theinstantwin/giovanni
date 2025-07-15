@@ -31,7 +31,7 @@
 					"slug": "gray"
 				},
 				{
-					"color": "#333230",
+					"color": "#404040",
 					"name": "Light Gray",
 					"slug": "light-gray"
 				},
@@ -114,11 +114,11 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var(--wp--preset--color--gray)"
+							"text": "var(--wp--preset--color--foreground)"
 						},
 						":hover": {
 							"color": {
-								"text": "var(--wp--preset--color--foreground)"
+								"text": "var(--wp--preset--color--primary)"
 							}
 						}
 					}

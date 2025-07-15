@@ -37,7 +37,7 @@
 
 .wp-block-site-title.is-style-brand-name a {
     font-weight: var(--wp--custom--font-weight--bold);
-    font-size: var(--wp--preset--font-size--2-xl);
+    font-size: var(--wp--preset--font-size--2xl);
     color: var(--wp--preset--color--primary);
     text-decoration: none;
     letter-spacing: var(--wp--custom--letter-spacing--tighter);

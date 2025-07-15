@@ -54,7 +54,7 @@
 .wp-block-group.is-style-portfolio-card .wp-block-paragraph {
     margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0;
     padding: 0 var(--wp--preset--spacing--6, 1.5rem);
-    color: var(--wp--preset--color--light-gray0);
+    color: var(--wp--preset--color--gray);
     font-size: var(--wp--preset--font-size--sm);
     line-height: var(--wp--custom--line-height--normal);
 }
