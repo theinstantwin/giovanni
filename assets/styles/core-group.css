@@ -1,45 +1,103 @@
 /* Giovanni Group Styles
 --------------------------------------------- */
 
+/* ============================================
+   CENTRALIZED SHADOW SYSTEM
+   ============================================ */
+
+/* All group blocks that need shadows - unified approach */
+.wp-block-group[class*="is-style-"],
+.wp-block-group.has-container-background-color,
+.wp-block-group.has-background {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: var(--giovanni-transition-base);
+}
+
+/* Hover effects for all shadowed group blocks */
+.wp-block-group[class*="is-style-"]:hover,
+.wp-block-group.has-container-background-color:hover,
+.wp-block-group.has-background:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* EXCEPTION: Portfolio cards with arrow buttons should not transform to avoid arrow animation conflicts */
+.wp-block-group.is-style-portfolio-card:hover {
+    transform: none !important;
+}
+
+/* NESTED GROUP OVERRIDE - Remove shadows from nested group blocks (but allow hover-cards) */
+.wp-block-group .wp-block-group {
+    box-shadow: none !important;
+}
+
+/* INTENTIONAL: Nested cards do NOT hover to prevent confusing interactions */
+.wp-block-group .wp-block-group:hover {
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* OPTIONAL: Remove borders from nested cards too (uncomment if desired) */
+/*
+.wp-block-group .wp-block-group[class*="is-style-"] {
+    border: none !important;
+}
+*/
+
+/* EXCEPTION: Allow hover-cards to have shadows and animations */
+.hover-cards > .wp-block-group {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.hover-cards > .wp-block-group:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Restore animated card hover effects */
+.hover-cards > .wp-block-group:nth-child(odd):hover {
+    transform: scale(1.03) rotate(1.5deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    background: var(--wp--preset--color--container, #ffffff) !important;
+}
+
+.hover-cards > .wp-block-group:nth-child(even):hover {
+    transform: scale(1.03) rotate(-1.5deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    background: var(--wp--preset--color--container, #ffffff) !important;
+}
+
+/* But still prevent nesting INSIDE hover-cards */
+.hover-cards .wp-block-group .wp-block-group {
+    box-shadow: none !important;
+}
+
+.hover-cards .wp-block-group .wp-block-group:hover {
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* ============================================
+   INDIVIDUAL BLOCK STYLES
+   ============================================ */
+
+/* Base card styling */
 .wp-block-group[class*="is-style-"][class*="card"] {
     background: var(--wp--preset--color--container);
     border-radius: var(--giovanni-card-radius);
     border: var(--giovanni-border-light);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: var(--giovanni-transition-base);
     margin: var(--wp--preset--spacing--6, 1.5rem) 0;
 }
 
-/* Enhanced visibility for container backgrounds - matches personal-reflection quote style */
-.wp-block-group.has-container-background-color {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-/* Remove shadows from nested group blocks to prevent compounding */
-.wp-block-group .wp-block-group[class*="is-style-"][class*="card"] {
-    box-shadow: none;
-}
-
-.wp-block-group .wp-block-group.has-container-background-color {
-    box-shadow: none;
-}
-
+/* Hover color changes for card styles */
 .wp-block-group[class*="is-style-"][class*="card"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     border-color: var(--wp--preset--color--primary);
     background: var(--wp--preset--color--container, #ffffff) !important;
     background-color: var(--wp--preset--color--container, #ffffff) !important;
 }
 
-/* No hover shadows for nested group blocks */
-.wp-block-group .wp-block-group[class*="is-style-"][class*="card"]:hover {
-    box-shadow: none;
-    transform: none;
-}
-
 .wp-block-group.is-style-card {
-    padding: var(--wp--preset--spacing--6, 1.5rem);
+    padding: var(--wp--preset--spacing--8, 2rem);
 }
 
 .wp-block-group.is-style-card > * {
@@ -51,7 +109,7 @@
 }
 
 .wp-block-group.is-style-portfolio-card {
-    padding: 0;
+    padding: 0 !important;
     overflow: hidden;
 }
 
@@ -66,15 +124,17 @@
 
 .wp-block-group.is-style-portfolio-card .wp-block-heading {
     margin: 0 0 var(--wp--preset--spacing--2, 0.5rem) 0;
-    padding: 0 var(--wp--preset--spacing--6, 1.5rem);
+    padding: 0 var(--wp--preset--spacing--8, 2rem) !important;
     font-size: var(--wp--preset--font-size--md);
     font-weight: var(--wp--custom--font-weight--semibold);
     line-height: var(--wp--custom--line-height--snug);
 }
 
-.wp-block-group.is-style-portfolio-card .wp-block-paragraph {
-    margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0;
-    padding: 0 var(--wp--preset--spacing--6, 1.5rem);
+/* Force portfolio card paragraph alignment with maximum specificity */
+div.wp-block-group.is-style-portfolio-card .wp-block-paragraph,
+div.wp-block-group.is-style-portfolio-card p {
+    margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0 !important;
+    padding: 0 var(--wp--preset--spacing--8, 2rem) !important;
     color: var(--wp--preset--color--muted-text);
     font-size: var(--wp--preset--font-size--sm);
     line-height: var(--wp--custom--line-height--normal);
@@ -82,11 +142,11 @@
 
 .wp-block-group.is-style-portfolio-card .wp-block-buttons {
     margin: 0;
-    padding: 0 var(--wp--preset--spacing--6, 1.5rem) var(--wp--preset--spacing--6, 1.5rem);
+    padding: 0 var(--wp--preset--spacing--8, 2rem) var(--wp--preset--spacing--8, 2rem) !important;
 }
 
 .wp-block-group.is-style-card-base {
-    padding: var(--wp--preset--spacing--6, 1.5rem);
+    padding: var(--wp--preset--spacing--8, 2rem);
     text-align: center;
     min-height: 280px;
     display: flex;
@@ -134,16 +194,17 @@
 }
 
 .wp-block-group.is-style-company-card {
-    /* No unique properties, inherits all from base */
+    /* Override base padding for better spacing */
+    padding: var(--wp--preset--spacing--8, 2rem) !important;
 }
 
 .wp-block-group.is-style-blog-roll-card {
-    /* No unique properties except hover */
+    /* Override base padding for better spacing */
+    padding: var(--wp--preset--spacing--8, 2rem) !important;
 }
 
 .wp-block-group.is-style-blog-roll-card:hover {
-    /* No box-shadow on hover, only background change */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* No special hover effects - handled by centralized system */
 }
 
 .wp-block-group.is-style-form-container {
@@ -152,23 +213,15 @@
     border-radius: var(--giovanni-card-radius);
     padding: var(--wp--preset--spacing--8, 2rem);
     margin: var(--wp--preset--spacing--8, 2rem) 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: var(--giovanni-transition-base);
+    /* Shadow handled by centralized system */
 }
 
 .wp-block-group.is-style-form-container:hover {
     border-color: var(--wp--preset--color--muted-text);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    /* Shadow handled by centralized system */
 }
 
-/* Remove shadows from nested form containers */
-.wp-block-group .wp-block-group.is-style-form-container {
-    box-shadow: none;
-}
-
-.wp-block-group .wp-block-group.is-style-form-container:hover {
-    box-shadow: none;
-}
+/* Nested shadow removal is now handled by centralized system */
 
 .hover-cards > .wp-block-group {
     position: relative;
@@ -176,22 +229,27 @@
     transition: transform var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
 }
 
-.hover-cards > .wp-block-group:nth-child(odd):hover {
-    transform: scale(1.03) rotate(1.5deg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background: var(--wp--preset--color--container, #ffffff) !important;
+/* Animation styles now handled by centralized system above */
+
+/* Fix button pill badges to not span full width and make them smaller */
+.giovanni-no-shrink {
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: fit-content;
+    display: inline-flex;
+    font-size: 0.65rem !important;
+    padding: 2px 10px !important;
+    line-height: 1.2;
 }
 
-.hover-cards > .wp-block-group:nth-child(even):hover {
-    transform: scale(1.03) rotate(-1.5deg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background: var(--wp--preset--color--container, #ffffff) !important;
+/* Fix pill button text color */
+.giovanni-no-shrink p {
+    color: var(--wp--preset--color--container, #ffffff) !important;
 }
 
-/* Prevent nested hover effects in animated cards */
-.hover-cards .wp-block-group .wp-block-group:hover {
-    transform: none;
-    box-shadow: none;
+/* Make hover-cards container match background for better card contrast */
+.hover-cards {
+    background: var(--wp--preset--color--background, #fafafa) !important;
 }
 
 .pulse-orb {
@@ -258,6 +316,21 @@
     }
     .hover-cards > .wp-block-group:hover {
         transform: scale(1.02) !important;
+    }
+    
+    /* Fix blog roll cards spacing on mobile - reduce gaps */
+    .wp-block-columns .wp-block-column {
+        margin-bottom: var(--wp--preset--spacing--2, 0.5rem) !important;
+    }
+    
+    .wp-block-columns .wp-block-column:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Ensure portfolio card paragraph alignment on mobile */
+    .wp-block-group.is-style-portfolio-card .wp-block-paragraph {
+        padding-left: var(--wp--preset--spacing--8, 2rem) !important;
+        padding-right: var(--wp--preset--spacing--8, 2rem) !important;
     }
 }
 

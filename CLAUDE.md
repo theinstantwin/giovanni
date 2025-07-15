@@ -663,6 +663,140 @@ wp pattern list
 4. `assets/styles/` - Block-specific CSS
 5. `functions.php` - Theme initialization
 
+## Centralized Shadow System Architecture
+
+**CRITICAL: Giovanni uses a centralized shadow system to prevent nested group block shadow overlap (the "grey container" issue).**
+
+### ✅ CENTRALIZED SHADOW SYSTEM:
+
+```css
+/* All group blocks that need shadows - unified approach */
+.wp-block-group[class*="is-style-"],
+.wp-block-group.has-container-background-color,
+.wp-block-group.has-background {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: var(--giovanni-transition-base);
+}
+
+/* Hover effects for all shadowed group blocks */
+.wp-block-group[class*="is-style-"]:hover,
+.wp-block-group.has-container-background-color:hover,
+.wp-block-group.has-background:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* NESTED GROUP OVERRIDE - Remove shadows from nested group blocks */
+.wp-block-group .wp-block-group {
+    box-shadow: none !important;
+}
+
+.wp-block-group .wp-block-group:hover {
+    box-shadow: none !important;
+    transform: none !important;
+}
+```
+
+### ✅ SPECIAL CASES REQUIRING `!important`:
+
+**1. Animated Cards Exception** - `hover-cards` pattern needs shadows and animations:
+```css
+/* EXCEPTION: Allow hover-cards to have shadows and animations */
+.hover-cards > .wp-block-group {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.hover-cards > .wp-block-group:nth-child(odd):hover {
+    transform: scale(1.03) rotate(1.5deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+.hover-cards > .wp-block-group:nth-child(even):hover {
+    transform: scale(1.03) rotate(-1.5deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+```
+
+**2. Pill Button Styling** - Override WordPress default sizing and colors:
+```css
+.giovanni-no-shrink {
+    font-size: 0.65rem !important;
+    padding: 2px 10px !important;
+}
+
+.giovanni-no-shrink p {
+    color: var(--wp--preset--color--container, #ffffff) !important;
+}
+```
+
+**3. Background Color Contrast** - Ensure proper card elevation:
+```css
+.hover-cards {
+    background: var(--wp--preset--color--background, #fafafa) !important;
+}
+```
+
+### ✅ SHADOW SYSTEM BENEFITS:
+
+- **Prevents grey overlay**: Nested group blocks automatically lose shadows
+- **Consistent shadow values**: All shadows use unified opacity values (0.05, 0.06, 0.08)
+- **Smart exceptions**: `hover-cards` pattern gets special treatment for animations
+- **Theme-aware**: Uses CSS custom properties for theme variation compatibility
+- **Performance optimized**: Fewer CSS rules to evaluate, better rendering performance
+- **Maintainable**: Only one place to modify shadow behavior
+
+### ✅ MAINTENANCE GUIDELINES:
+
+- **Before removing group styles**: Audit all patterns for usage first
+- **Shadow modifications**: Only edit the centralized system, not individual styles
+- **New patterns**: Will automatically inherit proper shadow behavior
+- **`!important` usage**: Only use for special cases documented above
+- **Testing**: Always test with nested group blocks to ensure no grey overlay
+- **Pattern validation**: Use animated-cards-test.html for comprehensive testing
+
+### 🔧 TROUBLESHOOTING: Random Grey Colors
+
+**Problem**: Content appears darker/greyer than expected, especially in nested containers or cards. The issue seems random and cache clearing doesn't fix it.
+
+**Root Cause**: Shadow overlap from nested group blocks creating compounding darkness.
+
+**Diagnostic Steps**:
+1. **Inspect Element** - Look for multiple `box-shadow` declarations
+2. **Check HTML Structure** - Look for nested `.wp-block-group` elements
+3. **Verify CSS Specificity** - Ensure centralized system rules aren't being overridden
+
+**Common Scenarios**:
+- **Pattern with nested groups**: Content inside cards appearing grey
+- **Plugin conflicts**: Other plugins adding shadows to group blocks
+- **Theme variation issues**: Custom variations not respecting shadow system
+- **WordPress editor**: Block editor showing grey overlay in preview
+
+**Quick Fixes**:
+```css
+/* Emergency fix: Force remove shadows from specific problematic containers */
+.problematic-container .wp-block-group {
+    box-shadow: none !important;
+}
+
+/* Or target specific pattern */
+.pattern-name .wp-block-group .wp-block-group {
+    box-shadow: none !important;
+}
+```
+
+**Permanent Solution**:
+1. **Identify the pattern** causing the issue
+2. **Check for nested group blocks** in the pattern HTML
+3. **Verify centralized system** is being applied correctly
+4. **Add specific override** if needed (document as special case)
+5. **Test with animated-cards-test.html** to verify fix
+
+**Prevention**:
+- Always use the centralized shadow system
+- Test all new patterns with nested group blocks
+- Never add individual shadow declarations to group styles
+- Use semantic color tokens to ensure proper contrast
+
 ## Development History & Architecture Notes
 
 **Giovanni v1.7.2** represents a fully refactored, modern FSE theme that has been through comprehensive restructuring:
