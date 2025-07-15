@@ -26,6 +26,11 @@
     gap: var(--wp--preset--spacing--3, 0.75rem);
     margin-bottom: var(--wp--preset--spacing--1, 0.25rem);
     line-height: 1.6;
+    padding: var(--wp--preset--spacing--2, 0.5rem);
+    margin-left: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
+    margin-right: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
+    border-radius: var(--wp--custom--border-radius--sm);
+    transition: all var(--wp--custom--transitions--fast) ease;
 }
 
 .blog-post-item a {
@@ -38,11 +43,18 @@
 }
 
 .blog-post-item:hover {
-    background-color: var(--wp--preset--color--white);
+    background-color: var(--wp--preset--color--primary);
+    transform: translateX(4px);
 }
 
-.blog-post-item a:hover {
-    color: var(--wp--preset--color--primary);
+.blog-post-item:hover a,
+.blog-post-item:hover .wp-block-post-title a {
+    color: var(--wp--preset--color--background) !important;
+}
+
+.blog-post-item:hover .post-date,
+.blog-post-item:hover .wp-block-post-date {
+    color: var(--wp--preset--color--background) !important;
 }
 
 .blog-post-item .post-date {
