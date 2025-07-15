@@ -52,6 +52,6 @@
     .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
     .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
         right: var(--wp--preset--spacing--2, 0.5rem);
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }

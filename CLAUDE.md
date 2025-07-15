@@ -53,7 +53,66 @@ The theme includes comprehensive custom properties in theme.json:
 - `xs`: clamp(0.625rem, 1.5vw, 0.75rem)
 - `sm`: clamp(0.75rem, 2vw, 0.875rem)
 - `md`: clamp(1rem, 2.5vw, 1.125rem) (body text)
-- `lg` through `display`: Progressive scale to 16rem
+- `lg`: clamp(1.125rem, 3vw, 1.25rem)
+- `xl`: clamp(1.25rem, 3.5vw, 1.5rem)
+- `2xl`: clamp(1.375rem, 4vw, 1.75rem)
+- `3xl`: clamp(1.5rem, 4.5vw, 2rem)
+- `4xl`: clamp(1.875rem, 5vw, 2.5rem)
+- `5xl`: clamp(2.25rem, 6vw, 3.5rem)
+- `6xl`: clamp(2.75rem, 7vw, 4.5rem)
+- `7xl`: clamp(3.5rem, 8vw, 6rem)
+- `8xl`: clamp(4.5rem, 10vw, 8rem)
+
+### Semantic Font Size System
+**CRITICAL**: The theme uses a complete semantic font size system with 12 tokens that work consistently across all theme variations.
+
+**Why Semantic Font Sizes**:
+- **Consistent typography** across all theme variations
+- **Better maintainability** - single source of truth for font sizes
+- **Responsive by default** - all use fluid typography with clamp()
+- **Theme-aware** - sizes adapt to different style variations
+- **Better accessibility** - semantic naming makes purpose clear
+
+**Available Semantic Tokens**:
+- `xs` (0.625rem-0.75rem) - Extra small text, metadata
+- `sm` (0.75rem-0.875rem) - Small text, captions
+- `md` (1rem-1.125rem) - Body text, paragraphs
+- `lg` (1.125rem-1.25rem) - Large text, post titles in lists
+- `xl` (1.25rem-1.5rem) - Extra large text, headings
+- `2xl` (1.375rem-1.75rem) - Section headings
+- `3xl` (1.5rem-2rem) - Main post titles
+- `4xl` (1.875rem-2.5rem) - Page titles
+- `5xl` (2.25rem-3.5rem) - Hero headings
+- `6xl` (2.75rem-4.5rem) - Large display text
+- `7xl` (3.5rem-6rem) - Extra large display
+- `8xl` (4.5rem-8rem) - Maximum size (404 error)
+
+**Usage in Patterns**:
+```html
+<!-- ✅ CORRECT - Uses semantic font size tokens -->
+<h2 class="wp-block-heading" fontSize="3xl">Main Title</h2>
+<p class="wp-block-paragraph" fontSize="md">Body text content</p>
+
+<!-- ❌ WRONG - Hardcoded font sizes -->
+<h2 class="wp-block-heading" style="font-size: 2rem">Main Title</h2>
+<p class="wp-block-paragraph" style="font-size: 1.125rem">Body text</p>
+```
+
+**Migration Complete**:
+All hardcoded font sizes have been converted to semantic tokens in:
+- `templates/404.html` - 404 error number uses `fontSize="8xl"`
+- `patterns/quick-note.php` - All text uses appropriate semantic tokens
+- `patterns/query-newsletter.php` - Newsletter metadata uses `fontSize="xs"`
+- `patterns/recommendation.php` - Recommendation cards use semantic hierarchy
+- `patterns/advanced-showcase.php` - Removed clamp() functions for semantic tokens
+
+**Font Size Hierarchy**:
+- **Metadata/Fine Print**: `xs`, `sm`
+- **Body Text**: `md` (default)
+- **Post Titles in Lists**: `lg`, `xl`
+- **Section Headings**: `2xl`, `3xl`
+- **Page Titles**: `4xl`, `5xl`
+- **Display/Hero**: `6xl`, `7xl`, `8xl`
 
 **Spacing Scale** (Fluid):
 - Scale from 0-40 using clamp() for responsive spacing
@@ -278,6 +337,19 @@ assets/styles/
 - Include proper metadata and descriptions
 - Test responsive behavior
 
+**CRITICAL - Semantic Font Size Usage**:
+- **Always use semantic font size tokens** (`fontSize="xl"`, `fontSize="sm"`)
+- **Never use hardcoded font sizes** (`"fontSize":"1.5rem"` ❌, `style="font-size: 2rem"` ❌)
+- **Never use clamp() functions in patterns** (`fontSize="clamp(1rem, 2vw, 1.5rem)"` ❌)
+- **Use appropriate semantic hierarchy**:
+  - Metadata/Fine Print: `xs`, `sm`
+  - Body Text: `md` (default)
+  - Post Titles in Lists: `lg`, `xl`
+  - Section Headings: `2xl`, `3xl`
+  - Page Titles: `4xl`, `5xl`
+  - Display/Hero: `6xl`, `7xl`, `8xl`
+- **Test with all style variations** - font sizes should remain consistent across themes
+
 **CRITICAL - Pattern Color Usage**:
 - **Always use semantic color tokens** (`"backgroundColor":"primary"`, `"textColor":"primary"`)
 - **Never use theme-specific color slugs** (`"backgroundColor":"giovanni-blue"` ❌)
@@ -488,6 +560,8 @@ When making changes to Giovanni:
 - [ ] Test all 9 theme style variations
 - [ ] **Test pattern colors with different style variations** (ensure no color bleeding)
 - [ ] **Verify semantic color token naming** (color names match actual appearance)
+- [ ] **Test semantic font size tokens** (ensure consistent typography across all themes)
+- [ ] **Verify no hardcoded font sizes** (all use semantic tokens: xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl)
 - [ ] Verify responsive behavior (mobile to desktop)
 - [ ] **Test system-aware dark mode** (responsive-mobile.css)
 - [ ] **Test touch device optimizations** (44px touch targets)
@@ -549,6 +623,13 @@ When making changes to Giovanni:
 - Update CSS to use semantic tokens instead of numbered systems
 - Test thoroughly to ensure no white-on-white or contrast issues
 
+**Hardcoded Font Sizes**:
+- Replace hardcoded `fontSize` values with semantic tokens (`fontSize="lg"` not `"fontSize":"1.125rem"`)
+- Remove clamp() functions from patterns (`fontSize="2xl"` not `"fontSize":"clamp(1.375rem, 4vw, 1.75rem)"`)
+- Fix style attribute font sizes (`fontSize="md"` not `style="font-size: 1rem"`)
+- Ensure consistent typography hierarchy across all theme variations
+- Test font scaling with all 9 style variations to verify consistency
+
 ## Quick Reference
 
 ### Essential Commands
@@ -561,6 +642,9 @@ grep -r "is-style-" assets/styles/
 
 # Find hardcoded color references in patterns
 find patterns/ -name "*.php" -exec grep -l "giovanni-blue\|#0070f3" {} \;
+
+# Find hardcoded font sizes in patterns
+find patterns/ -name "*.php" -exec grep -l "fontSize.*[0-9].*rem\|fontSize.*clamp" {} \;
 
 # Replace hardcoded colors with semantic tokens (example)
 find patterns/ -name "*.php" -exec sed -i '' 's/"backgroundColor":"giovanni-blue"/"backgroundColor":"primary"/g' {} \;
@@ -590,6 +674,8 @@ wp pattern list
 - ✅ **Mobile Arrow Button Optimization**: Added responsive styles for arrow buttons on small screens to prevent overflow and improve usability
 - ✅ **Semantic Color Token Migration**: Eliminated misleading numbered gray systems, implemented consistent semantic token naming
 - ✅ **Mobile Navigation Optimization**: Fixed touch targets and background contrast issues across all theme variations
+- ✅ **Semantic Font Size System Implementation**: Converted all hardcoded font sizes to semantic tokens (xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl) across all templates and patterns for consistent typography hierarchy
+- ✅ **Post Title Typography Fix**: Increased font sizes in post lists and patterns from `fontSize="lg"` to `fontSize="xl"` for better readability
 
 ### **Completed Refactoring (Historical Context)**
 - ✅ **Modular Architecture**: Migrated from monolithic `functions.php` to organized `/inc` structure
