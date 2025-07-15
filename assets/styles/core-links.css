@@ -97,12 +97,6 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --giovanni-link-underline-thin: 1.5px;
-        --giovanni-link-underline-thick: 2.5px;
-    }
-}
 
 @media (prefers-contrast: high) {
     .wp-block-post-content a,

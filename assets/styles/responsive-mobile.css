@@ -4,8 +4,10 @@
 /* System dark mode removed - use theme style variations instead */
 
 @media (max-width: 768px) {
-    /* Single post mobile padding improvements */
-    .wp-site-blocks main.wp-block-group.alignfull {
+    /* Mobile padding improvements for all pages */
+    main.wp-block-group.alignfull,
+    .wp-site-blocks main.wp-block-group.alignfull,
+    body main.wp-block-group[style*="padding"] {
         padding-left: var(--wp--preset--spacing--8, 2rem) !important;
         padding-right: var(--wp--preset--spacing--8, 2rem) !important;
     }
@@ -51,7 +53,9 @@
 
 @media (max-width: 480px) {
     /* Enhanced mobile padding for very small screens */
-    .wp-site-blocks main.wp-block-group.alignfull {
+    main.wp-block-group.alignfull,
+    .wp-site-blocks main.wp-block-group.alignfull,
+    body main.wp-block-group[style*="padding"] {
         padding-left: var(--wp--preset--spacing--10, 2.5rem) !important;
         padding-right: var(--wp--preset--spacing--10, 2.5rem) !important;
     }
