@@ -155,11 +155,13 @@
 .hover-cards > .wp-block-group:nth-child(odd):hover {
     transform: scale(1.03) rotate(1.5deg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--wp--preset--color--container, #ffffff) !important;
 }
 
 .hover-cards > .wp-block-group:nth-child(even):hover {
     transform: scale(1.03) rotate(-1.5deg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--wp--preset--color--container, #ffffff) !important;
 }
 
 .pulse-orb {
