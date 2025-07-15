@@ -19,7 +19,7 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     border-color: var(--wp--preset--color--primary);
-    background: color-mix(in srgb, var(--wp--preset--color--container) 97%, var(--wp--preset--color--primary) 3%);
+    background: var(--wp--preset--color--container);
 }
 
 .wp-block-group.is-style-card {
