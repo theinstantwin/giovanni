@@ -38,7 +38,7 @@
 }
 
 .blog-post-item:hover {
-    background-color: var(--wp--preset--color--background);
+    background-color: var(--wp--preset--color--white);
 }
 
 .blog-post-item a:hover {
