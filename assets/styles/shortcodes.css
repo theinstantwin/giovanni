@@ -12,6 +12,8 @@
     color: var(--wp--preset--color--foreground);
     margin-bottom: var(--wp--preset--spacing--3, 0.75rem);
     margin-top: var(--wp--preset--spacing--6, 1.5rem);
+    padding-bottom: var(--wp--preset--spacing--2, 0.5rem);
+    border-bottom: 1px solid var(--wp--preset--color--light-gray);
 }
 
 .blog-posts-by-month .month-header:first-child {
@@ -33,6 +35,10 @@
     font-weight: var(--wp--custom--font-weight--regular);
     flex: 1;
     transition: color var(--wp--custom--transitions--fast) ease;
+}
+
+.blog-post-item:hover {
+    background-color: var(--wp--preset--color--background);
 }
 
 .blog-post-item a:hover {
