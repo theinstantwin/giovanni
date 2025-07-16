@@ -810,6 +810,7 @@ wp pattern list
 - ✅ **Mobile Navigation Optimization**: Fixed touch targets and background contrast issues across all theme variations
 - ✅ **Semantic Font Size System Implementation**: Converted all hardcoded font sizes to semantic tokens (xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl) across all templates and patterns for consistent typography hierarchy
 - ✅ **Post Title Typography Fix**: Increased font sizes in post lists and patterns from `fontSize="lg"` to `fontSize="xl"` for better readability
+- ✅ **Grey Background Issue Fix**: Resolved grey background appearance on hover for certain blocks by updating CSS in `core-group.css` to maintain a white background for blog roll cards.
 
 ### **Completed Refactoring (Historical Context)**
 - ✅ **Modular Architecture**: Migrated from monolithic `functions.php` to organized `/inc` structure
@@ -822,3 +823,16 @@ wp pattern list
 Giovanni is a production-ready theme with clean, maintainable code architecture that serves as a model for future Medici Collection themes.
 
 This documentation provides comprehensive context for working with the Giovanni theme efficiently and maintaining its quality standards.
+
+### Grey Background Issue Fix
+The grey background issue was identified as a problem where certain blocks displayed a grey background on hover, which was not consistent with the intended design. This was traced back to a `box-shadow` and background color applied on hover in the CSS.
+
+#### Solution
+To resolve this, the CSS in `core-group.css` was updated to remove the grey background and ensure a white background is maintained for blog roll cards. This involved adjusting the `box-shadow` properties and ensuring that the hover state did not introduce any unintended background colors.
+
+#### Implementation Details
+- **File Affected**: `assets/styles/core-group.css`
+- **Changes Made**: Removed the grey background and adjusted `box-shadow` properties to maintain a consistent white background on hover.
+- **Testing**: The changes were tested across all theme variations to ensure consistency and adherence to the design system.
+
+This fix ensures that the visual appearance of the blocks aligns with the theme's modern and minimal design philosophy, providing a clean and professional aesthetic.

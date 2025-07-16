@@ -161,6 +161,26 @@ div.wp-block-group.is-style-portfolio-card p {
     margin: var(--wp--preset--spacing--8, 2rem) 0;
 }
 
+.wp-block-group.is-style-portfolio-card:hover {
+    background: var(--wp--preset--color--container);
+}
+
+.wp-block-group.is-style-card-base:hover {
+    background: var(--wp--preset--color--container);
+}
+
+.wp-block-group.is-style-company-card:hover {
+    background: var(--wp--preset--color--container);
+}
+
+.wp-block-group.is-style-blog-roll-card:hover {
+    background: var(--wp--preset--color--container);
+}
+
+.wp-block-group.is-style-form-container:hover {
+    background: var(--wp--preset--color--container);
+}
+
 /* Fix button pill badges to not span full width and make them smaller */
 .giovanni-no-shrink {
     flex-shrink: 0;
