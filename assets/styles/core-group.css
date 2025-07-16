@@ -45,7 +45,7 @@
     background: var(--wp--preset--color--container);
     border-radius: var(--giovanni-card-radius);
     border: var(--giovanni-border-light);
-    margin: var(--wp--preset--preset--spacing--6, 1.5rem) 0;
+    margin: var(--wp--preset--preset--preset--spacing--6, 1.5rem) 0;
 }
 
 .wp-block-group.is-style-card {
@@ -161,22 +161,10 @@ div.wp-block-group.is-style-portfolio-card p {
     margin: var(--wp--preset--spacing--8, 2rem) 0;
 }
 
-.wp-block-group.is-style-portfolio-card:hover {
-    background: var(--wp--preset--color--container);
-}
-
-.wp-block-group.is-style-card-base:hover {
-    background: var(--wp--preset--color--container);
-}
-
-.wp-block-group.is-style-company-card:hover {
-    background: var(--wp--preset--color--container);
-}
-
-.wp-block-group.is-style-blog-roll-card:hover {
-    background: var(--wp--preset--color--container);
-}
-
+.wp-block-group.is-style-portfolio-card:hover,
+.wp-block-group.is-style-card-base:hover,
+.wp-block-group.is-style-company-card:hover,
+.wp-block-group.is-style-blog-roll-card:hover,
 .wp-block-group.is-style-form-container:hover {
     background: var(--wp--preset--color--container);
 }
