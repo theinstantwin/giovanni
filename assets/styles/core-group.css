@@ -14,10 +14,17 @@
 }
 
 /* Simple hover effect for all shadowed group blocks */
-.wp-block-group[class*="is-style-"]:hover,
-.wp-block-group.has-container-background-color:hover,
-.wp-block-group.has-background:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+.wp-block-group[class*="is-style-"][class*="card"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--wp--preset--color--gray);
+    /* Remove the grey background on hover */
+    background: var(--wp--preset--color--container);
+}
+
+/* Ensure blog roll cards maintain white background */
+.wp-block-group.is-style-blog-roll-card:hover {
+    background: var(--wp--preset--color--container) !important;
 }
 
 /* NESTED GROUP OVERRIDE - Remove shadows from nested group blocks */
@@ -38,7 +45,7 @@
     background: var(--wp--preset--color--container);
     border-radius: var(--giovanni-card-radius);
     border: var(--giovanni-border-light);
-    margin: var(--wp--preset--spacing--6, 1.5rem) 0;
+    margin: var(--wp--preset--preset--spacing--6, 1.5rem) 0;
 }
 
 .wp-block-group.is-style-card {
