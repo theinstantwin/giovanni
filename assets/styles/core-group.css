@@ -9,7 +9,7 @@
 .wp-block-group[class*="is-style-"],
 .wp-block-group.has-container-background-color,
 .wp-block-group.has-background {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transition: all 0.2s ease;
 }
 
@@ -161,6 +161,7 @@ div.wp-block-group.is-style-portfolio-card p {
     margin: var(--wp--preset--spacing--8, 2rem) 0;
 }
 
+/* Add hover background color to all cards */
 .wp-block-group.is-style-portfolio-card:hover,
 .wp-block-group.is-style-card-base:hover,
 .wp-block-group.is-style-company-card:hover,
