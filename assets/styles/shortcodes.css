@@ -43,18 +43,18 @@
 }
 
 .blog-post-item:hover {
-    background-color: var(--wp--preset--color--primary);
-    transform: translateX(4px);
+    background-color: var(--wp--preset--color--white, #ffffff);
+    transform: none;
 }
 
 .blog-post-item:hover a,
 .blog-post-item:hover .wp-block-post-title a {
-    color: var(--wp--preset--color--background) !important;
+    color: var(--wp--preset--color--foreground) !important;
 }
 
 .blog-post-item:hover .post-date,
 .blog-post-item:hover .wp-block-post-date {
-    color: var(--wp--preset--color--background) !important;
+    color: var(--wp--preset--color--gray, #888) !important;
 }
 
 .blog-post-item .post-date {

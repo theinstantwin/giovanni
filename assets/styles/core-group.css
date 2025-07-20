@@ -303,6 +303,10 @@ div.wp-block-group.is-style-portfolio-card p {
     font-weight: 500;
 }
 
+.blog-post-item:hover .post-title a {
+    color: var(--wp--preset--color--white, #ffffff) !important;
+}
+
 /* Leader line - dotted line between title and date */
 .blog-post-item .leader-line {
     flex-grow: 1;
