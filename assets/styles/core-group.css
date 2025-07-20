@@ -271,17 +271,21 @@ div.wp-block-group.is-style-portfolio-card p {
    ============================================ */
 
 /* Blog post item styling with leader line design */
-.blog-post-item {
+.blog-post-item,
+.wp-block-group.blog-post-item {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    border-color: transparent !important;
     transition: background-color 0.25s ease-out;
 }
 
-.blog-post-item:hover {
+.blog-post-item:hover,
+.wp-block-group.blog-post-item:hover {
     background-color: var(--wp--preset--color--light-gray, #f7f7f7) !important;
     transform: none !important;
     box-shadow: none !important;
+    border-color: transparent !important;
 }
 
 /* Post title styling */
