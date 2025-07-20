@@ -265,3 +265,65 @@ div.wp-block-group.is-style-portfolio-card p {
         padding: var(--wp--preset--spacing--5, 1rem) var(--wp--preset--spacing--4, 0.75rem);
     }
 }
+
+/* ============================================
+   BLOG POST LIST STYLING
+   ============================================ */
+
+/* Blog post item styling with leader line design */
+.blog-post-item {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: background-color 0.25s ease-out;
+}
+
+.blog-post-item:hover {
+    background-color: var(--wp--preset--color--light-gray, #f7f7f7) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Post title styling */
+.blog-post-item .post-title {
+    flex-shrink: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 !important;
+}
+
+.blog-post-item .post-title a {
+    color: var(--wp--preset--color--foreground);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Leader line - dotted line between title and date */
+.blog-post-item .leader-line {
+    flex-grow: 1;
+    border-bottom: 1px dotted var(--wp--preset--color--gray, #ccc);
+    transform: translateY(-3px);
+    margin: 0 1rem;
+}
+
+/* Post date styling */
+.blog-post-item .post-date {
+    color: var(--wp--preset--color--gray, #888);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-post-item .post-title {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+    }
+    
+    .blog-post-item .leader-line {
+        margin: 0 0.5rem;
+    }
+}
