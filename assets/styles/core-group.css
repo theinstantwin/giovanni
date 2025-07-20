@@ -45,7 +45,7 @@
     background: var(--wp--preset--color--container);
     border-radius: var(--giovanni-card-radius);
     border: var(--giovanni-border-light);
-    margin: var(--wp--preset--preset--preset--spacing--6, 1.5rem) 0;
+    margin: var(--wp--preset--spacing--6, 1.5rem) 0;
 }
 
 .wp-block-group.is-style-card {
@@ -87,7 +87,7 @@ div.wp-block-group.is-style-portfolio-card .wp-block-paragraph,
 div.wp-block-group.is-style-portfolio-card p {
     margin: 0 0 var(--wp--preset--spacing--4, 1rem) 0 !important;
     padding: 0 var(--wp--preset--spacing--8, 2rem) !important;
-    color: var(--wp--preset--color--muted-text);
+    color: var(--wp--preset--color--gray);
     font-size: var(--wp--preset--font-size--sm);
     line-height: var(--wp--custom--line-height--normal);
 }
@@ -117,7 +117,7 @@ div.wp-block-group.is-style-portfolio-card p {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border: 1px solid var(--wp--preset--color--subtle-border);
+    border: 1px solid var(--wp--preset--color--light-gray);
 }
 
 .wp-block-group.is-style-card-base .wp-block-heading {
@@ -161,14 +161,7 @@ div.wp-block-group.is-style-portfolio-card p {
     margin: var(--wp--preset--spacing--8, 2rem) 0;
 }
 
-/* Add hover background color to all cards */
-.wp-block-group.is-style-portfolio-card:hover,
-.wp-block-group.is-style-card-base:hover,
-.wp-block-group.is-style-company-card:hover,
-.wp-block-group.is-style-blog-roll-card:hover,
-.wp-block-group.is-style-form-container:hover {
-    background: var(--wp--preset--color--container);
-}
+/* Individual card hover styles removed - handled by centralized system above */
 
 /* Fix button pill badges to not span full width and make them smaller */
 .giovanni-no-shrink {
@@ -183,7 +176,7 @@ div.wp-block-group.is-style-portfolio-card p {
 
 /* Fix pill button text color */
 .giovanni-no-shrink p {
-    color: var(--wp--preset--color--container, #ffffff) !important;
+    color: var(--wp--preset--color--container) !important;
 }
 
 .pulse-orb {
@@ -280,13 +273,7 @@ div.wp-block-group.is-style-portfolio-card p {
     transition: background-color 0.25s ease-out;
 }
 
-.blog-post-item:hover,
-.wp-block-group.blog-post-item:hover {
-    background-color: var(--wp--preset--color--light-gray, #f7f7f7) !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border-color: transparent !important;
-}
+/* Blog post hover styles moved to shortcodes.css */
 
 /* Post title styling */
 .blog-post-item .post-title {
@@ -304,7 +291,7 @@ div.wp-block-group.is-style-portfolio-card p {
 }
 
 .blog-post-item:hover .post-title a {
-    color: var(--wp--preset--color--white, #ffffff) !important;
+    color: var(--wp--preset--color--foreground) !important;
 }
 
 /* Leader line - dotted line between title and date */

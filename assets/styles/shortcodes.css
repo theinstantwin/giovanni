@@ -13,7 +13,7 @@
     margin-bottom: var(--wp--preset--spacing--3, 0.75rem);
     margin-top: var(--wp--preset--spacing--6, 1.5rem);
     padding-bottom: var(--wp--preset--spacing--2, 0.5rem);
-    border-bottom: 1px solid var(--wp--preset--color--subtle-border);
+    border-bottom: 1px solid var(--wp--preset--color--light-gray);
 }
 
 .blog-posts-by-month .month-header:first-child {
@@ -42,9 +42,9 @@
     transition: color var(--wp--custom--transitions--fast) ease;
 }
 
-.blog-post-item:hover {
-    background-color: var(--wp--preset--color--container, #ffffff);
-    transform: none;
+.blog-posts-by-month .blog-post-item:hover {
+    background-color: var(--wp--preset--color--white) !important;
+    transform: translateX(4px) !important;
 }
 
 .blog-post-item:hover a,
@@ -54,11 +54,11 @@
 
 .blog-post-item:hover .post-date,
 .blog-post-item:hover .wp-block-post-date {
-    color: var(--wp--preset--color--gray, #888) !important;
+    color: var(--wp--preset--color--gray) !important;
 }
 
 .blog-post-item .post-date {
-    color: var(--wp--preset--color--muted-text);
+    color: var(--wp--preset--color--gray);
     font-size: var(--wp--preset--font-size--sm);
     flex-shrink: 0;
     font-weight: var(--wp--custom--font-weight--regular);

@@ -3,7 +3,7 @@
 
 .wp-block-quote.is-style-book-quote {
     border-left: 4px solid var(--wp--preset--color--primary);
-    background: var(--wp--preset--color--subtle-border);
+    background: var(--wp--preset--color--light-gray);
     padding: var(--wp--preset--spacing--6, 1.5rem) var(--wp--preset--spacing--8, 2rem);
     margin: var(--wp--preset--spacing--8, 2rem) 0;
     border-radius: var(--wp--custom--border-radius--md);

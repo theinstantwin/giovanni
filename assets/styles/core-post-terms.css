@@ -65,7 +65,7 @@
     font-weight: var(--wp--custom--font-weight--medium);
     text-decoration: none;
     transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
-    border: 1px solid var(--wp--preset--color--subtle-border);
+    border: 1px solid var(--wp--preset--color--light-gray);
 }
 
 .wp-block-post-terms.is-style-ghost-outline a:hover {
