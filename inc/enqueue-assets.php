@@ -136,7 +136,12 @@ function giovanni_enqueue_custom_block_styles() {
             continue;
         }
         
-        $block_name = str_replace( 'core-', 'core/', $filename );
+        // Handle button variants (arrow, ghost, dark) - all belong to core/button
+        if ( strpos( $filename, 'core-button' ) === 0 ) {
+            $block_name = 'core/button';
+        } else {
+            $block_name = str_replace( 'core-', 'core/', $filename );
+        }
         
         // Only enqueue if the block exists
         if ( function_exists( 'wp_enqueue_block_style' ) && class_exists( 'WP_Block_Type_Registry' ) ) {

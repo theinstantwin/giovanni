@@ -557,6 +557,8 @@ The ACF integration is designed to handle theme name changes seamlessly:
 ### Required Testing Checklist
 When making changes to Giovanni:
 
+- [ ] **Verify enqueue system loads CSS** (check Network tab, file paths, block name mapping)
+- [ ] **Clear WordPress cache/transients** (especially when CSS changes don't appear)
 - [ ] **Verify no theme.json/CSS conflicts** (no `"core/button"` or other conflicting blocks in theme.json)
 - [ ] **Test custom block styles work** (arrow buttons, ghost, dark variations)
 - [ ] **Verify hover animations function** (no theme.json transforms interfering)
@@ -579,9 +581,19 @@ When making changes to Giovanni:
 
 ### Common Issues & Solutions
 
+**CSS Changes Not Appearing / Block Styles Not Working**:
+- **FIRST CHECK**: Verify enqueue system is loading CSS files
+  - Check file locations match enqueue expectations (`/assets/styles/*.css`)
+  - Verify block name mapping (button variants must map to `core/button`, not `core/button-arrow`)
+  - Clear WordPress cache and transients
+  - Check browser dev tools Network tab for 404s on CSS files
+- **Cause**: Enqueue system not finding or loading CSS files
+- **Solution**: Fix file paths, block name mapping, or enqueue logic
+- **Pattern**: Always verify asset loading BEFORE debugging CSS specificity
+
 **Block Styles Not Appearing**:
 - Check style registration names match CSS classes exactly
-- Verify CSS files are properly enqueued
+- Verify CSS files are properly enqueued (see above)
 - Clear block style cache in `block-helpers.php`
 
 **Pattern Categories Missing**:
@@ -660,11 +672,18 @@ wp pattern list
 ```
 
 ### Key Files to Check When Troubleshooting
-1. `theme.json` - Core configuration
-2. `inc/block-helpers.php` - Block styles and patterns
-3. `inc/enqueue-assets.php` - Asset loading
+1. **`inc/enqueue-assets.php`** - Asset loading (CHECK FIRST when CSS changes don't appear)
+2. `theme.json` - Core configuration
+3. `inc/block-helpers.php` - Block styles and patterns
 4. `assets/styles/` - Block-specific CSS
 5. `functions.php` - Theme initialization
+
+### CSS Troubleshooting Priority Order
+1. **Verify enqueue system** - Are CSS files loading?
+2. **Check file structure** - Files in expected locations?
+3. **Clear caches** - WordPress transients, browser cache
+4. **Check theme.json conflicts** - Competing inline styles?
+5. **Debug CSS specificity** - Selector strength and cascade order
 
 ## Centralized Shadow System Architecture
 
