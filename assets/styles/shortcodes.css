@@ -4,6 +4,7 @@
 .blog-posts-by-month {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: var(--wp--preset--spacing--8);
 }
 
 .blog-posts-by-month .month-header {
@@ -11,7 +12,7 @@
     font-weight: var(--wp--custom--font-weight--semibold);
     color: var(--wp--preset--color--foreground);
     margin-bottom: var(--wp--preset--spacing--3);
-    margin-top: var(--wp--preset--spacing--6);
+    margin-top: var(--wp--preset--spacing--8);
     padding-top: var(--wp--preset--spacing--6);
     padding-bottom: var(--wp--preset--spacing--2);
     border-bottom: 1px solid var(--wp--preset--color--light-gray);
