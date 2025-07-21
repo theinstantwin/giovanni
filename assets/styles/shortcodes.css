@@ -97,6 +97,7 @@
     .blog-posts-by-month {
         max-width: none;
         margin: 0;
+        padding: var(--wp--preset--spacing--4, 1rem);
     }
     
     .blog-post-item {
