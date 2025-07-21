@@ -390,7 +390,7 @@ assets/styles/
 |-------|------------|-------|-----------|------------|------|------------|---------|
 | **Default (theme.json)** | `#fafafa` | `#ffffff` | `#ffffff` | `#000000` | `#666666` | `#e5e5e5` | `#0070f3` |
 | **Dark Theme** | `#1e2021` | `#ffffff` | `#2a2a2a` | `#FBF1C7` | `#4C4641` | `#333230` | `#ff335f` |
-| **Linen Theme** | `#faf3ea` | *inherited* | `#ffffff` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
+| **Linen Theme** | `#faf3ea` | `#ffffff` | `#fdf9f3` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
 
 *Note: Theme variations marked as "inherited" use the default theme.json colors. This demonstrates how the semantic token system provides consistent naming while allowing theme-specific color customization.*
 
