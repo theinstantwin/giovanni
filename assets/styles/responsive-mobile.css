@@ -1,17 +1,8 @@
-/* Giovanni Theme - Responsive and Mobile Optimizations
---------------------------------------------- */
+/* Giovanni Theme - Essential Mobile & Touch Optimizations
+--------------------------------------------------------- */
 
-/* System dark mode removed - use theme style variations instead */
-
+/* Mobile Navigation Menu Styling */
 @media (max-width: 768px) {
-    /* Tablet and mobile padding improvements for all pages */
-    main.wp-block-group.alignfull,
-    .wp-site-blocks main.wp-block-group.alignfull,
-    body main.wp-block-group[style*="padding"] {
-        padding-left: var(--wp--preset--spacing--8, 2rem) !important;
-        padding-right: var(--wp--preset--spacing--8, 2rem) !important;
-    }
-    
     .wp-block-navigation__responsive-container.is-menu-open {
         background-color: var(--wp--preset--color--background);
         border: 1px solid var(--wp--preset--color--light-gray);
@@ -34,141 +25,18 @@
         color: var(--wp--preset--color--primary) !important;
         background-color: transparent;
     }
-
-    /* Touch-friendly button sizing on tablets and mobile */
-    .wp-block-button .wp-block-button__link {
-        min-height: 48px;
-        padding: 0.875rem 1.5rem;
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 6px;
-    }
-    
-    /* Arrow buttons mobile optimization */
-    .wp-block-button.is-style-arrow-light .wp-block-button__link,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-        min-width: 140px;
-        padding-right: 2.5rem;
-        padding-left: 1rem;
-        padding-top: 0.875rem;
-        padding-bottom: 0.875rem;
-    }
-    
-    /* Arrow icon mobile positioning */
-    .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
-        right: 0.875rem;
-        font-size: 1em;
-        width: 18px;
-        height: 18px;
-    }
-    
-    /* Ghost button mobile optimization */
-    .wp-block-button.is-style-ghost .wp-block-button__link {
-        min-height: 48px;
-        padding: 0.875rem 1.5rem;
-    }
-    
-    .wp-block-button.is-style-ghost .wp-block-button__link::after {
-        bottom: 6px;
-        height: 2px;
-    }
-    
-    /* Dark button mobile optimization */
-    .wp-block-button.is-style-dark .wp-block-button__link {
-        min-height: 48px;
-        padding: 0.875rem 1.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
 }
 
 @media (max-width: 640px) {
-    /* Small tablet and large phone optimizations */
     .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
         font-size: var(--wp--preset--font-size--md);
         padding: 0.75rem 0;
     }
-    
-    /* Mobile button enhancements for all variations */
-    .wp-block-button .wp-block-button__link {
-        min-height: 48px; /* Ensure touch-friendly target size */
-        padding-top: 0.875rem;
-        padding-bottom: 0.875rem;
-    }
-    
-    /* Ghost and dark buttons mobile adjustments */
-    .wp-block-button.is-style-ghost .wp-block-button__link,
-    .wp-block-button.is-style-dark .wp-block-button__link {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-    
-    /* Adjust arrow buttons for intermediate screen sizes */
-    .wp-block-button.is-style-arrow-light .wp-block-button__link,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-        min-width: 140px;
-        min-height: 48px;
-        padding-right: 2.5rem;
-        padding-left: 1.25rem;
-        font-size: 1rem;
-    }
 }
 
-@media (max-width: 480px) {
-    /* Enhanced mobile padding for very small screens */
-    main.wp-block-group.alignfull,
-    .wp-site-blocks main.wp-block-group.alignfull,
-    body main.wp-block-group[style*="padding"] {
-        padding-left: var(--wp--preset--spacing--10, 2.5rem) !important;
-        padding-right: var(--wp--preset--spacing--10, 2.5rem) !important;
-    }
-    
-    /* Compact arrow buttons on small screens */
-    .wp-block-button.is-style-arrow-light .wp-block-button__link,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-        min-width: 120px;
-        min-height: 48px;
-        padding-right: 2rem;
-        padding-left: 1rem;
-        padding-top: 0.875rem;
-        padding-bottom: 0.875rem;
-        font-size: 0.9rem;
-    }
-    
-    .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
-        right: 0.75rem;
-        font-size: 1em;
-        width: 16px;
-        height: 16px;
-    }
-}
-
-@media (max-width: 360px) {
-    /* Extra small screens (older phones) */
-    .wp-block-button.is-style-arrow-light .wp-block-button__link,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-        min-width: 110px;
-        min-height: 48px;
-        padding-right: 1.75rem;
-        padding-left: 0.875rem;
-        padding-top: 0.875rem;
-        padding-bottom: 0.875rem;
-        font-size: 0.85rem;
-    }
-    
-    .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
-        right: 0.625rem;
-        font-size: 0.9em;
-        width: 14px;
-        height: 14px;
-    }
-}
-
-/* Touch device optimizations - Only disable hover on actual touch devices */
-@media (hover: none) and (pointer: coarse) and (max-width: 1024px) {
-    /* Disable hover transforms on touch devices only */
+/* Touch Device Optimizations - Only disable hover on actual touch devices */
+@media (hover: none) and (pointer: coarse) {
+    /* Disable hover effects on touch devices, preserve focus states */
     .wp-block-button .wp-block-button__link:hover {
         transform: none;
         box-shadow: none;
@@ -180,30 +48,17 @@
         background: transparent;
     }
     
-    .wp-block-button.is-style-dark .wp-block-button__link:hover {
-        transform: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    .wp-block-button.is-style-ghost .wp-block-button__link:hover::after {
+        width: 0;
     }
     
-    .wp-block-button.is-style-arrow-light .wp-block-button__link:hover,
-    .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover {
-        transform: none;
-        box-shadow: none;
-    }
-    
-    /* Disable arrow animation on hover for touch devices */
     .wp-block-button.is-style-arrow-light .wp-block-button__link:hover::after,
     .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover::after {
         transform: translateY(-50%) translateX(-12px);
         opacity: 0;
     }
     
-    /* Disable ghost underline on hover for touch devices */
-    .wp-block-button.is-style-ghost .wp-block-button__link:hover::after {
-        width: 0;
-    }
-    
-    /* Enhanced focus states for touch devices - preserve animations */
+    /* Enhanced focus states for touch devices */
     .wp-block-button .wp-block-button__link:focus {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -217,10 +72,5 @@
     
     .wp-block-button.is-style-ghost .wp-block-button__link:focus::after {
         width: calc(100% - 2rem);
-    }
-    
-    /* Touch-friendly active states */
-    .wp-block-button .wp-block-button__link:active {
-        transform: scale(0.98);
     }
 }
