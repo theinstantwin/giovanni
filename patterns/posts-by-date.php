@@ -20,10 +20,6 @@
         <div class="wp-block-group blog-post-item" style="border-radius:8px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4)">
             <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"500","lineHeight":"1.3"},"spacing":{"margin":{"bottom":"0","top":"0"}}},"fontSize":"lg","className":"post-title"} /-->
             
-            <!-- wp:html -->
-            <div class="leader-line"></div>
-            <!-- /wp:html -->
-            
             <!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"lineHeight":"1.3"}},"textColor":"gray","fontSize":"sm","className":"post-date"} /-->
         </div>
         <!-- /wp:group -->
