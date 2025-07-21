@@ -611,8 +611,7 @@
 				},
 				":hover": {
 					"typography": {
-						"textDecoration": "underline",
-						"fontWeight": "var(--wp--custom--font-weight--semibold)"
+						"textDecoration": "underline"
 					},
 					"color": {
 						"text": "var(--wp--preset--color--emphasis)"
