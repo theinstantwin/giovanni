@@ -8,10 +8,11 @@
     --giovanni-link-transition: text-decoration-thickness var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut), color var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
 }
 
-.wp-block-post-content a,
-.entry-content p a, 
-.entry-content li a, 
-.entry-content blockquote a {
+/* Global link styles - exclude blog post items */
+.wp-block-post-content a:not(.blog-post-item a):not(.blog-post-item .wp-block-post-title a),
+.entry-content p a:not(.blog-post-item a), 
+.entry-content li a:not(.blog-post-item a), 
+.entry-content blockquote a:not(.blog-post-item a) {
     text-decoration: underline;
     text-decoration-thickness: var(--giovanni-link-underline-thin);
     text-underline-offset: var(--giovanni-link-offset);
@@ -20,7 +21,7 @@
     color: var(--wp--preset--color--primary);
 }
 
-.wp-block-post-title a {
+.wp-block-post-title a:not(.blog-post-item .wp-block-post-title a) {
     text-decoration: underline;
     text-decoration-thickness: var(--giovanni-link-underline-thin);
     text-underline-offset: var(--giovanni-link-offset);
@@ -48,20 +49,21 @@
     color: var(--wp--preset--color--primary);
 }
 
-.wp-block-post-content a:hover,
-.wp-block-post-content a:focus,
-.entry-content p a:hover,
-.entry-content p a:focus,
-.entry-content li a:hover,
-.entry-content li a:focus,
-.entry-content blockquote a:hover,
-.entry-content blockquote a:focus {
+/* Hover states - exclude blog post items */
+.wp-block-post-content a:not(.blog-post-item a):not(.blog-post-item .wp-block-post-title a):hover,
+.wp-block-post-content a:not(.blog-post-item a):not(.blog-post-item .wp-block-post-title a):focus,
+.entry-content p a:not(.blog-post-item a):hover,
+.entry-content p a:not(.blog-post-item a):focus,
+.entry-content li a:not(.blog-post-item a):hover,
+.entry-content li a:not(.blog-post-item a):focus,
+.entry-content blockquote a:not(.blog-post-item a):hover,
+.entry-content blockquote a:not(.blog-post-item a):focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
     color: var(--wp--preset--color--emphasis);
 }
 
-.wp-block-post-title a:hover,
-.wp-block-post-title a:focus {
+.wp-block-post-title a:not(.blog-post-item .wp-block-post-title a):hover,
+.wp-block-post-title a:not(.blog-post-item .wp-block-post-title a):focus {
     text-decoration-thickness: var(--giovanni-link-underline-thick);
     color: var(--wp--preset--color--emphasis);
 }
@@ -83,7 +85,7 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-    .wp-block-post-title a {
+    .wp-block-post-title a:not(.blog-post-item .wp-block-post-title a) {
         display: block;
         padding: var(--wp--preset--spacing--2, 0.5rem) 0;
         min-height: 44px;
@@ -97,11 +99,10 @@
     }
 }
 
-
 @media (prefers-contrast: high) {
-    .wp-block-post-content a,
-    .entry-content a,
-    .wp-block-post-title a,
+    .wp-block-post-content a:not(.blog-post-item a):not(.blog-post-item .wp-block-post-title a),
+    .entry-content a:not(.blog-post-item a),
+    .wp-block-post-title a:not(.blog-post-item .wp-block-post-title a),
     .wp-block-post-navigation-link a,
     .wp-site-blocks footer a {
         text-decoration-thickness: var(--giovanni-link-underline-thick);
@@ -110,9 +111,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .wp-block-post-content a,
-    .entry-content a,
-    .wp-block-post-title a,
+    .wp-block-post-content a:not(.blog-post-item a):not(.blog-post-item .wp-block-post-title a),
+    .entry-content a:not(.blog-post-item a),
+    .wp-block-post-title a:not(.blog-post-item .wp-block-post-title a),
     .wp-block-post-navigation-link a,
     .wp-site-blocks footer a {
         transition: none;

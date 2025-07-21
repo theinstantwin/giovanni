@@ -37,7 +37,9 @@
     transform: translateX(4px);
 }
 
-.blog-post-item a {
+/* Blog post item links - specific styling without !important */
+.blog-post-item a,
+.blog-post-item .wp-block-post-title a {
     text-decoration: none;
     color: var(--wp--preset--color--foreground);
     font-size: var(--wp--preset--font-size--md);
@@ -48,13 +50,11 @@
     padding-right: var(--wp--preset--spacing--6, 1.5rem);
 }
 
-
-
-
-
+/* Hover states for blog post items */
 .blog-post-item:hover a,
 .blog-post-item:hover .wp-block-post-title a {
     color: var(--wp--preset--color--foreground);
+    text-decoration: none;
 }
 
 .blog-post-item:hover .post-date,
