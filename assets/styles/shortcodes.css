@@ -11,20 +11,22 @@
     font-weight: var(--wp--custom--font-weight--semibold);
     color: var(--wp--preset--color--foreground);
     margin-bottom: var(--wp--preset--spacing--3);
-    margin-top: var(--wp--preset--spacing--8);
+    margin-top: var(--wp--preset--spacing--6);
+    padding-top: var(--wp--preset--spacing--6);
     padding-bottom: var(--wp--preset--spacing--2);
     border-bottom: 1px solid var(--wp--preset--color--light-gray);
 }
 
 .blog-posts-by-month .month-header:first-child {
     margin-top: 0;
+    padding-top: 0;
 }
 
 .blog-post-item {
     display: flex;
     align-items: baseline;
     gap: var(--wp--preset--spacing--3);
-    margin-bottom: var(--wp--preset--spacing--3);
+    margin-bottom: var(--wp--preset--spacing--1);
     line-height: 1.6;
     padding: var(--wp--preset--spacing--2);
     margin-left: calc(-1 * var(--wp--preset--spacing--2));

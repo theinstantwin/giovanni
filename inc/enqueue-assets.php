@@ -96,6 +96,46 @@ function giovanni_enqueue_shortcodes_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_shortcodes_styles' );
 
 /**
+ * Enqueue post-terms styles for frontend
+ * WordPress 6.8+ auto-loading might not work for all block styles
+ */
+function giovanni_enqueue_post_terms_styles() {
+    wp_enqueue_style(
+        'giovanni-post-terms',
+        get_theme_file_uri( 'assets/styles/core-post-terms.css' ),
+        array( 'giovanni-style' ),
+        wp_get_theme()->get('Version')
+    );
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_post_terms_styles' );
+
+/**
+ * Enqueue button styles for frontend
+ * WordPress 6.8+ auto-loading might not work for all block styles
+ */
+function giovanni_enqueue_button_styles() {
+    $button_styles = array(
+        'core-button',
+        'core-button-arrow',
+        'core-button-ghost',
+        'core-button-dark'
+    );
+    
+    foreach ( $button_styles as $style ) {
+        $file_path = get_template_directory() . "/assets/styles/{$style}.css";
+        if ( file_exists( $file_path ) ) {
+            wp_enqueue_style(
+                'giovanni-' . $style,
+                get_theme_file_uri( "assets/styles/{$style}.css" ),
+                array( 'giovanni-style' ),
+                wp_get_theme()->get('Version')
+            );
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_button_styles' );
+
+/**
  * Enqueue block styles for the editor (backend)
  * WordPress 6.8+ automatically loads block styles from assets/styles/ directory
  */
