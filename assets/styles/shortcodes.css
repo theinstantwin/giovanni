@@ -37,9 +37,9 @@
     text-decoration: none;
     color: var(--wp--preset--color--foreground);
     font-size: var(--wp--preset--font-size--md);
-    font-weight: var(--wp--custom--font-weight--regular);
+    font-weight: var(--wp--custom--font-weight--medium);
     flex: 1;
-    transition: color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    transition: color var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
 }
 
 .blog-posts-by-month .blog-post-item:hover {
@@ -60,7 +60,7 @@
     color: var(--wp--preset--color--gray);
     font-size: var(--wp--preset--font-size--sm);
     flex-shrink: 0;
-    font-weight: var(--wp--custom--font-weight--regular);
+    font-weight: var(--wp--custom--font-weight--medium);
     min-width: 50px;
 }
 
