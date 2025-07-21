@@ -114,6 +114,8 @@
     .blog-posts-by-month .month-header {
         margin-top: var(--wp--preset--spacing--4, 1rem);
         margin-bottom: var(--wp--preset--spacing--2, 0.5rem);
+        font-size: var(--wp--preset--font-size--xl);
+        line-height: 1.3;
     }
 }
 

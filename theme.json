@@ -694,6 +694,16 @@
 						"top": "var(--wp--preset--spacing--8)",
 						"bottom": "var(--wp--preset--spacing--4)"
 					}
+				},
+				"@media (max-width: 768px)": {
+					"typography": {
+						"fontSize": "var(--wp--preset--font-size--3xl)"
+					}
+				},
+				"@media (max-width: 480px)": {
+					"typography": {
+						"fontSize": "var(--wp--preset--font-size--2xl)"
+					}
 				}
 			},
 			"h3": {
