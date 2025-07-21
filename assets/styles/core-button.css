@@ -1,8 +1,9 @@
 /* Giovanni Base Button Styles
 --------------------------------------------- */
 
-/* Base button styles applied to all buttons EXCEPT arrow styles */
-.wp-block-button .wp-block-button__link:not(.wp-block-button.is-style-arrow-light .wp-block-button__link):not(.wp-block-button.is-style-arrow-dark .wp-block-button__link) {
+/* Minimal shared foundation for ALL buttons */
+.wp-block-button .wp-block-button__link {
+    /* Shared properties only - no visual effects */
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 6px;
     font-weight: 500;
@@ -11,41 +12,33 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
     min-height: 44px;
-    padding: 0.75rem 1.5rem;
     font-size: 1rem;
     line-height: 1.2;
     border: 1px solid transparent;
-    position: relative;
+}
+
+/* Default button styles (when no variant is applied) */
+.wp-block-button:not(.is-style-ghost):not(.is-style-dark):not(.is-style-arrow-light):not(.is-style-arrow-dark) .wp-block-button__link {
+    padding: 0.75rem 1.5rem;
     overflow: hidden;
 }
 
-/* Simplified base styles for ALL buttons */
-.wp-block-button .wp-block-button__link {
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 6px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
+/* Default button hover (only for non-variant buttons) */
+.wp-block-button:not(.is-style-ghost):not(.is-style-dark):not(.is-style-arrow-light):not(.is-style-arrow-dark) .wp-block-button__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Focus states for accessibility */
-.wp-block-button .wp-block-button__link:focus {
+/* Default button focus (only for non-variant buttons) */
+.wp-block-button:not(.is-style-ghost):not(.is-style-dark):not(.is-style-arrow-light):not(.is-style-arrow-dark) .wp-block-button__link:focus {
     outline: 2px solid var(--wp--preset--color--primary, #0070f3);
     outline-offset: 2px;
     transform: translateY(-2px);
 }
 
-/* Active state */
-.wp-block-button .wp-block-button__link:active {
+/* Default button active (only for non-variant buttons) */
+.wp-block-button:not(.is-style-ghost):not(.is-style-dark):not(.is-style-arrow-light):not(.is-style-arrow-dark) .wp-block-button__link:active {
     transform: translateY(0px);
-}
-
-/* Base hover enhancement */
-.wp-block-button .wp-block-button__link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

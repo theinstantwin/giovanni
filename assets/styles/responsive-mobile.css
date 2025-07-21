@@ -166,12 +166,25 @@
     }
 }
 
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-    /* Disable hover effects on touch devices */
-    .wp-block-button .wp-block-button__link:hover,
-    .wp-block-button.is-style-ghost .wp-block-button__link:hover,
-    .wp-block-button.is-style-dark .wp-block-button__link:hover,
+/* Touch device optimizations - Only disable hover on actual touch devices */
+@media (hover: none) and (pointer: coarse) and (max-width: 1024px) {
+    /* Disable hover transforms on touch devices only */
+    .wp-block-button .wp-block-button__link:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .wp-block-button.is-style-ghost .wp-block-button__link:hover {
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+    }
+    
+    .wp-block-button.is-style-dark .wp-block-button__link:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
     .wp-block-button.is-style-arrow-light .wp-block-button__link:hover,
     .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover {
         transform: none;
@@ -190,7 +203,7 @@
         width: 0;
     }
     
-    /* Enhanced focus states for touch devices */
+    /* Enhanced focus states for touch devices - preserve animations */
     .wp-block-button .wp-block-button__link:focus {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
