@@ -557,6 +557,9 @@ The ACF integration is designed to handle theme name changes seamlessly:
 ### Required Testing Checklist
 When making changes to Giovanni:
 
+- [ ] **Verify no theme.json/CSS conflicts** (no `"core/button"` or other conflicting blocks in theme.json)
+- [ ] **Test custom block styles work** (arrow buttons, ghost, dark variations)
+- [ ] **Verify hover animations function** (no theme.json transforms interfering)
 - [ ] Test all 3 theme style variations (Default, Dark, Linen)
 - [ ] **Test pattern colors with different style variations** (ensure no color bleeding)
 - [ ] **Verify semantic color token naming** (color names match actual appearance)
