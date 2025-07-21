@@ -83,95 +83,44 @@ function giovanni_enqueue_responsive_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_responsive_styles' );
 
 /**
- * Programmatically enqueue custom block styles
+ * Enqueue shortcodes styles (non-block specific)
  */
-function giovanni_enqueue_custom_block_styles() {
-    // Cache the file list for performance
-    $cache_key = 'giovanni_block_styles_files_' . wp_get_theme()->get('Version');
-    $files = get_transient( $cache_key );
-    
-    if ( false === $files ) {
-        $files = glob( get_template_directory() . '/assets/styles/*.css' );
-        
-        if ( empty( $files ) ) {
-            // Cache empty result for 1 hour to avoid repeated filesystem calls
-            set_transient( $cache_key, array(), HOUR_IN_SECONDS );
-            return;
-        }
-        
-        // Cache the file list for 6 hours (files rarely change in production)
-        set_transient( $cache_key, $files, 6 * HOUR_IN_SECONDS );
-    }
-    
-    if ( empty( $files ) ) {
-        return;
-    }
-    
-    foreach ( $files as $file ) {
-        $filename = basename( $file, '.css' );
-        
-        // Skip responsive-mobile.css as it's handled separately
-        if ( $filename === 'responsive-mobile' ) {
-            continue;
-        }
-        
-        // Handle non-block CSS files separately
-        if ( $filename === 'shortcodes' ) {
-            wp_enqueue_style(
-                'giovanni-shortcodes',
-                get_theme_file_uri( "assets/styles/{$filename}.css" ),
-                array( 'giovanni-style' ),
-                wp_get_theme()->get('Version')
-            );
-            continue;
-        }
-        
-        if ( $filename === 'core-links' ) {
-            wp_enqueue_style(
-                'giovanni-links',
-                get_theme_file_uri( "assets/styles/{$filename}.css" ),
-                array( 'giovanni-style' ),
-                wp_get_theme()->get('Version')
-            );
-            continue;
-        }
-        
-        // Handle button variants (arrow, ghost, dark) - all belong to core/button
-        if ( strpos( $filename, 'core-button' ) === 0 ) {
-            $block_name = 'core/button';
-        } else {
-            $block_name = str_replace( 'core-', 'core/', $filename );
-        }
-        
-        // Only enqueue if the block exists
-        if ( function_exists( 'wp_enqueue_block_style' ) && class_exists( 'WP_Block_Type_Registry' ) ) {
-            $registry = WP_Block_Type_Registry::get_instance();
-            if ( $registry->is_registered( $block_name ) ) {
-                wp_enqueue_block_style(
-                    $block_name,
-                    array(
-                        'handle' => "giovanni-block-{$filename}",
-                        'src'    => get_theme_file_uri( "assets/styles/{$filename}.css" ),
-                        'path'   => get_theme_file_path( "assets/styles/{$filename}.css" ),
-                    )
-                );
-            }
-        }
-    }
+function giovanni_enqueue_shortcodes_styles() {
+    wp_enqueue_style(
+        'giovanni-shortcodes',
+        get_theme_file_uri( 'assets/styles/shortcodes.css' ),
+        array( 'giovanni-style' ),
+        wp_get_theme()->get('Version')
+    );
 }
-add_action( 'init', 'giovanni_enqueue_custom_block_styles', 100 );
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_shortcodes_styles' );
 
 /**
  * Enqueue block styles for the editor (backend)
+ * WordPress 6.8+ automatically loads block styles from assets/styles/ directory
  */
 function giovanni_enqueue_block_editor_styles() {
-    $files = glob( get_template_directory() . '/assets/styles/core-*.css' );
-    if ( ! empty( $files ) ) {
-        foreach ( $files as $file ) {
-            $filename = basename( $file );
+    // Only enqueue editor-specific styles if they exist
+    $editor_styles = array(
+        'core-button-arrow',
+        'core-button-ghost', 
+        'core-button-dark',
+        'core-navigation',
+        'core-group',
+        'core-post-terms',
+        'core-site-title',
+        'core-image',
+        'core-table',
+        'core-quote',
+        'core-separator'
+    );
+    
+    foreach ( $editor_styles as $style ) {
+        $file_path = get_template_directory() . "/assets/styles/{$style}.css";
+        if ( file_exists( $file_path ) ) {
             wp_enqueue_style(
-                'giovanni-editor-' . $filename,
-                get_theme_file_uri( 'assets/styles/' . $filename ),
+                'giovanni-editor-' . $style,
+                get_theme_file_uri( "assets/styles/{$style}.css" ),
                 array(),
                 wp_get_theme()->get('Version')
             );
@@ -179,32 +128,3 @@ function giovanni_enqueue_block_editor_styles() {
     }
 }
 add_action( 'enqueue_block_editor_assets', 'giovanni_enqueue_block_editor_styles' );
-
-/**
- * Clear the block styles cache when theme is updated or when needed
- */
-function giovanni_clear_block_styles_cache() {
-    $cache_key = 'giovanni_block_styles_files_' . wp_get_theme()->get('Version');
-    delete_transient( $cache_key );
-    
-    // Also clear any old cache keys from previous versions
-    global $wpdb;
-    $wpdb->query( 
-        $wpdb->prepare( 
-            "DELETE FROM {$wpdb->options} 
-             WHERE option_name LIKE %s 
-             AND option_name != %s",
-            '_transient_giovanni_block_styles_files_%',
-            '_transient_' . $cache_key
-        )
-    );
-}
-
-// Clear cache on theme switch or update
-add_action( 'after_switch_theme', 'giovanni_clear_block_styles_cache' );
-add_action( 'upgrader_process_complete', 'giovanni_clear_block_styles_cache' );
-
-// Clear cache when in development (if WP_DEBUG is true)
-if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-    add_action( 'init', 'giovanni_clear_block_styles_cache' );
-}
