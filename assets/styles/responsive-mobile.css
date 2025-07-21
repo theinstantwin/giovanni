@@ -34,6 +34,14 @@
     }
 }
 
+/* Essential Mobile Padding - Prevent content touching screen edges */
+@media (max-width: 480px) {
+    main.wp-block-group.alignfull {
+        padding-left: var(--wp--preset--spacing--8) !important;
+        padding-right: var(--wp--preset--spacing--8) !important;
+    }
+}
+
 /* Touch Device Optimizations - Only disable hover on actual touch devices */
 @media (hover: none) and (pointer: coarse) {
     /* Disable hover effects on touch devices, preserve focus states */
