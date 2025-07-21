@@ -30,6 +30,11 @@
     margin-left: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     margin-right: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     border-radius: var(--wp--custom--border-radius--sm);
+    transition: transform var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
+}
+
+.blog-post-item:hover {
+    transform: translateX(4px);
 }
 
 .blog-post-item a {
