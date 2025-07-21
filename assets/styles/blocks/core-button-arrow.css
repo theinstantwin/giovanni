@@ -1,55 +1,56 @@
 /* Arrow Button Style Variations
 --------------------------------------------- */
 
-/* Arrow Button Base Styles */
+/* Arrow Button Base Styles - Higher specificity */
 .wp-block-button.is-style-arrow-light .wp-block-button__link,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-    position: relative;
-    padding-right: 3rem;
-    padding-left: 1.25rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    min-width: 140px;
-    min-height: 44px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 6px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
-    font-size: 1rem;
-    line-height: 1.2;
+    position: relative !important;
+    padding: 0.75rem 3rem 0.75rem 1.25rem !important;
+    min-width: 140px !important;
+    min-height: 44px !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+    overflow: visible !important;
+    border: 1px solid transparent !important;
 }
 
-/* Arrow Icon Styles */
+/* Arrow Icon Styles - Critical for animation */
 .wp-block-button.is-style-arrow-light .wp-block-button__link::after,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
-    content: "→";
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%) translateX(-12px);
-    opacity: 0;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: 1.1em;
-    color: inherit;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
+    content: "→" !important;
+    position: absolute !important;
+    right: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) translateX(-12px) !important;
+    opacity: 0 !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    font-size: 1.1em !important;
+    color: inherit !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20px !important;
+    height: 20px !important;
+    z-index: 10 !important;
+    pointer-events: none !important;
 }
 
-/* Arrow Animation on Hover */
+/* Arrow Animation on Hover - Must override everything */
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover::after,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover::after,
 .wp-block-button.is-style-arrow-light .wp-block-button__link:focus::after,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:focus::after {
-    transform: translateY(-50%) translateX(0px);
-    opacity: 1;
+    transform: translateY(-50%) translateX(0px) !important;
+    opacity: 1 !important;
 }
 
 /* Button hover state with smooth transform */
@@ -57,47 +58,48 @@
 .wp-block-button.is-style-arrow-light .wp-block-button__link:focus,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Active state for arrow buttons */
 .wp-block-button.is-style-arrow-light .wp-block-button__link:active,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:active {
-    transform: translateY(0px);
+    transform: translateY(0px) !important;
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:active::after,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:active::after {
-    transform: translateY(-50%) translateX(-2px);
+    transform: translateY(-50%) translateX(-2px) !important;
+    opacity: 0.8 !important;
 }
 
 /* Arrow Light Variant */
 .wp-block-button.is-style-arrow-light .wp-block-button__link {
-    background: var(--wp--preset--color--background, #fafafa);
-    color: var(--wp--preset--color--foreground, #000000);
-    border: 1px solid var(--wp--preset--color--light-gray, #e5e5e5);
+    background: var(--wp--preset--color--background, #fafafa) !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    border: 1px solid var(--wp--preset--color--light-gray, #e5e5e5) !important;
 }
 
 .wp-block-button.is-style-arrow-light .wp-block-button__link:hover,
 .wp-block-button.is-style-arrow-light .wp-block-button__link:focus {
-    background: var(--wp--preset--color--container, #ffffff);
-    color: var(--wp--preset--color--foreground, #000000);
-    border-color: var(--wp--preset--color--gray, #666666);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: var(--wp--preset--color--container, #ffffff) !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    border-color: var(--wp--preset--color--gray, #666666) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Arrow Dark Variant */
 .wp-block-button.is-style-arrow-dark .wp-block-button__link {
-    background: var(--wp--preset--color--primary, #0070f3);
-    color: var(--wp--preset--color--white, #ffffff);
-    border: 1px solid transparent;
+    background: var(--wp--preset--color--primary, #0070f3) !important;
+    color: var(--wp--preset--color--white, #ffffff) !important;
+    border: 1px solid transparent !important;
 }
 
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:hover,
 .wp-block-button.is-style-arrow-dark .wp-block-button__link:focus {
-    background: var(--wp--preset--color--primary, #0070f3);
-    color: var(--wp--preset--color--white, #ffffff);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    filter: brightness(1.1);
+    background: var(--wp--preset--color--primary, #0070f3) !important;
+    color: var(--wp--preset--color--white, #ffffff) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+    filter: brightness(1.1) !important;
 }
