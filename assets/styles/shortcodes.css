@@ -30,7 +30,7 @@
     margin-left: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     margin-right: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     border-radius: var(--wp--custom--border-radius--sm);
-    transition: all var(--wp--custom--transitions--fast) ease;
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
 }
 
 .blog-post-item a {
@@ -39,7 +39,7 @@
     font-size: var(--wp--preset--font-size--md);
     font-weight: var(--wp--custom--font-weight--regular);
     flex: 1;
-    transition: color var(--wp--custom--transitions--fast) ease;
+    transition: color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
 }
 
 .blog-posts-by-month .blog-post-item:hover {
