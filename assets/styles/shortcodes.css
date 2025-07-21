@@ -30,7 +30,7 @@
     margin-left: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     margin-right: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     border-radius: var(--wp--custom--border-radius--sm);
-    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blog-post-item a {
@@ -43,8 +43,7 @@
 }
 
 .blog-posts-by-month .blog-post-item:hover {
-    background-color: var(--wp--preset--color--white) !important;
-    transform: translateX(4px) !important;
+    transform: translateX(4px);
 }
 
 .blog-post-item:hover a,
