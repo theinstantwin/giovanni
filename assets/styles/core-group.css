@@ -222,25 +222,27 @@ div.wp-block-group.is-style-portfolio-card p {
    HOVER CARDS ANIMATION (SPECIAL EXCEPTION)
    ============================================ */
 
-/* EXCEPTION: Allow hover-cards to have shadows and animations */
+/* Simplified hover-cards animation system */
 .hover-cards {
-    background: var(--wp--preset--color--background, #fafafa) !important;
+    background: var(--wp--preset--color--background);
 }
 
 .hover-cards > .wp-block-group {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-    background: var(--wp--preset--color--container, #ffffff) !important;
-    transition: all 0.3s ease !important;
+    background: var(--wp--preset--color--container);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.hover-cards > .wp-block-group:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .hover-cards > .wp-block-group:nth-child(odd):hover {
-    transform: scale(1.03) rotate(1.5deg) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    transform: scale(1.03) rotate(1.5deg);
 }
 
 .hover-cards > .wp-block-group:nth-child(even):hover {
-    transform: scale(1.03) rotate(-1.5deg) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    transform: scale(1.03) rotate(-1.5deg);
 }
 
 /* Show pulse orb on hover */
