@@ -23,8 +23,8 @@ Tags: block-themes, full-site-editing, blog, portfolio, minimal, clean, modern, 
     --giovanni-pill-radius: var(--wp--custom--border-radius--full);
     
     /* Common transition patterns */
-    --giovanni-transition-base: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--ease-in-out);
-    --giovanni-transition-fast: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    --giovanni-transition-base: all var(--wp--custom--transitions--normal) var(--wp--custom--animation--easeInOut);
+    --giovanni-transition-fast: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
     
     /* Common border patterns */
     --giovanni-border-light: 1px solid var(--wp--preset--color--light-gray);

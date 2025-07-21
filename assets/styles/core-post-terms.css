@@ -13,7 +13,7 @@
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: var(--wp--custom--letter-spacing--wide);
-    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
     border: 1px solid transparent;
 }
 
@@ -38,7 +38,7 @@
     font-size: var(--wp--preset--font-size--sm);
     font-weight: var(--wp--custom--font-weight--semibold);
     text-decoration: none;
-    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
     border: 1px solid transparent;
 }
 
@@ -64,7 +64,7 @@
     font-size: var(--wp--preset--font-size--sm);
     font-weight: var(--wp--custom--font-weight--medium);
     text-decoration: none;
-    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    transition: all var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
     border: 1px solid var(--wp--preset--color--light-gray);
 }
 

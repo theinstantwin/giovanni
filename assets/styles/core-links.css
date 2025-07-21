@@ -5,7 +5,7 @@
     --giovanni-link-underline-thin: 1px;
     --giovanni-link-underline-thick: 2px;
     --giovanni-link-offset: 2px;
-    --giovanni-link-transition: text-decoration-thickness var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out), color var(--wp--custom--transitions--fast) var(--wp--custom--animation--ease-in-out);
+    --giovanni-link-transition: text-decoration-thickness var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut), color var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
 }
 
 .wp-block-post-content a,

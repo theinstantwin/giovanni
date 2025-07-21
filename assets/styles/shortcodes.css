@@ -47,12 +47,12 @@
 
 .blog-post-item:hover a,
 .blog-post-item:hover .wp-block-post-title a {
-    color: var(--wp--preset--color--foreground) !important;
+    color: var(--wp--preset--color--foreground);
 }
 
 .blog-post-item:hover .post-date,
 .blog-post-item:hover .wp-block-post-date {
-    color: var(--wp--preset--color--gray) !important;
+    color: var(--wp--preset--color--gray);
 }
 
 .blog-post-item .post-date {
