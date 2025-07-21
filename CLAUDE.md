@@ -214,19 +214,12 @@ The theme provides custom styles for core WordPress blocks:
 - `logo-style`: Logo-focused styling
 - `brand-name`: Brand name emphasis
 
-### Theme Style Variations (9 Variations)
+### Theme Style Variations (3 Variations)
 The theme includes complete style variations for different aesthetics:
 
-1. **Default Giovanni**: Clean, modern design
-2. **Dark Theme**: Dark mode optimized
-3. **Condensed Modern**: Tighter spacing, condensed typography
-4. **Display Bold**: Large, bold typography
-5. **GitHub Dark**: Developer-focused dark theme
-6. **Linen Theme**: Warm, textured background
-7. **Minimal Mono**: Monospace typography focus
-8. **Serif Editorial**: Editorial/magazine style
-9. **Tech Neon**: High-tech, neon accents
-10. **Creamsicle**: Creamy, warm colors with linen theme palette
+1. **Default Giovanni**: Clean, modern light design with blue primary (#0070f3)
+2. **Dark Theme**: Dark mode optimized with cream text and red primary (#ff335f)
+3. **Linen Theme**: Warm, textured cream background with red primary (#ff335f)
 
 ## File Structure & Organization
 
@@ -247,7 +240,7 @@ giovanni/
 │   ├── search.html           # Search results
 │   └── 404.html              # Error page
 ├── patterns/                  # Block patterns (22 patterns)
-├── styles/                    # Theme variations (9 styles)
+├── styles/                    # Theme variations (3 styles)
 ├── inc/                       # Modular functionality
 └── assets/styles/             # Block-specific CSS
 ```
@@ -320,7 +313,7 @@ assets/styles/
 **Block Style Development**:
 - Style names MUST match CSS class names exactly
 - Use CSS custom properties (never hardcoded colors)
-- Test with all 9 theme variations
+- Test with all 3 theme variations
 - Ensure accessibility compliance
 
 **Arrow Button Implementation**:
@@ -383,14 +376,7 @@ assets/styles/
 |-------|------------|-------|-----------|------------|------|------------|---------|
 | **Default (theme.json)** | `#fafafa` | `#ffffff` | `#ffffff` | `#000000` | `#666666` | `#e5e5e5` | `#0070f3` |
 | **Dark Theme** | `#1e2021` | `#ffffff` | `#2a2a2a` | `#FBF1C7` | `#4C4641` | `#333230` | `#ff335f` |
-| **GitHub Dark** | `#0d1117` | `#ffffff` | `#161b22` | `#e6edf3` | `#8b949e` | `#30363d` | `#f85149` |
 | **Linen Theme** | `#faf3ea` | *inherited* | `#ffffff` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
-| **Minimal Mono** | `#ffffff` | *inherited* | `#ffffff` | `#000000` | `#666666` | `#e5e5e5` | `#000000` |
-| **Tech Neon** | `#0a0a0f` | `#ffffff` | `#1a1a2e` | `#e0e7ff` | `#6366f1` | `#1e1b4b` | `#00d4aa` |
-| **Creamsicle** | `#faf3ea` | *inherited* | `#ffffff` | `#383a3c` | `#6c757d` | `#f5eadd` | `#ff335f` |
-| **Condensed Modern** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
-| **Display Bold** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
-| **Serif Editorial** | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* | *inherited* |
 
 *Note: Theme variations marked as "inherited" use the default theme.json colors. This demonstrates how the semantic token system provides consistent naming while allowing theme-specific color customization.*
 
@@ -422,7 +408,7 @@ assets/styles/
 ```
 
 **Why This Matters**:
-- Ensures patterns work with all 9 theme style variations
+- Ensures patterns work with all 3 theme style variations
 - Prevents color bleeding between style variations
 - Maintains design system consistency
 - Allows users to properly customize colors
@@ -557,7 +543,7 @@ The ACF integration is designed to handle theme name changes seamlessly:
 ### Required Testing Checklist
 When making changes to Giovanni:
 
-- [ ] Test all 9 theme style variations
+- [ ] Test all 3 theme style variations (Default, Dark, Linen)
 - [ ] **Test pattern colors with different style variations** (ensure no color bleeding)
 - [ ] **Verify semantic color token naming** (color names match actual appearance)
 - [ ] **Test semantic font size tokens** (ensure consistent typography across all themes)
@@ -572,7 +558,7 @@ When making changes to Giovanni:
 - [ ] Verify block style variations work
 - [ ] Check color contrast in both light and dark modes
 - [ ] Test touch interactions and focus states on mobile
-- [ ] Verify Giovanni Blue → Red transition in dark mode
+- [ ] Verify Giovanni Blue → Red transition in dark/linen themes
 
 ### Common Issues & Solutions
 
@@ -606,7 +592,7 @@ When making changes to Giovanni:
 - Check arrow positioning in `core-button.css` (should have proper padding-right spacing)
 - Verify arrow animation uses smooth translateX transitions
 - Ensure hover states include proper color, transform, and box-shadow properties
-- Test arrow visibility across all 9 theme variations
+- Test arrow visibility across all 3 theme variations
 - Clear browser cache to see CSS changes
 
 **Mobile Padding and Layout Issues**:
@@ -802,7 +788,7 @@ wp pattern list
 **Giovanni v1.7.2** represents a fully refactored, modern FSE theme that has been through comprehensive restructuring:
 
 ### **Recent Fixes & Improvements**
-- ✅ **Complete Numbered Gray System Removal**: Successfully eliminated all numbered gray tokens (gray-50 through gray-900) from theme system, replacing with semantic tokens that remain consistent across all 9 theme variations
+- ✅ **Complete Numbered Gray System Removal**: Successfully eliminated all numbered gray tokens (gray-50 through gray-900) from theme system, replacing with semantic tokens that remain consistent across all 3 theme variations
 - ✅ **Arrow Button Animation Fix**: Resolved wonky arrow button behavior with improved positioning, smoother animations, and proper hover/focus states
 - ✅ **Mobile Padding Layout Fix**: Updated all templates to use `spacing-6` instead of `spacing-4` for proper mobile padding, preventing content from being too close to screen edges
 - ✅ **Mobile Arrow Button Optimization**: Added responsive styles for arrow buttons on small screens to prevent overflow and improve usability
