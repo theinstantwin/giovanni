@@ -30,6 +30,7 @@
     margin-left: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     margin-right: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     border-radius: var(--wp--custom--border-radius--sm);
+    /* Remove any container transitions to prevent jerky movement */
 }
 
 .blog-post-item a {
@@ -39,6 +40,13 @@
     font-weight: var(--wp--custom--font-weight--medium);
     flex: 1;
     transition: color var(--wp--custom--transitions--fast) var(--wp--custom--animation--easeInOut);
+    position: relative;
+    padding-right: var(--wp--preset--spacing--6, 1.5rem);
+}
+
+/* Ensure title links have proper positioning for arrow */
+.blog-post-item .post-title a,
+.blog-post-item .wp-block-post-title a {
     position: relative;
     padding-right: var(--wp--preset--spacing--6, 1.5rem);
 }
@@ -63,8 +71,9 @@
     min-width: 50px;
 }
 
-/* Arrow Icon for Blog Post Items */
-.blog-post-item a::after {
+/* Arrow Icon for Blog Post Items - Only on title links */
+.blog-post-item .post-title a::after,
+.blog-post-item .wp-block-post-title a::after {
     content: "→";
     position: absolute;
     right: 0;
@@ -79,7 +88,8 @@
 }
 
 /* Arrow Animation on Hover */
-.blog-post-item:hover a::after {
+.blog-post-item:hover .post-title a::after,
+.blog-post-item:hover .wp-block-post-title a::after {
     transform: translateY(-50%) translateX(0px);
     opacity: 1;
 }
