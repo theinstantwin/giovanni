@@ -30,7 +30,6 @@
     margin-left: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     margin-right: calc(-1 * var(--wp--preset--spacing--2, 0.5rem));
     border-radius: var(--wp--custom--border-radius--sm);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blog-post-item a {
@@ -44,9 +43,7 @@
     padding-right: var(--wp--preset--spacing--6, 1.5rem);
 }
 
-.blog-posts-by-month .blog-post-item:hover {
-    transform: translateX(4px);
-}
+
 
 .blog-post-item:hover a,
 .blog-post-item:hover .wp-block-post-title a {
