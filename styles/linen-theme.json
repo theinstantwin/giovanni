@@ -83,7 +83,7 @@
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var(--wp--preset--color--gray)"
+							"text": "var(--wp--preset--color--foreground)"
 						},
 						":hover": {
 							"color": {

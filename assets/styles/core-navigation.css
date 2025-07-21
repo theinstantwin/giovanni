@@ -167,7 +167,7 @@
     background-color: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background) !important;
     font-weight: var(--wp--custom--font-weight--semibold);
-    box-shadow: 0 2px 8px rgba(0, 112, 243, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .current-menu-item a::after,
