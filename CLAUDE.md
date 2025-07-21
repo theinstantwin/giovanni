@@ -271,7 +271,21 @@ assets/styles/
 ├── core-links.css            # Link styles
 ├── core-separator.css        # Separator styles
 ├── responsive-mobile.css     # Mobile + Dark Theme CSS (CRITICAL FILE)
-└── shortcodes.css            # Custom shortcode styles
+├── shortcodes.css            # Custom shortcode styles
+├── components/               # Component-specific styles
+│   └── responsive-mobile.css # Mobile + Dark Theme CSS
+└── blocks/                   # Block-specific styles
+    ├── core-button-arrow.css # Arrow button styles
+    ├── core-button-dark.css  # Dark button styles
+    ├── core-button-ghost.css # Ghost button styles
+    ├── core-links.css        # Link styles
+    ├── core-post-terms.css   # Post terms styles
+    ├── core-group.css        # Group block styles
+    ├── core-quote.css        # Quote block styles
+    ├── core-separator.css    # Separator styles
+    ├── core-image.css        # Image block styles
+    ├── core-site-title.css   # Site title styles
+    └── core-table.css        # Table block styles
 ```
 
 ### Mobile & Dark Theme System (responsive-mobile.css)
@@ -738,7 +752,7 @@ wp pattern list
 - **New patterns**: Will automatically inherit proper shadow behavior
 - **`!important` usage**: Only use for special cases documented above
 - **Testing**: Always test with nested group blocks to ensure no grey overlay
-- **Pattern validation**: Use animated-cards-test.html for comprehensive testing
+- **Pattern validation**: Test with nested group blocks to ensure no grey overlay
 
 ### 🔧 TROUBLESHOOTING: Random Grey Colors
 
@@ -775,7 +789,7 @@ wp pattern list
 2. **Check for nested group blocks** in the pattern HTML
 3. **Verify centralized system** is being applied correctly
 4. **Add specific override** if needed (document as special case)
-5. **Test with animated-cards-test.html** to verify fix
+5. **Test with nested group blocks** to verify fix
 
 **Prevention**:
 - Always use the centralized shadow system
@@ -796,7 +810,8 @@ wp pattern list
 - ✅ **Mobile Navigation Optimization**: Fixed touch targets and background contrast issues across all theme variations
 - ✅ **Semantic Font Size System Implementation**: Converted all hardcoded font sizes to semantic tokens (xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl) across all templates and patterns for consistent typography hierarchy
 - ✅ **Post Title Typography Fix**: Increased font sizes in post lists and patterns from `fontSize="lg"` to `fontSize="xl"` for better readability
-- ✅ **Grey Background Issue Fix**: Resolved grey background appearance on hover for certain blocks by updating CSS in `core-group.css` to maintain a white background for blog roll cards.
+- ✅ **Grey Background Issue Fix**: Resolved grey background appearance on hover for certain blocks by updating CSS in `core-group.css` to maintain a white background for blog roll cards
+- ✅ **Asset Organization Cleanup**: Removed development artifacts and test files, organized CSS into proper components/ and blocks/ structure
 
 ### **Completed Refactoring (Historical Context)**
 - ✅ **Modular Architecture**: Migrated from monolithic `functions.php` to organized `/inc` structure
