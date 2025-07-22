@@ -17,7 +17,7 @@ This Giovanni-specific file provides theme context and features. The master CLAU
 
 **Giovanni** is a modern Full Site Editing (FSE) WordPress theme designed for personal blogs, portfolios, and creative professionals. It features elegant design, comprehensive block patterns, professional typography, system-aware dark mode, and touch optimization.
 
-- **Version**: 1.7.2
+- **Version**: 1.7.4
 - **Author**: Matt DeSiena
 - **PHP Requirement**: 8.0+
 - **WordPress Requirement**: 6.0+

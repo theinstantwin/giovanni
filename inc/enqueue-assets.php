@@ -160,6 +160,27 @@ function giovanni_enqueue_button_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_button_styles' );
 
 /**
+ * Enqueue navigation styles for frontend
+ * WordPress 6.8+ auto-loading might not work for all block styles
+ */
+function giovanni_enqueue_navigation_styles() {
+    $file_path = get_template_directory() . '/assets/styles/core-navigation.css';
+    $version = wp_get_theme()->get('Version');
+    
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+    }
+    
+    wp_enqueue_style(
+        'giovanni-navigation',
+        get_theme_file_uri( 'assets/styles/core-navigation.css' ),
+        array( 'giovanni-style' ),
+        $version
+    );
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_navigation_styles' );
+
+/**
  * Enqueue group styles for frontend (for card/grid/animated patterns)
  */
 function giovanni_enqueue_group_styles() {
