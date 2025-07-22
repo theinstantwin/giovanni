@@ -1,0 +1,73 @@
+/* Ghost Button Style Variation
+--------------------------------------------- */
+
+/* Ghost Button Base Styles */
+.wp-block-button.is-style-ghost .wp-block-button__link {
+    background: transparent !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    border: 1px solid var(--wp--preset--color--light-gray, #e5e5e5) !important;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    overflow: hidden;
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 500;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Underline effect on hover */
+.wp-block-button.is-style-ghost .wp-block-button__link::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--wp--preset--color--foreground, #000000);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+    border-radius: 1px;
+}
+
+/* Hover states */
+.wp-block-button.is-style-ghost .wp-block-button__link:hover {
+    background: var(--wp--preset--color--light-gray, #e5e5e5) !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    border-color: var(--wp--preset--color--gray, #666666) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-button.is-style-ghost .wp-block-button__link:hover::after {
+    width: calc(100% - 2rem);
+}
+
+/* Focus states for accessibility */
+.wp-block-button.is-style-ghost .wp-block-button__link:focus {
+    outline: 2px solid var(--wp--preset--color--primary, #0070f3);
+    outline-offset: 2px;
+    background: var(--wp--preset--color--light-gray, #e5e5e5) !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-button.is-style-ghost .wp-block-button__link:focus::after {
+    width: calc(100% - 2rem);
+}
+
+/* Active state */
+.wp-block-button.is-style-ghost .wp-block-button__link:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.wp-block-button.is-style-ghost .wp-block-button__link:active::after {
+    width: calc(100% - 2.5rem);
+}

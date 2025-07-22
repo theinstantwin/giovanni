@@ -229,20 +229,22 @@ div.wp-block-group.is-style-portfolio-card p {
 
 .hover-cards > .wp-block-group {
     background: var(--wp--preset--color--container);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
     transition: all 0.3s ease;
 }
 
 .hover-cards > .wp-block-group:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 .hover-cards > .wp-block-group:nth-child(odd):hover {
-    transform: scale(1.03) rotate(1.5deg);
+    transform: scale(1.03) rotate(1.5deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 .hover-cards > .wp-block-group:nth-child(even):hover {
-    transform: scale(1.03) rotate(-1.5deg);
+    transform: scale(1.03) rotate(-1.5deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Show pulse orb on hover */
