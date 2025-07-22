@@ -73,11 +73,18 @@ add_action( 'wp_enqueue_scripts', 'giovanni_theme_enqueue_scripts' );
  * Enqueue responsive and mobile optimization styles
  */
 function giovanni_enqueue_responsive_styles() {
+    $file_path = get_template_directory() . '/assets/styles/responsive-mobile.css';
+    $version = wp_get_theme()->get('Version');
+    
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+    }
+    
     wp_enqueue_style(
         'giovanni-responsive-mobile',
         get_theme_file_uri( 'assets/styles/responsive-mobile.css' ),
         array( 'giovanni-style' ),
-        wp_get_theme()->get('Version')
+        $version
     );
 }
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_responsive_styles' );
@@ -86,11 +93,18 @@ add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_responsive_styles' );
  * Enqueue shortcodes styles (non-block specific)
  */
 function giovanni_enqueue_shortcodes_styles() {
+    $file_path = get_template_directory() . '/assets/styles/shortcodes.css';
+    $version = wp_get_theme()->get('Version');
+    
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+    }
+    
     wp_enqueue_style(
         'giovanni-shortcodes',
         get_theme_file_uri( 'assets/styles/shortcodes.css' ),
         array( 'giovanni-style' ),
-        wp_get_theme()->get('Version')
+        $version
     );
 }
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_shortcodes_styles' );
@@ -100,11 +114,18 @@ add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_shortcodes_styles' );
  * WordPress 6.8+ auto-loading might not work for all block styles
  */
 function giovanni_enqueue_post_terms_styles() {
+    $file_path = get_template_directory() . '/assets/styles/core-post-terms.css';
+    $version = wp_get_theme()->get('Version');
+    
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+    }
+    
     wp_enqueue_style(
         'giovanni-post-terms',
         get_theme_file_uri( 'assets/styles/core-post-terms.css' ),
         array( 'giovanni-style' ),
-        wp_get_theme()->get('Version')
+        $version
     );
 }
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_post_terms_styles' );
@@ -139,15 +160,34 @@ function giovanni_enqueue_button_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_button_styles' );
 
 /**
+ * Enqueue group styles for frontend (for card/grid/animated patterns)
+ */
+function giovanni_enqueue_group_styles() {
+    $file_path = get_template_directory() . '/assets/styles/core-group.css';
+    $version = wp_get_theme()->get('Version');
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+    }
+    wp_enqueue_style(
+        'giovanni-core-group',
+        get_theme_file_uri( 'assets/styles/core-group.css' ),
+        array( 'giovanni-style' ),
+        $version
+    );
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_group_styles' );
+
+/**
  * Enqueue block styles for the editor (backend)
  * WordPress 6.8+ automatically loads block styles from assets/styles/ directory
  */
 function giovanni_enqueue_block_editor_styles() {
     // Only enqueue editor-specific styles if they exist
     $editor_styles = array(
-        'core-button-arrow',
-        'core-button-ghost', 
-        'core-button-dark',
+        'core-button',           // Base button styles
+        'core-button-arrow',     // Arrow button styles 
+        'core-button-ghost',     // Ghost button styles
+        'core-button-dark',      // Dark button styles
         'core-navigation',
         'core-group',
         'core-post-terms',
@@ -161,11 +201,14 @@ function giovanni_enqueue_block_editor_styles() {
     foreach ( $editor_styles as $style ) {
         $file_path = get_template_directory() . "/assets/styles/{$style}.css";
         if ( file_exists( $file_path ) ) {
+            // Use file modification time for better cache busting in editor too
+            $version = wp_get_theme()->get('Version') . '.' . filemtime( $file_path );
+            
             wp_enqueue_style(
                 'giovanni-editor-' . $style,
                 get_theme_file_uri( "assets/styles/{$style}.css" ),
                 array(),
-                wp_get_theme()->get('Version')
+                $version
             );
         }
     }
