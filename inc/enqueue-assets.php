@@ -124,11 +124,14 @@ function giovanni_enqueue_button_styles() {
     foreach ( $button_styles as $style ) {
         $file_path = get_template_directory() . "/assets/styles/{$style}.css";
         if ( file_exists( $file_path ) ) {
+            // Use file modification time for better cache busting
+            $version = wp_get_theme()->get('Version') . '.' . filemtime( $file_path );
+            
             wp_enqueue_style(
                 'giovanni-' . $style,
                 get_theme_file_uri( "assets/styles/{$style}.css" ),
                 array( 'giovanni-style' ),
-                wp_get_theme()->get('Version')
+                $version
             );
         }
     }

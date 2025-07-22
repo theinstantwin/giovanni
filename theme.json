@@ -649,7 +649,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--emphasis)",
+						"background": "var(--wp--preset--color--gray)",
 						"text": "var(--wp--preset--color--background)"
 					},
 					"transform": "translateY(-1px)",
@@ -867,7 +867,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--emphasis)",
+						"background": "var(--wp--preset--color--gray)",
 						"text": "var(--wp--preset--color--background)"
 					},
 					"border": {
