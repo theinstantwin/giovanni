@@ -12,6 +12,8 @@
 !functions.php
 !README.md
 !CLAUDE.md
+!assets/styles/
+!assets/styles/*.css
 
 # Ignore specific untracked files
 all-cards-test.html

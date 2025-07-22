@@ -1,0 +1,112 @@
+/* Arrow Button Style Variations
+--------------------------------------------- */
+
+/* Arrow Button Base Styles - Self-contained with higher specificity */
+.wp-block-button.is-style-arrow-light .wp-block-button__link,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link {
+    /* Complete button foundation */
+    position: relative;
+    padding: var(--wp--preset--spacing--3) 3rem var(--wp--preset--spacing--3) var(--wp--preset--spacing--8);
+    min-width: 140px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--wp--custom--border-radius--md);
+    font-weight: var(--wp--custom--font-weight--medium);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-size: var(--wp--preset--font-size--md);
+    line-height: 1.75;
+    overflow: visible;
+    border: 1px solid transparent;
+}
+
+/* Arrow Icon Styles - Clean animation setup */
+.wp-block-button.is-style-arrow-light .wp-block-button__link::after,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link::after {
+    content: "→";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(-8px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.1em;
+    color: inherit;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+/* Arrow Animation on Hover - Higher specificity naturally */
+.wp-block-button.is-style-arrow-light .wp-block-button__link:hover::after,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:hover::after,
+.wp-block-button.is-style-arrow-light .wp-block-button__link:focus::after,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:focus::after {
+    transform: translateY(-50%) translateX(4px);
+    opacity: 1;
+}
+
+/* Arrow Button Hover States - Complete control */
+.wp-block-button.is-style-arrow-light .wp-block-button__link:hover,
+.wp-block-button.is-style-arrow-light .wp-block-button__link:focus,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:hover,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:focus {
+    /* box-shadow removed for cleaner look */
+}
+
+/* Arrow Button Active States */
+.wp-block-button.is-style-arrow-light .wp-block-button__link:active,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:active {
+    /* box-shadow removed for cleaner look */
+}
+
+.wp-block-button.is-style-arrow-light .wp-block-button__link:active::after,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:active::after {
+    transform: translateY(-50%) translateX(2px);
+    opacity: 0.9;
+}
+
+/* Arrow Button Focus States */
+.wp-block-button.is-style-arrow-light .wp-block-button__link:focus,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:focus {
+    outline: 2px solid var(--wp--preset--color--primary, #0070f3);
+    outline-offset: 2px;
+}
+
+/* Arrow Light Variant Colors */
+.wp-block-button.is-style-arrow-light .wp-block-button__link {
+    background: var(--wp--preset--color--background, #fafafa) !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    border-color: var(--wp--preset--color--light-gray, #e5e5e5) !important;
+}
+
+.wp-block-button.is-style-arrow-light .wp-block-button__link:hover,
+.wp-block-button.is-style-arrow-light .wp-block-button__link:focus {
+    background: var(--wp--preset--color--container, #ffffff) !important;
+    color: var(--wp--preset--color--foreground, #000000) !important;
+    border-color: var(--wp--preset--color--gray, #666666) !important;
+}
+
+/* Arrow Dark Variant Colors */
+.wp-block-button.is-style-arrow-dark .wp-block-button__link,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:link,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:visited {
+    background: var(--wp--preset--color--primary, #0070f3) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:hover,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:focus,
+.wp-block-button.is-style-arrow-dark .wp-block-button__link:active {
+    background: var(--wp--preset--color--primary, #0070f3) !important;
+    color: #ffffff !important;
+    filter: brightness(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
