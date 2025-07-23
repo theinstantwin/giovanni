@@ -15,7 +15,7 @@ Giovanni represents the foundation of this collection: elegant, sophisticated, a
 - **Gutenberg Native**: All layouts use native WordPress blocks
 - **Clean Design**: Minimalist layout with elegant typography
 - **Professional Typography**: Inter font family with fluid scaling
-- **Dark Mode Support**: Multiple theme variations (Default, Dark, GitHub Dark, Linen)
+- **Dark Mode Support**: Multiple theme variations (Default, Dark, Linen)
 - **Responsive Design**: Mobile-first approach with flexible layouts
 - **Accessibility Ready**: WCAG compliant with proper color contrast
 
@@ -100,11 +100,10 @@ Giovanni includes 18 comprehensive block patterns organized into categories:
 
 ## Theme Variations
 
-Giovanni includes four carefully crafted theme variations:
+Giovanni includes three carefully crafted theme variations:
 
 - **Default**: Clean, modern design with Giovanni Blue accents
 - **Dark**: Elegant dark mode with warm contrast
-- **GitHub Dark**: Developer-focused dark theme
 - **Linen**: Warm, approachable design with soft tones
 
 ## Typography
@@ -118,12 +117,12 @@ Giovanni uses the Inter font family with a carefully crafted typographic scale:
 
 ## Color Palette
 
-The theme includes a comprehensive color system:
+The theme includes a comprehensive color system, now managed via separate style variation files for enhanced flexibility:
 
 - **Giovanni Blue**: Primary accent color (#0070f3)
 - **Gray Scale**: 10 levels from Gray 50 to Gray 900
 - **Semantic Colors**: Background, Foreground, and Reading Text
-- **Theme Variations**: Each variation includes adapted color palettes
+- **Theme Variations**: Each variation now has its own dedicated color palette, accessible via the Site Editor's Styles panel.
 
 ## Browser Support
 
@@ -166,6 +165,11 @@ For support, please:
 3. Check the WordPress.org support forums (once theme is approved)
 
 ## Changelog
+
+### Version 1.7.5
+- Refactored theme styles into dedicated JSON files in the 'styles' directory for better organization and Full Site Editing (FSE) compatibility (Default, Linen, and Dark variations).
+- Updated theme version to 1.7.5.
+- Added CLAUDE.md to .gitignore for repository exclusion.
 
 ### Version 1.0.0
 - Initial release of Giovanni theme
