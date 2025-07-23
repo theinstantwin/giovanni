@@ -13,8 +13,8 @@
     transition: all 0.2s ease;
 }
 
-/* Simple hover effect for all shadowed group blocks */
-.wp-block-group[class*="is-style-"][class*="card"]:hover {
+/* Simple hover effect for all shadowed group blocks - EXCLUDE hover-cards */
+.wp-block-group[class*="is-style-"][class*="card"]:hover:not(.hover-cards *) {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border-color: var(--wp--preset--color--gray);
@@ -222,21 +222,23 @@ div.wp-block-group.is-style-portfolio-card p {
    HOVER CARDS ANIMATION (SPECIAL EXCEPTION)
    ============================================ */
 
-/* Simplified hover-cards animation system */
+/* Hover-cards animation system - EXCLUSIVE control over transforms */
 .hover-cards {
-    background: var(--wp--preset--color--background);
+    background: var(--wp--preset--color--background) !important;
 }
 
 .hover-cards > .wp-block-group {
     background: var(--wp--preset--color--container);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
 }
 
 .hover-cards > .wp-block-group:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
+/* Exclusive transform control - prevents conflicts with centralized system */
 .hover-cards > .wp-block-group:nth-child(odd):hover {
     transform: scale(1.03) rotate(1.5deg) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
