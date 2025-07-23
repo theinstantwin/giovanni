@@ -11,7 +11,7 @@
 !theme.json
 !functions.php
 !README.md
-!CLAUDE.md
+CLAUDE.md
 !assets/styles/
 !assets/styles/*.css
 !assets/styles/components/
