@@ -552,6 +552,44 @@ The ACF integration is designed to handle theme name changes seamlessly:
 - Cache-friendly implementation
 - Documented in `inc/performance.php`
 
+### Technical SEO Features ✅ NEW
+Giovanni now includes comprehensive **built-in SEO functionality** that eliminates the need for SEO plugins:
+
+**Core Technical SEO Features:**
+- **Canonical URLs** - Automatic canonical tags for all page types (posts, pages, archives, categories, tags, author pages)
+- **Smart Robots Meta Tags** - Context-aware robots directives (noindex for 404s, search results; optimized snippet settings for content)
+- **XML Sitemap Generation** - Automatic XML sitemaps at `/sitemap.xml`, `/sitemap-posts.xml`, `/sitemap-pages.xml`
+- **Custom Robots.txt** - SEO-optimized robots.txt with proper disallow rules and sitemap reference
+- **404 Error Tracking** - Comprehensive 404 monitoring with logging (URI, referer, user agent) and database storage of last 50 errors
+- **Schema Markup** - BlogPosting structured data for posts, Organization schema for homepage
+
+**Page Speed & Performance SEO:**
+- **DNS Prefetching** - Optimized Google Fonts loading with preconnect and dns-prefetch
+- **Resource Hints** - Performance-focused resource loading hints
+- **Viewport Optimization** - Mobile-first viewport meta tag implementation
+- **Performance Monitoring** - Page load time tracking (in debug mode)
+
+**Advanced SEO Features:**
+- **Structured Data** - Rich snippets with author information, featured images, publish/modified dates
+- **SEO-Friendly URL Structure** - Proper canonical URL handling for all content types
+- **Mobile SEO Optimization** - Built-in mobile-first responsive design with proper touch targets
+- **Core Web Vitals Ready** - Optimized for Google's page experience metrics
+
+**Enterprise-Level Capabilities:**
+- **Multi-Site Ready** - All SEO functions work with WordPress multisite
+- **Plugin-Free** - No dependencies on third-party SEO plugins
+- **Security Headers** - Built-in security headers for better SEO trust signals
+- **Performance Optimized** - Minimal resource usage, efficient database queries
+
+**Implementation Details:**
+All SEO functionality is built into `inc/performance.php` and automatically activated when the theme is enabled. No configuration required - works out of the box with sensible defaults.
+
+**Benefits:**
+- **Faster Sites** - No heavy SEO plugin overhead
+- **Better Control** - Theme-integrated SEO features
+- **Consistent Performance** - Optimized specifically for Giovanni's architecture
+- **Future-Proof** - Built on WordPress core functions and standards
+
 ## Testing & Quality Assurance
 
 ### Required Testing Checklist
@@ -578,6 +616,11 @@ When making changes to Giovanni:
 - [ ] Check color contrast in both light and dark modes
 - [ ] Test touch interactions and focus states on mobile
 - [ ] Verify Giovanni Blue → Red transition in dark/linen themes
+- [ ] **Test SEO functionality** - Verify XML sitemaps generate correctly (`/sitemap.xml`)
+- [ ] **Test canonical URLs** - Check canonical tags appear on all page types
+- [ ] **Test 404 error tracking** - Verify 404s are logged with proper context
+- [ ] **Test structured data** - Validate BlogPosting schema on single posts
+- [ ] **Test robots.txt** - Verify custom robots.txt rules and sitemap reference
 
 ### Common Issues & Solutions
 
