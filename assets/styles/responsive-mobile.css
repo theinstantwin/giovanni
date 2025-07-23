@@ -82,3 +82,74 @@
         width: calc(100% - 2rem);
     }
 }
+
+/* Three-Column Animated Cards - Mobile Responsiveness
+--------------------------------------------------------- */
+
+/* Tablet: 3 columns → 2 columns */
+@media (max-width: 1024px) {
+    .wp-block-group.hover-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--wp--preset--spacing--6) !important;
+    }
+}
+
+/* Mobile: 2 columns → 1 column */
+@media (max-width: 640px) {
+    .wp-block-group.hover-cards {
+        grid-template-columns: 1fr !important;
+        gap: var(--wp--preset--spacing--4) !important;
+    }
+    
+    /* Reduce card padding on mobile for better content fit */
+    .hover-cards .wp-block-group.show-orb-on-hover {
+        padding: var(--wp--preset--spacing--6) !important;
+    }
+    
+    /* Adjust pulse orb size for mobile */
+    .hover-cards .pulse-orb {
+        width: 8px !important;
+        height: 8px !important;
+    }
+    
+    /* Optimize badge sizing on mobile */
+    .hover-cards .giovanni-no-shrink {
+        padding-top: 2px !important;
+        padding-right: 12px !important;
+        padding-bottom: 2px !important;
+        padding-left: 12px !important;
+        font-size: 0.6rem !important;
+    }
+}
+
+/* Small mobile: Further optimize spacing */
+@media (max-width: 480px) {
+    .wp-block-group.hover-cards {
+        gap: var(--wp--preset--spacing--3) !important;
+    }
+    
+    /* Reduce card padding further on small screens */
+    .hover-cards .wp-block-group.show-orb-on-hover {
+        padding: var(--wp--preset--spacing--5) !important;
+    }
+    
+    /* Adjust heading size for mobile */
+    .hover-cards + .wp-block-heading {
+        font-size: var(--wp--preset--font-size--4xl) !important;
+    }
+}
+
+/* Touch-friendly hover animations - Disable complex animations on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .hover-cards > .wp-block-group:nth-child(odd):hover,
+    .hover-cards > .wp-block-group:nth-child(even):hover {
+        transform: none !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    }
+    
+    /* Keep subtle focus states for accessibility */
+    .hover-cards > .wp-block-group:focus-within {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1) !important;
+    }
+}
