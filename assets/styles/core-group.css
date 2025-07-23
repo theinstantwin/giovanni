@@ -5,10 +5,10 @@
    SIMPLE CENTRALIZED SHADOW SYSTEM
    ============================================ */
 
-/* All group blocks that need shadows - unified approach */
-.wp-block-group[class*="is-style-"],
-.wp-block-group.has-container-background-color,
-.wp-block-group.has-background {
+/* All group blocks that need shadows - unified approach - EXCLUDE hover-cards children */
+.wp-block-group[class*="is-style-"]:not(.hover-cards):not(.hover-cards *),
+.wp-block-group.has-container-background-color:not(.hover-cards):not(.hover-cards *),
+.wp-block-group.has-background:not(.hover-cards):not(.hover-cards *) {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transition: all 0.2s ease;
 }
@@ -28,12 +28,13 @@
 }
 
 /* NESTED GROUP OVERRIDE - Remove shadows from nested group blocks */
-.wp-block-group .wp-block-group {
+.wp-block-group .wp-block-group:not(.hover-cards):not(.hover-cards *) {
     box-shadow: none !important;
 }
 
-.wp-block-group .wp-block-group:hover {
+.wp-block-group .wp-block-group:hover:not(.hover-cards):not(.hover-cards *) {
     box-shadow: none !important;
+    transform: none !important;
 }
 
 /* ============================================
@@ -227,18 +228,16 @@ div.wp-block-group.is-style-portfolio-card p {
     background: var(--wp--preset--color--background) !important;
 }
 
+/* CRITICAL: Override ALL centralized system rules for hover-cards */
 .hover-cards > .wp-block-group {
     background: var(--wp--preset--color--container);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform: none !important;
     transform-origin: center center;
 }
 
-.hover-cards > .wp-block-group:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Exclusive transform control - prevents conflicts with centralized system */
+/* Specific hover animations - COMPLETE override of centralized system */
 .hover-cards > .wp-block-group:nth-child(odd):hover {
     transform: scale(1.03) rotate(1.5deg) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
@@ -247,6 +246,12 @@ div.wp-block-group.is-style-portfolio-card p {
 .hover-cards > .wp-block-group:nth-child(even):hover {
     transform: scale(1.03) rotate(-1.5deg) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Base hover state for any hover-cards that don't match odd/even */
+.hover-cards > .wp-block-group:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    transform: none !important;
 }
 
 /* Show pulse orb on hover */
