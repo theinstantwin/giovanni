@@ -169,7 +169,6 @@ For support, please:
 ### Version 1.7.5
 - Refactored theme styles into dedicated JSON files in the 'styles' directory for better organization and Full Site Editing (FSE) compatibility (Default, Linen, and Dark variations).
 - Updated theme version to 1.7.5.
-- Added CLAUDE.md to .gitignore for repository exclusion.
 
 ### Version 1.0.0
 - Initial release of Giovanni theme
