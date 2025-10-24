@@ -2,6 +2,8 @@
 
 A modern, elegant Full Site Editing (FSE) WordPress theme designed for personal blogs, portfolios, and creative professionals. Built entirely with Gutenberg blocks and the WordPress Site Editor with comprehensive block patterns and professional typography.
 
+**Now includes built-in block validation tools!**
+
 ## About the Name
 
 Giovanni is named after my nephew, making it the perfect start to my WordPress theme journey. This theme launches my "Medici Collection" - a series of WordPress themes named after members of the influential Medici family of Renaissance Florence. Just as the Medici family fostered creativity, innovation, and artistic excellence, each theme in this collection aims to empower creators and elevate their digital presence.
