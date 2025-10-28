@@ -41,9 +41,11 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-light"} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-light"} -->
 <div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Learn More</a></div>
-<!-- /wp:button --></div>
+<!-- /wp:button -->
+</div>
 <!-- /wp:buttons -->
 
 </div>
@@ -65,9 +67,11 @@
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-dark"} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-dark"} -->
 <div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Explore</a></div>
-<!-- /wp:button --></div>
+<!-- /wp:button -->
+</div>
 <!-- /wp:buttons -->
 
 </div>
@@ -85,13 +89,12 @@
         <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-ghost"} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-ghost"} -->
 <div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">See in Action</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
-
+<!-- /wp:button -->
 </div>
-<!-- /wp:group -->
+<!-- /wp:buttons -->
 
 </div>
 <!-- /wp:group -->
@@ -100,9 +103,9 @@
 <hr class="wp-block-separator has-alpha-channel-opacity" style="margin-top:var(--wp--preset--spacing--8);margin-bottom:var(--wp--preset--spacing--8)"/>
 <!-- /wp:separator -->
 
-        <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"xl"} -->
-        <h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1.25rem, 3vw, 1.75rem);font-weight:600">Button Style Gallery</h3>
-        <!-- /wp:heading -->
+<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"xl"} -->
+<h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1.25rem, 3vw, 1.75rem);font-weight:600">Button Style Gallery</h3>
+<!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)"}}} -->
 <div class="wp-block-buttons">
@@ -127,6 +130,12 @@
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
+
+</div>
+<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->
