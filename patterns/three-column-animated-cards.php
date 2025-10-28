@@ -21,7 +21,7 @@
 	<!-- /wp:heading -->
 
 	<!-- Cards grid with semantic article tags -->
-	<!-- wp:group {"align":"wide","layout":{"type":"grid","columnCount":3},"className":"showcase-grid showcase-grid-3col"} -->
+	<!-- wp:group {"align":"wide","layout":{"type":"default"},"className":"showcase-grid showcase-grid-3col"} -->
 	<div class="wp-block-group alignwide showcase-grid showcase-grid-3col">
 		<!-- Card 1: Podcast Episode -->
 		<!-- wp:group {"tagName":"article","className":"showcase-card","backgroundColor":"container","layout":{"type":"flex","orientation":"vertical"}} -->

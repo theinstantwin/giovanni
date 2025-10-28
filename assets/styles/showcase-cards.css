@@ -3,13 +3,14 @@
    Features: Hover animations, pulsing orbs, responsive grid
    ========================================================= */
 
-/* Base grid container */
+/* Base grid container - CRITICAL: Override WordPress default layout */
 .showcase-grid {
-    display: grid;
+    display: grid !important;
     gap: var(--wp--preset--spacing--8);
+    grid-auto-flow: row;
 }
 
-.showcase-grid-3col {
+.showcase-grid.showcase-grid-3col {
     grid-template-columns: repeat(3, 1fr);
 }
 
