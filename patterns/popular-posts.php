@@ -13,8 +13,8 @@
     <h2 class="wp-block-heading has-text-align-center has-3-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--4);font-weight:700;letter-spacing:-0.02em;line-height:1.2">Popular Posts</h2>
     <!-- /wp:heading -->
     
-    <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--12)"}}},"textColor":"muted-text","fontSize":"lg"} -->
-    <p class="has-text-align-center has-muted-text-color has-text-color has-lg-font-size" style="margin-bottom:var(--wp--preset--spacing--12)">The most-read posts that readers love</p>
+    <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--12)"}}},"textColor":"secondary","fontSize":"lg"} -->
+    <p class="has-text-align-center has-secondary-color has-text-color has-lg-font-size" style="margin-bottom:var(--wp--preset--spacing--12)">The most-read posts that readers love</p>
     <!-- /wp:paragraph -->
 
     <!-- wp:query {"queryId":2,"query":{"perPage":4,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
@@ -28,38 +28,38 @@
             <div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--5)">
                 <!-- wp:post-terms {"term":"category","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary","fontSize":"sm"} /-->
                 
-                <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"muted-text","fontSize":"sm"} -->
-                <p class="has-muted-text-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">•</p>
+                <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"secondary","fontSize":"sm"} -->
+                <p class="has-secondary-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">•</p>
                 <!-- /wp:paragraph -->
                 
-                <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"muted-text","fontSize":"sm"} -->
-                <p class="has-muted-text-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">📈 Popular</p>
+                <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"secondary","fontSize":"sm"} -->
+                <p class="has-secondary-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">📈 Popular</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
             
             <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"600","lineHeight":"1.3"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--4)"}}},"fontSize":"xl"} /-->
             
-            <!-- wp:post-excerpt {"excerptLength":20,"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--5)"}}},"textColor":"muted-text","fontSize":"md"} /-->
+            <!-- wp:post-excerpt {"excerptLength":20,"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--5)"}}},"textColor":"secondary","fontSize":"md"} /-->
             
             <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--3)","margin":{"top":"auto"}}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center","justifyContent":"space-between"}} -->
             <div class="wp-block-group" style="margin-top:auto">
                 <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--2)"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
                 <div class="wp-block-group">
-                    <!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"muted-text","fontSize":"sm"} /-->
+                    <!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"secondary","fontSize":"sm"} /-->
                     
-                    <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"muted-text","fontSize":"sm"} -->
-                    <p class="has-muted-text-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">•</p>
+                    <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"secondary","fontSize":"sm"} -->
+                    <p class="has-secondary-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">•</p>
                     <!-- /wp:paragraph -->
                     
-                    <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"muted-text","fontSize":"sm"} -->
-                    <p class="has-muted-text-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">3 min read</p>
+                    <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"secondary","fontSize":"sm"} -->
+                    <p class="has-secondary-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">3 min read</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
                 
-                <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"muted-text","fontSize":"sm"} -->
-                <p class="has-muted-text-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">👁️ 1.2k views</p>
+                <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"secondary","fontSize":"sm"} -->
+                <p class="has-secondary-color has-text-color has-sm-font-size" style="margin-top:0;margin-bottom:0">👁️ 1.2k views</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -68,8 +68,8 @@
         <!-- /wp:post-template -->
 
         <!-- wp:query-no-results -->
-        <!-- wp:paragraph {"textAlign":"center","textColor":"muted-text"} -->
-        <p class="has-text-align-center has-muted-text-color has-text-color">No popular posts found yet.</p>
+        <!-- wp:paragraph {"textAlign":"center","textColor":"secondary"} -->
+        <p class="has-text-align-center has-secondary-color has-text-color">No popular posts found yet.</p>
         <!-- /wp:paragraph -->
         <!-- /wp:query-no-results -->
     </div>

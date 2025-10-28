@@ -26,8 +26,8 @@
         <!-- /wp:post-template -->
 
         <!-- wp:query-no-results -->
-        <!-- wp:paragraph {"textAlign":"center","textColor":"muted-text"} -->
-        <p class="has-text-align-center has-muted-text-color has-text-color">No posts found.</p>
+        <!-- wp:paragraph {"textAlign":"center","textColor":"secondary"} -->
+        <p class="has-text-align-center has-secondary-color has-text-color">No posts found.</p>
         <!-- /wp:paragraph -->
         <!-- /wp:query-no-results -->
     </div>

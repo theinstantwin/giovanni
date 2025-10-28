@@ -38,8 +38,8 @@
             <p class="margin-note-text" style="margin-top:0;margin-bottom:0;font-size:0.875rem;font-style:italic;line-height:1.5">Your personal annotation, thought, or reaction goes here. This feels like a handwritten note in the margin of a book.</p>
             <!-- /wp:paragraph -->
             
-            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--muted-text)"}}},"typography":{"fontWeight":"500"},"spacing":{"margin":{"top":"0.5rem","bottom":"0"}}},"textColor":"muted-text","className":"margin-note-author","fontSize":"xs"} -->
-            <p class="margin-note-author has-muted-text-color has-text-color has-link-color" style="margin-top:0.5rem;margin-bottom:0;font-size:0.75rem;font-weight:500">— Author</p>
+            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--secondary)"}}},"typography":{"fontWeight":"500"},"spacing":{"margin":{"top":"0.5rem","bottom":"0"}}},"textColor":"secondary","className":"margin-note-author","fontSize":"xs"} -->
+            <p class="margin-note-author has-secondary-color has-text-color has-link-color" style="margin-top:0.5rem;margin-bottom:0;font-size:0.75rem;font-weight:500">— Author</p>
             <!-- /wp:paragraph -->
             
         </div>
