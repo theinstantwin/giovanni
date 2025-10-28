@@ -24,9 +24,8 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","bottom":"var(--wp--preset--spacing--8)","left":"var(--wp--preset--spacing--8)"}},"border":{"radius":"var(--giovanni-card-radius)"},"position":{"type":"relative"}},"backgroundColor":"container","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"className":"show-orb-on-hover is-linked","metadata":{"link":"#"},"fontSize":"md"} -->
 		<div class="wp-block-group show-orb-on-hover is-linked has-container-background-color has-background has-md-font-size" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--8)">
 			<a class="wp-block-group__link" href="#" target="_self" rel="follow" aria-hidden="true" tabindex="-1"></a>
-			<!-- wp:html -->
+			<!-- wp:html /-->
 			<div class="pulse-orb"></div>
-			<!-- /wp:html -->
 			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex">
 				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"foreground"} -->
@@ -50,9 +49,8 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","bottom":"var(--wp--preset--spacing--8)","left":"var(--wp--preset--spacing--8)"}},"border":{"radius":"var(--giovanni-card-radius)"},"position":{"type":"relative"}},"backgroundColor":"container","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"className":"show-orb-on-hover is-linked","metadata":{"link":"#"},"fontSize":"md"} -->
 		<div class="wp-block-group show-orb-on-hover is-linked has-container-background-color has-background has-md-font-size" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--8)">
 			<a class="wp-block-group__link" href="#" target="_self" rel="follow" aria-hidden="true" tabindex="-1"></a>
-			<!-- wp:html -->
+			<!-- wp:html /-->
 			<div class="pulse-orb"></div>
-			<!-- /wp:html -->
 			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex">
 				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"foreground"} -->
@@ -76,9 +74,8 @@
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","bottom":"var(--wp--preset--spacing--8)","left":"var(--wp--preset--spacing--8)"}},"border":{"radius":"var(--giovanni-card-radius)"},"position":{"type":"relative"}},"backgroundColor":"container","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"className":"show-orb-on-hover is-linked","metadata":{"link":"#"},"fontSize":"md"} -->
 		<div class="wp-block-group show-orb-on-hover is-linked has-container-background-color has-background has-md-font-size" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--8)">
 			<a class="wp-block-group__link" href="#" target="_self" rel="follow" aria-hidden="true" tabindex="-1"></a>
-			<!-- wp:html -->
+			<!-- wp:html /-->
 			<div class="pulse-orb"></div>
-			<!-- /wp:html -->
 			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex">
 				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"foreground"} -->
