@@ -15,11 +15,11 @@
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">
 
 <!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"foreground","fontSize":"4xl"} -->
-<h2 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(2rem, 5vw, 4rem);font-weight:700;line-height:1.1">Advanced CSS Showcase</h2>
+<h2 class="wp-block-heading has-text-align-center has-foreground-color has-text-color has-4xl-font-size" style="font-weight:700;line-height:1.1">Advanced CSS Showcase</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--8)"}}},"textColor":"secondary","fontSize":"lg"} -->
-<p class="has-text-align-center has-secondary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--8);font-size:clamp(1rem, 2.5vw, 1.25rem)">Fluid typography, dynamic colors, and smooth animations</p>
+<p class="has-text-align-center has-secondary-color has-text-color has-lg-font-size" style="margin-bottom:var(--wp--preset--spacing--8)">Fluid typography, dynamic colors, and smooth animations</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--6)"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
@@ -31,11 +31,11 @@
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"}} -->
 <div class="wp-block-group">
             <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"2xl"} -->
-            <h3 class="wp-block-heading has-foreground-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Fluid Typography</h3>
+            <h3 class="wp-block-heading has-foreground-color has-text-color has-2xl-font-size" style="font-weight:600">Fluid Typography</h3>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"textColor":"foreground","fontSize":"md"} -->
-            <p class="has-foreground-color has-text-color" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Text that scales smoothly from mobile to desktop using clamp() for responsive perfection without breakpoints.</p>
+            <p class="has-foreground-color has-text-color has-md-font-size" style="line-height:1.6">Text that scales smoothly from mobile to desktop using clamp() for responsive perfection without breakpoints.</p>
             <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -57,11 +57,11 @@
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"}} -->
 <div class="wp-block-group">
             <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"2xl"} -->
-            <h3 class="wp-block-heading has-foreground-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Dynamic Colors</h3>
+            <h3 class="wp-block-heading has-foreground-color has-text-color has-2xl-font-size" style="font-weight:600">Dynamic Colors</h3>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"textColor":"foreground","fontSize":"md"} -->
-            <p class="has-foreground-color has-text-color" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Colors that adapt to any theme variation using color-mix() for intelligent hover effects and backgrounds.</p>
+            <p class="has-foreground-color has-text-color has-md-font-size" style="line-height:1.6">Colors that adapt to any theme variation using color-mix() for intelligent hover effects and backgrounds.</p>
             <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -81,11 +81,11 @@
 <div class="wp-block-group is-style-card" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
 
         <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"2xl"} -->
-        <h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Smooth Animations</h3>
+        <h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color has-2xl-font-size" style="font-weight:600">Smooth Animations</h3>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.6"}},"textColor":"foreground","fontSize":"md"} -->
-        <p class="has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Performance-optimized animations with GPU acceleration and respect for user motion preferences.</p>
+        <p class="has-text-align-center has-foreground-color has-text-color has-md-font-size" style="line-height:1.6">Performance-optimized animations with GPU acceleration and respect for user motion preferences.</p>
         <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
@@ -104,7 +104,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"xl"} -->
-<h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1.25rem, 3vw, 1.75rem);font-weight:600">Button Style Gallery</h3>
+<h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color has-xl-font-size" style="font-weight:600">Button Style Gallery</h3>
 <!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)"}}} -->
