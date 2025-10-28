@@ -26,11 +26,6 @@
 		<!-- Card 1: Podcast Episode -->
 		<!-- wp:group {"tagName":"article","className":"showcase-card","backgroundColor":"container","layout":{"type":"flex","orientation":"vertical"}} -->
 		<article class="wp-block-group showcase-card has-container-background-color has-background">
-			<!-- Decorative pulse orb (hidden from screen readers) -->
-			<!-- wp:html -->
-			<div class="pulse-orb" aria-hidden="true"></div>
-			<!-- /wp:html -->
-
 			<!-- Card heading (h3 for proper hierarchy) -->
 			<!-- wp:heading {"level":3,"textColor":"foreground","className":"card-title","fontSize":"lg"} -->
 			<h3 class="wp-block-heading card-title has-foreground-color has-text-color has-lg-font-size">Podcast Episode 1</h3>
@@ -55,11 +50,6 @@
 		<!-- Card 2: Interview -->
 		<!-- wp:group {"tagName":"article","className":"showcase-card","backgroundColor":"container","layout":{"type":"flex","orientation":"vertical"}} -->
 		<article class="wp-block-group showcase-card has-container-background-color has-background">
-			<!-- Decorative pulse orb (hidden from screen readers) -->
-			<!-- wp:html -->
-			<div class="pulse-orb" aria-hidden="true"></div>
-			<!-- /wp:html -->
-
 			<!-- Card heading (h3 for proper hierarchy) -->
 			<!-- wp:heading {"level":3,"textColor":"foreground","className":"card-title","fontSize":"lg"} -->
 			<h3 class="wp-block-heading card-title has-foreground-color has-text-color has-lg-font-size">Interview with a Pro</h3>
@@ -84,11 +74,6 @@
 		<!-- Card 3: Webinar -->
 		<!-- wp:group {"tagName":"article","className":"showcase-card","backgroundColor":"container","layout":{"type":"flex","orientation":"vertical"}} -->
 		<article class="wp-block-group showcase-card has-container-background-color has-background">
-			<!-- Decorative pulse orb (hidden from screen readers) -->
-			<!-- wp:html -->
-			<div class="pulse-orb" aria-hidden="true"></div>
-			<!-- /wp:html -->
-
 			<!-- Card heading (h3 for proper hierarchy) -->
 			<!-- wp:heading {"level":3,"textColor":"foreground","className":"card-title","fontSize":"lg"} -->
 			<h3 class="wp-block-heading card-title has-foreground-color has-text-color has-lg-font-size">Webinar: Design Systems</h3>

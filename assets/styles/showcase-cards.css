@@ -63,8 +63,9 @@
     font-size: var(--wp--preset--font-size--xs);
 }
 
-/* Pulse orb animation - decorative element */
-.pulse-orb {
+/* Pulse orb animation - decorative element (created with ::before pseudo-element) */
+.showcase-card::before {
+    content: '';
     position: absolute;
     top: 12px;
     right: 12px;
@@ -77,7 +78,7 @@
 }
 
 /* Show pulse orb on card hover */
-.showcase-card:hover .pulse-orb {
+.showcase-card:hover::before {
     opacity: 1;
     animation: pulse-scale 1s ease-in-out infinite;
 }
