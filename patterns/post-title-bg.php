@@ -22,8 +22,10 @@
 <p class="has-secondary-color has-text-color has-sm-font-size">/</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:post-date {"style":{"color":{"text":"var(--wp--preset--color--secondary)"}},"fontSize":"sm"} /--></div>
+<!-- wp:post-date {"style":{"color":{"text":"var(--wp--preset--color--secondary)"}},"fontSize":"sm"} /-->
+</div>
 <!-- /wp:group -->
 
-<!-- wp:post-featured-image {"height":"450px","align":"wide","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--16)"}}}} /--></div>
+<!-- wp:post-featured-image {"height":"450px","align":"wide","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--16)"}}}} /-->
+</div>
 <!-- /wp:group -->

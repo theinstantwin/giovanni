@@ -100,6 +100,9 @@ validate_json() {
             # Extract JSON portion - handle both "<!-- wp:blockname {...} -->" and "<!-- wp:blockname -->"
             local json_part=$(echo "$line" | sed 's/.*<!-- wp:[^ ]* *\(.*\) *-->.*/\1/')
 
+            # Remove self-closing marker if present (} / or just /)
+            json_part=$(echo "$json_part" | sed 's/ *\/ *$//')
+
             # Skip if no JSON (self-closing blocks without attributes or empty attributes)
             if [[ "$json_part" == "/>" ]] || [[ -z "$json_part" ]] || [[ "$json_part" =~ ^[[:space:]]*$ ]] || [[ "$json_part" == "$line" ]]; then
                 continue
@@ -170,7 +173,8 @@ validate_block_structure() {
         ((line_num++))
 
         # Check for opening block comment (handles both <!-- wp:block {...} --> and <!-- wp:block -->)
-        if echo "$line" | grep -q '<!-- *wp:'; then
+        # BUT skip self-closing blocks (<!-- wp:block /--> or <!-- wp:block />-->)
+        if echo "$line" | grep -q '<!-- *wp:' && ! echo "$line" | grep -q ' */-->'; then
             # Extract block name using parameter expansion (more reliable than sed)
             local temp="${line#*wp:}"
             local block_name="${temp%% *}"
