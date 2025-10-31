@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.9
+- Fixed subtle-border token errors across ALL patterns (15 pattern files affected)
+- Changed borderColor from "subtle-border" to "subtle" (correct token name)
+- Fixed CSS class names: has-subtle-border-color (correct), has-subtle-background-color (correct)
+- Patterns now properly use existing color tokens from theme.json
+- Fixes author-bio, behind-the-scenes, currently-status, featured-posts, hero-about, hero-portfolio, key-takeaway, popular-posts, query-newsletter, recommendation, and more
+
+
 ### Version 1.9.8
 - Fixed single post meta visibility in dark mode (categories, tags, dates, reading time)
 - Fixed image and media caption colors in dark mode

@@ -23,7 +23,7 @@
 <p class="has-muted-text-color has-text-color has-sm-font-size">/</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:post-date {"style":{"color":{"text":"var(--wp--preset--color--subtle-border)"}},"fontSize":"sm"} /--></div>
+<!-- wp:post-date {"style":{"color":{"text":"var(--wp--preset--color--subtle)"}},"fontSize":"sm"} /--></div>
 <!-- /wp:group --></div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:group -->
