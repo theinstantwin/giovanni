@@ -168,6 +168,13 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.2
+- Fix recommendation pattern: replaced non-semantic color tokens with semantic tokens
+- Update border color from subtle to light-gray for better theme variation support
+- Replace secondary text color with gray for consistent color behavior
+- Reduce vertical margins from spacing-8 to spacing-5 for better visual balance
+
+
 ### Version 2.0.1
 - Fixed Margin Note (quick-note) pattern author attribution color in dark mode
 - Changed author text from gray to secondary token for better dark mode visibility
