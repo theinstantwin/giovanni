@@ -1,0 +1,63 @@
+/* Giovanni Margin Note Pattern
+--------------------------------------------- */
+
+.margin-note-pattern {
+    margin-top: var(--wp--preset--spacing--12);
+    margin-bottom: var(--wp--preset--spacing--12);
+}
+
+.margin-note-container {
+    align-items: flex-start;
+    gap: var(--wp--preset--spacing--8);
+}
+
+.margin-note-main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.margin-note-sidebar {
+    flex-shrink: 0;
+    width: 280px;
+    padding: var(--wp--preset--spacing--4);
+    background: var(--wp--preset--color--container);
+    border-left: 3px solid var(--wp--preset--color--primary);
+    border-radius: var(--wp--custom--border-radius--sm);
+}
+
+.margin-note-label {
+    margin: 0;
+}
+
+.margin-note-text {
+    color: var(--wp--preset--color--foreground);
+}
+
+.margin-note-author {
+    color: var(--wp--preset--color--secondary);
+    opacity: 0.8;
+}
+
+/* Mobile responsiveness - stack layout */
+@media (max-width: 1024px) {
+    .margin-note-container {
+        flex-direction: column;
+    }
+    
+    .margin-note-sidebar {
+        width: 100%;
+        max-width: 680px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .margin-note-sidebar {
+        background: var(--wp--preset--color--container);
+        border-left-color: var(--wp--preset--color--primary);
+    }
+    
+    .margin-note-text {
+        color: var(--wp--preset--color--foreground);
+    }
+}

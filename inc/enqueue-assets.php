@@ -130,6 +130,26 @@ function giovanni_enqueue_currently_status_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_currently_status_styles' );
 
 /**
+ * Enqueue margin-note pattern styles
+ */
+function giovanni_enqueue_margin_note_styles() {
+    $file_path = get_template_directory() . '/assets/styles/pattern-margin-note.css';
+    $version = wp_get_theme()->get('Version');
+
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+
+        wp_enqueue_style(
+            'giovanni-pattern-margin-note',
+            get_theme_file_uri( 'assets/styles/pattern-margin-note.css' ),
+            array( 'giovanni-style' ),
+            $version
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_margin_note_styles' );
+
+/**
  * Enqueue post-terms styles for frontend
  * WordPress 6.8+ auto-loading might not work for all block styles
  */

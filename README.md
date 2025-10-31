@@ -168,6 +168,16 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.1
+- Fixed Margin Note (quick-note) pattern author attribution color in dark mode
+- Changed author text from gray to secondary token for better dark mode visibility
+- Added dedicated CSS file for Margin Note pattern (pattern-margin-note.css)
+- Enhanced margin note sidebar styling with proper background and border
+- Added mobile responsive behavior (stacks vertically below 1024px)
+- Improved dark mode support for margin note styling
+- Better visual hierarchy with primary color accent border
+
+
 ### Version 2.0.0
 - Fixed column spacing and color consistency in Currently Status pattern
 - Added dedicated CSS file for Currently Status pattern (pattern-currently-status.css)
