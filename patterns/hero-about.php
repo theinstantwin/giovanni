@@ -51,8 +51,8 @@
     
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-buttons">
-        <!-- wp:button {"style":{"typography":{"fontWeight":"500"},"spacing":{"padding":{"left":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","top":"var(--wp--preset--spacing--3)","bottom":"var(--wp--preset--spacing--3)"}},"border":{"radius":"6px"}},"fontSize":"md"} -->
-        <div class="wp-block-button has-md-font-size"><a class="wp-block-button__link wp-element-button" href="/contact" style="border-radius:6px;font-weight:500;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--8)">Let's work together</a></div>
+        <!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-dark"} -->
+        <div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="/contact" style="border-radius:var(--giovanni-button-radius)">Let's work together</a></div>
         <!-- /wp:button -->
     </div>
     <!-- /wp:buttons -->

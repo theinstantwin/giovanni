@@ -26,8 +26,8 @@
 
         <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)","margin":{"top":"var(--wp--preset--spacing--6)"}}}} -->
         <div class="wp-block-buttons" style="gap:var(--wp--preset--spacing--4);margin-top:var(--wp--preset--spacing--6)">
-            <!-- wp:button {"backgroundColor":"primary","textColor":"background","style":{"border":{"radius":"var(--giovanni-button-radius)"}},"fontSize":"md"} -->
-            <div class="wp-block-button has-md-font-size"><a class="wp-block-button__link has-background-color has-primary-background-color has-text-color has-background wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Get in touch</a></div>
+            <!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-dark"} -->
+            <div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Get in touch</a></div>
             <!-- /wp:button -->
 
             <!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-light"} -->
