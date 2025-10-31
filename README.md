@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.8
+- Complete refactor of author-bio pattern to fix circular image issue
+- Use inline border-radius:50% on img tag instead of figure for proper circular shape
+- Replace CSS variable border radius with static 8px for card container
+- Add placeholder image URL for visual reference
+- Update author name and Twitter link with real values
+
+
 ### Version 2.1.7
 - Fix author-bio pattern: use defined custom properties instead of undefined variables
 - Replace var(--giovanni-card-radius) with var(--wp--custom--border-radius--md)
