@@ -169,7 +169,7 @@ validate_block_structure() {
     local stack_depth=0
     local line_num=0
 
-    while IFS= read -r line; do
+    while IFS= read -r line || [ -n "$line" ]; do
         ((line_num++))
 
         # Check for opening block comment (handles both <!-- wp:block {...} --> and <!-- wp:block -->)
@@ -178,7 +178,9 @@ validate_block_structure() {
             # Extract block name using parameter expansion (more reliable than sed)
             local temp="${line#*wp:}"
             local block_name="${temp%% *}"
-            local block_name="${block_name%%/*}"
+            block_name="${block_name%%/*}"
+            # Remove leading/trailing whitespace
+            block_name=$(echo "$block_name" | xargs)
             # Extract everything between block name and -->
             local block_attrs=$(echo "$line" | sed 's/.*<!-- wp:[^ ]* *\(.*\) *-->.*/\1/')
 
@@ -242,7 +244,9 @@ validate_block_structure() {
             # Extract block name using parameter expansion
             local temp="${line#*/wp:}"
             local closing_block="${temp%% *}"
-            local closing_block="${closing_block%%/*}"
+            closing_block="${closing_block%%/*}"
+            # Remove leading/trailing whitespace
+            closing_block=$(echo "$closing_block" | xargs)
 
             if [ $stack_depth -eq 0 ]; then
                 print_error "Unexpected closing block '<!-- /wp:$closing_block -->' at $file:$line_num"
