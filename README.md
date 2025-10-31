@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.7
+- Fix author-bio pattern: use defined custom properties instead of undefined variables
+- Replace var(--giovanni-card-radius) with var(--wp--custom--border-radius--md)
+- Replace static 100px radius with var(--wp--custom--border-radius--full) for circular image
+- Update validation script to allow var(--wp--custom--*) properties
+- Clarify that WordPress supports custom properties defined in theme.json
+
+
 ### Version 2.1.6
 - Fix author-bio pattern: replace CSS variable with fixed border radius value in image block
 - Resolve "Block contains unexpected or invalid content" error caused by var() in JSON attributes

@@ -163,26 +163,27 @@ validate_no_css_vars_in_json() {
                 continue
             fi
 
-            # Check for custom CSS variables in JSON attributes (not WordPress presets)
+            # Check for undefined CSS variables in JSON attributes
             # WordPress presets are allowed: var(--wp--preset--*)
-            # Custom variables are NOT allowed: var(--wp--custom--*), var(--theme-name-*)
-            # Find all var() that are NOT --wp--preset--
-            local custom_vars=$(echo "$json_part" | grep -oE 'var\(--[^)]+\)' | grep -v 'var(--wp--preset--' || true)
+            # WordPress custom properties are allowed: var(--wp--custom--*)
+            # Theme-specific undefined variables are NOT allowed: var(--theme-name-*)
+            # Find all var() that are NOT --wp--preset-- or --wp--custom--
+            local custom_vars=$(echo "$json_part" | grep -oE 'var\(--[^)]+\)' | grep -vE 'var\(--wp--(preset|custom)--' || true)
 
             if [ -n "$custom_vars" ]; then
-                print_error "Custom CSS variable found in JSON attributes at $file:$line_num"
-                echo "         WordPress blocks only support var(--wp--preset--*) in JSON attributes"
-                echo "         Custom variables must be in inline style attributes only"
+                print_error "Undefined CSS variable found in JSON attributes at $file:$line_num"
+                echo "         WordPress blocks only support var(--wp--preset--*) and var(--wp--custom--*)"
+                echo "         Variables must be defined in theme.json settings"
                 echo "         Line: $line"
                 echo "         Found: $custom_vars"
-                print_warning "Replace with static value in JSON, or move to inline style attribute"
+                print_warning "Define in theme.json settings.custom, use static value, or move to inline style"
                 has_errors=true
             fi
         fi
     done < "$file"
 
     if [ "$has_errors" = false ]; then
-        print_success "No custom CSS variables in JSON attributes"
+        print_success "No undefined CSS variables in JSON attributes"
         return 0
     else
         return 1
