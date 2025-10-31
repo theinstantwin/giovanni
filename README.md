@@ -168,6 +168,15 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.2
+- Fix behind-the-scenes pattern: tools container calc() syntax
+- Replace borderColor "subtle" with "light-gray" (semantic token)
+- Fix negative margin calc() syntax: calc(0px - var(...)) u2192 calc(var(...) * -1)
+- WordPress expects proper CSS calc() syntax for block validation
+- Tools container now correctly "bleeds" to edges with negative margins
+- Pattern now inserts without block recovery prompt
+
+
 ### Version 2.1.1
 - Remove advanced-showcase.php pattern (deprecated)
 - Pattern count reduced from 23 to 22 patterns
