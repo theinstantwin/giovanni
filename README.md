@@ -168,6 +168,12 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.6
+- Fix author-bio pattern: replace CSS variable with fixed border radius value in image block
+- Resolve "Block contains unexpected or invalid content" error caused by var() in JSON attributes
+- Revert incorrect column width changes from v2.1.4
+
+
 ### Version 2.1.5
 - Refactor currently-status pattern: remove deprecated width attributes, use modern equal-width column distribution
 - Refactor text-title-lists pattern: update to modern layout syntax with fixed flexSize for 20% side columns
