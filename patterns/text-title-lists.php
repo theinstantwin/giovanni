@@ -11,7 +11,7 @@
 ?>
 
 <!-- wp:columns {"metadata":{"categories":["giovanni-posts"],"patternName":"giovanni-theme/text-title-lists","name":"Giovanni Text Title Lists"},"align":"wide"} -->
-<div class="wp-block-columns alignwide"><!-- wp:column {"width":"20%"} -->
+<div class="wp-block-columns alignwide"><!-- wp:column {"style":{"layout":{"selfStretch":"fixed","flexSize":"20%"}}} -->
 <div class="wp-block-column" style="flex-basis:20%"></div>
 <!-- /wp:column -->
 
@@ -31,7 +31,7 @@
 <!-- /wp:query --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"20%"} -->
+<!-- wp:column {"style":{"layout":{"selfStretch":"fixed","flexSize":"20%"}}} -->
 <div class="wp-block-column" style="flex-basis:20%"></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

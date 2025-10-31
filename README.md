@@ -168,6 +168,12 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.5
+- Refactor currently-status pattern: remove deprecated width attributes, use modern equal-width column distribution
+- Refactor text-title-lists pattern: update to modern layout syntax with fixed flexSize for 20% side columns
+- Improve WordPress 6.0+ compatibility by eliminating deprecated column width attributes
+
+
 ### Version 2.1.4
 - Fix author-bio pattern: invalid column width attribute
 - Replace "width":"80px" with proper layout style object

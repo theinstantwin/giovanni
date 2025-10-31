@@ -17,8 +17,8 @@
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var(--wp--preset--spacing--4)","left":"var(--wp--preset--spacing--6)"}}}} -->
 <div class="wp-block-columns">
 
-<!-- wp:column {"width":"33.33%","className":"currently-column currently-reading"} -->
-<div class="wp-block-column currently-column currently-reading" style="flex-basis:33.33%">
+<!-- wp:column {"className":"currently-column currently-reading"} -->
+<div class="wp-block-column currently-column currently-reading">
 <!-- wp:heading {"level":5,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--2)"}}},"textColor":"primary","fontSize":"sm"} -->
 <h5 class="wp-block-heading has-primary-color has-text-color has-sm-font-size" style="margin-bottom:var(--wp--preset--spacing--2);font-weight:500">Reading</h5>
 <!-- /wp:heading -->
@@ -29,8 +29,8 @@
 </div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"33.33%","className":"currently-column currently-working"} -->
-<div class="wp-block-column currently-column currently-working" style="flex-basis:33.33%">
+<!-- wp:column {"className":"currently-column currently-working"} -->
+<div class="wp-block-column currently-column currently-working">
 <!-- wp:heading {"level":5,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--2)"}}},"textColor":"primary","fontSize":"sm"} -->
 <h5 class="wp-block-heading has-primary-color has-text-color has-sm-font-size" style="margin-bottom:var(--wp--preset--spacing--2);font-weight:500">Working On</h5>
 <!-- /wp:heading -->
@@ -41,8 +41,8 @@
 </div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"33.33%","className":"currently-column currently-thinking"} -->
-<div class="wp-block-column currently-column currently-thinking" style="flex-basis:33.33%">
+<!-- wp:column {"className":"currently-column currently-thinking"} -->
+<div class="wp-block-column currently-column currently-thinking">
 <!-- wp:heading {"level":5,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--2)"}}},"textColor":"primary","fontSize":"sm"} -->
 <h5 class="wp-block-heading has-primary-color has-text-color has-sm-font-size" style="margin-bottom:var(--wp--preset--spacing--2);font-weight:500">Thinking About</h5>
 <!-- /wp:heading -->
