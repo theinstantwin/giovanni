@@ -45,6 +45,7 @@ EXAMPLES:
 
 VALIDATION CHECKS:
     ✓ JSON syntax in block comments
+    ✓ No custom CSS variables in JSON attributes (WordPress presets are allowed)
     ✓ PHP syntax validation
     ✓ Block id/localId matching
     ✓ Class attribute requirement for styleAttributes
@@ -132,6 +133,56 @@ validate_json() {
 
     if [ "$has_errors" = false ]; then
         print_success "JSON validation passed"
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Validate no CSS variables in JSON attributes
+validate_no_css_vars_in_json() {
+    local file="$1"
+    local has_errors=false
+
+    print_info "Checking for CSS variables in JSON attributes..."
+
+    # Find all WordPress block opening comments
+    local line_num=0
+    while IFS= read -r line; do
+        ((line_num++))
+
+        if [[ $line =~ ^\s*\<!--\ wp: ]]; then
+            # Extract JSON portion
+            local json_part=$(echo "$line" | sed 's/.*<!-- wp:[^ ]* *\(.*\) *-->.*/\1/')
+
+            # Remove self-closing marker if present
+            json_part=$(echo "$json_part" | sed 's/ *\/ *$//')
+
+            # Skip if no JSON
+            if [[ "$json_part" == "/>" ]] || [[ -z "$json_part" ]] || [[ "$json_part" =~ ^[[:space:]]*$ ]] || [[ "$json_part" == "$line" ]]; then
+                continue
+            fi
+
+            # Check for custom CSS variables in JSON attributes (not WordPress presets)
+            # WordPress presets are allowed: var(--wp--preset--*)
+            # Custom variables are NOT allowed: var(--wp--custom--*), var(--theme-name-*)
+            # Find all var() that are NOT --wp--preset--
+            local custom_vars=$(echo "$json_part" | grep -oE 'var\(--[^)]+\)' | grep -v 'var(--wp--preset--' || true)
+
+            if [ -n "$custom_vars" ]; then
+                print_error "Custom CSS variable found in JSON attributes at $file:$line_num"
+                echo "         WordPress blocks only support var(--wp--preset--*) in JSON attributes"
+                echo "         Custom variables must be in inline style attributes only"
+                echo "         Line: $line"
+                echo "         Found: $custom_vars"
+                print_warning "Replace with static value in JSON, or move to inline style attribute"
+                has_errors=true
+            fi
+        fi
+    done < "$file"
+
+    if [ "$has_errors" = false ]; then
+        print_success "No custom CSS variables in JSON attributes"
         return 0
     else
         return 1
@@ -304,6 +355,7 @@ validate_file() {
 
     # Run all validations
     validate_json "$file" || file_has_errors=true
+    validate_no_css_vars_in_json "$file" || file_has_errors=true
     validate_php "$file" || file_has_errors=true
     validate_block_structure "$file" || file_has_errors=true
 
