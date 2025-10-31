@@ -168,6 +168,13 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.3
+- Fixed color tokens in personal pattern group (recommendation, currently-status, quick-note)
+- Fixed borderColor: subtle-border → subtle in recommendation and currently-status patterns
+- Removed hardcoded font sizes in quick-note pattern, using semantic tokens instead
+- Fixed quick-note color token: muted-text → gray
+
+
 ### Version 1.9.2
 - Fixed button styles in hero-section and hero-about patterns (arrow-dark and arrow-light)
 - Fixed color tokens in featured-posts-grid and popular-posts patterns (muted-text → gray, subtle-border → subtle)
