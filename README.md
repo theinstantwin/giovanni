@@ -168,6 +168,13 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.4
+- Fix recommendation pattern image block configuration
+- Add proper width, height, and aspect ratio (3:4) to image
+- Add object-fit: cover for consistent image display
+- Ensure border-radius applies correctly to image element
+
+
 ### Version 2.0.3
 - Audit and fix all giovanni-personal patterns for semantic token usage
 - Fix currently-status pattern: replace subtle border with light-gray, reduce margins

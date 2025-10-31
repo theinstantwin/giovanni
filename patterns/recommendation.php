@@ -58,8 +58,8 @@
         </div>
         <!-- /wp:group -->
         
-        <!-- wp:image {"style":{"layout":{"selfStretch":"fit","flexSize":"120px"},"border":{"radius":"var(--wp--custom--border-radius--sm)"}},"className":"recommendation-image"} -->
-        <figure class="wp-block-image recommendation-image has-custom-border" style="border-radius:var(--wp--custom--border-radius--sm)"><img alt="Book cover, tool screenshot, or person photo" style="border-radius:var(--wp--custom--border-radius--sm)" /></figure>
+        <!-- wp:image {"width":"120px","height":"auto","aspectRatio":"3/4","style":{"layout":{"selfStretch":"fit","flexSize":"120px"},"border":{"radius":"var(--wp--custom--border-radius--sm)"}},"className":"recommendation-image"} -->
+        <figure class="wp-block-image recommendation-image is-resized has-custom-border" style="border-radius:var(--wp--custom--border-radius--sm)"><img src="" alt="Book cover, tool screenshot, or person photo" style="aspect-ratio:3/4;object-fit:cover;width:120px;height:auto;border-radius:var(--wp--custom--border-radius--sm)"/></figure>
         <!-- /wp:image -->
         
     </div>
