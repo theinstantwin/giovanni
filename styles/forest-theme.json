@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Forest Theme",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#F6F5DE",
+					"name": "Background",
+					"slug": "background"
+				},
+				{
+					"color": "#ffffff",
+					"name": "White",
+					"slug": "white"
+				},
+				{
+					"color": "#F5EADD",
+					"name": "Container",
+					"slug": "container"
+				},
+				{
+					"color": "#1D201F",
+					"name": "Foreground",
+					"slug": "foreground"
+				},
+				{
+					"color": "#6B7269",
+					"name": "Gray",
+					"slug": "gray"
+				},
+				{
+					"color": "#E8E6D0",
+					"name": "Light Gray",
+					"slug": "light-gray"
+				},
+				{
+					"color": "#1A3624",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#10b981",
+					"name": "Success",
+					"slug": "success"
+				},
+				{
+					"color": "#f59e0b",
+					"name": "Warning",
+					"slug": "warning"
+				},
+				{
+					"color": "#ef4444",
+					"name": "Error",
+					"slug": "error"
+				},
+				{
+					"color": "#3b82f6",
+					"name": "Info",
+					"slug": "info"
+				},
+				{
+					"color": "#CA6663",
+					"name": "Accent Coral",
+					"slug": "accent-coral"
+				},
+				{
+					"color": "#06b6d4",
+					"name": "Accent Cyan",
+					"slug": "accent-cyan"
+				},
+				{
+					"color": "var(--wp--preset--color--gray)",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "var(--wp--preset--color--gray)",
+					"name": "Muted",
+					"slug": "muted"
+				},
+				{
+					"color": "var(--wp--preset--color--light-gray)",
+					"name": "Subtle",
+					"slug": "subtle"
+				},
+				{
+					"color": "var(--wp--preset--color--foreground)",
+					"name": "Emphasis",
+					"slug": "emphasis"
+				}
+			]
+		}
+	}
+}
