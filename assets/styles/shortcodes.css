@@ -63,11 +63,11 @@
 
 .blog-post-item:hover .post-date,
 .blog-post-item:hover .wp-block-post-date {
-    color: var(--wp--preset--color--gray);
+    color: var(--wp--preset--color--secondary);
 }
 
 .blog-post-item .post-date {
-    color: var(--wp--preset--color--gray);
+    color: var(--wp--preset--color--secondary);
     font-size: var(--wp--preset--font-size--sm);
     flex-shrink: 0;
     font-weight: var(--wp--custom--font-weight--medium);
@@ -86,7 +86,7 @@
     font-size: 1em;
     line-height: 1;
     font-weight: normal;
-    color: var(--wp--preset--color--gray);
+    color: var(--wp--preset--color--secondary);
     will-change: transform, opacity;
 }
 
@@ -101,10 +101,20 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .blog-post-item .post-date {
         font-size: var(--wp--preset--font-size--xs);
         min-width: auto;
+    }
+}
+
+/* Dark Mode Support
+   Works for both system dark mode and Dark Theme style variation
+   because 'secondary' maps to 'foreground' (#FBF1C7) in dark themes
+--------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    .blog-posts-by-month .month-header {
+        border-bottom-color: var(--wp--preset--color--gray);
     }
 }
 

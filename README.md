@@ -168,6 +168,13 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.7
+- Fixed Posts by Date date visibility for BOTH system dark mode AND Dark Theme variation
+- Changed date colors from gray to secondary token (adapts to theme)
+- Changed arrow icon colors to use secondary token
+- Cleaner solution that works universally across all theme variations
+
+
 ### Version 1.9.6
 - Fixed date visibility in Posts by Date pattern for dark mode
 - Enhanced arrow icon contrast in blog post items
