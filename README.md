@@ -168,6 +168,13 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.1
+- Remove advanced-showcase.php pattern (deprecated)
+- Pattern count reduced from 23 to 22 patterns
+- No associated CSS files or dependencies to clean up
+- Simplifies pattern library and reduces maintenance overhead
+
+
 ### Version 2.1.0
 - Fix author-bio pattern: multiple block recovery issues resolved
 - Replace borderColor "subtle" with "light-gray" (semantic token)
