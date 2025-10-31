@@ -13,8 +13,8 @@
     <h1 class="wp-block-heading has-text-align-center has-4-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--6);font-weight:700;letter-spacing:-0.025em;line-height:1.1">Building meaningful experiences</h1>
     <!-- /wp:heading -->
     
-    <!-- wp:paragraph {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--12)"}}},"fontSize":"xl","textColor":"secondary"} -->
-    <p class="has-text-align-center has-secondary-color has-text-color has-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--12)">Father, developer, and lifelong learner passionate about creating solutions that matter</p>
+    <!-- wp:paragraph {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--12)"}}},"fontSize":"xl","textColor":"muted-text"} -->
+    <p class="has-text-align-center has-muted-text-color has-text-color has-xl-font-size" style="margin-bottom:var(--wp--preset--spacing--12)">Father, developer, and lifelong learner passionate about creating solutions that matter</p>
     <!-- /wp:paragraph -->
     
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var(--wp--preset--spacing--12)"}}}} -->
@@ -25,8 +25,8 @@
             <h3 class="wp-block-heading has-lg-font-size" style="margin-bottom:var(--wp--preset--spacing--3);font-weight:600;line-height:1.3">Background</h3>
             <!-- /wp:heading -->
             
-            <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--6)"}}},"fontSize":"md","textColor":"secondary"} -->
-            <p class="has-secondary-color has-text-color has-md-font-size" style="margin-bottom:var(--wp--preset--spacing--6)">Chrome extension developer and technical strategist with a focus on privacy-first solutions and user-centric design.</p>
+            <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--6)"}}},"fontSize":"md","textColor":"muted-text"} -->
+            <p class="has-muted-text-color has-text-color has-md-font-size" style="margin-bottom:var(--wp--preset--spacing--6)">Chrome extension developer and technical strategist with a focus on privacy-first solutions and user-centric design.</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:column -->
@@ -37,16 +37,16 @@
             <h3 class="wp-block-heading has-lg-font-size" style="margin-bottom:var(--wp--preset--spacing--3);font-weight:600;line-height:1.3">Philosophy</h3>
             <!-- /wp:heading -->
             
-            <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--6)"}}},"fontSize":"md","textColor":"secondary"} -->
-            <p class="has-secondary-color has-text-color has-md-font-size" style="margin-bottom:var(--wp--preset--spacing--6)">Technology should enhance human connection, not replace it. I build tools that respect privacy and empower users.</p>
+            <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--6)"}}},"fontSize":"md","textColor":"muted-text"} -->
+            <p class="has-muted-text-color has-text-color has-md-font-size" style="margin-bottom:var(--wp--preset--spacing--6)">Technology should enhance human connection, not replace it. I build tools that respect privacy and empower users.</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:column -->
     </div>
     <!-- /wp:columns -->
     
-    <!-- wp:separator {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--12)","bottom":"var(--wp--preset--spacing--8)"}}},"backgroundColor":"light-gray","className":"is-style-wide"} -->
-    <hr class="wp-block-separator has-text-color has-light-gray-color has-alpha-channel-opacity has-light-gray-background-color has-background is-style-wide" style="margin-top:var(--wp--preset--spacing--12);margin-bottom:var(--wp--preset--spacing--8)"/>
+    <!-- wp:separator {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--12)","bottom":"var(--wp--preset--spacing--8)"}}},"backgroundColor":"subtle-border","className":"is-style-wide"} -->
+    <hr class="wp-block-separator has-text-color has-subtle-border-color has-alpha-channel-opacity has-subtle-border-background-color has-background is-style-wide" style="margin-top:var(--wp--preset--spacing--12);margin-bottom:var(--wp--preset--spacing--8)"/>
     <!-- /wp:separator -->
     
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

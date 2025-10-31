@@ -18,7 +18,7 @@
         <!-- wp:group {"style":{"layout":{"selfStretch":"fill"}},"className":"margin-note-main-content","layout":{"type":"constrained","contentSize":"680px"}} -->
         <div class="wp-block-group margin-note-main-content">
             <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"className":"margin-note-reference","fontSize":"lg"} -->
-            <p class="margin-note-reference has-lg-font-size" style="margin-top:0;margin-bottom:0;line-height:1.6">This is the main text that you want to annotate. The margin note will appear alongside this content, creating a true marginalia experience.</p>
+            <p class="margin-note-reference" style="margin-top:0;margin-bottom:0;font-size:1.125rem;line-height:1.6">This is the main text that you want to annotate. The margin note will appear alongside this content, creating a true marginalia experience.</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->
@@ -29,17 +29,17 @@
             <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem","margin":{"bottom":"0.75rem"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
             <div class="wp-block-group" style="gap:0.5rem;margin-bottom:0.75rem">
                 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--primary)"}}},"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"primary","className":"margin-note-label","fontSize":"xs"} -->
-                <p class="margin-note-label has-primary-color has-text-color has-link-color has-xs-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase">✏️ Note</p>
+                <p class="margin-note-label has-primary-color has-text-color has-link-color" style="font-size:0.75rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase">✏️ Note</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
             
             <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5","fontStyle":"italic"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"className":"margin-note-text","fontSize":"sm"} -->
-            <p class="margin-note-text has-sm-font-size" style="margin-top:0;margin-bottom:0;font-style:italic;line-height:1.5">Your personal annotation, thought, or reaction goes here. This feels like a handwritten note in the margin of a book.</p>
+            <p class="margin-note-text" style="margin-top:0;margin-bottom:0;font-size:0.875rem;font-style:italic;line-height:1.5">Your personal annotation, thought, or reaction goes here. This feels like a handwritten note in the margin of a book.</p>
             <!-- /wp:paragraph -->
             
-            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--secondary)"}}},"typography":{"fontWeight":"500"},"spacing":{"margin":{"top":"0.5rem","bottom":"0"}}},"textColor":"secondary","className":"margin-note-author","fontSize":"xs"} -->
-            <p class="margin-note-author has-secondary-color has-text-color has-link-color has-xs-font-size" style="margin-top:0.5rem;margin-bottom:0;font-weight:500">— Author</p>
+            <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--muted-text)"}}},"typography":{"fontWeight":"500"},"spacing":{"margin":{"top":"0.5rem","bottom":"0"}}},"textColor":"muted-text","className":"margin-note-author","fontSize":"xs"} -->
+            <p class="margin-note-author has-muted-text-color has-text-color has-link-color" style="margin-top:0.5rem;margin-bottom:0;font-size:0.75rem;font-weight:500">— Author</p>
             <!-- /wp:paragraph -->
             
         </div>

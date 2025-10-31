@@ -199,25 +199,6 @@ function giovanni_enqueue_group_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_group_styles' );
 
 /**
- * Enqueue showcase/animated cards styles for frontend
- * Required for three-column-animated-cards pattern animations
- */
-function giovanni_enqueue_showcase_cards_styles() {
-    $file_path = get_template_directory() . '/assets/styles/showcase-cards.css';
-    $version = wp_get_theme()->get('Version');
-    if ( file_exists( $file_path ) ) {
-        $version .= '.' . filemtime( $file_path );
-    }
-    wp_enqueue_style(
-        'giovanni-showcase-cards',
-        get_theme_file_uri( 'assets/styles/showcase-cards.css' ),
-        array( 'giovanni-style' ),
-        $version
-    );
-}
-add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_showcase_cards_styles' );
-
-/**
  * Enqueue block styles for the editor (backend)
  * WordPress 6.8+ automatically loads block styles from assets/styles/ directory
  */
@@ -225,7 +206,7 @@ function giovanni_enqueue_block_editor_styles() {
     // Only enqueue editor-specific styles if they exist
     $editor_styles = array(
         'core-button',           // Base button styles
-        'core-button-arrow',     // Arrow button styles
+        'core-button-arrow',     // Arrow button styles 
         'core-button-ghost',     // Ghost button styles
         'core-button-dark',      // Dark button styles
         'core-navigation',
@@ -235,16 +216,15 @@ function giovanni_enqueue_block_editor_styles() {
         'core-image',
         'core-table',
         'core-quote',
-        'core-separator',
-        'showcase-cards'         // Animated cards styles
+        'core-separator'
     );
-
+    
     foreach ( $editor_styles as $style ) {
         $file_path = get_template_directory() . "/assets/styles/{$style}.css";
         if ( file_exists( $file_path ) ) {
             // Use file modification time for better cache busting in editor too
             $version = wp_get_theme()->get('Version') . '.' . filemtime( $file_path );
-
+            
             wp_enqueue_style(
                 'giovanni-editor-' . $style,
                 get_theme_file_uri( "assets/styles/{$style}.css" ),

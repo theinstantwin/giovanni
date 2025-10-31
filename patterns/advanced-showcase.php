@@ -3,152 +3,130 @@
  * Title: Giovanni Advanced Showcase
  * Slug: giovanni/advanced-showcase
  * Categories: giovanni-content
- * Description: Demonstrates modern CSS techniques with fluid typography, dynamic colors, and smooth animations
- * Keywords: advanced, modern, css, responsive, fluid, animations, showcase
+ * Description: Demonstrates modern CSS techniques including clamp(), color-mix(), and advanced animations
+ * Keywords: advanced, modern, css, clamp, color-mix, responsive, fluid
  * Block Types: core/group
  * Inserter: true
- * Version: 2.0
+ * Version: 1.7
  */
 ?>
 
-<!-- Main section: Advanced CSS showcase -->
-<!-- wp:group {"tagName":"section","className":"advanced-showcase-section","layout":{"type":"constrained"}} -->
-<section class="wp-block-group advanced-showcase-section">
-	<!-- Section heading -->
-	<!-- wp:heading {"level":2,"textAlign":"center","textColor":"foreground","fontSize":"4xl","className":"showcase-title"} -->
-	<h2 class="wp-block-heading has-text-align-center has-foreground-color has-text-color has-4xl-font-size showcase-title">Advanced CSS Showcase</h2>
-	<!-- /wp:heading -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--12)","bottom":"var(--wp--preset--spacing--12)"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">
 
-	<!-- Section subtitle -->
-	<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"lg","className":"showcase-subtitle"} -->
-	<p class="wp-block-paragraph has-text-align-center has-secondary-color has-text-color has-lg-font-size showcase-subtitle">Fluid typography, dynamic colors, and smooth animations</p>
-	<!-- /wp:paragraph -->
+<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"textColor":"foreground","fontSize":"4xl"} -->
+<h2 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(2rem, 5vw, 4rem);font-weight:700;line-height:1.1">Advanced CSS Showcase</h2>
+<!-- /wp:heading -->
 
-	<!-- Feature cards grid -->
-	<!-- wp:group {"layout":{"type":"constrained","contentSize":"1200px"},"className":"showcase-features"} -->
-	<div class="wp-block-group showcase-features">
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--8)"}}},"textColor":"secondary","fontSize":"lg"} -->
+<p class="has-text-align-center has-secondary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--8);font-size:clamp(1rem, 2.5vw, 1.25rem)">Fluid typography, dynamic colors, and smooth animations</p>
+<!-- /wp:paragraph -->
 
-		<!-- Feature Card 1: Fluid Typography -->
-		<!-- wp:group {"tagName":"article","className":"feature-card feature-card--typography","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-		<article class="wp-block-group feature-card feature-card--typography">
-			<!-- Card content area -->
-			<!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"},"className":"feature-content"} -->
-			<div class="wp-block-group feature-content">
-				<!-- wp:heading {"level":3,"textColor":"foreground","fontSize":"2xl","className":"feature-title"} -->
-				<h3 class="wp-block-heading has-foreground-color has-text-color has-2xl-font-size feature-title">Fluid Typography</h3>
-				<!-- /wp:heading -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--6)"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group">
 
-				<!-- wp:paragraph {"textColor":"foreground","fontSize":"md"} -->
-				<p class="wp-block-paragraph has-foreground-color has-text-color has-md-font-size">Text that scales smoothly from mobile to desktop using responsive typography for perfect readability without breakpoints.</p>
-				<!-- /wp:paragraph -->
-			</div>
-			<!-- /wp:group -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--6)","bottom":"var(--wp--preset--spacing--6)","left":"var(--wp--preset--spacing--6)","right":"var(--wp--preset--spacing--6)"}},"border":{"radius":"var(--giovanni-card-radius)"}},"className":"is-style-card","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="wp-block-group is-style-card" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
 
-			<!-- Card CTA button -->
-			<!-- wp:buttons -->
-			<div class="wp-block-buttons">
-				<!-- wp:button {"className":"is-style-arrow-light"} -->
-				<div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#">Learn More</a></div>
-				<!-- /wp:button -->
-			</div>
-			<!-- /wp:buttons -->
-		</article>
-		<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"}} -->
+<div class="wp-block-group">
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"2xl"} -->
+            <h3 class="wp-block-heading has-foreground-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Fluid Typography</h3>
+            <!-- /wp:heading -->
 
-		<!-- Feature Card 2: Dynamic Colors -->
-		<!-- wp:group {"tagName":"article","className":"feature-card feature-card--colors","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-		<article class="wp-block-group feature-card feature-card--colors">
-			<!-- Card content area -->
-			<!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"},"className":"feature-content"} -->
-			<div class="wp-block-group feature-content">
-				<!-- wp:heading {"level":3,"textColor":"foreground","fontSize":"2xl","className":"feature-title"} -->
-				<h3 class="wp-block-heading has-foreground-color has-text-color has-2xl-font-size feature-title">Dynamic Colors</h3>
-				<!-- /wp:heading -->
+            <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"textColor":"foreground","fontSize":"md"} -->
+            <p class="has-foreground-color has-text-color" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Text that scales smoothly from mobile to desktop using clamp() for responsive perfection without breakpoints.</p>
+            <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 
-				<!-- wp:paragraph {"textColor":"foreground","fontSize":"md"} -->
-				<p class="wp-block-paragraph has-foreground-color has-text-color has-md-font-size">Colors that adapt to any theme variation for intelligent hover effects and backgrounds that work everywhere.</p>
-				<!-- /wp:paragraph -->
-			</div>
-			<!-- /wp:group -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-light"} -->
+<div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Learn More</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 
-			<!-- Card CTA button -->
-			<!-- wp:buttons -->
-			<div class="wp-block-buttons">
-				<!-- wp:button {"className":"is-style-arrow-dark"} -->
-				<div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#">Explore</a></div>
-				<!-- /wp:button -->
-			</div>
-			<!-- /wp:buttons -->
-		</article>
-		<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
 
-		<!-- Feature Card 3: Smooth Animations -->
-		<!-- wp:group {"tagName":"article","className":"feature-card feature-card--animations","layout":{"type":"constrained"}} -->
-		<article class="wp-block-group feature-card feature-card--animations">
-			<!-- Card content area (centered) -->
-			<!-- wp:group {"layout":{"type":"constrained"},"className":"feature-content"} -->
-			<div class="wp-block-group feature-content">
-				<!-- wp:heading {"level":3,"textAlign":"center","textColor":"foreground","fontSize":"2xl","className":"feature-title"} -->
-				<h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color has-2xl-font-size feature-title">Smooth Animations</h3>
-				<!-- /wp:heading -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--6)","bottom":"var(--wp--preset--spacing--6)","left":"var(--wp--preset--spacing--6)","right":"var(--wp--preset--spacing--6)"}},"border":{"radius":"var(--giovanni-card-radius)"}},"className":"is-style-portfolio-card","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="wp-block-group is-style-portfolio-card" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
 
-				<!-- wp:paragraph {"align":"center","textColor":"foreground","fontSize":"md"} -->
-				<p class="wp-block-paragraph has-text-align-center has-foreground-color has-text-color has-md-font-size">Performance-optimized animations with GPU acceleration and respect for user motion preferences.</p>
-				<!-- /wp:paragraph -->
-			</div>
-			<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"500px"}} -->
+<div class="wp-block-group">
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"2xl"} -->
+            <h3 class="wp-block-heading has-foreground-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Dynamic Colors</h3>
+            <!-- /wp:heading -->
 
-			<!-- Card CTA button (centered) -->
-			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-buttons">
-				<!-- wp:button {"className":"is-style-ghost"} -->
-				<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#">See in Action</a></div>
-				<!-- /wp:button -->
-			</div>
-			<!-- /wp:buttons -->
-		</article>
-		<!-- /wp:group -->
-	</div>
-	<!-- /wp:group -->
+            <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.6"}},"textColor":"foreground","fontSize":"md"} -->
+            <p class="has-foreground-color has-text-color" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Colors that adapt to any theme variation using color-mix() for intelligent hover effects and backgrounds.</p>
+            <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 
-	<!-- Divider -->
-	<!-- wp:separator {"className":"showcase-divider"} -->
-	<hr class="wp-block-separator has-alpha-channel-opacity showcase-divider"/>
-	<!-- /wp:separator -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-dark"} -->
+<div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Explore</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 
-	<!-- Button style gallery section -->
-	<!-- wp:heading {"level":3,"textAlign":"center","textColor":"foreground","fontSize":"xl","className":"gallery-title"} -->
-	<h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color has-xl-font-size gallery-title">Button Style Gallery</h3>
-	<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
 
-	<!-- Button styles showcase -->
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"className":"button-gallery"} -->
-	<div class="wp-block-buttons button-gallery">
-		<!-- Arrow Light variant -->
-		<!-- wp:button {"className":"is-style-arrow-light"} -->
-		<div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#">Arrow Light</a></div>
-		<!-- /wp:button -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--6)","bottom":"var(--wp--preset--spacing--6)","left":"var(--wp--preset--spacing--6)","right":"var(--wp--preset--spacing--6)"}},"border":{"radius":"var(--giovanni-card-radius)"}},"className":"is-style-card","layout":{"type":"constrained"}} -->
+<div class="wp-block-group is-style-card" style="border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)">
 
-		<!-- Arrow Dark variant -->
-		<!-- wp:button {"className":"is-style-arrow-dark"} -->
-		<div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#">Arrow Dark</a></div>
-		<!-- /wp:button -->
+        <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"2xl"} -->
+        <h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:600">Smooth Animations</h3>
+        <!-- /wp:heading -->
 
-		<!-- Ghost variant -->
-		<!-- wp:button {"className":"is-style-ghost"} -->
-		<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#">Ghost</a></div>
-		<!-- /wp:button -->
+        <!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.6"}},"textColor":"foreground","fontSize":"md"} -->
+        <p class="has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1rem, 2vw, 1.125rem);line-height:1.6">Performance-optimized animations with GPU acceleration and respect for user motion preferences.</p>
+        <!-- /wp:paragraph -->
 
-		<!-- Dark variant -->
-		<!-- wp:button {"className":"is-style-dark"} -->
-		<div class="wp-block-button is-style-dark"><a class="wp-block-button__link wp-element-button" href="#">Dark</a></div>
-		<!-- /wp:button -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-ghost"} -->
+<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">See in Action</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 
-		<!-- Default variant -->
-		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Default</a></div>
-		<!-- /wp:button -->
-	</div>
-	<!-- /wp:buttons -->
-</section>
+</div>
+<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--8)","bottom":"var(--wp--preset--spacing--8)"}}}} -->
+<hr class="wp-block-separator has-alpha-channel-opacity" style="margin-top:var(--wp--preset--spacing--8);margin-bottom:var(--wp--preset--spacing--8)"/>
+<!-- /wp:separator -->
+
+        <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"foreground","fontSize":"xl"} -->
+        <h3 class="wp-block-heading has-text-align-center has-foreground-color has-text-color" style="font-size:clamp(1.25rem, 3vw, 1.75rem);font-weight:600">Button Style Gallery</h3>
+        <!-- /wp:heading -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)"}}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-light"} -->
+<div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Arrow Light</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-dark"} -->
+<div class="wp-block-button is-style-arrow-dark"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Arrow Dark</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-ghost"} -->
+<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Ghost</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-dark"} -->
+<div class="wp-block-button is-style-dark"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Dark</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:var(--giovanni-button-radius)">Default</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+
+</div>
 <!-- /wp:group -->
