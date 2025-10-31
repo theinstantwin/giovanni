@@ -71,12 +71,12 @@
 					"slug": "accent-cyan"
 				},
 				{
-					"color": "var(--wp--preset--color--gray)",
+					"color": "var(--wp--preset--color--foreground)",
 					"name": "Secondary",
 					"slug": "secondary"
 				},
 				{
-					"color": "var(--wp--preset--color--gray)",
+					"color": "var(--wp--preset--color--foreground)",
 					"name": "Muted",
 					"slug": "muted"
 				},

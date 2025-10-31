@@ -168,6 +168,22 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.5
+- Fixed post meta visibility in dark mode (date, categories, tags now use foreground color)
+- Enhanced author bio pattern text visibility in dark mode
+- Improved post navigation link contrast in dark mode
+- Updated Dark Theme style variation: secondary/muted colors now use foreground for better contrast
+- All secondary text now uses the cream/yellow foreground color for better readability
+- Fixes apply to both system-aware dark mode and Dark Theme style variation
+
+
+### Version 1.9.4
+- Fixed dark mode accessibility issues in header and navigation
+- Improved border contrast using gray token instead of light-gray in dark mode
+- Enhanced site title and navigation link visibility in dark mode
+- Fixed mobile menu button visibility with proper border colors
+- Better hover states for navigation elements in dark mode
+
 ### Version 1.9.3
 - Fixed color tokens in personal pattern group (recommendation, currently-status, quick-note)
 - Fixed borderColor: subtle-border → subtle in recommendation and currently-status patterns

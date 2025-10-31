@@ -146,10 +146,96 @@
         transform: none !important;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
     }
-    
+
     /* Keep subtle focus states for accessibility */
     .hover-cards > .wp-block-group:focus-within {
         transform: translateY(-1px) !important;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/* Dark Mode Accessibility Fixes
+--------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    /* Header - Fix border contrast in dark mode */
+    .wp-block-group.alignfull {
+        border-bottom-color: var(--wp--preset--color--gray) !important;
+    }
+
+    /* Site Title - Ensure proper contrast */
+    .wp-block-site-title a {
+        color: var(--wp--preset--color--foreground);
+    }
+
+    .wp-block-site-title a:hover {
+        color: var(--wp--preset--color--primary);
+    }
+
+    /* Navigation Links - Better contrast in dark mode */
+    .wp-block-navigation .wp-block-navigation-item a {
+        color: var(--wp--preset--color--foreground);
+    }
+
+    .wp-block-navigation .wp-block-navigation-item a:hover,
+    .wp-block-navigation .wp-block-navigation-item a:focus {
+        color: var(--wp--preset--color--primary);
+    }
+
+    /* Mobile Menu Button - Visible border in dark mode */
+    .wp-block-navigation__responsive-container-open,
+    .wp-block-navigation__responsive-container-close {
+        border-color: var(--wp--preset--color--gray) !important;
+        background-color: var(--wp--preset--color--background);
+    }
+
+    .wp-block-navigation__responsive-container-open:hover,
+    .wp-block-navigation__responsive-container-close:hover {
+        background-color: var(--wp--preset--color--container);
+        border-color: var(--wp--preset--color--primary) !important;
+    }
+
+    /* Mobile Menu Overlay - Better contrast */
+    @media (max-width: 768px) {
+        .wp-block-navigation__responsive-container.is-menu-open {
+            border-color: var(--wp--preset--color--gray);
+        }
+
+        .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
+            border-bottom-color: var(--wp--preset--color--gray);
+        }
+    }
+
+    /* Site Title Logo Style - Better visibility in dark mode */
+    .wp-block-site-title.is-style-logo-style {
+        background: var(--wp--preset--color--container);
+        border-color: var(--wp--preset--color--gray);
+    }
+
+    .wp-block-site-title.is-style-logo-style:hover {
+        background: var(--wp--preset--color--gray);
+        border-color: var(--wp--preset--color--primary);
+    }
+
+    /* Navigation Hover Background - Better visibility */
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover {
+        background-color: var(--wp--preset--color--container);
+    }
+
+    /* Post Meta - Use foreground color for better visibility */
+    .wp-block-post-date,
+    .wp-block-post-terms,
+    .wp-block-post-author,
+    .has-gray-color {
+        color: var(--wp--preset--color--foreground) !important;
+    }
+
+    /* Author Bio Pattern - Better text visibility */
+    .has-secondary-color {
+        color: var(--wp--preset--color--foreground) !important;
+    }
+
+    /* Post Navigation Links - Better visibility */
+    .wp-block-post-navigation-link a {
+        color: var(--wp--preset--color--foreground) !important;
     }
 }
