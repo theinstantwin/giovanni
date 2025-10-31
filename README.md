@@ -168,6 +168,15 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.0
+- Fix author-bio pattern: multiple block recovery issues resolved
+- Replace borderColor "subtle" with "light-gray" (semantic token)
+- Remove invalid image JSON attributes: "width":"80px" and "height":"80px"
+- Replace "secondary" color token with "gray" for consistency (5 occurrences)
+- Image sizing now handled by inline styles only, not JSON attributes
+- All color tokens now use direct semantic tokens from theme.json palette
+
+
 ### Version 2.0.9
 - Fix hero-about pattern: replace invalid color tokens with semantic tokens
 - Replace "muted-text" with "gray" (3 occurrences - invalid token not in theme.json)
