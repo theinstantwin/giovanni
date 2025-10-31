@@ -199,6 +199,35 @@ function giovanni_enqueue_group_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_group_styles' );
 
 /**
+ * Enqueue additional block styles for frontend
+ * These styles are needed on frontend for custom block variations
+ */
+function giovanni_enqueue_additional_block_styles() {
+    $additional_styles = array(
+        'core-image',        // Polaroid and image block styles
+        'core-site-title',   // Site title block styles
+        'core-table',        // Table block styles
+        'core-quote',        // Quote block styles
+        'core-separator'     // Separator block styles
+    );
+
+    foreach ( $additional_styles as $style ) {
+        $file_path = get_template_directory() . "/assets/styles/{$style}.css";
+        if ( file_exists( $file_path ) ) {
+            $version = wp_get_theme()->get('Version') . '.' . filemtime( $file_path );
+
+            wp_enqueue_style(
+                'giovanni-' . $style,
+                get_theme_file_uri( "assets/styles/{$style}.css" ),
+                array( 'giovanni-style' ),
+                $version
+            );
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_additional_block_styles' );
+
+/**
  * Enqueue block styles for the editor (backend)
  * WordPress 6.8+ automatically loads block styles from assets/styles/ directory
  */
