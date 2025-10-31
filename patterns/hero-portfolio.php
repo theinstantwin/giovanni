@@ -60,12 +60,12 @@
     
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--4)"}}} -->
     <div class="wp-block-buttons">
-        <!-- wp:button {"style":{"typography":{"fontWeight":"500"},"spacing":{"padding":{"left":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","top":"var(--wp--preset--spacing--3)","bottom":"var(--wp--preset--spacing--3)"}},"border":{"radius":"var(--giovanni-button-radius)"}},"fontSize":"md"} -->
-        <div class="wp-block-button has-md-font-size"><a class="wp-block-button__link wp-element-button" href="#projects" style="border-radius:var(--giovanni-button-radius);font-weight:500;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--8)">View projects</a></div>
+        <!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-arrow-light"} -->
+        <div class="wp-block-button is-style-arrow-light"><a class="wp-block-button__link wp-element-button" href="#projects" style="border-radius:var(--giovanni-button-radius)">View projects</a></div>
         <!-- /wp:button -->
-        
-        <!-- wp:button {"textColor":"secondary","style":{"color":{"background":"transparent"},"typography":{"fontWeight":"500"},"spacing":{"padding":{"left":"var(--wp--preset--spacing--8)","right":"var(--wp--preset--spacing--8)","top":"var(--wp--preset--spacing--3)","bottom":"var(--wp--preset--spacing--3)"}},"border":{"radius":"var(--giovanni-button-radius)","width":"1px"}},"borderColor":"secondary","fontSize":"md","className":"is-style-outline"} -->
-        <div class="wp-block-button has-md-font-size is-style-outline"><a class="wp-block-button__link has-secondary-color has-secondary-border-color has-text-color has-border-color wp-element-button" href="/contact" style="border-width:1px;border-radius:var(--giovanni-button-radius);background:transparent;font-weight:500;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--8)">Hire me</a></div>
+
+        <!-- wp:button {"style":{"border":{"radius":"var(--giovanni-button-radius)"}},"className":"is-style-ghost"} -->
+        <div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="/contact" style="border-radius:var(--giovanni-button-radius)">Hire me</a></div>
         <!-- /wp:button -->
     </div>
     <!-- /wp:buttons -->
