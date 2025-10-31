@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.9
+- Fix hero-about pattern: replace invalid color tokens with semantic tokens
+- Replace "muted-text" with "gray" (3 occurrences - invalid token not in theme.json)
+- Replace separator "subtle" background with "light-gray" (invalid background color)
+- "subtle" exists only as border color alias, not as background color token
+- Pattern now inserts without "unexpected or invalid content" error
+
+
 ### Version 2.0.8
 - Fix currently-status pattern block recovery issue
 - Add missing border-radius to inline styles on container div
