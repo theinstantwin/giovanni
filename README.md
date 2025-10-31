@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.7
+- Fix recommendation pattern block recovery issue
+- Remove invalid JSON attributes from image block (width, height, aspectRatio)
+- WordPress expects numeric values without units in JSON, not strings like "120px"
+- Keep sizing in inline styles where WordPress handles them properly
+- Pattern now inserts without "Attempt Block Recovery" prompt
+
+
 ### Version 2.0.6
 - Fix margin note author color contrast
 - Remove opacity: 0.8 from .margin-note-author for better readability
