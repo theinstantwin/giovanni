@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.5
+- Fix margin note pattern: replace all hardcoded spacing with semantic tokens
+- Replace 0.5rem with var(--wp--preset--spacing--2)
+- Replace 0.75rem with var(--wp--preset--spacing--3)
+- Ensures consistent spacing across all theme variations
+- Border-radius already using correct semantic tokens
+
+
 ### Version 2.0.4
 - Fix recommendation pattern image block configuration
 - Add proper width, height, and aspect ratio (3:4) to image
