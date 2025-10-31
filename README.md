@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.8
+- Fixed single post meta visibility in dark mode (categories, tags, dates, reading time)
+- Fixed image and media caption colors in dark mode
+- Added caption element styling to theme.json using secondary token
+- Caption colors now adapt properly across all theme variations
+- Comprehensive fix for .has-gray-color elements in single post templates
+
+
 ### Version 1.9.7
 - Fixed Posts by Date date visibility for BOTH system dark mode AND Dark Theme variation
 - Changed date colors from gray to secondary token (adapts to theme)

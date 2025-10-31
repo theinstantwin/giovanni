@@ -766,6 +766,20 @@
 						"bottom": "var(--wp--preset--spacing--6)"
 					}
 				}
+			},
+			"caption": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--sm)",
+					"fontStyle": "italic"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				},
+				"spacing": {
+					"margin": {
+						"top": "var(--wp--preset--spacing--2)"
+					}
+				}
 			}
 		},
 		"blocks": {

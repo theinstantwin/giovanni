@@ -225,7 +225,16 @@
     .wp-block-post-date,
     .wp-block-post-terms,
     .wp-block-post-author,
-    .has-gray-color {
+    .has-gray-color,
+    .has-gray-color.has-text-color {
+        color: var(--wp--preset--color--foreground) !important;
+    }
+
+    /* Image and media captions */
+    figcaption,
+    .wp-element-caption,
+    .wp-caption-text,
+    .wp-block-image figcaption {
         color: var(--wp--preset--color--foreground) !important;
     }
 
