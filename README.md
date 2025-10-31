@@ -168,6 +168,16 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.3
+- Refactor behind-the-scenes pattern: eliminate calc() for full-bleed effect
+- Replace complex negative margin calc() with cleaner padding approach
+- Parent container: remove left/right/bottom padding (only top padding remains)
+- Content blocks: add individual left/right padding as needed
+- Tools container: naturally spans full width without negative margins
+- Simpler, more maintainable, WordPress-native approach
+- No inline calc() = better compatibility and fewer edge cases
+
+
 ### Version 2.1.2
 - Fix behind-the-scenes pattern: tools container calc() syntax
 - Replace borderColor "subtle" with "light-gray" (semantic token)
