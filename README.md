@@ -168,6 +168,15 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.4
+- Fix author-bio pattern: invalid column width attribute
+- Replace "width":"80px" with proper layout style object
+- WordPress columns expect percentages in width, not pixel values
+- Use style.layout.flexSize instead: {"selfStretch":"fixed","flexSize":"80px"}
+- Inline flex-basis:80px remains for actual rendering
+- This was causing "Block contains unexpected or invalid content" error
+
+
 ### Version 2.1.3
 - Refactor behind-the-scenes pattern: eliminate calc() for full-bleed effect
 - Replace complex negative margin calc() with cleaner padding approach

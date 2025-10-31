@@ -12,7 +12,7 @@
 <div class="wp-block-group has-container-background-color has-light-gray-border-color has-background has-border-color" style="border-width:1px;border-radius:var(--giovanni-card-radius);padding-top:var(--wp--preset--spacing--12);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--8)">
     <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var(--wp--preset--spacing--6)"}}}} -->
     <div class="wp-block-columns are-vertically-aligned-center">
-        <!-- wp:column {"verticalAlignment":"center","width":"80px"} -->
+        <!-- wp:column {"verticalAlignment":"center","style":{"layout":{"selfStretch":"fixed","flexSize":"80px"}}} -->
         <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:80px">
             <!-- wp:image {"scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","style":{"border":{"radius":"var(--wp--custom--border-radius--full)"}}} -->
             <figure class="wp-block-image size-thumbnail" style="border-radius:var(--wp--custom--border-radius--full)"><img src="" alt="Author Profile" style="object-fit:cover;width:80px;height:80px"/></figure>
