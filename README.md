@@ -168,6 +168,12 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.2
+- Fixed button styles in hero-section and hero-about patterns (arrow-dark and arrow-light)
+- Fixed color tokens in featured-posts-grid and popular-posts patterns (muted-text → gray, subtle-border → subtle)
+- Fixed button style in featured-posts-grid (replaced invalid is-style-outline with is-style-ghost)
+- Fixed background color classes (has-white-background-color → has-container-background-color)
+
 ### Version 1.9.1
 - Fixed behind-the-scenes pattern full-bleed behavior (contentSize 640px → 650px)
 - Fixed hero-portfolio button styles (replaced invalid is-style-outline with proper arrow-light and ghost styles)
