@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.1.9
+- Fix author-bio pattern: eliminate all hardcoded values, use semantic tokens
+- Card border: var(--wp--custom--border-radius--md) instead of hardcoded 8px
+- Circular image: var(--wp--custom--border-radius--full) instead of hardcoded 50%
+- Restore placeholder text instead of real author information (patterns should be generic)
+- Pattern now fully respects theme variations and custom property overrides
+
+
 ### Version 2.1.8
 - Complete refactor of author-bio pattern to fix circular image issue
 - Use inline border-radius:50% on img tag instead of figure for proper circular shape
