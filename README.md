@@ -168,6 +168,13 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.6
+- Fix margin note author color contrast
+- Remove opacity: 0.8 from .margin-note-author for better readability
+- Improves contrast ratio from ~4.5:1 to ~6.3:1 (meets AAA standard)
+- Color still uses semantic gray token for theme variation support
+
+
 ### Version 2.0.5
 - Fix margin note pattern: replace all hardcoded spacing with semantic tokens
 - Replace 0.5rem with var(--wp--preset--spacing--2)
