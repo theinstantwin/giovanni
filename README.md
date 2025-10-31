@@ -168,6 +168,15 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.3
+- Audit and fix all giovanni-personal patterns for semantic token usage
+- Fix currently-status pattern: replace subtle border with light-gray, reduce margins
+- Fix quick-note pattern: replace secondary text color with gray
+- Fix pattern-margin-note.css: replace secondary color with gray
+- Add pattern CSS files to block editor enqueue for proper editor preview
+- Ensure all personal patterns use consistent semantic color tokens
+
+
 ### Version 2.0.2
 - Fix recommendation pattern: replaced non-semantic color tokens with semantic tokens
 - Update border color from subtle to light-gray for better theme variation support

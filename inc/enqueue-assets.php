@@ -275,7 +275,7 @@ function giovanni_enqueue_block_editor_styles() {
     // Only enqueue editor-specific styles if they exist
     $editor_styles = array(
         'core-button',           // Base button styles
-        'core-button-arrow',     // Arrow button styles 
+        'core-button-arrow',     // Arrow button styles
         'core-button-ghost',     // Ghost button styles
         'core-button-dark',      // Dark button styles
         'core-navigation',
@@ -285,7 +285,9 @@ function giovanni_enqueue_block_editor_styles() {
         'core-image',
         'core-table',
         'core-quote',
-        'core-separator'
+        'core-separator',
+        'pattern-currently-status',  // Currently status pattern
+        'pattern-margin-note'    // Margin note pattern
     );
     
     foreach ( $editor_styles as $style ) {

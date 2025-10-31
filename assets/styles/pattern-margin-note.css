@@ -34,7 +34,7 @@
 }
 
 .margin-note-author {
-    color: var(--wp--preset--color--secondary);
+    color: var(--wp--preset--color--gray);
     opacity: 0.8;
 }
 
