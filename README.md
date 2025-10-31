@@ -168,6 +168,14 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.8
+- Fix currently-status pattern block recovery issue
+- Add missing border-radius to inline styles on container div
+- JSON specified radius but inline styles were missing it
+- This mismatch between JSON and HTML triggered block recovery
+- Pattern now inserts cleanly without recovery prompt
+
+
 ### Version 2.0.7
 - Fix recommendation pattern block recovery issue
 - Remove invalid JSON attributes from image block (width, height, aspectRatio)
