@@ -238,4 +238,25 @@
     .wp-block-post-navigation-link a {
         color: var(--wp--preset--color--foreground) !important;
     }
+
+    /* Posts by Date Pattern - Fix date visibility */
+    .blog-post-item .post-date,
+    .blog-post-item .wp-block-post-date {
+        color: var(--wp--preset--color--foreground) !important;
+    }
+
+    .blog-post-item:hover .post-date,
+    .blog-post-item:hover .wp-block-post-date {
+        color: var(--wp--preset--color--foreground) !important;
+    }
+
+    /* Arrow icon in blog post items */
+    .blog-post-item a::after {
+        color: var(--wp--preset--color--foreground) !important;
+    }
+
+    /* Month headers in posts by date */
+    .blog-posts-by-month .month-header {
+        border-bottom-color: var(--wp--preset--color--gray);
+    }
 }

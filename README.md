@@ -168,6 +168,12 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.6
+- Fixed date visibility in Posts by Date pattern for dark mode
+- Enhanced arrow icon contrast in blog post items
+- Improved month header border visibility in dark mode
+
+
 ### Version 1.9.5
 - Fixed post meta visibility in dark mode (date, categories, tags now use foreground color)
 - Enhanced author bio pattern text visibility in dark mode
