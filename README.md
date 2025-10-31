@@ -168,6 +168,11 @@ For support, please:
 
 ## Changelog
 
+### Version 1.9.1
+- Fixed behind-the-scenes pattern full-bleed behavior (contentSize 640px → 650px)
+- Fixed hero-portfolio button styles (replaced invalid is-style-outline with proper arrow-light and ghost styles)
+- Fixed block validator bug with files missing trailing newline
+
 ### Version 1.7.5
 - Refactored theme styles into dedicated JSON files in the 'styles' directory for better organization and Full Site Editing (FSE) compatibility (Default, Linen, and Dark variations).
 - Updated theme version to 1.7.5.
