@@ -139,10 +139,29 @@ validate_json() {
     fi
 }
 
+# Build list of defined custom properties from theme.json
+build_custom_properties_list() {
+    local theme_json="theme.json"
+
+    if [ ! -f "$theme_json" ]; then
+        echo ""
+        return
+    fi
+
+    # Extract all custom property paths from theme.json
+    # Converts "fontWeight: bold" to "--font-weight--bold"
+    jq -r '.settings.custom | to_entries[] | .key as $cat | .value | keys[] | "--\($cat)--\(.)"' "$theme_json" 2>/dev/null | \
+    # Convert camelCase to kebab-case
+    sed 's/\([A-Z]\)/-\1/g' | tr '[:upper:]' '[:lower:]' || echo ""
+}
+
 # Validate no CSS variables in JSON attributes
 validate_no_css_vars_in_json() {
     local file="$1"
     local has_errors=false
+
+    # Build list of defined custom properties
+    local defined_custom_props=$(build_custom_properties_list)
 
     print_info "Checking for CSS variables in JSON attributes..."
 
@@ -164,20 +183,42 @@ validate_no_css_vars_in_json() {
             fi
 
             # Check for undefined CSS variables in JSON attributes
-            # WordPress presets are allowed: var(--wp--preset--*)
-            # WordPress custom properties are allowed: var(--wp--custom--*)
+            # WordPress presets are allowed: var(--wp--preset--*) (assumed to be defined)
+            # WordPress custom properties: var(--wp--custom--*) (check if defined)
             # Theme-specific undefined variables are NOT allowed: var(--theme-name-*)
-            # Find all var() that are NOT --wp--preset-- or --wp--custom--
-            local custom_vars=$(echo "$json_part" | grep -oE 'var\(--[^)]+\)' | grep -vE 'var\(--wp--(preset|custom)--' || true)
 
-            if [ -n "$custom_vars" ]; then
+            # First, find all var() that are NOT --wp--preset-- or --wp--custom--
+            local undefined_vars=$(echo "$json_part" | grep -oE 'var\(--[^)]+\)' | grep -vE 'var\(--wp--(preset|custom)--' || true)
+
+            if [ -n "$undefined_vars" ]; then
                 print_error "Undefined CSS variable found in JSON attributes at $file:$line_num"
                 echo "         WordPress blocks only support var(--wp--preset--*) and var(--wp--custom--*)"
                 echo "         Variables must be defined in theme.json settings"
                 echo "         Line: $line"
-                echo "         Found: $custom_vars"
+                echo "         Found: $undefined_vars"
                 print_warning "Define in theme.json settings.custom, use static value, or move to inline style"
                 has_errors=true
+            fi
+
+            # Second, check if --wp--custom-- variables are actually defined in theme.json
+            if [ -n "$defined_custom_props" ]; then
+                local custom_only_vars=$(echo "$json_part" | grep -oE 'var\(--wp--custom--[^)]+\)' || true)
+
+                for var in $custom_only_vars; do
+                    # Extract the property path (e.g., --border-radius--md from var(--wp--custom--border-radius--md))
+                    local prop_path=$(echo "$var" | sed 's/var(--wp--custom//' | sed 's/).*//')
+
+                    # Check if this property path exists in our defined list
+                    # Use grep -F -- to treat $prop_path as a literal string (not options)
+                    if ! echo "$defined_custom_props" | grep -qF -- "$prop_path"; then
+                        print_error "Undefined --wp--custom property at $file:$line_num"
+                        echo "         Variable: $var"
+                        echo "         Property $prop_path not found in theme.json settings.custom"
+                        echo "         Line: $line"
+                        print_warning "Add property to theme.json settings.custom or use a defined property"
+                        has_errors=true
+                    fi
+                done
             fi
         fi
     done < "$file"
