@@ -15,7 +15,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var(--wp--preset--spacing--4)","left":"var(--wp--preset--spacing--6)"}}}} -->
-<div class="wp-block-columns" style="--wp--style--block-gap:var(--wp--preset--spacing--4)">
+<div class="wp-block-columns">
 
 <!-- wp:column {"width":"33.33%","className":"currently-column currently-reading"} -->
 <div class="wp-block-column currently-column currently-reading" style="flex-basis:33.33%">
@@ -43,8 +43,8 @@
 
 <!-- wp:column {"width":"33.33%","className":"currently-column currently-thinking"} -->
 <div class="wp-block-column currently-column currently-thinking" style="flex-basis:33.33%">
-<!-- wp:heading {"level":5,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--2)"}}},"textColor":"foreground","fontSize":"sm"} -->
-<h5 class="wp-block-heading has-foreground-color has-text-color has-sm-font-size" style="margin-bottom:var(--wp--preset--spacing--2);font-weight:500">Thinking About</h5>
+<!-- wp:heading {"level":5,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--2)"}}},"textColor":"primary","fontSize":"sm"} -->
+<h5 class="wp-block-heading has-primary-color has-text-color has-sm-font-size" style="margin-bottom:var(--wp--preset--spacing--2);font-weight:500">Thinking About</h5>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.4"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"foreground","fontSize":"sm"} -->

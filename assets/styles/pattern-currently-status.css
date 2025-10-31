@@ -1,0 +1,45 @@
+/* Giovanni Currently Status Pattern
+--------------------------------------------- */
+
+.currently-box {
+    border-radius: var(--wp--custom--border-radius--lg);
+}
+
+.currently-label {
+    border-bottom: 2px solid var(--wp--preset--color--primary);
+    padding-bottom: var(--wp--preset--spacing--3);
+}
+
+/* Column spacing consistency */
+.currently-box .wp-block-columns {
+    gap: var(--wp--preset--spacing--6);
+}
+
+.currently-column {
+    min-width: 0; /* Prevent overflow */
+}
+
+/* Ensure consistent heading colors */
+.currently-column h5 {
+    color: var(--wp--preset--color--primary);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .currently-box .wp-block-columns {
+        flex-direction: column;
+        gap: var(--wp--preset--spacing--6);
+    }
+    
+    .currently-column {
+        flex-basis: 100% !important;
+        width: 100%;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .currently-box {
+        border-color: var(--wp--preset--color--gray);
+    }
+}

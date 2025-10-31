@@ -168,6 +168,16 @@ For support, please:
 
 ## Changelog
 
+### Version 2.0.0
+- Fixed column spacing and color consistency in Currently Status pattern
+- Added dedicated CSS file for Currently Status pattern (pattern-currently-status.css)
+- Fixed "Thinking About" heading color inconsistency (now uses primary color like other headings)
+- Removed deprecated --wp--style--block-gap inline style
+- Added proper mobile responsive behavior for status columns
+- Enhanced dark mode support for status dashboard border
+- Pattern now properly stacks columns on mobile devices
+
+
 ### Version 1.9.9
 - Fixed subtle-border token errors across ALL patterns (15 pattern files affected)
 - Changed borderColor from "subtle-border" to "subtle" (correct token name)
