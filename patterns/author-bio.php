@@ -15,7 +15,7 @@
         <!-- wp:column {"verticalAlignment":"center","width":"80px"} -->
         <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:80px">
             <!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded"} -->
-            <figure class="wp-block-image size-thumbnail is-style-rounded"><img src="https://via.placeholder.com/80" alt="Author Profile" style="object-fit:cover;border-radius:var(--wp--custom--border-radius--full);width:80px;height:80px"/></figure>
+            <figure class="wp-block-image size-thumbnail is-style-rounded"><img alt="Author Profile" style="object-fit:cover;border-radius:var(--wp--custom--border-radius--full);"/></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->
