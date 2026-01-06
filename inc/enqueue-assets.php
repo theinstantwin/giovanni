@@ -239,6 +239,26 @@ function giovanni_enqueue_group_styles() {
 add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_group_styles' );
 
 /**
+ * Enqueue link styles for animated underlines
+ */
+function giovanni_enqueue_link_styles() {
+    $file_path = get_template_directory() . '/assets/styles/core-link.css';
+    $version = wp_get_theme()->get('Version');
+
+    if ( file_exists( $file_path ) ) {
+        $version .= '.' . filemtime( $file_path );
+    }
+
+    wp_enqueue_style(
+        'giovanni-link',
+        get_theme_file_uri( 'assets/styles/core-link.css' ),
+        array( 'giovanni-style' ),
+        $version
+    );
+}
+add_action( 'wp_enqueue_scripts', 'giovanni_enqueue_link_styles' );
+
+/**
  * Enqueue additional block styles for frontend
  * These styles are needed on frontend for custom block variations
  */
@@ -286,6 +306,7 @@ function giovanni_enqueue_block_editor_styles() {
         'core-table',
         'core-quote',
         'core-separator',
+        'core-link',             // Animated link underlines
         'pattern-currently-status',  // Currently status pattern
         'pattern-margin-note'    // Margin note pattern
     );

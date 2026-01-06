@@ -1,0 +1,26 @@
+/* Giovanni Link Styles - Animated Underline
+--------------------------------------------- */
+
+/* Base link style - thin underline at baseline */
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content),
+.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: text-decoration-thickness var(--wp--custom--transitions--fast, 0.15s) ease,
+                text-underline-offset var(--wp--custom--transitions--fast, 0.15s) ease;
+}
+
+/* Hover state - thicker underline, drops down */
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):hover,
+.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Focus state for accessibility */
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):focus,
+.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):focus {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
