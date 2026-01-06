@@ -181,6 +181,10 @@ For support, please:
 
 ## Changelog
 
+### Version 2.2.6
+- Exclude shortcode links (.blog-post-item) from animated underline effect
+
+
 ### Version 2.2.3
 - Fix "Block contains unexpected or invalid content" error on home template button
 - Root cause: JSON attributes had custom padding/font-weight but HTML had matching inline styles - WordPress block validator detected mismatch
