@@ -1,26 +1,29 @@
 /* Giovanni Link Styles - Animated Underline
 --------------------------------------------- */
 
-/* Base link style - thin underline at baseline */
+/* Base link style - thin underline using border-bottom for precise control */
 .wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content),
 .wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a) {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-    transition: text-decoration-thickness var(--wp--custom--transitions--fast, 0.15s) ease,
-                text-underline-offset var(--wp--custom--transitions--fast, 0.15s) ease;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 calc(100% - 1px);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    padding-bottom: 2px;
+    transition: background-size var(--wp--custom--transitions--fast, 0.15s) ease-out,
+                padding-bottom var(--wp--custom--transitions--fast, 0.15s) ease-out;
 }
 
-/* Hover state - thicker underline, drops down */
+/* Hover state - thicker underline grows downward */
 .wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):hover,
 .wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):hover {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    background-size: 100% 2px;
+    padding-bottom: 3px;
 }
 
 /* Focus state for accessibility */
 .wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):focus,
 .wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):focus {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    background-size: 100% 2px;
+    padding-bottom: 3px;
 }
