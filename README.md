@@ -22,7 +22,7 @@ Giovanni represents the foundation of this collection: elegant, sophisticated, a
 - **Accessibility Ready**: WCAG compliant with proper color contrast
 
 ### 📝 Content & Patterns
-- **Comprehensive Block Patterns**: 18 custom patterns for common layouts
+- **Comprehensive Block Patterns**: 22 custom patterns for common layouts
 - **Hero Section Variations**: Multiple hero layouts for different page types
 - **Personal Content Patterns**: Currently Status, Behind the Scenes, Key Takeaways
 - **Header Options**: Centered logo and split layout header patterns
@@ -72,15 +72,22 @@ Giovanni will be submitted to the WordPress.org theme directory for one-click in
 
 ## Block Patterns
 
-Giovanni includes 18 comprehensive block patterns organized into categories:
+Giovanni includes 22 comprehensive block patterns organized into categories:
 
 ### Giovanni Author
 - **Author Bio**: Personal author bio section for building connections
+
+### Giovanni Cards
+- **Basic Card Single**: General purpose card container
+- **Company Card Single**: Company/brand showcase card
+- **Portfolio Card Single**: Portfolio project card
+- **Three Column Animated Cards**: Interactive card grid with hover animations
 
 ### Giovanni Content
 - **Behind the Scenes**: Process transparency with accent highlights
 - **Key Takeaway**: Signal amplification for important points
 - **Quick Note**: Conversational marginalia for personal commentary
+- **Text Title Lists**: Structured list content with titles
 
 ### Giovanni Header
 - **Header Centered Logo**: Minimalist header with centered branding
@@ -96,17 +103,23 @@ Giovanni includes 18 comprehensive block patterns organized into categories:
 - **Recommendation**: Trusted endorsement cards with ratings
 
 ### Giovanni Posts
+- **Blog Post Meta**: Post metadata display (date, author, reading time)
+- **Blog Roll Cards Grid**: Blog listing in card grid format
 - **Featured Posts Grid**: Showcase your best content
 - **Popular Posts**: Highlight trending content
 - **Posts by Date**: Chronological content display
+- **Post Title Background**: Post title with background image
+- **Post Title Cover**: Full-cover post title layout
+- **Query Newsletter**: Newsletter signup with query loop
 
 ## Theme Variations
 
-Giovanni includes three carefully crafted theme variations:
+Giovanni includes four carefully crafted theme variations:
 
-- **Default**: Clean, modern design with Giovanni Blue accents
-- **Dark**: Elegant dark mode with warm contrast
-- **Linen**: Warm, approachable design with soft tones
+- **Default**: Clean, modern design with Giovanni Blue accents (#0070f3)
+- **Dark**: Elegant dark mode with warm cream text and red accents (#ff335f)
+- **Linen**: Warm, approachable design with soft cream tones and red accents (#ff335f)
+- **Forest**: Nature-inspired palette with deep green primary (#1A3624) and warm backgrounds
 
 ## Typography
 
@@ -167,6 +180,10 @@ For support, please:
 3. Check the WordPress.org support forums (once theme is approved)
 
 ## Changelog
+
+### Version 2.2.0
+- Add animated link underlines (thin at baseline, thicker on hover)
+
 
 ### Version 2.1.9
 - Fix author-bio pattern: eliminate all hardcoded values, use semantic tokens
