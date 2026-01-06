@@ -1,18 +1,19 @@
 /* Giovanni Link Styles - Animated Underline
 --------------------------------------------- */
 
-/* Base link style - thin underline anchored at baseline */
+/* Base link style - thin underline anchored at top, grows down */
 .wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content),
 .wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a) {
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0 100%;
+    background-position: 0 calc(100% - 1px);
     background-size: 100% 1px;
     background-repeat: no-repeat;
+    padding-bottom: 3px;
     transition: background-size var(--wp--custom--transitions--fast, 0.15s) ease-out;
 }
 
-/* Hover state - line grows thicker downward from baseline */
+/* Hover state - line grows thicker downward */
 .wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):hover,
 .wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):hover {
     background-size: 100% 3px;
