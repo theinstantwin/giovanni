@@ -651,9 +651,7 @@
 					"color": {
 						"background": "var(--wp--preset--color--gray)",
 						"text": "var(--wp--preset--color--background)"
-					},
-					"transform": "translateY(-1px)",
-					"boxShadow": "var(--wp--custom--shadows--md)"
+					}
 				},
 				":focus": {
 					"outline": {
@@ -662,10 +660,6 @@
 						"color": "var(--wp--preset--color--primary)",
 						"offset": "2px"
 					}
-				},
-				":active": {
-					"transform": "translateY(0px)",
-					"boxShadow": "var(--wp--custom--shadows--sm)"
 				}
 			},
 			"h1": {

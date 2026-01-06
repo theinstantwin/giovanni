@@ -1,7 +1,22 @@
 /* Giovanni Button Variant Styles
 --------------------------------------------- */
 
-/* Base button styles are handled by theme.json */
+/* Base button hover effects (transform/shadow not supported in theme.json) */
+.wp-block-button__link {
+    transition: transform var(--wp--custom--transitions--fast, 0.15s) ease-out,
+                box-shadow var(--wp--custom--transitions--fast, 0.15s) ease-out,
+                background-color var(--wp--custom--transitions--fast, 0.15s) ease-out;
+}
+
+.wp-block-button__link:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--wp--custom--shadows--md, 0 4px 6px -1px rgba(0,0,0,0.1));
+}
+
+.wp-block-button__link:active {
+    transform: translateY(0);
+    box-shadow: var(--wp--custom--shadows--sm, 0 1px 2px 0 rgba(0,0,0,0.05));
+}
 
 /* Button variants - only handle specific overrides */
 .wp-block-button.is-style-ghost .wp-block-button__link {

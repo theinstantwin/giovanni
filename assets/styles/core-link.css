@@ -2,8 +2,9 @@
 --------------------------------------------- */
 
 /* Base link style - thin underline anchored at top, grows down */
-.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content),
-.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a) {
+/* Excludes: buttons, navigation, post titles, blog items, categories, tags */
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-terms a),
+.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):not(.wp-block-post-terms a) {
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0 calc(100% - 1px);
@@ -14,13 +15,13 @@
 }
 
 /* Hover state - line grows thicker downward */
-.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):hover,
-.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):hover {
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-terms a):hover,
+.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):not(.wp-block-post-terms a):hover {
     background-size: 100% 3px;
 }
 
 /* Focus state for accessibility */
-.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):focus,
-.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):focus {
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-terms a):focus,
+.wp-block-group a:not(.wp-block-button__link):not(.wp-block-navigation-item__content):not(.wp-block-post-title a):not(.blog-post-item a):not(.wp-block-post-terms a):focus {
     background-size: 100% 3px;
 }
