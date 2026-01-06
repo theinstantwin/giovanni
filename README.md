@@ -181,6 +181,17 @@ For support, please:
 
 ## Changelog
 
+### Version 2.2.3
+- Fix "Block contains unexpected or invalid content" error on home template button
+- Root cause: JSON attributes had custom padding/font-weight but HTML had matching inline styles - WordPress block validator detected mismatch
+- Solution: Simplified button to use theme.json defaults, removed all custom inline styling
+- Also fixed: hardcoded border-radius in 404.html search, footer.html subscribe button
+- Also fixed: hardcoded blockGap values in single.html and page.html
+
+### Version 2.2.1
+- Fix link underline animation to grow downward from fixed top edge
+- Use background-image technique instead of text-decoration for precise control
+
 ### Version 2.2.0
 - Add animated link underlines (thin at baseline, thicker on hover)
 
